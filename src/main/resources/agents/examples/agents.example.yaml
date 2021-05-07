@@ -1,0 +1,10 @@
+#%Agents 1.0
+agents:
+  - !include nicolas.fragment.example.yaml # Node encoded in another fragment file
+  - !include polimi.fragment.example.yaml # Node encoded in another fragment file
+  - name: Boca Juniors # Inlined node
+    members:
+      - name: Carlos Alberto Tevez
+        ssn: "333333333"
+      - name: Cristian Pavon
+        ssn: "444444444"

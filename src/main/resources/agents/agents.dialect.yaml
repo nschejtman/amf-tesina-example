@@ -1,0 +1,52 @@
+#%Dialect 1.0
+dialect: Agents
+version: 1.0
+uses:
+  agents-vocabulary: agents.vocabulary.yaml
+
+# Mappings from nodes in the source YAML/JSON document to nodes in the RDF Graph
+nodeMappings:
+  NamedNode:
+    # no class term (will auto-generate one)
+    mapping:
+      name:
+        propertyTerm: agents-vocabulary.name
+        range: string
+
+  PersonNode:
+    classTerm: agents-vocabulary.Person
+    extends: NamedNode # This is only structural extension (it inherits the `name` mapping)
+    mapping:
+      ssn:
+        propertyTerm: agents-vocabulary.ssn
+        mandatory: true
+        range: string
+
+  OrganizationNode:
+    classTerm: agents-vocabulary.Organization
+    extends: NamedNode # This is only structural extension (it inherits the `name` mapping)
+    mapping:
+      members:
+        propertyTerm: agents-vocabulary.members
+        allowMultiple: true
+        mandatory: true
+        range: PersonNode
+
+  AgentListNode:
+    # no class term (will auto-generate one)
+    mapping:
+      agents:
+        propertyTerm: agents-vocabulary.composedOf
+        allowMultiple: true
+        range:
+          - OrganizationNode
+          - PersonNode
+
+# Divide nodes into separate documents
+documents:
+  root:
+    encodes: AgentListNode
+  fragments:
+    encodes:
+      Organization: OrganizationNode
+      Person: PersonNode

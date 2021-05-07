@@ -1,0 +1,83 @@
+<file://src/main/resources/agents/agents.vocabulary.yaml>
+        a       <http://a.ml/vocabularies/document#Unit> , <http://a.ml/vocabularies/meta#Vocabulary> , <http://www.w3.org/2002/07/owl#Ontology> ;
+        <http://a.ml/vocabularies/core#name>
+                "Agents" ;
+        <http://a.ml/vocabularies/document#declares>
+                <http://agents.org/vocabulary#members> , <http://agents.org/vocabulary#Organization> , <http://agents.org/vocabulary#composedOf> , <http://agents.org/vocabulary#name> , <http://agents.org/vocabulary#ssn> , <http://agents.org/vocabulary#Agent> , <http://agents.org/vocabulary#Person> ;
+        <http://a.ml/vocabularies/document#location>
+                "file://src/main/resources/agents/agents.vocabulary.yaml" ;
+        <http://a.ml/vocabularies/document#root>
+                true ;
+        <http://a.ml/vocabularies/document#version>
+                "3.0.0" ;
+        <http://a.ml/vocabularies/meta#base>
+                "http://agents.org/vocabulary#" .
+
+<http://agents.org/vocabulary#ssn>
+        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#Property> , <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> ;
+        <http://a.ml/vocabularies/core#description>
+                "Number that identifies a physical person in various governamental agencies" ;
+        <http://a.ml/vocabularies/core#displayName>
+                "Social Security Number" .
+
+<http://agents.org/vocabulary#Person>
+        a       <http://a.ml/vocabularies/document#DomainElement> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://agents.org/vocabulary#Agent> ;
+        <http://a.ml/vocabularies/core#description>
+                "A physical person judiciary agent class" ;
+        <http://a.ml/vocabularies/core#displayName>
+                "Person" ;
+        <http://a.ml/vocabularies/core#name>
+                "Person" .
+
+<http://agents.org/vocabulary#name>
+        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#Property> , <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> ;
+        <http://a.ml/vocabularies/core#description>
+                "The name given to any juduiciary agent" ;
+        <http://a.ml/vocabularies/core#displayName>
+                "Name" .
+
+<http://agents.org/vocabulary#members>
+        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#Property> , <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://agents.org/vocabulary#Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://agents.org/vocabulary#composedOf> ;
+        <http://a.ml/vocabularies/core#description>
+                "The person members of an organization judiciary agent" ;
+        <http://a.ml/vocabularies/core#displayName>
+                "Members" .
+
+<http://agents.org/vocabulary#composedOf>
+        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#Property> , <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://agents.org/vocabulary#Agent> ;
+        <http://a.ml/vocabularies/core#description>
+                "List of other judiciary agents composing another an organization judiciary agent" ;
+        <http://a.ml/vocabularies/core#displayName>
+                "Composed Of" .
+
+<http://agents.org/vocabulary#Agent>
+        a       <http://a.ml/vocabularies/document#DomainElement> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://a.ml/vocabularies/core#description>
+                "The most generic class representing any judiciary agent" ;
+        <http://a.ml/vocabularies/core#displayName>
+                "Agent" ;
+        <http://a.ml/vocabularies/core#name>
+                "Agent" .
+
+<http://agents.org/vocabulary#Organization>
+        a       <http://a.ml/vocabularies/document#DomainElement> , <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://agents.org/vocabulary#Agent> ;
+        <http://a.ml/vocabularies/core#description>
+                "An organization (company, non-profit, etc.) judiciary agent class" ;
+        <http://a.ml/vocabularies/core#displayName>
+                "Organization" ;
+        <http://a.ml/vocabularies/core#name>
+                "Organization" .

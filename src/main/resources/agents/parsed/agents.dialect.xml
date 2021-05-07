@@ -1,0 +1,205 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.0="http://www.w3.org/ns/shacl#"
+    xmlns:j.1="http://a.ml/vocabularies/meta#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.2="http://a.ml/vocabularies/core#"
+    xmlns:j.3="http://a.ml/vocabularies/document#">
+  <j.1:Dialect rdf:about="file://src/main/resources/agents/agents.dialect.yaml">
+    <j.3:declares>
+      <j.3:DomainElement rdf:about="file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode">
+        <j.1:resolvedExtends>
+          <j.3:DomainElement rdf:about="file://src/main/resources/agents/agents.dialect.yaml#/declarations/NamedNode">
+            <j.0:property>
+              <j.3:DomainElement rdf:about="file://src/main/resources/agents/agents.dialect.yaml#/declarations/NamedNode/property/name">
+                <j.0:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <j.2:name>name</j.2:name>
+                <j.0:path>
+                  <j.3:DomainElement rdf:about="http://agents.org/vocabulary#name">
+                    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    <j.2:description>The name given to any juduiciary agent</j.2:description>
+                    <j.2:displayName>Name</j.2:displayName>
+                    <rdf:type rdf:resource="http://a.ml/vocabularies/meta#Property"/>
+                    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+                  </j.3:DomainElement>
+                </j.0:path>
+                <rdf:type rdf:resource="http://a.ml/vocabularies/meta#NodePropertyMapping"/>
+              </j.3:DomainElement>
+            </j.0:property>
+            <j.2:name>NamedNode</j.2:name>
+            <rdf:type rdf:resource="http://www.w3.org/ns/shacl#Shape"/>
+            <rdf:type rdf:resource="http://a.ml/vocabularies/meta#NodeMapping"/>
+          </j.3:DomainElement>
+        </j.1:resolvedExtends>
+        <j.0:property rdf:resource="file://src/main/resources/agents/agents.dialect.yaml#/declarations/NamedNode/property/name"/>
+        <j.0:property>
+          <j.3:DomainElement rdf:about="file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode/property/ssn">
+            <j.0:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+            >1</j.0:minCount>
+            <j.0:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            <j.2:name>ssn</j.2:name>
+            <j.0:path>
+              <j.3:DomainElement rdf:about="http://agents.org/vocabulary#ssn">
+                <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <j.2:description>Number that identifies a physical person in various governamental agencies</j.2:description>
+                <j.2:displayName>Social Security Number</j.2:displayName>
+                <rdf:type rdf:resource="http://a.ml/vocabularies/meta#Property"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+              </j.3:DomainElement>
+            </j.0:path>
+            <rdf:type rdf:resource="http://a.ml/vocabularies/meta#NodePropertyMapping"/>
+          </j.3:DomainElement>
+        </j.0:property>
+        <j.2:name>PersonNode</j.2:name>
+        <j.0:targetClass>
+          <j.3:DomainElement rdf:about="http://agents.org/vocabulary#Person">
+            <rdfs:subClassOf>
+              <j.3:DomainElement rdf:about="http://agents.org/vocabulary#Agent">
+                <j.2:description>The most generic class representing any judiciary agent</j.2:description>
+                <j.2:displayName>Agent</j.2:displayName>
+                <j.2:name>Agent</j.2:name>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+              </j.3:DomainElement>
+            </rdfs:subClassOf>
+            <j.2:description>A physical person judiciary agent class</j.2:description>
+            <j.2:displayName>Person</j.2:displayName>
+            <j.2:name>Person</j.2:name>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+          </j.3:DomainElement>
+        </j.0:targetClass>
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#Shape"/>
+        <rdf:type rdf:resource="http://a.ml/vocabularies/meta#NodeMapping"/>
+      </j.3:DomainElement>
+    </j.3:declares>
+    <rdf:type rdf:resource="http://a.ml/vocabularies/document#Document"/>
+    <j.3:version>3.0.0</j.3:version>
+    <rdf:type rdf:resource="http://a.ml/vocabularies/document#Module"/>
+    <j.3:declares>
+      <j.3:DomainElement rdf:about="file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode">
+        <j.1:resolvedExtends rdf:resource="file://src/main/resources/agents/agents.dialect.yaml#/declarations/NamedNode"/>
+        <j.0:property rdf:resource="file://src/main/resources/agents/agents.dialect.yaml#/declarations/NamedNode/property/name"/>
+        <j.0:property>
+          <j.3:DomainElement rdf:about="file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode/property/members">
+            <j.1:allowMultiple rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >true</j.1:allowMultiple>
+            <j.0:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+            >1</j.0:minCount>
+            <j.0:node>
+              <rdfs:Seq rdf:about="file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode/property/members/list">
+                <rdfs:_1 rdf:resource="file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode"/>
+              </rdfs:Seq>
+            </j.0:node>
+            <j.2:name>members</j.2:name>
+            <j.0:path>
+              <j.3:DomainElement rdf:about="http://agents.org/vocabulary#members">
+                <rdfs:subPropertyOf>
+                  <j.3:DomainElement rdf:about="http://agents.org/vocabulary#composedOf">
+                    <rdfs:range rdf:resource="http://agents.org/vocabulary#Agent"/>
+                    <j.2:description>List of other judiciary agents composing another an organization judiciary agent</j.2:description>
+                    <j.2:displayName>Composed Of</j.2:displayName>
+                    <rdf:type rdf:resource="http://a.ml/vocabularies/meta#Property"/>
+                    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+                  </j.3:DomainElement>
+                </rdfs:subPropertyOf>
+                <rdfs:range rdf:resource="http://agents.org/vocabulary#Person"/>
+                <j.2:description>The person members of an organization judiciary agent</j.2:description>
+                <j.2:displayName>Members</j.2:displayName>
+                <rdf:type rdf:resource="http://a.ml/vocabularies/meta#Property"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+              </j.3:DomainElement>
+            </j.0:path>
+            <rdf:type rdf:resource="http://a.ml/vocabularies/meta#NodePropertyMapping"/>
+          </j.3:DomainElement>
+        </j.0:property>
+        <j.2:name>OrganizationNode</j.2:name>
+        <j.0:targetClass>
+          <j.3:DomainElement rdf:about="http://agents.org/vocabulary#Organization">
+            <rdfs:subClassOf rdf:resource="http://agents.org/vocabulary#Agent"/>
+            <j.2:description>An organization (company, non-profit, etc.) judiciary agent class</j.2:description>
+            <j.2:displayName>Organization</j.2:displayName>
+            <j.2:name>Organization</j.2:name>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+          </j.3:DomainElement>
+        </j.0:targetClass>
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#Shape"/>
+        <rdf:type rdf:resource="http://a.ml/vocabularies/meta#NodeMapping"/>
+      </j.3:DomainElement>
+    </j.3:declares>
+    <rdf:type rdf:resource="http://a.ml/vocabularies/document#Unit"/>
+    <j.1:documents>
+      <j.3:DomainElement rdf:about="file://src/main/resources/agents/agents.dialect.yaml/documents">
+        <j.1:fragments>
+          <j.3:DomainElement rdf:about="file://src/main/resources/agents/agents.dialect.yaml#/documents/fragments/Person">
+            <j.1:encodedNode rdf:resource="file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode"/>
+            <j.2:name>Person</j.2:name>
+            <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DocumentMapping"/>
+          </j.3:DomainElement>
+        </j.1:fragments>
+        <j.1:fragments>
+          <j.3:DomainElement rdf:about="file://src/main/resources/agents/agents.dialect.yaml#/documents/fragments/Organization">
+            <j.1:encodedNode rdf:resource="file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode"/>
+            <j.2:name>Organization</j.2:name>
+            <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DocumentMapping"/>
+          </j.3:DomainElement>
+        </j.1:fragments>
+        <j.1:rootDocument>
+          <j.3:DomainElement rdf:about="file://src/main/resources/agents/agents.dialect.yaml#/documents/root">
+            <j.1:encodedNode>
+              <j.3:DomainElement rdf:about="file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode">
+                <j.0:property>
+                  <j.3:DomainElement rdf:about="file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode/property/agents">
+                    <j.1:allowMultiple rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                    >true</j.1:allowMultiple>
+                    <j.0:node>
+                      <rdfs:Seq rdf:about="file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode/property/agents/list">
+                        <rdfs:_2 rdf:resource="file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode"/>
+                        <rdfs:_1 rdf:resource="file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode"/>
+                      </rdfs:Seq>
+                    </j.0:node>
+                    <j.2:name>agents</j.2:name>
+                    <j.0:path rdf:resource="http://agents.org/vocabulary#composedOf"/>
+                    <rdf:type rdf:resource="http://a.ml/vocabularies/meta#NodePropertyMapping"/>
+                  </j.3:DomainElement>
+                </j.0:property>
+                <j.2:name>AgentListNode</j.2:name>
+                <rdf:type rdf:resource="http://www.w3.org/ns/shacl#Shape"/>
+                <rdf:type rdf:resource="http://a.ml/vocabularies/meta#NodeMapping"/>
+              </j.3:DomainElement>
+            </j.1:encodedNode>
+            <j.2:name>Agents 1.0</j.2:name>
+            <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DocumentMapping"/>
+          </j.3:DomainElement>
+        </j.1:rootDocument>
+        <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DocumentsModel"/>
+      </j.3:DomainElement>
+    </j.1:documents>
+    <j.3:location>file://src/main/resources/agents/agents.dialect.yaml</j.3:location>
+    <j.3:references>
+      <j.3:Unit rdf:about="file://src/main/resources/agents/agents.vocabulary.yaml">
+        <j.3:declares rdf:resource="http://agents.org/vocabulary#members"/>
+        <j.2:name>Agents</j.2:name>
+        <j.3:declares rdf:resource="http://agents.org/vocabulary#Organization"/>
+        <j.3:declares rdf:resource="http://agents.org/vocabulary#composedOf"/>
+        <j.3:declares rdf:resource="http://agents.org/vocabulary#name"/>
+        <j.3:root rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</j.3:root>
+        <j.3:declares rdf:resource="http://agents.org/vocabulary#ssn"/>
+        <j.3:version>3.0.0</j.3:version>
+        <rdf:type rdf:resource="http://a.ml/vocabularies/meta#Vocabulary"/>
+        <j.1:base>http://agents.org/vocabulary#</j.1:base>
+        <j.3:declares rdf:resource="http://agents.org/vocabulary#Agent"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+        <j.3:declares rdf:resource="http://agents.org/vocabulary#Person"/>
+        <j.3:location>file://src/main/resources/agents/agents.vocabulary.yaml</j.3:location>
+      </j.3:Unit>
+    </j.3:references>
+    <j.3:declares rdf:resource="file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode"/>
+    <j.2:version>1.0</j.2:version>
+    <j.3:root rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.3:root>
+    <j.3:declares rdf:resource="file://src/main/resources/agents/agents.dialect.yaml#/declarations/NamedNode"/>
+    <j.2:name>Agents</j.2:name>
+    <rdf:type rdf:resource="http://a.ml/vocabularies/document#Fragment"/>
+  </j.1:Dialect>
+</rdf:RDF>
