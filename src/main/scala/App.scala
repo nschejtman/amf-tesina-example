@@ -3,7 +3,8 @@ import amf.client.parse.Aml10Parser
 import amf.plugins.document.Vocabularies
 import amf.plugins.document.vocabularies.AMLPlugin
 import amf.plugins.features.validation.AMFValidatorPlugin
-import org.apache.jena.rdf.model.Model
+import org.apache.jena.rdf.model.{InfModel, Model, ModelFactory}
+import org.apache.jena.reasoner.ReasonerRegistry
 
 import java.io.FileWriter
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -21,7 +22,7 @@ object App {
       // Parse the input files: dialect, vocabulary and example that will be mapped to RDF with the dialect mappings
       dialectBaseUnitModel        <- parse("file://src/main/resources/agents/agents.dialect.yaml")
       vocabularyBaseUnitUnitModel <- parse("file://src/main/resources/agents/agents.vocabulary.yaml")
-      exampleBaseUnitModel        <- parse("file://src/main/resources/agents/example-instances/agents.instance.yaml")
+      instanceBaseUnitModel       <- parse("file://src/main/resources/agents/example-instances/agents.instance.yaml")
 
       /**
         * Transform AMF's native Base Unit representation to RDF
@@ -29,9 +30,13 @@ object App {
         * In AMF we have our own internal model which is based on RDF but is easier to consume by traditional programming
         * languages. We can convert it nevertheless to an RDF representation
         */
-      dialectRdfModel    <- toRdfModel(dialectBaseUnitModel)
-      vocabularyRdfModel <- toRdfModel(vocabularyBaseUnitUnitModel)
-      exampleRdfModel    <- toRdfModel(exampleBaseUnitModel)
+      dialectRdfModel           <- toRdfModel(dialectBaseUnitModel)
+      vocabularyRdfModel        <- toRdfModel(vocabularyBaseUnitUnitModel)
+      instanceRdfModel          <- toRdfModel(instanceBaseUnitModel)
+      instanceInferenceRdfModel <- getInferenceModel(instanceRdfModel, vocabularyRdfModel)
+      inferredTriples <- Future.successful {
+        instanceInferenceRdfModel.difference(instanceRdfModel)
+      }
 
     } yield {
       case class Fmt(lang: String, extension: String)
@@ -40,7 +45,14 @@ object App {
         case Fmt(lang, extension) =>
           write(dialectRdfModel, s"src/main/resources/agents/graphs/agents.dialect$extension", lang)
           write(vocabularyRdfModel, s"src/main/resources/agents/graphs/agents.vocabulary$extension", lang)
-          write(exampleRdfModel, s"src/main/resources/agents/graphs/agents.instance$extension", lang)
+          write(instanceRdfModel, s"src/main/resources/agents/graphs/agents.instance$extension", lang)
+          write(instanceInferenceRdfModel,
+                s"src/main/resources/agents/graphs-with-reasoning/agents.instance$extension",
+                lang)
+          write(inferredTriples,
+                s"src/main/resources/agents/graphs-with-reasoning/agents.inferred.triples.instance$extension",
+                lang)
+
       }
     }
 
@@ -50,6 +62,13 @@ object App {
     }
 
     Await.ready(result, Duration.Inf)
+  }
+
+  private def getInferenceModel(data: Model, schema: Model): Future[InfModel] = {
+    val reasoner = ReasonerRegistry.getOWLReasoner.bindSchema(schema)
+    Future.successful {
+      ModelFactory.createInfModel(reasoner, data)
+    }
   }
 
   private def write(model: Model, fileName: String, lang: String): Unit = {
