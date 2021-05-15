@@ -1,93 +1,79 @@
 {
   "@graph" : [ {
-    "@id" : "file://src/main/resources/agents/examples/agents.example.yaml",
-    "@type" : [ "http://a.ml/vocabularies/meta#DialectInstance", "http://a.ml/vocabularies/document#Unit", "http://a.ml/vocabularies/document#Document", "http://a.ml/vocabularies/document#Fragment", "http://a.ml/vocabularies/document#Module" ],
-    "encodes" : "file://src/main/resources/agents/examples/agents.example.yaml#/encodes",
-    "references" : [ "file://src/main/resources/agents/examples/polimi.fragment.example.yaml", "file://src/main/resources/agents/examples/nicolas.fragment.example.yaml" ],
+    "@id" : "file://src/main/resources/agents/example-instances/agents.instance.yaml",
+    "@type" : [ "http://a.ml/vocabularies/document#Module", "http://a.ml/vocabularies/document#Fragment", "http://a.ml/vocabularies/document#Unit", "http://a.ml/vocabularies/meta#DialectInstance", "http://a.ml/vocabularies/document#Document" ],
+    "encodes" : "file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes",
+    "references" : [ "file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml", "file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml" ],
     "http://a.ml/vocabularies/document#root" : true,
     "version" : "3.0.0",
     "definedBy" : "file://src/main/resources/agents/agents.dialect.yaml"
   }, {
-    "@id" : "file://src/main/resources/agents/examples/agents.example.yaml#/encodes",
+    "@id" : "file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes",
     "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#DialectDomainElement", "file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode" ],
-    "composedOf" : [ "file://src/main/resources/agents/examples/agents.example.yaml#/encodes/agents/2", "file://src/main/resources/agents/examples/agents.example.yaml#/encodes/agents/1", "file://src/main/resources/agents/examples/agents.example.yaml#/encodes/agents/0" ]
+    "composedOf" : [ "file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2", "file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/1", "file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/0" ]
   }, {
-    "@id" : "file://src/main/resources/agents/examples/agents.example.yaml#/encodes/agents/0",
+    "@id" : "file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/0",
     "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#DialectDomainElement", "file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode", "http://agents.org/vocabulary#Person" ],
-    "link-label" : "nicolas.fragment.example.yaml",
-    "link-target" : "file://src/main/resources/agents/examples/nicolas.fragment.example.yaml#/encodes"
+    "link-label" : "nicolas.fragment.instance.yaml",
+    "link-target" : "file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml#/encodes"
   }, {
-    "@id" : "file://src/main/resources/agents/examples/agents.example.yaml#/encodes/agents/1",
+    "@id" : "file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/1",
     "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#DialectDomainElement", "file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode", "http://agents.org/vocabulary#Organization" ],
-    "link-label" : "polimi.fragment.example.yaml",
-    "link-target" : "file://src/main/resources/agents/examples/polimi.fragment.example.yaml#/encodes"
+    "link-label" : "polimi.fragment.instance.yaml",
+    "link-target" : "file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/encodes"
   }, {
-    "@id" : "file://src/main/resources/agents/examples/agents.example.yaml#/encodes/agents/2",
+    "@id" : "file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2",
     "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#DialectDomainElement", "file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode", "http://agents.org/vocabulary#Organization" ],
-    "members" : [ "file://src/main/resources/agents/examples/agents.example.yaml#/encodes/agents/2/members/1", "file://src/main/resources/agents/examples/agents.example.yaml#/encodes/agents/2/members/0" ],
+    "members" : [ "file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/1", "file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/0" ],
     "name" : "Boca Juniors"
   }, {
-    "@id" : "file://src/main/resources/agents/examples/agents.example.yaml#/encodes/agents/2/members/0",
+    "@id" : "file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/0",
     "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#DialectDomainElement", "file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode", "http://agents.org/vocabulary#Person" ],
     "name" : "Carlos Alberto Tevez",
     "ssn" : "333333333"
   }, {
-    "@id" : "file://src/main/resources/agents/examples/agents.example.yaml#/encodes/agents/2/members/1",
+    "@id" : "file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/1",
     "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#DialectDomainElement", "file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode", "http://agents.org/vocabulary#Person" ],
     "name" : "Cristian Pavon",
     "ssn" : "444444444"
   }, {
-    "@id" : "file://src/main/resources/agents/examples/nicolas.fragment.example.yaml",
+    "@id" : "file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml",
     "@type" : [ "http://a.ml/vocabularies/document#Unit", "http://a.ml/vocabularies/document#Fragment", "http://a.ml/vocabularies/meta#DialectInstanceFragment" ],
-    "encodes" : "file://src/main/resources/agents/examples/nicolas.fragment.example.yaml#/encodes",
+    "encodes" : "file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml#/encodes",
     "http://a.ml/vocabularies/document#root" : false,
     "version" : "3.0.0",
     "definedBy" : "file://src/main/resources/agents/agents.dialect.yaml",
     "fragment" : "Person"
   }, {
-    "@id" : "file://src/main/resources/agents/examples/nicolas.fragment.example.yaml#/encodes",
+    "@id" : "file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml#/encodes",
     "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#DialectDomainElement", "file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode", "http://agents.org/vocabulary#Person" ],
     "name" : "Nicolas Schejtman",
     "ssn" : "38028835"
   }, {
-    "@id" : "file://src/main/resources/agents/examples/polimi.fragment.example.yaml",
+    "@id" : "file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml",
     "@type" : [ "http://a.ml/vocabularies/document#Unit", "http://a.ml/vocabularies/document#Fragment", "http://a.ml/vocabularies/meta#DialectInstanceFragment" ],
-    "encodes" : "file://src/main/resources/agents/examples/polimi.fragment.example.yaml#/encodes",
+    "encodes" : "file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/encodes",
     "http://a.ml/vocabularies/document#root" : false,
     "version" : "3.0.0",
     "definedBy" : "file://src/main/resources/agents/agents.dialect.yaml",
     "fragment" : "Organization"
   }, {
-    "@id" : "file://src/main/resources/agents/examples/polimi.fragment.example.yaml#/encodes",
+    "@id" : "file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/encodes",
     "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#DialectDomainElement", "file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode", "http://agents.org/vocabulary#Organization" ],
-    "members" : [ "file://src/main/resources/agents/examples/polimi.fragment.example.yaml#/members/1", "file://src/main/resources/agents/examples/polimi.fragment.example.yaml#/members/0" ],
+    "members" : [ "file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/1", "file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/0" ],
     "name" : "Politecnico di Milano"
   }, {
-    "@id" : "file://src/main/resources/agents/examples/polimi.fragment.example.yaml#/members/0",
+    "@id" : "file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/0",
     "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#DialectDomainElement", "file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode", "http://agents.org/vocabulary#Person" ],
     "name" : "Marco Colombetti",
     "ssn" : "111111111"
   }, {
-    "@id" : "file://src/main/resources/agents/examples/polimi.fragment.example.yaml#/members/1",
+    "@id" : "file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/1",
     "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#DialectDomainElement", "file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode", "http://agents.org/vocabulary#Person" ],
     "name" : "Angelo Carlo Morzenti",
     "ssn" : "222222222"
   } ],
   "@context" : {
-    "link-label" : {
-      "@id" : "http://a.ml/vocabularies/document#link-label"
-    },
-    "link-target" : {
-      "@id" : "http://a.ml/vocabularies/document#link-target",
-      "@type" : "@id"
-    },
-    "name" : {
-      "@id" : "http://agents.org/vocabulary#name"
-    },
-    "members" : {
-      "@id" : "http://agents.org/vocabulary#members",
-      "@type" : "@id"
-    },
     "root" : {
       "@id" : "http://a.ml/vocabularies/document#root",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
@@ -106,15 +92,29 @@
       "@id" : "http://a.ml/vocabularies/meta#definedBy",
       "@type" : "@id"
     },
+    "link-label" : {
+      "@id" : "http://a.ml/vocabularies/document#link-label"
+    },
+    "link-target" : {
+      "@id" : "http://a.ml/vocabularies/document#link-target",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://agents.org/vocabulary#name"
+    },
     "ssn" : {
       "@id" : "http://agents.org/vocabulary#ssn"
     },
-    "references" : {
-      "@id" : "http://a.ml/vocabularies/document#references",
+    "members" : {
+      "@id" : "http://agents.org/vocabulary#members",
       "@type" : "@id"
     },
     "composedOf" : {
       "@id" : "http://agents.org/vocabulary#composedOf",
+      "@type" : "@id"
+    },
+    "references" : {
+      "@id" : "http://a.ml/vocabularies/document#references",
       "@type" : "@id"
     }
   }

@@ -4,14 +4,15 @@
     xmlns:j.1="file://src/main/resources/agents/agents.dialect.yaml#/declarations/"
     xmlns:j.2="http://a.ml/vocabularies/meta#"
     xmlns:j.3="http://a.ml/vocabularies/document#">
-  <j.2:DialectInstance rdf:about="file://src/main/resources/agents/examples/agents.example.yaml">
+  <j.3:Module rdf:about="file://src/main/resources/agents/example-instances/agents.instance.yaml">
+    <j.3:version>3.0.0</j.3:version>
     <j.3:encodes>
-      <j.3:DomainElement rdf:about="file://src/main/resources/agents/examples/agents.example.yaml#/encodes">
+      <j.3:DomainElement rdf:about="file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes">
         <j.0:composedOf>
-          <j.3:DomainElement rdf:about="file://src/main/resources/agents/examples/agents.example.yaml#/encodes/agents/2">
+          <j.3:DomainElement rdf:about="file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2">
             <j.0:name>Boca Juniors</j.0:name>
             <j.0:members>
-              <j.3:DomainElement rdf:about="file://src/main/resources/agents/examples/agents.example.yaml#/encodes/agents/2/members/1">
+              <j.3:DomainElement rdf:about="file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/1">
                 <j.0:name>Cristian Pavon</j.0:name>
                 <j.0:ssn>444444444</j.0:ssn>
                 <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DialectDomainElement"/>
@@ -20,7 +21,7 @@
               </j.3:DomainElement>
             </j.0:members>
             <j.0:members>
-              <j.3:DomainElement rdf:about="file://src/main/resources/agents/examples/agents.example.yaml#/encodes/agents/2/members/0">
+              <j.3:DomainElement rdf:about="file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/0">
                 <j.0:name>Carlos Alberto Tevez</j.0:name>
                 <j.0:ssn>333333333</j.0:ssn>
                 <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DialectDomainElement"/>
@@ -34,13 +35,13 @@
           </j.3:DomainElement>
         </j.0:composedOf>
         <j.0:composedOf>
-          <j.3:DomainElement rdf:about="file://src/main/resources/agents/examples/agents.example.yaml#/encodes/agents/1">
-            <j.3:link-label>polimi.fragment.example.yaml</j.3:link-label>
+          <j.3:DomainElement rdf:about="file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/1">
+            <j.3:link-label>polimi.fragment.instance.yaml</j.3:link-label>
             <j.3:link-target>
-              <j.3:DomainElement rdf:about="file://src/main/resources/agents/examples/polimi.fragment.example.yaml#/encodes">
+              <j.3:DomainElement rdf:about="file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/encodes">
                 <j.0:name>Politecnico di Milano</j.0:name>
                 <j.0:members>
-                  <j.3:DomainElement rdf:about="file://src/main/resources/agents/examples/polimi.fragment.example.yaml#/members/1">
+                  <j.3:DomainElement rdf:about="file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/1">
                     <j.0:name>Angelo Carlo Morzenti</j.0:name>
                     <j.0:ssn>222222222</j.0:ssn>
                     <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DialectDomainElement"/>
@@ -49,7 +50,7 @@
                   </j.3:DomainElement>
                 </j.0:members>
                 <j.0:members>
-                  <j.3:DomainElement rdf:about="file://src/main/resources/agents/examples/polimi.fragment.example.yaml#/members/0">
+                  <j.3:DomainElement rdf:about="file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/0">
                     <j.0:name>Marco Colombetti</j.0:name>
                     <j.0:ssn>111111111</j.0:ssn>
                     <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DialectDomainElement"/>
@@ -68,10 +69,10 @@
           </j.3:DomainElement>
         </j.0:composedOf>
         <j.0:composedOf>
-          <j.3:DomainElement rdf:about="file://src/main/resources/agents/examples/agents.example.yaml#/encodes/agents/0">
-            <j.3:link-label>nicolas.fragment.example.yaml</j.3:link-label>
+          <j.3:DomainElement rdf:about="file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/0">
+            <j.3:link-label>nicolas.fragment.instance.yaml</j.3:link-label>
             <j.3:link-target>
-              <j.3:DomainElement rdf:about="file://src/main/resources/agents/examples/nicolas.fragment.example.yaml#/encodes">
+              <j.3:DomainElement rdf:about="file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml#/encodes">
                 <j.0:name>Nicolas Schejtman</j.0:name>
                 <j.0:ssn>38028835</j.0:ssn>
                 <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DialectDomainElement"/>
@@ -88,13 +89,18 @@
         <rdf:type rdf:resource="file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode"/>
       </j.3:DomainElement>
     </j.3:encodes>
+    <rdf:type rdf:resource="http://a.ml/vocabularies/document#Fragment"/>
+    <j.3:root rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.3:root>
+    <j.2:definedBy rdf:resource="file://src/main/resources/agents/agents.dialect.yaml"/>
     <rdf:type rdf:resource="http://a.ml/vocabularies/document#Unit"/>
+    <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DialectInstance"/>
     <j.3:references>
-      <j.3:Unit rdf:about="file://src/main/resources/agents/examples/polimi.fragment.example.yaml">
+      <j.3:Unit rdf:about="file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml">
         <j.3:root rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
         >false</j.3:root>
         <j.3:version>3.0.0</j.3:version>
-        <j.3:encodes rdf:resource="file://src/main/resources/agents/examples/polimi.fragment.example.yaml#/encodes"/>
+        <j.3:encodes rdf:resource="file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/encodes"/>
         <j.2:fragment>Organization</j.2:fragment>
         <j.2:definedBy rdf:resource="file://src/main/resources/agents/agents.dialect.yaml"/>
         <rdf:type rdf:resource="http://a.ml/vocabularies/document#Fragment"/>
@@ -102,23 +108,17 @@
       </j.3:Unit>
     </j.3:references>
     <rdf:type rdf:resource="http://a.ml/vocabularies/document#Document"/>
-    <j.3:root rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</j.3:root>
-    <j.2:definedBy rdf:resource="file://src/main/resources/agents/agents.dialect.yaml"/>
-    <j.3:version>3.0.0</j.3:version>
-    <rdf:type rdf:resource="http://a.ml/vocabularies/document#Fragment"/>
     <j.3:references>
-      <j.3:Unit rdf:about="file://src/main/resources/agents/examples/nicolas.fragment.example.yaml">
+      <j.3:Unit rdf:about="file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml">
         <j.3:root rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
         >false</j.3:root>
         <j.3:version>3.0.0</j.3:version>
-        <j.3:encodes rdf:resource="file://src/main/resources/agents/examples/nicolas.fragment.example.yaml#/encodes"/>
+        <j.3:encodes rdf:resource="file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml#/encodes"/>
         <j.2:fragment>Person</j.2:fragment>
         <j.2:definedBy rdf:resource="file://src/main/resources/agents/agents.dialect.yaml"/>
         <rdf:type rdf:resource="http://a.ml/vocabularies/document#Fragment"/>
         <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DialectInstanceFragment"/>
       </j.3:Unit>
     </j.3:references>
-    <rdf:type rdf:resource="http://a.ml/vocabularies/document#Module"/>
-  </j.2:DialectInstance>
+  </j.3:Module>
 </rdf:RDF>

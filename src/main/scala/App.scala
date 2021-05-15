@@ -21,7 +21,7 @@ object App {
       // Parse the input files: dialect, vocabulary and example that will be mapped to RDF with the dialect mappings
       dialectBaseUnitModel        <- parse("file://src/main/resources/agents/agents.dialect.yaml")
       vocabularyBaseUnitUnitModel <- parse("file://src/main/resources/agents/agents.vocabulary.yaml")
-      exampleBaseUnitModel        <- parse("file://src/main/resources/agents/examples/agents.example.yaml")
+      exampleBaseUnitModel        <- parse("file://src/main/resources/agents/example-instances/agents.instance.yaml")
 
       /**
         * Transform AMF's native Base Unit representation to RDF
@@ -38,15 +38,15 @@ object App {
       val formats = Fmt("JSON-LD", ".jsonld") :: Fmt("RDF/XML", ".xml") :: Fmt("TTL", ".ttl") :: Nil
       formats.foreach {
         case Fmt(lang, extension) =>
-          write(dialectRdfModel, s"src/main/resources/agents/parsed/agents.dialect$extension", lang)
-          write(vocabularyRdfModel, s"src/main/resources/agents/parsed/agents.vocabulary$extension", lang)
-          write(exampleRdfModel, s"src/main/resources/agents/parsed/agents.example$extension", lang)
+          write(dialectRdfModel, s"src/main/resources/agents/graphs/agents.dialect$extension", lang)
+          write(vocabularyRdfModel, s"src/main/resources/agents/graphs/agents.vocabulary$extension", lang)
+          write(exampleRdfModel, s"src/main/resources/agents/graphs/agents.instance$extension", lang)
       }
     }
 
     result onComplete {
       case Success(_) => println("Finished with success")
-      case Failure(_) => println("Finished with failure")
+      case Failure(f) => println(s"Finished with failure: ${f.toString}")
     }
 
     Await.ready(result, Duration.Inf)
