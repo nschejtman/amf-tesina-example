@@ -1,849 +1,527 @@
-<http://www.w3.org/2000/01/rdf-schema#domain>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/2000/01/rdf-schema#domain> .
-
-<http://www.w3.org/2002/07/owl#DatatypeProperty>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-
-<http://www.w3.org/2002/07/owl#Property>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2002/07/owl#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/2002/07/owl#Property> .
-
-<http://www.w3.org/2002/07/owl#imports>
-        a       <http://www.w3.org/2002/07/owl#OntologyProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/2002/07/owl#Ontology> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2002/07/owl#Ontology> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/2002/07/owl#imports> .
-
-<http://www.w3.org/2001/XMLSchema#negativeInteger>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
-
-<http://www.w3.org/2002/07/owl#ObjectProperty>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-
-<http://www.w3.org/2002/07/owl#intersectionOf>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/2002/07/owl#intersectionOf> .
-
-<http://www.w3.org/2002/07/owl#backwardCompatibleWith>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/2002/07/owl#Ontology> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2002/07/owl#Ontology> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/2002/07/owl#backwardCompatibleWith> .
-
-<http://a.ml/vocabularies/meta#definedBy>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://a.ml/vocabularies/meta#definedBy> .
-
-<http://www.w3.org/2002/07/owl#Ontology>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2002/07/owl#Ontology> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/2002/07/owl#Ontology> .
-
-<http://www.w3.org/2001/XMLSchema#unsignedLong>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2001/XMLSchema#unsignedLong> , <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#long> , <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
-        <http://www.w3.org/2002/07/owl#disjointWith>
-                <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#boolean> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/2001/XMLSchema#unsignedLong> .
-
-<http://a.ml/vocabularies/document#references>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://a.ml/vocabularies/document#references> .
-
-<http://www.w3.org/1999/02/22-rdf-syntax-ns#first>
-        a       <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> .
-
-<http://a.ml/vocabularies/document#link-target>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://a.ml/vocabularies/document#link-target> .
-
-<http://www.w3.org/2002/07/owl#onProperty>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/2002/07/owl#Restriction> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2002/07/owl#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/2002/07/owl#onProperty> .
-
-<http://www.w3.org/2002/07/owl#differentFrom>
-        a       <http://www.w3.org/2002/07/owl#SymmetricProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/2002/07/owl#differentFrom> .
-
-<http://www.w3.org/1999/02/22-rdf-syntax-ns#object>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> .
-
-<http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> .
-
-<http://www.w3.org/2002/07/owl#disjointWith>
-        a       <http://www.w3.org/2002/07/owl#SymmetricProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/2002/07/owl#disjointWith> .
-
-<http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2000/01/rdf-schema#Container> .
-
-<http://www.w3.org/2002/07/owl#Class>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/2002/07/owl#Class> .
-
-<http://www.w3.org/2001/XMLSchema#duration>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2002/07/owl#disjointWith>
-                <http://www.w3.org/2001/XMLSchema#long> , <http://www.w3.org/2001/XMLSchema#byte> , <http://www.w3.org/2001/XMLSchema#unsignedShort> , <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#unsignedLong> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#int> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#unsignedInt> , <http://www.w3.org/2001/XMLSchema#short> , <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> , <http://www.w3.org/2001/XMLSchema#unsignedByte> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#decimal> , <http://www.w3.org/2001/XMLSchema#boolean> , <http://www.w3.org/2001/XMLSchema#nonPositiveInteger> .
-
-<http://a.ml/vocabularies/document#declares>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://a.ml/vocabularies/document#declares> .
-
-<http://www.w3.org/1999/02/22-rdf-syntax-ns#List>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-
-<http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
-
-<http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq>
-        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2000/01/rdf-schema#Container> .
-
-<http://www.w3.org/2001/XMLSchema#double>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
-
-<http://www.w3.org/2001/XMLSchema#gMonth>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
-
-<http://www.w3.org/2002/07/owl#FunctionalProperty>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-
-<http://www.w3.org/2001/XMLSchema#unsignedByte>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2001/XMLSchema#unsignedLong> , <http://www.w3.org/2001/XMLSchema#unsignedInt> , <http://www.w3.org/2001/XMLSchema#int> , <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#long> , <http://www.w3.org/2001/XMLSchema#byte> , <http://www.w3.org/2001/XMLSchema#short> , <http://www.w3.org/2001/XMLSchema#unsignedByte> , <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> , <http://www.w3.org/2001/XMLSchema#unsignedShort> ;
-        <http://www.w3.org/2002/07/owl#disjointWith>
-                <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#boolean> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/2001/XMLSchema#unsignedByte> .
-
-<http://a.ml/vocabularies/document#version>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://a.ml/vocabularies/document#version> .
-
-<http://www.w3.org/2002/07/owl#SymmetricProperty>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2002/07/owl#ObjectProperty> .
-
-<http://www.w3.org/2001/XMLSchema#gMonthDay>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
-
-<http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty>
-        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-
-<http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-
-<http://www.w3.org/2001/XMLSchema#nonNegativeInteger>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
-        <http://www.w3.org/2002/07/owl#disjointWith>
-                <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#boolean> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-
-<http://www.w3.org/2002/07/owl#sameAs>
-        a       <http://www.w3.org/2002/07/owl#SymmetricProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/2002/07/owl#sameAs> .
-
-<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
-
-<http://www.w3.org/2001/XMLSchema#unsignedShort>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2001/XMLSchema#unsignedLong> , <http://www.w3.org/2001/XMLSchema#unsignedInt> , <http://www.w3.org/2001/XMLSchema#int> , <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#long> , <http://www.w3.org/2001/XMLSchema#short> , <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> , <http://www.w3.org/2001/XMLSchema#unsignedShort> ;
-        <http://www.w3.org/2002/07/owl#disjointWith>
-                <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#boolean> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/2001/XMLSchema#unsignedShort> .
-
-<http://www.w3.org/2001/XMLSchema#gDay>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
-
-<http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
-
-<http://www.w3.org/2000/01/rdf-schema#range>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/2000/01/rdf-schema#range> .
-
-<http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/2000/01/rdf-schema#seeAlso> , <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> .
-
-<http://www.w3.org/2001/XMLSchema#boolean>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2002/07/owl#disjointWith>
-                <http://www.w3.org/2001/XMLSchema#long> , <http://www.w3.org/2001/XMLSchema#byte> , <http://www.w3.org/2001/XMLSchema#unsignedShort> , <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#unsignedLong> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#int> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#unsignedInt> , <http://www.w3.org/2001/XMLSchema#short> , <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#unsignedByte> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#decimal> , <http://www.w3.org/2001/XMLSchema#nonPositiveInteger> .
-
-<http://www.w3.org/2002/07/owl#InverseFunctionalProperty>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2002/07/owl#ObjectProperty> .
-
-<http://www.w3.org/2002/07/owl#Nothing>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2002/07/owl#Nothing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/2002/07/owl#Nothing> .
-
-<http://a.ml/vocabularies/meta#base>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://a.ml/vocabularies/meta#base> .
-
-<http://www.w3.org/2001/XMLSchema#hexBinary>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
-
-<http://agents.org/vocabulary#Organization>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://a.ml/vocabularies/document#DomainElement> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2002/07/owl#Thing> , <http://agents.org/vocabulary#Organization> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://agents.org/vocabulary#Agent> ;
-        <http://a.ml/vocabularies/core#description>
-                "An organization (company, non-profit, etc.) judiciary agent class" ;
-        <http://a.ml/vocabularies/core#displayName>
-                "Organization" ;
-        <http://a.ml/vocabularies/core#name>
-                "Organization" ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://agents.org/vocabulary#Organization> .
-
-<http://www.w3.org/2002/07/owl#oneOf>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/2002/07/owl#oneOf> .
-
-<http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag>
-        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2000/01/rdf-schema#Container> .
-
-<http://a.ml/vocabularies/meta#fragment>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://a.ml/vocabularies/meta#fragment> .
-
-<http://www.w3.org/2001/XMLSchema#decimal>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2002/07/owl#disjointWith>
-                <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#boolean> .
-
-<http://a.ml/vocabularies/core#displayName>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://a.ml/vocabularies/core#displayName> .
-
-<http://www.w3.org/2001/XMLSchema#dateTime>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2002/07/owl#disjointWith>
-                <http://www.w3.org/2001/XMLSchema#long> , <http://www.w3.org/2001/XMLSchema#byte> , <http://www.w3.org/2001/XMLSchema#unsignedShort> , <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#unsignedLong> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#int> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#unsignedInt> , <http://www.w3.org/2001/XMLSchema#short> , <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#unsignedByte> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#decimal> , <http://www.w3.org/2001/XMLSchema#boolean> , <http://www.w3.org/2001/XMLSchema#nonPositiveInteger> .
-
-<http://agents.org/vocabulary#members>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#Property> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2002/07/owl#Thing> , <http://agents.org/vocabulary#Person> , <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://agents.org/vocabulary#composedOf> , <http://agents.org/vocabulary#members> ;
-        <http://a.ml/vocabularies/core#description>
-                "The person members of an organization judiciary agent" ;
-        <http://a.ml/vocabularies/core#displayName>
-                "Members" .
-
-<http://www.w3.org/2001/XMLSchema#date>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2002/07/owl#disjointWith>
-                <http://www.w3.org/2001/XMLSchema#long> , <http://www.w3.org/2001/XMLSchema#byte> , <http://www.w3.org/2001/XMLSchema#unsignedShort> , <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#unsignedLong> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#int> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#unsignedInt> , <http://www.w3.org/2001/XMLSchema#short> , <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#unsignedByte> , <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#decimal> , <http://www.w3.org/2001/XMLSchema#boolean> , <http://www.w3.org/2001/XMLSchema#nonPositiveInteger> .
-
-<http://www.w3.org/2001/XMLSchema#int>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2001/XMLSchema#int> , <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#long> ;
-        <http://www.w3.org/2002/07/owl#disjointWith>
-                <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#boolean> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/2001/XMLSchema#int> .
-
-<http://www.w3.org/2001/XMLSchema#gYear>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
-
-<http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> .
-
-<http://agents.org/vocabulary#Person>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://a.ml/vocabularies/document#DomainElement> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://agents.org/vocabulary#Person> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://agents.org/vocabulary#Agent> ;
-        <http://a.ml/vocabularies/core#description>
-                "A physical person judiciary agent class" ;
-        <http://a.ml/vocabularies/core#displayName>
-                "Person" ;
-        <http://a.ml/vocabularies/core#name>
-                "Person" ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://agents.org/vocabulary#Person> .
-
-<http://www.w3.org/2002/07/owl#Thing>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/2002/07/owl#Thing> .
-
-<http://www.w3.org/2002/07/owl#incompatibleWith>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/2002/07/owl#Ontology> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2002/07/owl#Ontology> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/2002/07/owl#incompatibleWith> .
-
-<http://agents.org/vocabulary#Agent>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://a.ml/vocabularies/document#DomainElement> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2002/07/owl#Thing> , <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://a.ml/vocabularies/core#description>
-                "The most generic class representing any judiciary agent" ;
-        <http://a.ml/vocabularies/core#displayName>
-                "Agent" ;
-        <http://a.ml/vocabularies/core#name>
-                "Agent" ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://agents.org/vocabulary#Agent> .
-
-<http://www.w3.org/2002/07/owl#OntologyProperty>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-
-<http://agents.org/vocabulary#ssn>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#Property> , <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://agents.org/vocabulary#ssn> ;
-        <http://a.ml/vocabularies/core#description>
-                "Number that identifies a physical person in various governamental agencies" ;
-        <http://a.ml/vocabularies/core#displayName>
-                "Social Security Number" .
-
-<http://a.ml/vocabularies/document#location>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://a.ml/vocabularies/document#location> .
-
-<http://www.w3.org/2002/07/owl#priorVersion>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/2002/07/owl#Ontology> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2002/07/owl#Ontology> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/2002/07/owl#priorVersion> .
-
-<http://www.w3.org/2000/01/rdf-schema#subClassOf>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/2000/01/rdf-schema#subClassOf> .
-
-<http://www.w3.org/2000/01/rdf-schema#Resource>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/2000/01/rdf-schema#Resource> .
-
-<http://www.w3.org/2002/07/owl#TransitiveProperty>
-        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2002/07/owl#ObjectProperty> .
-
-<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest>
-        a       <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> .
-
-<http://www.w3.org/2002/07/owl#equivalentClass>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/2002/07/owl#equivalentClass> .
-
-<http://a.ml/vocabularies/document#root>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://a.ml/vocabularies/document#root> .
-
-<http://www.w3.org/2001/XMLSchema#short>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2001/XMLSchema#int> , <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#long> , <http://www.w3.org/2001/XMLSchema#short> ;
-        <http://www.w3.org/2002/07/owl#disjointWith>
-                <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#boolean> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/2001/XMLSchema#short> .
-
-<http://a.ml/vocabularies/core#name>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://a.ml/vocabularies/core#name> .
-
-<http://www.w3.org/2001/XMLSchema#positiveInteger>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
-
-<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> .
-
-<http://www.w3.org/2000/01/rdf-schema#Class>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/2000/01/rdf-schema#Class> .
-
-<http://www.w3.org/2001/XMLSchema#anyURI>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
-
-<http://www.w3.org/2000/01/rdf-schema#Datatype>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2000/01/rdf-schema#Class> .
-
-<http://www.w3.org/2002/07/owl#versionInfo>
-        a       <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-
-<http://agents.org/vocabulary#name>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#Property> , <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://agents.org/vocabulary#name> ;
-        <http://a.ml/vocabularies/core#description>
-                "The name given to any juduiciary agent" ;
-        <http://a.ml/vocabularies/core#displayName>
-                "Name" .
-
-<http://www.w3.org/2001/XMLSchema#long>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#long> ;
-        <http://www.w3.org/2002/07/owl#disjointWith>
-                <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#boolean> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/2001/XMLSchema#long> .
-
-<http://www.w3.org/2001/XMLSchema#base64Binary>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
-
-<http://a.ml/vocabularies/document#encodes>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://a.ml/vocabularies/document#encodes> .
-
-<http://www.w3.org/2001/XMLSchema#unsignedInt>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2001/XMLSchema#unsignedLong> , <http://www.w3.org/2001/XMLSchema#unsignedInt> , <http://www.w3.org/2001/XMLSchema#int> , <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#long> , <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
-        <http://www.w3.org/2002/07/owl#disjointWith>
-                <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#boolean> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/2001/XMLSchema#unsignedInt> .
-
-<http://www.w3.org/2001/XMLSchema#byte>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2001/XMLSchema#int> , <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#long> , <http://www.w3.org/2001/XMLSchema#byte> , <http://www.w3.org/2001/XMLSchema#short> ;
-        <http://www.w3.org/2002/07/owl#disjointWith>
-                <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#boolean> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/2001/XMLSchema#byte> .
-
-<http://www.w3.org/1999/02/22-rdf-syntax-ns#subject>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> .
-
-<http://a.ml/vocabularies/core#description>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://a.ml/vocabularies/core#description> .
-
-<http://www.w3.org/2001/XMLSchema#time>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2002/07/owl#disjointWith>
-                <http://www.w3.org/2001/XMLSchema#long> , <http://www.w3.org/2001/XMLSchema#byte> , <http://www.w3.org/2001/XMLSchema#unsignedShort> , <http://www.w3.org/2001/XMLSchema#unsignedLong> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#int> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#unsignedInt> , <http://www.w3.org/2001/XMLSchema#short> , <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#unsignedByte> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#decimal> , <http://www.w3.org/2001/XMLSchema#boolean> , <http://www.w3.org/2001/XMLSchema#nonPositiveInteger> .
-
-<http://www.w3.org/2001/XMLSchema#integer>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2001/XMLSchema#decimal> , <http://www.w3.org/2001/XMLSchema#integer> ;
-        <http://www.w3.org/2002/07/owl#disjointWith>
-                <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#boolean> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/2001/XMLSchema#integer> .
-
-<http://www.w3.org/2001/XMLSchema#float>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2002/07/owl#disjointWith>
-                <http://www.w3.org/2001/XMLSchema#long> , <http://www.w3.org/2001/XMLSchema#byte> , <http://www.w3.org/2001/XMLSchema#unsignedShort> , <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#unsignedLong> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#int> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#unsignedInt> , <http://www.w3.org/2001/XMLSchema#short> , <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#unsignedByte> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#decimal> , <http://www.w3.org/2001/XMLSchema#boolean> , <http://www.w3.org/2001/XMLSchema#nonPositiveInteger> .
-
-<http://www.w3.org/2000/01/rdf-schema#Literal>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2000/01/rdf-schema#Literal> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/2000/01/rdf-schema#Literal> .
-
-<http://www.w3.org/2002/07/owl#Restriction>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2002/07/owl#Restriction> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/2002/07/owl#Restriction> .
-
-<http://www.w3.org/2001/XMLSchema#nonPositiveInteger>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2002/07/owl#disjointWith>
-                <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#boolean> .
-
-<http://www.w3.org/2001/XMLSchema#gYearMonth>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
-
-<http://a.ml/vocabularies/document#link-label>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://a.ml/vocabularies/document#link-label> .
-
-<http://agents.org/vocabulary#composedOf>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#Property> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2002/07/owl#Thing> , <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://agents.org/vocabulary#composedOf> ;
-        <http://a.ml/vocabularies/core#description>
-                "List of other judiciary agents composing another an organization judiciary agent" ;
-        <http://a.ml/vocabularies/core#displayName>
-                "Composed Of" .
-
-<http://www.w3.org/2001/XMLSchema#string>
-        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2002/07/owl#disjointWith>
-                <http://www.w3.org/2001/XMLSchema#long> , <http://www.w3.org/2001/XMLSchema#byte> , <http://www.w3.org/2001/XMLSchema#unsignedShort> , <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#unsignedLong> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#int> , <http://www.w3.org/2001/XMLSchema#unsignedInt> , <http://www.w3.org/2001/XMLSchema#short> , <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#unsignedByte> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#decimal> , <http://www.w3.org/2001/XMLSchema#boolean> , <http://www.w3.org/2001/XMLSchema#nonPositiveInteger> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                <http://www.w3.org/2001/XMLSchema#string> .
-
-<file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml>
-        a       <http://a.ml/vocabularies/document#Unit> , <http://a.ml/vocabularies/document#Fragment> , <http://a.ml/vocabularies/meta#DialectInstanceFragment> ;
-        <http://a.ml/vocabularies/document#encodes>
-                <file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml#/encodes> ;
-        <http://a.ml/vocabularies/document#root>
-                false ;
-        <http://a.ml/vocabularies/document#version>
-                "3.0.0" ;
-        <http://a.ml/vocabularies/meta#definedBy>
-                <file://src/main/resources/agents/agents.dialect.yaml> ;
-        <http://a.ml/vocabularies/meta#fragment>
-                "Person" .
-
-<file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/0>
-        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#DialectDomainElement> , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , <http://agents.org/vocabulary#Person> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://agents.org/vocabulary#Agent> ;
-        <http://a.ml/vocabularies/document#link-label>
-                "nicolas.fragment.instance.yaml" ;
-        <http://a.ml/vocabularies/document#link-target>
-                <file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml#/encodes> ;
-        <http://www.w3.org/2002/07/owl#sameAs>
-                <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/0> .
-
-<file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/1>
-        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#DialectDomainElement> , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , <http://agents.org/vocabulary#Person> , <http://www.w3.org/2002/07/owl#Thing> , <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://agents.org/vocabulary#name>
-                "Cristian Pavon" ;
-        <http://agents.org/vocabulary#ssn>
-                "444444444" ;
-        <http://www.w3.org/2002/07/owl#sameAs>
-                <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/1> .
-
-<file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/0>
-        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#DialectDomainElement> , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , <http://agents.org/vocabulary#Person> , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://agents.org/vocabulary#Agent> ;
-        <http://agents.org/vocabulary#name>
-                "Marco Colombetti" ;
-        <http://agents.org/vocabulary#ssn>
-                "111111111" ;
-        <http://www.w3.org/2002/07/owl#sameAs>
-                <file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/0> .
-
-<file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml>
-        a       <http://a.ml/vocabularies/document#Unit> , <http://a.ml/vocabularies/document#Fragment> , <http://a.ml/vocabularies/meta#DialectInstanceFragment> ;
-        <http://a.ml/vocabularies/document#encodes>
-                <file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/encodes> ;
-        <http://a.ml/vocabularies/document#root>
-                false ;
-        <http://a.ml/vocabularies/document#version>
-                "3.0.0" ;
-        <http://a.ml/vocabularies/meta#definedBy>
-                <file://src/main/resources/agents/agents.dialect.yaml> ;
-        <http://a.ml/vocabularies/meta#fragment>
-                "Organization" .
-
-<file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml#/encodes>
-        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#DialectDomainElement> , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , <http://agents.org/vocabulary#Person> , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://agents.org/vocabulary#Agent> ;
-        <http://agents.org/vocabulary#name>
-                "Nicolas Schejtman" ;
-        <http://agents.org/vocabulary#ssn>
-                "38028835" ;
-        <http://www.w3.org/2002/07/owl#sameAs>
-                <file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml#/encodes> .
-
-<file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/1>
-        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#DialectDomainElement> , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode> , <http://agents.org/vocabulary#Organization> , <http://www.w3.org/2002/07/owl#Thing> , <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://a.ml/vocabularies/document#link-label>
-                "polimi.fragment.instance.yaml" ;
-        <http://a.ml/vocabularies/document#link-target>
-                <file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/encodes> ;
-        <http://www.w3.org/2002/07/owl#sameAs>
-                <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/1> .
-
-<file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/1>
-        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#DialectDomainElement> , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , <http://agents.org/vocabulary#Person> , <http://www.w3.org/2002/07/owl#Thing> , <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://agents.org/vocabulary#name>
-                "Angelo Carlo Morzenti" ;
-        <http://agents.org/vocabulary#ssn>
-                "222222222" ;
-        <http://www.w3.org/2002/07/owl#sameAs>
-                <file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/1> .
-
-<file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2>
-        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#DialectDomainElement> , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode> , <http://agents.org/vocabulary#Organization> , <http://www.w3.org/2002/07/owl#Thing> , <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://agents.org/vocabulary#composedOf>
-                <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/1> , <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/0> ;
-        <http://agents.org/vocabulary#members>
-                <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/1> , <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/0> ;
-        <http://agents.org/vocabulary#name>
-                "Boca Juniors" ;
-        <http://www.w3.org/2002/07/owl#sameAs>
-                <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2> .
-
-<file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/encodes>
-        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#DialectDomainElement> , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode> , <http://agents.org/vocabulary#Organization> , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://agents.org/vocabulary#Agent> ;
-        <http://agents.org/vocabulary#composedOf>
-                <file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/1> , <file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/0> ;
-        <http://agents.org/vocabulary#members>
-                <file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/1> , <file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/0> ;
-        <http://agents.org/vocabulary#name>
-                "Politecnico di Milano" ;
-        <http://www.w3.org/2002/07/owl#sameAs>
-                <file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/encodes> .
-
-<file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes>
-        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#DialectDomainElement> , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode> , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://agents.org/vocabulary#composedOf>
-                <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2> , <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/1> , <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/0> ;
-        <http://www.w3.org/2002/07/owl#sameAs>
-                <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes> .
-
-<file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/0>
-        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#DialectDomainElement> , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , <http://agents.org/vocabulary#Person> , <http://www.w3.org/2002/07/owl#Thing> , <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://agents.org/vocabulary#name>
-                "Carlos Alberto Tevez" ;
-        <http://agents.org/vocabulary#ssn>
-                "333333333" ;
-        <http://www.w3.org/2002/07/owl#sameAs>
-                <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/0> .
-
-<file://src/main/resources/agents/example-instances/agents.instance.yaml>
-        a       <http://a.ml/vocabularies/document#Module> , <http://a.ml/vocabularies/document#Fragment> , <http://a.ml/vocabularies/document#Unit> , <http://a.ml/vocabularies/meta#DialectInstance> , <http://a.ml/vocabularies/document#Document> ;
-        <http://a.ml/vocabularies/document#encodes>
-                <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes> ;
-        <http://a.ml/vocabularies/document#references>
-                <file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml> , <file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml> ;
-        <http://a.ml/vocabularies/document#root>
-                true ;
-        <http://a.ml/vocabularies/document#version>
-                "3.0.0" ;
-        <http://a.ml/vocabularies/meta#definedBy>
-                <file://src/main/resources/agents/agents.dialect.yaml> .
+@base          <file://src/main/resources/agents/example-instances/agents.instance.yaml> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix core:  <http://a.ml/vocabularies/core#> .
+@prefix vocabulary: <http://agents.org/vocabulary#> .
+@prefix dialect: <file://src/main/resources/agents/agents.dialect.yaml#/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix meta:  <http://a.ml/vocabularies/meta#> .
+@prefix document: <http://a.ml/vocabularies/document#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+rdfs:domain  a              rdf:Property , rdfs:Resource ;
+        rdfs:domain         rdf:Property , rdfs:Resource ;
+        rdfs:range          rdfs:Class , rdfs:Resource ;
+        rdfs:subPropertyOf  rdfs:domain .
+
+owl:DatatypeProperty  a  rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdf:Property .
+
+owl:Property  a              rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      owl:Property , rdfs:Resource ;
+        owl:equivalentClass  owl:Property .
+
+owl:imports  a              owl:OntologyProperty , rdf:Property , rdfs:Resource ;
+        rdfs:domain         owl:Ontology , rdfs:Resource ;
+        rdfs:range          owl:Ontology , rdfs:Resource ;
+        rdfs:subPropertyOf  owl:imports .
+
+xsd:negativeInteger  a  rdfs:Datatype , rdfs:Resource , rdfs:Class .
+
+owl:ObjectProperty  a    rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdf:Property .
+
+owl:intersectionOf  a       rdf:Property , rdfs:Resource ;
+        rdfs:domain         owl:Class , rdfs:Resource , rdfs:Class ;
+        rdfs:subPropertyOf  owl:intersectionOf .
+
+owl:backwardCompatibleWith
+        a                   rdf:Property , rdfs:Resource ;
+        rdfs:domain         owl:Ontology , rdfs:Resource ;
+        rdfs:range          owl:Ontology , rdfs:Resource ;
+        rdfs:subPropertyOf  owl:backwardCompatibleWith .
+
+meta:definedBy  a           rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  meta:definedBy .
+
+owl:Ontology  a              rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      owl:Ontology , rdfs:Resource ;
+        owl:equivalentClass  owl:Ontology .
+
+xsd:unsignedLong  a          rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      xsd:unsignedLong , xsd:integer , xsd:long , xsd:nonNegativeInteger ;
+        owl:disjointWith     xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        owl:equivalentClass  xsd:unsignedLong .
+
+document:references  a      rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  document:references .
+
+rdf:first  a                owl:FunctionalProperty , rdf:Property , rdfs:Resource ;
+        rdfs:domain         rdf:List , rdfs:Resource ;
+        rdfs:subPropertyOf  rdf:first .
+
+document:link-target  a     rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  document:link-target .
+
+owl:onProperty  a           rdf:Property , rdfs:Resource ;
+        rdfs:domain         owl:Restriction , rdfs:Resource , owl:Class , rdfs:Class ;
+        rdfs:range          owl:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  owl:onProperty .
+
+owl:differentFrom  a        owl:SymmetricProperty , owl:ObjectProperty , rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  owl:differentFrom .
+
+rdf:object  a               rdf:Property , rdfs:Resource ;
+        rdfs:domain         rdf:Statement , rdfs:Resource ;
+        rdfs:subPropertyOf  rdf:object .
+
+rdfs:subPropertyOf  a       rdf:Property , rdfs:Resource ;
+        rdfs:domain         rdf:Property , rdfs:Resource ;
+        rdfs:range          rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  rdfs:subPropertyOf .
+
+owl:disjointWith  a         owl:SymmetricProperty , owl:ObjectProperty , rdf:Property , rdfs:Resource ;
+        rdfs:domain         owl:Class , rdfs:Resource , rdfs:Class ;
+        rdfs:range          owl:Class , rdfs:Resource , rdfs:Class ;
+        rdfs:subPropertyOf  owl:disjointWith .
+
+rdf:Alt  a               rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Container .
+
+owl:Class  a                 rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      owl:Class , rdfs:Resource , rdfs:Class ;
+        owl:equivalentClass  owl:Class .
+
+xsd:duration  a           rdfs:Datatype , rdfs:Resource , rdfs:Class , owl:Class ;
+        owl:disjointWith  xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:float , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger .
+
+document:declares  a        rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  document:declares .
+
+rdf:List  a                  rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      rdf:List , rdfs:Resource ;
+        owl:equivalentClass  rdf:List .
+
+rdf:Statement  a             rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      rdf:Statement , rdfs:Resource ;
+        owl:equivalentClass  rdf:Statement .
+
+rdf:Seq  a               rdfs:Resource , rdfs:Class ;
+        rdfs:subClassOf  rdfs:Container .
+
+xsd:double  a   rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+xsd:gMonth  a   rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+owl:FunctionalProperty
+        a                rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdf:Property .
+
+xsd:unsignedByte  a          rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      xsd:unsignedLong , xsd:unsignedInt , xsd:int , xsd:integer , xsd:long , xsd:byte , xsd:short , xsd:unsignedByte , xsd:nonNegativeInteger , xsd:unsignedShort ;
+        owl:disjointWith     xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        owl:equivalentClass  xsd:unsignedByte .
+
+document:version  a         rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  document:version .
+
+owl:SymmetricProperty
+        a                rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  owl:ObjectProperty .
+
+xsd:gMonthDay  a  rdfs:Datatype , rdfs:Resource , rdfs:Class .
+
+rdfs:ContainerMembershipProperty
+        a                rdfs:Resource , rdfs:Class ;
+        rdfs:subClassOf  rdf:Property .
+
+rdf:Property  a              rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      rdf:Property , rdfs:Resource ;
+        owl:equivalentClass  rdf:Property .
+
+xsd:nonNegativeInteger
+        a                    rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      xsd:integer , xsd:nonNegativeInteger ;
+        owl:disjointWith     xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        owl:equivalentClass  xsd:nonNegativeInteger .
+
+owl:sameAs  a               owl:SymmetricProperty , rdf:Property , owl:ObjectProperty , rdfs:Resource ;
+        rdfs:subPropertyOf  owl:sameAs .
+
+rdf:XMLLiteral  a  rdfs:Datatype , rdfs:Resource , rdfs:Class .
+
+xsd:unsignedShort  a         rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      xsd:unsignedLong , xsd:unsignedInt , xsd:int , xsd:integer , xsd:long , xsd:short , xsd:nonNegativeInteger , xsd:unsignedShort ;
+        owl:disjointWith     xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        owl:equivalentClass  xsd:unsignedShort .
+
+xsd:gDay  a     rdfs:Datatype , rdfs:Resource , rdfs:Class .
+
+rdf:nil  a      rdf:List , rdfs:Resource .
+
+rdfs:range  a               rdf:Property , rdfs:Resource ;
+        rdfs:domain         rdf:Property , rdfs:Resource ;
+        rdfs:range          rdfs:Class , rdfs:Resource ;
+        rdfs:subPropertyOf  rdfs:range .
+
+rdfs:isDefinedBy  a         rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  rdfs:seeAlso , rdfs:isDefinedBy .
+
+xsd:boolean  a            rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        owl:disjointWith  xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:float , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:nonPositiveInteger .
+
+owl:InverseFunctionalProperty
+        a                rdfs:Resource , rdfs:Class ;
+        rdfs:subClassOf  owl:ObjectProperty .
+
+owl:Nothing  a               rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      owl:Nothing , rdfs:Resource , owl:Thing ;
+        owl:equivalentClass  owl:Nothing .
+
+meta:base  a                rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  meta:base .
+
+xsd:hexBinary  a  rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+vocabulary:Organization
+        a                    rdfs:Class , document:DomainElement , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      owl:Thing , rdfs:Resource , vocabulary:Organization , vocabulary:Agent ;
+        core:description     "An organization (company, non-profit, etc.) judiciary agent class" ;
+        core:displayName     "Organization" ;
+        core:name            "Organization" ;
+        owl:equivalentClass  vocabulary:Organization .
+
+owl:oneOf  a                rdf:Property , rdfs:Resource ;
+        rdfs:domain         owl:Class , rdfs:Resource , rdfs:Class ;
+        rdfs:subPropertyOf  owl:oneOf .
+
+rdf:Bag  a               rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Container .
+
+meta:fragment  a            rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  meta:fragment .
+
+xsd:decimal  a            rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        owl:disjointWith  xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean .
+
+core:displayName  a         rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  core:displayName .
+
+xsd:dateTime  a           rdfs:Datatype , rdfs:Resource , rdfs:Class , owl:Class ;
+        owl:disjointWith  xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:float , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger .
+
+vocabulary:members  a       rdf:Property , document:DomainElement , meta:Property , owl:ObjectProperty , rdfs:Resource ;
+        rdfs:domain         owl:Thing , rdfs:Resource ;
+        rdfs:range          owl:Thing , vocabulary:Person , rdfs:Resource , vocabulary:Agent ;
+        rdfs:subPropertyOf  vocabulary:composedOf , vocabulary:members ;
+        core:description    "The person members of an organization judiciary agent" ;
+        core:displayName    "Members" .
+
+xsd:date  a               rdfs:Datatype , rdfs:Resource , rdfs:Class , owl:Class ;
+        owl:disjointWith  xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:float , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger .
+
+xsd:int  a                   rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      xsd:int , xsd:integer , xsd:long ;
+        owl:disjointWith     xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        owl:equivalentClass  xsd:int .
+
+xsd:gYear  a    rdfs:Datatype , rdfs:Resource , rdfs:Class .
+
+rdf:predicate  a            rdf:Property , rdfs:Resource ;
+        rdfs:domain         rdf:Statement , rdfs:Resource ;
+        rdfs:subPropertyOf  rdf:predicate .
+
+vocabulary:Person  a         rdfs:Class , document:DomainElement , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdfs:Resource , vocabulary:Person , owl:Thing , vocabulary:Agent ;
+        core:description     "A physical person judiciary agent class" ;
+        core:displayName     "Person" ;
+        core:name            "Person" ;
+        owl:equivalentClass  vocabulary:Person .
+
+owl:Thing  a                 rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      rdfs:Resource , owl:Thing ;
+        owl:equivalentClass  owl:Thing .
+
+owl:incompatibleWith  a     rdf:Property , rdfs:Resource ;
+        rdfs:domain         owl:Ontology , rdfs:Resource ;
+        rdfs:range          owl:Ontology , rdfs:Resource ;
+        rdfs:subPropertyOf  owl:incompatibleWith .
+
+vocabulary:Agent  a          rdfs:Class , document:DomainElement , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      owl:Thing , rdfs:Resource , vocabulary:Agent ;
+        core:description     "The most generic class representing any judiciary agent" ;
+        core:displayName     "Agent" ;
+        core:name            "Agent" ;
+        owl:equivalentClass  vocabulary:Agent .
+
+owl:OntologyProperty  a  rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdf:Property .
+
+vocabulary:ssn  a           rdf:Property , document:DomainElement , meta:Property , owl:DatatypeProperty , rdfs:Resource ;
+        rdfs:range          xsd:string , rdfs:Resource ;
+        rdfs:subPropertyOf  vocabulary:ssn ;
+        core:description    "Number that identifies a physical person in various governamental agencies" ;
+        core:displayName    "Social Security Number" .
+
+document:location  a        rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  document:location .
+
+owl:priorVersion  a         rdf:Property , rdfs:Resource ;
+        rdfs:domain         owl:Ontology , rdfs:Resource ;
+        rdfs:range          owl:Ontology , rdfs:Resource ;
+        rdfs:subPropertyOf  owl:priorVersion .
+
+rdfs:subClassOf  a          rdf:Property , rdfs:Resource ;
+        rdfs:domain         rdfs:Class , rdfs:Resource ;
+        rdfs:range          rdfs:Class , rdfs:Resource ;
+        rdfs:subPropertyOf  rdfs:subClassOf .
+
+rdfs:Resource  a             rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      rdfs:Resource ;
+        owl:equivalentClass  rdfs:Resource .
+
+owl:TransitiveProperty
+        a                rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  owl:ObjectProperty .
+
+rdf:rest  a                 owl:FunctionalProperty , rdf:Property , rdfs:Resource ;
+        rdfs:domain         rdf:List , rdfs:Resource ;
+        rdfs:range          rdf:List , rdfs:Resource ;
+        rdfs:subPropertyOf  rdf:rest .
+
+owl:equivalentClass  a      rdf:Property , rdfs:Resource ;
+        rdfs:domain         owl:Class , rdfs:Resource , rdfs:Class ;
+        rdfs:range          owl:Class , rdfs:Resource , rdfs:Class ;
+        rdfs:subPropertyOf  owl:equivalentClass .
+
+document:root  a            rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  document:root .
+
+xsd:short  a                 rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      xsd:int , xsd:integer , xsd:long , xsd:short ;
+        owl:disjointWith     xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        owl:equivalentClass  xsd:short .
+
+core:name  a                rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  core:name .
+
+xsd:positiveInteger  a  rdfs:Datatype , rdfs:Resource , rdfs:Class .
+
+rdf:type  a                 rdf:Property , rdfs:Resource ;
+        rdfs:range          rdfs:Class , rdfs:Resource ;
+        rdfs:subPropertyOf  rdf:type .
+
+rdfs:Class  a                rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      rdfs:Class , rdfs:Resource ;
+        owl:equivalentClass  rdfs:Class .
+
+xsd:anyURI  a   rdfs:Datatype , rdfs:Resource , rdfs:Class .
+
+rdfs:Datatype  a         rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Class .
+
+owl:versionInfo  a  owl:AnnotationProperty .
+
+xsd:long  a                  rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      xsd:integer , xsd:long ;
+        owl:disjointWith     xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        owl:equivalentClass  xsd:long .
+
+vocabulary:name  a          rdf:Property , document:DomainElement , meta:Property , owl:DatatypeProperty , rdfs:Resource ;
+        rdfs:range          xsd:string , rdfs:Resource ;
+        rdfs:subPropertyOf  vocabulary:name ;
+        core:description    "The name given to any juduiciary agent" ;
+        core:displayName    "Name" .
+
+xsd:base64Binary  a  rdfs:Datatype , rdfs:Class , rdfs:Resource .
+
+document:encodes  a         rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  document:encodes .
+
+xsd:unsignedInt  a           rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      xsd:unsignedLong , xsd:unsignedInt , xsd:int , xsd:integer , xsd:long , xsd:nonNegativeInteger ;
+        owl:disjointWith     xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        owl:equivalentClass  xsd:unsignedInt .
+
+xsd:byte  a                  rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      xsd:int , xsd:integer , xsd:long , xsd:byte , xsd:short ;
+        owl:disjointWith     xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        owl:equivalentClass  xsd:byte .
+
+rdf:subject  a              rdf:Property , rdfs:Resource ;
+        rdfs:domain         rdf:Statement , rdfs:Resource ;
+        rdfs:subPropertyOf  rdf:subject .
+
+core:description  a         rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  core:description .
+
+xsd:time  a               rdfs:Datatype , rdfs:Resource , rdfs:Class , owl:Class ;
+        owl:disjointWith  xsd:long , xsd:byte , xsd:unsignedShort , xsd:unsignedLong , xsd:float , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger .
+
+xsd:integer  a               rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      xsd:decimal , xsd:integer ;
+        owl:disjointWith     xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
+        owl:equivalentClass  xsd:integer .
+
+xsd:float  a              rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        owl:disjointWith  xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger .
+
+rdfs:Literal  a              rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      rdfs:Literal , rdfs:Resource ;
+        owl:equivalentClass  rdfs:Literal .
+
+owl:Restriction  a           rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      owl:Restriction , rdfs:Resource , owl:Class ;
+        owl:equivalentClass  owl:Restriction .
+
+xsd:nonPositiveInteger
+        a                 rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        owl:disjointWith  xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean .
+
+xsd:gYearMonth  a  rdfs:Datatype , rdfs:Resource , rdfs:Class .
+
+document:link-label  a      rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  document:link-label .
+
+vocabulary:composedOf
+        a                   rdf:Property , document:DomainElement , meta:Property , owl:ObjectProperty , rdfs:Resource ;
+        rdfs:domain         owl:Thing , rdfs:Resource ;
+        rdfs:range          owl:Thing , vocabulary:Agent , rdfs:Resource ;
+        rdfs:subPropertyOf  vocabulary:composedOf ;
+        core:description    "List of other judiciary agents composing another an organization judiciary agent" ;
+        core:displayName    "Composed Of" .
+
+xsd:string  a                rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        rdfs:subClassOf      rdfs:Resource , xsd:string ;
+        owl:disjointWith     xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:float , xsd:dateTime , xsd:int , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger ;
+        owl:equivalentClass  xsd:string .
+
+<nicolas.fragment.instance.yaml>
+        a                 document:Unit , document:Fragment , meta:DialectInstanceFragment ;
+        document:encodes  <nicolas.fragment.instance.yaml#/encodes> ;
+        document:root     false ;
+        document:version  "3.0.0" ;
+        meta:definedBy    <file://src/main/resources/agents/agents.dialect.yaml> ;
+        meta:fragment     "Person" .
+
+<#/encodes/agents/0>  a       document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , vocabulary:Person , owl:Thing , rdfs:Resource , vocabulary:Agent ;
+        document:link-label   "nicolas.fragment.instance.yaml" ;
+        document:link-target  <nicolas.fragment.instance.yaml#/encodes> ;
+        owl:sameAs            <#/encodes/agents/0> .
+
+<#/encodes/agents/2/members/1>
+        a                document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , vocabulary:Person , owl:Thing , vocabulary:Agent , rdfs:Resource ;
+        vocabulary:name  "Cristian Pavon" ;
+        vocabulary:ssn   "444444444" ;
+        owl:sameAs       <#/encodes/agents/2/members/1> .
+
+<polimi.fragment.instance.yaml#/members/0>
+        a                document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , vocabulary:Person , owl:Thing , rdfs:Resource , vocabulary:Agent ;
+        vocabulary:name  "Marco Colombetti" ;
+        vocabulary:ssn   "111111111" ;
+        owl:sameAs       <polimi.fragment.instance.yaml#/members/0> .
+
+<polimi.fragment.instance.yaml>
+        a                 document:Unit , document:Fragment , meta:DialectInstanceFragment ;
+        document:encodes  <polimi.fragment.instance.yaml#/encodes> ;
+        document:root     false ;
+        document:version  "3.0.0" ;
+        meta:definedBy    <file://src/main/resources/agents/agents.dialect.yaml> ;
+        meta:fragment     "Organization" .
+
+<nicolas.fragment.instance.yaml#/encodes>
+        a                document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , vocabulary:Person , owl:Thing , rdfs:Resource , vocabulary:Agent ;
+        vocabulary:name  "Nicolas Schejtman" ;
+        vocabulary:ssn   "38028835" ;
+        owl:sameAs       <nicolas.fragment.instance.yaml#/encodes> .
+
+<#/encodes/agents/1>  a       document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode> , vocabulary:Organization , vocabulary:Agent , owl:Thing , rdfs:Resource ;
+        document:link-label   "polimi.fragment.instance.yaml" ;
+        document:link-target  <polimi.fragment.instance.yaml#/encodes> ;
+        owl:sameAs            <#/encodes/agents/1> .
+
+<polimi.fragment.instance.yaml#/members/1>
+        a                document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , vocabulary:Person , owl:Thing , vocabulary:Agent , rdfs:Resource ;
+        vocabulary:name  "Angelo Carlo Morzenti" ;
+        vocabulary:ssn   "222222222" ;
+        owl:sameAs       <polimi.fragment.instance.yaml#/members/1> .
+
+<#/encodes/agents/2>  a        document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode> , vocabulary:Organization , owl:Thing , vocabulary:Agent , rdfs:Resource ;
+        vocabulary:composedOf  <#/encodes/agents/2/members/1> , <#/encodes/agents/2/members/0> ;
+        vocabulary:members     <#/encodes/agents/2/members/1> , <#/encodes/agents/2/members/0> ;
+        vocabulary:name        "Boca Juniors" ;
+        owl:sameAs             <#/encodes/agents/2> .
+
+<polimi.fragment.instance.yaml#/encodes>
+        a                      document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode> , vocabulary:Organization , owl:Thing , rdfs:Resource , vocabulary:Agent ;
+        vocabulary:composedOf  <polimi.fragment.instance.yaml#/members/1> , <polimi.fragment.instance.yaml#/members/0> ;
+        vocabulary:members     <polimi.fragment.instance.yaml#/members/1> , <polimi.fragment.instance.yaml#/members/0> ;
+        vocabulary:name        "Politecnico di Milano" ;
+        owl:sameAs             <polimi.fragment.instance.yaml#/encodes> .
+
+<#/encodes>  a                 document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode> , owl:Thing , rdfs:Resource ;
+        vocabulary:composedOf  <#/encodes/agents/2> , <#/encodes/agents/1> , <#/encodes/agents/0> ;
+        owl:sameAs             <#/encodes> .
+
+<#/encodes/agents/2/members/0>
+        a                document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , vocabulary:Person , owl:Thing , vocabulary:Agent , rdfs:Resource ;
+        vocabulary:name  "Carlos Alberto Tevez" ;
+        vocabulary:ssn   "333333333" ;
+        owl:sameAs       <#/encodes/agents/2/members/0> .
+
+<>      a                    document:Module , document:Fragment , document:Unit , meta:DialectInstance , document:Document ;
+        document:encodes     <#/encodes> ;
+        document:references  <polimi.fragment.instance.yaml> , <nicolas.fragment.instance.yaml> ;
+        document:root        true ;
+        document:version     "3.0.0" ;
+        meta:definedBy       <file://src/main/resources/agents/agents.dialect.yaml> .
 
 <file://src/main/resources/agents/agents.vocabulary.yaml>
-        a       <http://a.ml/vocabularies/document#Unit> , <http://a.ml/vocabularies/meta#Vocabulary> , <http://www.w3.org/2002/07/owl#Ontology> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://a.ml/vocabularies/core#name>
-                "Agents" ;
-        <http://a.ml/vocabularies/document#declares>
-                <http://agents.org/vocabulary#members> , <http://agents.org/vocabulary#Organization> , <http://agents.org/vocabulary#composedOf> , <http://agents.org/vocabulary#name> , <http://agents.org/vocabulary#ssn> , <http://agents.org/vocabulary#Agent> , <http://agents.org/vocabulary#Person> ;
-        <http://a.ml/vocabularies/document#location>
-                "file://src/main/resources/agents/agents.vocabulary.yaml" ;
-        <http://a.ml/vocabularies/document#root>
-                true ;
-        <http://a.ml/vocabularies/document#version>
-                "3.0.0" ;
-        <http://a.ml/vocabularies/meta#base>
-                "http://agents.org/vocabulary#" .
+        a                  document:Unit , meta:Vocabulary , owl:Ontology , rdfs:Resource ;
+        core:name          "Agents" ;
+        document:declares  vocabulary:members , vocabulary:Organization , vocabulary:composedOf , vocabulary:name , vocabulary:ssn , vocabulary:Agent , vocabulary:Person ;
+        document:location  "file://src/main/resources/agents/agents.vocabulary.yaml" ;
+        document:root      true ;
+        document:version   "3.0.0" ;
+        meta:base          "http://agents.org/vocabulary#" .
 
-<http://www.w3.org/2002/07/owl#AnnotationProperty>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+rdfs:seeAlso  a             rdf:Property , rdfs:Resource ;
+        rdfs:subPropertyOf  rdfs:seeAlso .
+
+rdfs:Container  a  rdfs:Class , rdfs:Resource .
+
+owl:AnnotationProperty
+        a       rdfs:Class , rdfs:Resource .
 
 <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+        a       rdfs:Class , rdfs:Resource .
 
-<http://a.ml/vocabularies/document#DomainElement>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+document:DomainElement
+        a       rdfs:Class , rdfs:Resource .
 
 <file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+        a       rdfs:Class , rdfs:Resource .
 
-<http://a.ml/vocabularies/meta#DialectDomainElement>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+meta:DialectDomainElement
+        a       rdfs:Class , rdfs:Resource .
 
-<http://a.ml/vocabularies/meta#DialectInstance>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+meta:DialectInstance  a  rdfs:Class , rdfs:Resource .
 
 <file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+        a       rdfs:Class , rdfs:Resource .
 
-<http://a.ml/vocabularies/document#Unit>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+document:Unit  a  rdfs:Class , rdfs:Resource .
 
-<http://a.ml/vocabularies/document#Fragment>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+document:Fragment  a  rdfs:Class , rdfs:Resource .
 
-<http://a.ml/vocabularies/meta#DialectInstanceFragment>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+meta:DialectInstanceFragment
+        a       rdfs:Class , rdfs:Resource .
 
-<http://a.ml/vocabularies/document#Module>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+document:Module  a  rdfs:Class , rdfs:Resource .
 
-<http://a.ml/vocabularies/document#Document>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+document:Document  a  rdfs:Class , rdfs:Resource .
 
-<http://a.ml/vocabularies/meta#Property>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+meta:Property  a  rdfs:Class , rdfs:Resource .
 
-<http://a.ml/vocabularies/meta#Vocabulary>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
-
-<http://www.w3.org/2000/01/rdf-schema#seeAlso>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
-
-<http://www.w3.org/2000/01/rdf-schema#Container>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+meta:Vocabulary  a  rdfs:Class , rdfs:Resource .

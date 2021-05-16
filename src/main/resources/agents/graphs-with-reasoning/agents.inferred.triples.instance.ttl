@@ -1,3 +1,4 @@
+@base          <file://src/main/resources/agents/example-instances/agents.instance.yaml> .
 <http://www.w3.org/2000/01/rdf-schema#domain>
         a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
         <http://www.w3.org/2000/01/rdf-schema#domain>
@@ -32,7 +33,7 @@
                 <http://www.w3.org/2002/07/owl#imports> .
 
 <http://www.w3.org/2001/XMLSchema#negativeInteger>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 
 <http://www.w3.org/2002/07/owl#ObjectProperty>
         a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
@@ -109,7 +110,7 @@
                 <http://www.w3.org/2002/07/owl#onProperty> .
 
 <http://www.w3.org/2002/07/owl#differentFrom>
-        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#SymmetricProperty> ;
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#SymmetricProperty> ;
         <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
                 <http://www.w3.org/2002/07/owl#differentFrom> .
 
@@ -180,10 +181,10 @@
                 <http://www.w3.org/2000/01/rdf-schema#Container> .
 
 <http://www.w3.org/2001/XMLSchema#double>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 
 <http://www.w3.org/2001/XMLSchema#gMonth>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 
 <http://www.w3.org/2002/07/owl#FunctionalProperty>
         a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
@@ -213,22 +214,22 @@
         a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
 
 <http://www.w3.org/2001/XMLSchema#gMonthDay>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 
 <http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty>
         a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
         <http://www.w3.org/2000/01/rdf-schema#subClassOf>
                 <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
 
-<file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/1>
-        a       <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> ;
+<#/encodes/agents/2/members/1>
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2002/07/owl#Thing> ;
         <http://www.w3.org/2002/07/owl#sameAs>
-                <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/1> .
+                <#/encodes/agents/2/members/1> .
 
-<file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml#/encodes>
-        a       <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+<nicolas.fragment.instance.yaml#/encodes>
+        a       <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://agents.org/vocabulary#Agent> ;
         <http://www.w3.org/2002/07/owl#sameAs>
-                <file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml#/encodes> .
+                <nicolas.fragment.instance.yaml#/encodes> .
 
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>
         a       <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
@@ -247,12 +248,12 @@
                 <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 
 <http://www.w3.org/2002/07/owl#sameAs>
-        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#SymmetricProperty> ;
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#SymmetricProperty> ;
         <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
                 <http://www.w3.org/2002/07/owl#sameAs> .
 
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 
 <http://www.w3.org/2001/XMLSchema#unsignedShort>
         a       <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
@@ -264,7 +265,7 @@
                 <http://www.w3.org/2001/XMLSchema#unsignedShort> .
 
 <http://www.w3.org/2001/XMLSchema#gDay>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>
         a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
@@ -312,7 +313,7 @@
         a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
 
 <http://www.w3.org/2001/XMLSchema#hexBinary>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 
 <http://agents.org/vocabulary#Organization>
         a       <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://a.ml/vocabularies/document#DomainElement> ;
@@ -349,10 +350,10 @@
         <http://www.w3.org/2002/07/owl#disjointWith>
                 <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#boolean> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#time> .
 
-<file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/0>
-        a       <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> ;
+<#/encodes/agents/2/members/0>
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2002/07/owl#Thing> ;
         <http://www.w3.org/2002/07/owl#sameAs>
-                <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/0> .
+                <#/encodes/agents/2/members/0> .
 
 <http://a.ml/vocabularies/core#displayName>
         a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
@@ -365,17 +366,17 @@
 <http://a.ml/vocabularies/document#DomainElement>
         a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
 
-<file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/1>
-        a       <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> ;
+<polimi.fragment.instance.yaml#/members/1>
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2002/07/owl#Thing> ;
         <http://www.w3.org/2002/07/owl#sameAs>
-                <file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/1> .
+                <polimi.fragment.instance.yaml#/members/1> .
 
-<file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/encodes>
+<polimi.fragment.instance.yaml#/encodes>
         a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2002/07/owl#Thing> ;
         <http://agents.org/vocabulary#composedOf>
-                <file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/0> , <file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/1> ;
+                <polimi.fragment.instance.yaml#/members/0> , <polimi.fragment.instance.yaml#/members/1> ;
         <http://www.w3.org/2002/07/owl#sameAs>
-                <file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/encodes> .
+                <polimi.fragment.instance.yaml#/encodes> .
 
 <http://agents.org/vocabulary#members>
         a       <http://a.ml/vocabularies/meta#Property> , <http://a.ml/vocabularies/document#DomainElement> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
@@ -417,7 +418,7 @@
                 <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> .
 
 <http://www.w3.org/2001/XMLSchema#gYear>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 
 <http://agents.org/vocabulary#Person>
         a       <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://a.ml/vocabularies/document#DomainElement> ;
@@ -464,10 +465,9 @@
 <file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode>
         a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
 
-<file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes>
-        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> ;
+<#/encodes>  a  <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> ;
         <http://www.w3.org/2002/07/owl#sameAs>
-                <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes> .
+                <#/encodes> .
 
 <http://www.w3.org/2002/07/owl#OntologyProperty>
         a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
@@ -508,12 +508,11 @@
         <http://a.ml/vocabularies/core#displayName>
                 "Social Security Number" .
 
-<file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2>
-        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2002/07/owl#Thing> ;
+<#/encodes/agents/2>  a  <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2002/07/owl#Thing> ;
         <http://agents.org/vocabulary#composedOf>
-                <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/0> , <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/1> ;
+                <#/encodes/agents/2/members/0> , <#/encodes/agents/2/members/1> ;
         <http://www.w3.org/2002/07/owl#sameAs>
-                <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2> .
+                <#/encodes/agents/2> .
 
 <http://www.w3.org/2000/01/rdf-schema#Resource>
         a       <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
@@ -536,10 +535,10 @@
         <http://www.w3.org/2000/01/rdf-schema#subClassOf>
                 <http://www.w3.org/2002/07/owl#ObjectProperty> .
 
-<file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/0>
-        a       <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> ;
+<polimi.fragment.instance.yaml#/members/0>
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2002/07/owl#Thing> ;
         <http://www.w3.org/2002/07/owl#sameAs>
-                <file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/0> .
+                <polimi.fragment.instance.yaml#/members/0> .
 
 <http://a.ml/vocabularies/document#root>
         a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
@@ -551,7 +550,7 @@
         <http://www.w3.org/2000/01/rdf-schema#domain>
                 <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+                <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> ;
         <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
                 <http://www.w3.org/2002/07/owl#equivalentClass> .
 
@@ -573,7 +572,7 @@
         a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
 
 <http://www.w3.org/2001/XMLSchema#positiveInteger>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
         a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
@@ -601,7 +600,7 @@
                 <http://www.w3.org/2000/01/rdf-schema#Class> .
 
 <http://www.w3.org/2001/XMLSchema#anyURI>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 
 <http://a.ml/vocabularies/meta#DialectDomainElement>
         a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
@@ -616,7 +615,7 @@
                 <http://www.w3.org/2001/XMLSchema#long> .
 
 <http://www.w3.org/2001/XMLSchema#base64Binary>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 
 <http://agents.org/vocabulary#name>
         a       <http://a.ml/vocabularies/document#DomainElement> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://a.ml/vocabularies/meta#Property> , <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
@@ -634,10 +633,9 @@
         <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
                 <http://a.ml/vocabularies/document#encodes> .
 
-<file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/1>
-        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2002/07/owl#Thing> ;
+<#/encodes/agents/1>  a  <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2002/07/owl#Thing> ;
         <http://www.w3.org/2002/07/owl#sameAs>
-                <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/1> .
+                <#/encodes/agents/1> .
 
 <http://www.w3.org/2001/XMLSchema#unsignedInt>
         a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
@@ -733,16 +731,15 @@
         <http://a.ml/vocabularies/meta#base>
                 "http://agents.org/vocabulary#" .
 
-<file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/0>
-        a       <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+<#/encodes/agents/0>  a  <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://agents.org/vocabulary#Agent> ;
         <http://www.w3.org/2002/07/owl#sameAs>
-                <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/0> .
+                <#/encodes/agents/0> .
 
 <http://a.ml/vocabularies/document#Document>
         a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
 
 <http://www.w3.org/2001/XMLSchema#gYearMonth>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 
 <http://a.ml/vocabularies/document#link-label>
         a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;

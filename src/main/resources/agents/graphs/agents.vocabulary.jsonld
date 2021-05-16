@@ -1,58 +1,58 @@
 {
   "@graph" : [ {
-    "@id" : "file://src/main/resources/agents/agents.vocabulary.yaml",
-    "@type" : [ "http://a.ml/vocabularies/document#Unit", "http://a.ml/vocabularies/meta#Vocabulary", "http://www.w3.org/2002/07/owl#Ontology" ],
+    "@id" : "./",
+    "@type" : [ "document:Unit", "meta:Vocabulary", "owl:Ontology" ],
     "name" : "Agents",
-    "declares" : [ "http://agents.org/vocabulary#members", "http://agents.org/vocabulary#Organization", "http://agents.org/vocabulary#composedOf", "http://agents.org/vocabulary#name", "http://agents.org/vocabulary#ssn", "http://agents.org/vocabulary#Agent", "http://agents.org/vocabulary#Person" ],
+    "declares" : [ "vocabulary:members", "vocabulary:Organization", "vocabulary:composedOf", "vocabulary:name", "vocabulary:ssn", "vocabulary:Agent", "vocabulary:Person" ],
     "location" : "file://src/main/resources/agents/agents.vocabulary.yaml",
-    "http://a.ml/vocabularies/document#root" : true,
+    "document:root" : true,
     "version" : "3.0.0",
     "base" : "http://agents.org/vocabulary#"
   }, {
-    "@id" : "http://agents.org/vocabulary#Agent",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://www.w3.org/2002/07/owl#Class" ],
+    "@id" : "vocabulary:Agent",
+    "@type" : [ "document:DomainElement", "owl:Class" ],
     "description" : "The most generic class representing any judiciary agent",
     "displayName" : "Agent",
     "name" : "Agent"
   }, {
-    "@id" : "http://agents.org/vocabulary#Organization",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://www.w3.org/2002/07/owl#Class" ],
+    "@id" : "vocabulary:Organization",
+    "@type" : [ "document:DomainElement", "owl:Class" ],
     "description" : "An organization (company, non-profit, etc.) judiciary agent class",
     "displayName" : "Organization",
     "name" : "Organization",
-    "subClassOf" : "http://agents.org/vocabulary#Agent"
+    "subClassOf" : "vocabulary:Agent"
   }, {
-    "@id" : "http://agents.org/vocabulary#Person",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://www.w3.org/2002/07/owl#Class" ],
+    "@id" : "vocabulary:Person",
+    "@type" : [ "document:DomainElement", "owl:Class" ],
     "description" : "A physical person judiciary agent class",
     "displayName" : "Person",
     "name" : "Person",
-    "subClassOf" : "http://agents.org/vocabulary#Agent"
+    "subClassOf" : "vocabulary:Agent"
   }, {
-    "@id" : "http://agents.org/vocabulary#composedOf",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#Property", "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+    "@id" : "vocabulary:composedOf",
+    "@type" : [ "document:DomainElement", "meta:Property", "owl:ObjectProperty" ],
     "description" : "List of other judiciary agents composing another an organization judiciary agent",
     "displayName" : "Composed Of",
-    "range" : "http://agents.org/vocabulary#Agent"
+    "range" : "vocabulary:Agent"
   }, {
-    "@id" : "http://agents.org/vocabulary#members",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#Property", "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+    "@id" : "vocabulary:members",
+    "@type" : [ "document:DomainElement", "meta:Property", "owl:ObjectProperty" ],
     "description" : "The person members of an organization judiciary agent",
     "displayName" : "Members",
-    "range" : "http://agents.org/vocabulary#Person",
-    "subPropertyOf" : "http://agents.org/vocabulary#composedOf"
+    "range" : "vocabulary:Person",
+    "subPropertyOf" : "vocabulary:composedOf"
   }, {
-    "@id" : "http://agents.org/vocabulary#name",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#Property", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+    "@id" : "vocabulary:name",
+    "@type" : [ "document:DomainElement", "meta:Property", "owl:DatatypeProperty" ],
     "description" : "The name given to any juduiciary agent",
     "displayName" : "Name",
-    "range" : "http://www.w3.org/2001/XMLSchema#string"
+    "range" : "xsd:string"
   }, {
-    "@id" : "http://agents.org/vocabulary#ssn",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#Property", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+    "@id" : "vocabulary:ssn",
+    "@type" : [ "document:DomainElement", "meta:Property", "owl:DatatypeProperty" ],
     "description" : "Number that identifies a physical person in various governamental agencies",
     "displayName" : "Social Security Number",
-    "range" : "http://www.w3.org/2001/XMLSchema#string"
+    "range" : "xsd:string"
   } ],
   "@context" : {
     "declares" : {
@@ -92,6 +92,16 @@
     "subPropertyOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
       "@type" : "@id"
-    }
+    },
+    "shacl" : "http://www.w3.org/ns/shacl#",
+    "core" : "http://a.ml/vocabularies/core#",
+    "vocabulary" : "http://agents.org/vocabulary#",
+    "dialect" : "file://src/main/resources/agents/agents.dialect.yaml#/",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "meta" : "http://a.ml/vocabularies/meta#",
+    "document" : "http://a.ml/vocabularies/document#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#"
   }
 }

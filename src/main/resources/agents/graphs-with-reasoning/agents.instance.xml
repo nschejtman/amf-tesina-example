@@ -1,20 +1,315 @@
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:j.0="http://agents.org/vocabulary#"
+    xmlns:vocabulary="http://agents.org/vocabulary#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:j.1="file://src/main/resources/agents/agents.dialect.yaml#/declarations/"
-    xmlns:j.2="http://a.ml/vocabularies/meta#"
+    xmlns:j.0="file://src/main/resources/agents/agents.dialect.yaml#/declarations/"
+    xmlns:shacl="http://www.w3.org/ns/shacl#"
+    xmlns:meta="http://a.ml/vocabularies/meta#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:j.3="http://a.ml/vocabularies/core#"
-    xmlns:j.4="http://a.ml/vocabularies/document#">
+    xmlns:core="http://a.ml/vocabularies/core#"
+    xmlns:document="http://a.ml/vocabularies/document#"
+    xmlns:dialect="file://src/main/resources/agents/agents.dialect.yaml#/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <document:Module rdf:about="">
+    <document:version>3.0.0</document:version>
+    <document:encodes>
+      <document:DomainElement rdf:about="#/encodes">
+        <vocabulary:composedOf>
+          <document:DomainElement rdf:about="#/encodes/agents/2">
+            <vocabulary:name>Boca Juniors</vocabulary:name>
+            <vocabulary:members>
+              <document:DomainElement rdf:about="#/encodes/agents/2/members/1">
+                <vocabulary:name>Cristian Pavon</vocabulary:name>
+                <vocabulary:ssn>444444444</vocabulary:ssn>
+                <rdf:type>
+                  <rdfs:Class rdf:about="http://a.ml/vocabularies/meta#DialectDomainElement"/>
+                </rdf:type>
+                <rdf:type>
+                  <rdfs:Class rdf:about="../agents.dialect.yaml#/declarations/PersonNode"/>
+                </rdf:type>
+                <rdf:type>
+                  <rdfs:Class rdf:about="http://agents.org/vocabulary#Person"/>
+                </rdf:type>
+                <rdf:type>
+                  <rdfs:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+                </rdf:type>
+                <owl:sameAs rdf:resource="#/encodes/agents/2/members/1"/>
+                <rdf:type>
+                  <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+                </rdf:type>
+                <rdf:type>
+                  <rdfs:Class rdf:about="http://agents.org/vocabulary#Agent"/>
+                </rdf:type>
+              </document:DomainElement>
+            </vocabulary:members>
+            <vocabulary:members>
+              <document:DomainElement rdf:about="#/encodes/agents/2/members/0">
+                <vocabulary:name>Carlos Alberto Tevez</vocabulary:name>
+                <vocabulary:ssn>333333333</vocabulary:ssn>
+                <rdf:type>
+                  <rdfs:Class rdf:about="http://a.ml/vocabularies/meta#DialectDomainElement"/>
+                </rdf:type>
+                <rdf:type>
+                  <rdfs:Class rdf:about="../agents.dialect.yaml#/declarations/PersonNode"/>
+                </rdf:type>
+                <rdf:type>
+                  <rdfs:Class rdf:about="http://agents.org/vocabulary#Person"/>
+                </rdf:type>
+                <rdf:type>
+                  <rdfs:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+                </rdf:type>
+                <owl:sameAs rdf:resource="#/encodes/agents/2/members/0"/>
+                <rdf:type>
+                  <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+                </rdf:type>
+                <rdf:type>
+                  <rdfs:Class rdf:about="http://agents.org/vocabulary#Agent"/>
+                </rdf:type>
+              </document:DomainElement>
+            </vocabulary:members>
+            <rdf:type>
+              <rdfs:Class rdf:about="http://a.ml/vocabularies/meta#DialectDomainElement"/>
+            </rdf:type>
+            <rdf:type>
+              <rdfs:Class rdf:about="../agents.dialect.yaml#/declarations/OrganizationNode"/>
+            </rdf:type>
+            <rdf:type>
+              <rdfs:Class rdf:about="http://agents.org/vocabulary#Organization"/>
+            </rdf:type>
+            <rdf:type>
+              <rdfs:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+            </rdf:type>
+            <owl:sameAs rdf:resource="#/encodes/agents/2"/>
+            <rdf:type>
+              <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+            </rdf:type>
+            <rdf:type>
+              <rdfs:Class rdf:about="http://agents.org/vocabulary#Agent"/>
+            </rdf:type>
+            <vocabulary:composedOf rdf:resource="#/encodes/agents/2/members/1"/>
+            <vocabulary:composedOf rdf:resource="#/encodes/agents/2/members/0"/>
+          </document:DomainElement>
+        </vocabulary:composedOf>
+        <vocabulary:composedOf>
+          <document:DomainElement rdf:about="#/encodes/agents/1">
+            <document:link-label>polimi.fragment.instance.yaml</document:link-label>
+            <document:link-target>
+              <document:DomainElement rdf:about="polimi.fragment.instance.yaml#/encodes">
+                <vocabulary:name>Politecnico di Milano</vocabulary:name>
+                <vocabulary:members>
+                  <document:DomainElement rdf:about="polimi.fragment.instance.yaml#/members/1">
+                    <vocabulary:name>Angelo Carlo Morzenti</vocabulary:name>
+                    <vocabulary:ssn>222222222</vocabulary:ssn>
+                    <rdf:type>
+                      <rdfs:Class rdf:about="http://a.ml/vocabularies/meta#DialectDomainElement"/>
+                    </rdf:type>
+                    <rdf:type>
+                      <rdfs:Class rdf:about="../agents.dialect.yaml#/declarations/PersonNode"/>
+                    </rdf:type>
+                    <rdf:type>
+                      <rdfs:Class rdf:about="http://agents.org/vocabulary#Person"/>
+                    </rdf:type>
+                    <rdf:type>
+                      <rdfs:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+                    </rdf:type>
+                    <owl:sameAs rdf:resource="polimi.fragment.instance.yaml#/members/1"/>
+                    <rdf:type>
+                      <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+                    </rdf:type>
+                    <rdf:type>
+                      <rdfs:Class rdf:about="http://agents.org/vocabulary#Agent"/>
+                    </rdf:type>
+                  </document:DomainElement>
+                </vocabulary:members>
+                <vocabulary:members>
+                  <document:DomainElement rdf:about="polimi.fragment.instance.yaml#/members/0">
+                    <vocabulary:name>Marco Colombetti</vocabulary:name>
+                    <vocabulary:ssn>111111111</vocabulary:ssn>
+                    <rdf:type>
+                      <rdfs:Class rdf:about="http://a.ml/vocabularies/meta#DialectDomainElement"/>
+                    </rdf:type>
+                    <rdf:type>
+                      <rdfs:Class rdf:about="../agents.dialect.yaml#/declarations/PersonNode"/>
+                    </rdf:type>
+                    <rdf:type>
+                      <rdfs:Class rdf:about="http://agents.org/vocabulary#Person"/>
+                    </rdf:type>
+                    <rdf:type>
+                      <rdfs:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+                    </rdf:type>
+                    <owl:sameAs rdf:resource="polimi.fragment.instance.yaml#/members/0"/>
+                    <rdf:type>
+                      <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+                    </rdf:type>
+                    <rdf:type>
+                      <rdfs:Class rdf:about="http://agents.org/vocabulary#Agent"/>
+                    </rdf:type>
+                  </document:DomainElement>
+                </vocabulary:members>
+                <rdf:type>
+                  <rdfs:Class rdf:about="http://a.ml/vocabularies/meta#DialectDomainElement"/>
+                </rdf:type>
+                <rdf:type>
+                  <rdfs:Class rdf:about="../agents.dialect.yaml#/declarations/OrganizationNode"/>
+                </rdf:type>
+                <rdf:type>
+                  <rdfs:Class rdf:about="http://agents.org/vocabulary#Organization"/>
+                </rdf:type>
+                <rdf:type>
+                  <rdfs:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+                </rdf:type>
+                <owl:sameAs rdf:resource="polimi.fragment.instance.yaml#/encodes"/>
+                <rdf:type>
+                  <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+                </rdf:type>
+                <rdf:type>
+                  <rdfs:Class rdf:about="http://agents.org/vocabulary#Agent"/>
+                </rdf:type>
+                <vocabulary:composedOf rdf:resource="polimi.fragment.instance.yaml#/members/1"/>
+                <vocabulary:composedOf rdf:resource="polimi.fragment.instance.yaml#/members/0"/>
+              </document:DomainElement>
+            </document:link-target>
+            <rdf:type>
+              <rdfs:Class rdf:about="http://a.ml/vocabularies/meta#DialectDomainElement"/>
+            </rdf:type>
+            <rdf:type>
+              <rdfs:Class rdf:about="../agents.dialect.yaml#/declarations/OrganizationNode"/>
+            </rdf:type>
+            <rdf:type>
+              <rdfs:Class rdf:about="http://agents.org/vocabulary#Organization"/>
+            </rdf:type>
+            <rdf:type>
+              <rdfs:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+            </rdf:type>
+            <owl:sameAs rdf:resource="#/encodes/agents/1"/>
+            <rdf:type>
+              <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+            </rdf:type>
+            <rdf:type>
+              <rdfs:Class rdf:about="http://agents.org/vocabulary#Agent"/>
+            </rdf:type>
+          </document:DomainElement>
+        </vocabulary:composedOf>
+        <vocabulary:composedOf>
+          <document:DomainElement rdf:about="#/encodes/agents/0">
+            <document:link-label>nicolas.fragment.instance.yaml</document:link-label>
+            <document:link-target>
+              <document:DomainElement rdf:about="nicolas.fragment.instance.yaml#/encodes">
+                <vocabulary:name>Nicolas Schejtman</vocabulary:name>
+                <vocabulary:ssn>38028835</vocabulary:ssn>
+                <rdf:type>
+                  <rdfs:Class rdf:about="http://a.ml/vocabularies/meta#DialectDomainElement"/>
+                </rdf:type>
+                <rdf:type>
+                  <rdfs:Class rdf:about="../agents.dialect.yaml#/declarations/PersonNode"/>
+                </rdf:type>
+                <rdf:type>
+                  <rdfs:Class rdf:about="http://agents.org/vocabulary#Person"/>
+                </rdf:type>
+                <rdf:type>
+                  <rdfs:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+                </rdf:type>
+                <owl:sameAs rdf:resource="nicolas.fragment.instance.yaml#/encodes"/>
+                <rdf:type>
+                  <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+                </rdf:type>
+                <rdf:type>
+                  <rdfs:Class rdf:about="http://agents.org/vocabulary#Agent"/>
+                </rdf:type>
+              </document:DomainElement>
+            </document:link-target>
+            <rdf:type>
+              <rdfs:Class rdf:about="http://a.ml/vocabularies/meta#DialectDomainElement"/>
+            </rdf:type>
+            <rdf:type>
+              <rdfs:Class rdf:about="../agents.dialect.yaml#/declarations/PersonNode"/>
+            </rdf:type>
+            <rdf:type>
+              <rdfs:Class rdf:about="http://agents.org/vocabulary#Person"/>
+            </rdf:type>
+            <rdf:type>
+              <rdfs:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+            </rdf:type>
+            <owl:sameAs rdf:resource="#/encodes/agents/0"/>
+            <rdf:type>
+              <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+            </rdf:type>
+            <rdf:type>
+              <rdfs:Class rdf:about="http://agents.org/vocabulary#Agent"/>
+            </rdf:type>
+          </document:DomainElement>
+        </vocabulary:composedOf>
+        <rdf:type>
+          <rdfs:Class rdf:about="http://a.ml/vocabularies/meta#DialectDomainElement"/>
+        </rdf:type>
+        <rdf:type>
+          <rdfs:Class rdf:about="../agents.dialect.yaml#/declarations/AgentListNode"/>
+        </rdf:type>
+        <rdf:type>
+          <rdfs:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+        </rdf:type>
+        <owl:sameAs rdf:resource="#/encodes"/>
+        <rdf:type>
+          <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        </rdf:type>
+      </document:DomainElement>
+    </document:encodes>
+    <rdf:type>
+      <rdfs:Class rdf:about="http://a.ml/vocabularies/document#Fragment"/>
+    </rdf:type>
+    <document:root rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</document:root>
+    <meta:definedBy rdf:resource="../agents.dialect.yaml"/>
+    <rdf:type>
+      <rdfs:Class rdf:about="http://a.ml/vocabularies/document#Unit"/>
+    </rdf:type>
+    <rdf:type>
+      <rdfs:Class rdf:about="http://a.ml/vocabularies/meta#DialectInstance"/>
+    </rdf:type>
+    <document:references>
+      <document:Unit rdf:about="polimi.fragment.instance.yaml">
+        <document:root rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</document:root>
+        <document:version>3.0.0</document:version>
+        <document:encodes rdf:resource="polimi.fragment.instance.yaml#/encodes"/>
+        <meta:fragment>Organization</meta:fragment>
+        <meta:definedBy rdf:resource="../agents.dialect.yaml"/>
+        <rdf:type>
+          <rdfs:Class rdf:about="http://a.ml/vocabularies/document#Fragment"/>
+        </rdf:type>
+        <rdf:type>
+          <rdfs:Class rdf:about="http://a.ml/vocabularies/meta#DialectInstanceFragment"/>
+        </rdf:type>
+      </document:Unit>
+    </document:references>
+    <rdf:type>
+      <rdfs:Class rdf:about="http://a.ml/vocabularies/document#Document"/>
+    </rdf:type>
+    <document:references>
+      <document:Unit rdf:about="nicolas.fragment.instance.yaml">
+        <document:root rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</document:root>
+        <document:version>3.0.0</document:version>
+        <document:encodes rdf:resource="nicolas.fragment.instance.yaml#/encodes"/>
+        <meta:fragment>Person</meta:fragment>
+        <meta:definedBy rdf:resource="../agents.dialect.yaml"/>
+        <rdf:type>
+          <rdfs:Class rdf:about="http://a.ml/vocabularies/document#Fragment"/>
+        </rdf:type>
+        <rdf:type>
+          <rdfs:Class rdf:about="http://a.ml/vocabularies/meta#DialectInstanceFragment"/>
+        </rdf:type>
+      </document:Unit>
+    </document:references>
+  </document:Module>
   <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#string">
     <rdf:type>
       <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
     </rdf:type>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:subClassOf>
       <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <owl:disjointWith>
       <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#long"/>
@@ -778,10 +1073,10 @@
   </rdfs:Datatype>
   <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#positiveInteger">
     <rdf:type>
-      <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+      <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
     </rdf:type>
     <rdf:type>
-      <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     </rdf:type>
   </rdfs:Datatype>
   <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#dateTime">
@@ -804,13 +1099,13 @@
     <owl:disjointWith rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     <owl:disjointWith rdf:resource="http://www.w3.org/2001/XMLSchema#nonPositiveInteger"/>
     <rdf:type>
-      <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    </rdf:type>
-    <rdf:type>
       <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     </rdf:type>
     <rdf:type>
       <rdfs:Class rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:type>
+    <rdf:type>
+      <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
     </rdf:type>
   </rdfs:Datatype>
   <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#negativeInteger">
@@ -846,13 +1141,13 @@
     <rdfs:subClassOf>
       <rdfs:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
     </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="http://agents.org/vocabulary#Agent"/>
     <rdfs:subClassOf>
       <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     </rdfs:subClassOf>
-    <j.3:description>The most generic class representing any judiciary agent</j.3:description>
-    <j.3:displayName>Agent</j.3:displayName>
-    <j.3:name>Agent</j.3:name>
+    <rdfs:subClassOf rdf:resource="http://agents.org/vocabulary#Agent"/>
+    <core:description>The most generic class representing any judiciary agent</core:description>
+    <core:displayName>Agent</core:displayName>
+    <core:name>Agent</core:name>
     <rdf:type rdf:resource="http://a.ml/vocabularies/document#DomainElement"/>
     <rdf:type>
       <rdfs:Class rdf:about="http://www.w3.org/2002/07/owl#Class"/>
@@ -875,12 +1170,12 @@
       <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     </rdf:type>
   </rdfs:Class>
-  <rdfs:Class rdf:about="file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode">
+  <rdfs:Class rdf:about="../agents.dialect.yaml#/declarations/PersonNode">
     <rdf:type>
       <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     </rdf:type>
   </rdfs:Class>
-  <rdfs:Class rdf:about="file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode">
+  <rdfs:Class rdf:about="../agents.dialect.yaml#/declarations/OrganizationNode">
     <rdf:type>
       <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     </rdf:type>
@@ -912,14 +1207,14 @@
     <rdfs:subClassOf>
       <rdfs:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
     </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="http://agents.org/vocabulary#Organization"/>
     <rdfs:subClassOf>
       <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://agents.org/vocabulary#Organization"/>
     <rdfs:subClassOf rdf:resource="http://agents.org/vocabulary#Agent"/>
-    <j.3:description>An organization (company, non-profit, etc.) judiciary agent class</j.3:description>
-    <j.3:displayName>Organization</j.3:displayName>
-    <j.3:name>Organization</j.3:name>
+    <core:description>An organization (company, non-profit, etc.) judiciary agent class</core:description>
+    <core:displayName>Organization</core:displayName>
+    <core:name>Organization</core:name>
     <rdf:type rdf:resource="http://a.ml/vocabularies/document#DomainElement"/>
     <rdf:type>
       <rdfs:Class rdf:about="http://www.w3.org/2002/07/owl#Class"/>
@@ -969,7 +1264,7 @@
       <rdfs:Class rdf:about="http://www.w3.org/2002/07/owl#Class"/>
     </rdf:type>
   </rdfs:Class>
-  <rdfs:Class rdf:about="file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode">
+  <rdfs:Class rdf:about="../agents.dialect.yaml#/declarations/AgentListNode">
     <rdf:type>
       <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     </rdf:type>
@@ -983,17 +1278,17 @@
     </rdf:type>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://agents.org/vocabulary#Person">
-    <rdfs:subClassOf rdf:resource="http://agents.org/vocabulary#Person"/>
     <rdfs:subClassOf>
       <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://agents.org/vocabulary#Person"/>
     <rdfs:subClassOf>
       <rdfs:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
     </rdfs:subClassOf>
     <rdfs:subClassOf rdf:resource="http://agents.org/vocabulary#Agent"/>
-    <j.3:description>A physical person judiciary agent class</j.3:description>
-    <j.3:displayName>Person</j.3:displayName>
-    <j.3:name>Person</j.3:name>
+    <core:description>A physical person judiciary agent class</core:description>
+    <core:displayName>Person</core:displayName>
+    <core:name>Person</core:name>
     <rdf:type rdf:resource="http://a.ml/vocabularies/document#DomainElement"/>
     <rdf:type>
       <rdfs:Class rdf:about="http://www.w3.org/2002/07/owl#Class"/>
@@ -1218,8 +1513,8 @@
   </rdf:Property>
   <rdf:Property rdf:about="http://agents.org/vocabulary#ssn">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <j.3:description>Number that identifies a physical person in various governamental agencies</j.3:description>
-    <j.3:displayName>Social Security Number</j.3:displayName>
+    <core:description>Number that identifies a physical person in various governamental agencies</core:description>
+    <core:displayName>Social Security Number</core:displayName>
     <rdf:type rdf:resource="http://a.ml/vocabularies/document#DomainElement"/>
     <rdf:type rdf:resource="http://a.ml/vocabularies/meta#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -1255,8 +1550,8 @@
     <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     <rdfs:range rdf:resource="http://agents.org/vocabulary#Agent"/>
-    <j.3:description>List of other judiciary agents composing another an organization judiciary agent</j.3:description>
-    <j.3:displayName>Composed Of</j.3:displayName>
+    <core:description>List of other judiciary agents composing another an organization judiciary agent</core:description>
+    <core:displayName>Composed Of</core:displayName>
     <rdf:type rdf:resource="http://a.ml/vocabularies/document#DomainElement"/>
     <rdf:type rdf:resource="http://a.ml/vocabularies/meta#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -1317,8 +1612,8 @@
   </rdf:Property>
   <rdf:Property rdf:about="http://agents.org/vocabulary#name">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <j.3:description>The name given to any juduiciary agent</j.3:description>
-    <j.3:displayName>Name</j.3:displayName>
+    <core:description>The name given to any juduiciary agent</core:description>
+    <core:displayName>Name</core:displayName>
     <rdf:type rdf:resource="http://a.ml/vocabularies/document#DomainElement"/>
     <rdf:type rdf:resource="http://a.ml/vocabularies/meta#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -1343,8 +1638,8 @@
     <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     <rdfs:subPropertyOf rdf:resource="http://agents.org/vocabulary#composedOf"/>
     <rdfs:range rdf:resource="http://agents.org/vocabulary#Person"/>
-    <j.3:description>The person members of an organization judiciary agent</j.3:description>
-    <j.3:displayName>Members</j.3:displayName>
+    <core:description>The person members of an organization judiciary agent</core:description>
+    <core:displayName>Members</core:displayName>
     <rdf:type rdf:resource="http://a.ml/vocabularies/document#DomainElement"/>
     <rdf:type rdf:resource="http://a.ml/vocabularies/meta#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -1405,185 +1700,25 @@
     <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
   </owl:FunctionalProperty>
-  <j.4:Module rdf:about="file://src/main/resources/agents/example-instances/agents.instance.yaml">
-    <j.4:version>3.0.0</j.4:version>
-    <j.4:encodes>
-      <j.4:DomainElement rdf:about="file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes">
-        <j.0:composedOf>
-          <j.4:DomainElement rdf:about="file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2">
-            <j.0:name>Boca Juniors</j.0:name>
-            <j.0:members>
-              <j.4:DomainElement rdf:about="file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/1">
-                <j.0:name>Cristian Pavon</j.0:name>
-                <j.0:ssn>444444444</j.0:ssn>
-                <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DialectDomainElement"/>
-                <rdf:type rdf:resource="file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode"/>
-                <rdf:type rdf:resource="http://agents.org/vocabulary#Person"/>
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <owl:sameAs rdf:resource="file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/1"/>
-                <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-                <rdf:type rdf:resource="http://agents.org/vocabulary#Agent"/>
-              </j.4:DomainElement>
-            </j.0:members>
-            <j.0:members>
-              <j.4:DomainElement rdf:about="file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/0">
-                <j.0:name>Carlos Alberto Tevez</j.0:name>
-                <j.0:ssn>333333333</j.0:ssn>
-                <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DialectDomainElement"/>
-                <rdf:type rdf:resource="file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode"/>
-                <rdf:type rdf:resource="http://agents.org/vocabulary#Person"/>
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <owl:sameAs rdf:resource="file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/0"/>
-                <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-                <rdf:type rdf:resource="http://agents.org/vocabulary#Agent"/>
-              </j.4:DomainElement>
-            </j.0:members>
-            <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DialectDomainElement"/>
-            <rdf:type rdf:resource="file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode"/>
-            <rdf:type rdf:resource="http://agents.org/vocabulary#Organization"/>
-            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-            <owl:sameAs rdf:resource="file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2"/>
-            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-            <rdf:type rdf:resource="http://agents.org/vocabulary#Agent"/>
-            <j.0:composedOf rdf:resource="file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/1"/>
-            <j.0:composedOf rdf:resource="file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/0"/>
-          </j.4:DomainElement>
-        </j.0:composedOf>
-        <j.0:composedOf>
-          <j.4:DomainElement rdf:about="file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/1">
-            <j.4:link-label>polimi.fragment.instance.yaml</j.4:link-label>
-            <j.4:link-target>
-              <j.4:DomainElement rdf:about="file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/encodes">
-                <j.0:name>Politecnico di Milano</j.0:name>
-                <j.0:members>
-                  <j.4:DomainElement rdf:about="file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/1">
-                    <j.0:name>Angelo Carlo Morzenti</j.0:name>
-                    <j.0:ssn>222222222</j.0:ssn>
-                    <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DialectDomainElement"/>
-                    <rdf:type rdf:resource="file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode"/>
-                    <rdf:type rdf:resource="http://agents.org/vocabulary#Person"/>
-                    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                    <owl:sameAs rdf:resource="file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/1"/>
-                    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-                    <rdf:type rdf:resource="http://agents.org/vocabulary#Agent"/>
-                  </j.4:DomainElement>
-                </j.0:members>
-                <j.0:members>
-                  <j.4:DomainElement rdf:about="file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/0">
-                    <j.0:name>Marco Colombetti</j.0:name>
-                    <j.0:ssn>111111111</j.0:ssn>
-                    <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DialectDomainElement"/>
-                    <rdf:type rdf:resource="file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode"/>
-                    <rdf:type rdf:resource="http://agents.org/vocabulary#Person"/>
-                    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                    <owl:sameAs rdf:resource="file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/0"/>
-                    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-                    <rdf:type rdf:resource="http://agents.org/vocabulary#Agent"/>
-                  </j.4:DomainElement>
-                </j.0:members>
-                <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DialectDomainElement"/>
-                <rdf:type rdf:resource="file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode"/>
-                <rdf:type rdf:resource="http://agents.org/vocabulary#Organization"/>
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <owl:sameAs rdf:resource="file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/encodes"/>
-                <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-                <rdf:type rdf:resource="http://agents.org/vocabulary#Agent"/>
-                <j.0:composedOf rdf:resource="file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/1"/>
-                <j.0:composedOf rdf:resource="file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/0"/>
-              </j.4:DomainElement>
-            </j.4:link-target>
-            <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DialectDomainElement"/>
-            <rdf:type rdf:resource="file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode"/>
-            <rdf:type rdf:resource="http://agents.org/vocabulary#Organization"/>
-            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-            <owl:sameAs rdf:resource="file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/1"/>
-            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-            <rdf:type rdf:resource="http://agents.org/vocabulary#Agent"/>
-          </j.4:DomainElement>
-        </j.0:composedOf>
-        <j.0:composedOf>
-          <j.4:DomainElement rdf:about="file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/0">
-            <j.4:link-label>nicolas.fragment.instance.yaml</j.4:link-label>
-            <j.4:link-target>
-              <j.4:DomainElement rdf:about="file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml#/encodes">
-                <j.0:name>Nicolas Schejtman</j.0:name>
-                <j.0:ssn>38028835</j.0:ssn>
-                <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DialectDomainElement"/>
-                <rdf:type rdf:resource="file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode"/>
-                <rdf:type rdf:resource="http://agents.org/vocabulary#Person"/>
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <owl:sameAs rdf:resource="file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml#/encodes"/>
-                <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-                <rdf:type rdf:resource="http://agents.org/vocabulary#Agent"/>
-              </j.4:DomainElement>
-            </j.4:link-target>
-            <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DialectDomainElement"/>
-            <rdf:type rdf:resource="file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode"/>
-            <rdf:type rdf:resource="http://agents.org/vocabulary#Person"/>
-            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-            <owl:sameAs rdf:resource="file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/0"/>
-            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-            <rdf:type rdf:resource="http://agents.org/vocabulary#Agent"/>
-          </j.4:DomainElement>
-        </j.0:composedOf>
-        <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DialectDomainElement"/>
-        <rdf:type rdf:resource="file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <owl:sameAs rdf:resource="file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes"/>
-        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-      </j.4:DomainElement>
-    </j.4:encodes>
-    <rdf:type rdf:resource="http://a.ml/vocabularies/document#Fragment"/>
-    <j.4:root rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</j.4:root>
-    <j.2:definedBy rdf:resource="file://src/main/resources/agents/agents.dialect.yaml"/>
-    <rdf:type rdf:resource="http://a.ml/vocabularies/document#Unit"/>
-    <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DialectInstance"/>
-    <j.4:references>
-      <j.4:Unit rdf:about="file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml">
-        <j.4:root rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-        >false</j.4:root>
-        <j.4:version>3.0.0</j.4:version>
-        <j.4:encodes rdf:resource="file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/encodes"/>
-        <j.2:fragment>Organization</j.2:fragment>
-        <j.2:definedBy rdf:resource="file://src/main/resources/agents/agents.dialect.yaml"/>
-        <rdf:type rdf:resource="http://a.ml/vocabularies/document#Fragment"/>
-        <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DialectInstanceFragment"/>
-      </j.4:Unit>
-    </j.4:references>
-    <rdf:type rdf:resource="http://a.ml/vocabularies/document#Document"/>
-    <j.4:references>
-      <j.4:Unit rdf:about="file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml">
-        <j.4:root rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-        >false</j.4:root>
-        <j.4:version>3.0.0</j.4:version>
-        <j.4:encodes rdf:resource="file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml#/encodes"/>
-        <j.2:fragment>Person</j.2:fragment>
-        <j.2:definedBy rdf:resource="file://src/main/resources/agents/agents.dialect.yaml"/>
-        <rdf:type rdf:resource="http://a.ml/vocabularies/document#Fragment"/>
-        <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DialectInstanceFragment"/>
-      </j.4:Unit>
-    </j.4:references>
-  </j.4:Module>
   <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
-  <j.4:Unit rdf:about="file://src/main/resources/agents/agents.vocabulary.yaml">
-    <j.4:declares rdf:resource="http://agents.org/vocabulary#members"/>
-    <j.3:name>Agents</j.3:name>
-    <j.4:declares rdf:resource="http://agents.org/vocabulary#Organization"/>
-    <j.4:declares rdf:resource="http://agents.org/vocabulary#composedOf"/>
-    <j.4:declares rdf:resource="http://agents.org/vocabulary#name"/>
-    <j.4:declares rdf:resource="http://agents.org/vocabulary#ssn"/>
-    <j.4:root rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</j.4:root>
-    <j.4:version>3.0.0</j.4:version>
+  <document:Unit rdf:about="../agents.vocabulary.yaml">
+    <document:declares rdf:resource="http://agents.org/vocabulary#members"/>
+    <core:name>Agents</core:name>
+    <document:declares rdf:resource="http://agents.org/vocabulary#Organization"/>
+    <document:declares rdf:resource="http://agents.org/vocabulary#composedOf"/>
+    <document:declares rdf:resource="http://agents.org/vocabulary#name"/>
+    <document:declares rdf:resource="http://agents.org/vocabulary#ssn"/>
+    <document:root rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</document:root>
+    <document:version>3.0.0</document:version>
     <rdf:type rdf:resource="http://a.ml/vocabularies/meta#Vocabulary"/>
-    <j.2:base>http://agents.org/vocabulary#</j.2:base>
-    <j.4:declares rdf:resource="http://agents.org/vocabulary#Agent"/>
+    <meta:base>http://agents.org/vocabulary#</meta:base>
+    <document:declares rdf:resource="http://agents.org/vocabulary#Agent"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    <j.4:declares rdf:resource="http://agents.org/vocabulary#Person"/>
-    <j.4:location>file://src/main/resources/agents/agents.vocabulary.yaml</j.4:location>
+    <document:declares rdf:resource="http://agents.org/vocabulary#Person"/>
+    <document:location>file://src/main/resources/agents/agents.vocabulary.yaml</document:location>
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-  </j.4:Unit>
+  </document:Unit>
   <rdf:List rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
   </rdf:List>

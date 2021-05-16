@@ -1,150 +1,150 @@
 {
   "@graph" : [ {
-    "@id" : "file://src/main/resources/agents/agents.dialect.yaml",
-    "@type" : [ "http://a.ml/vocabularies/meta#Dialect", "http://a.ml/vocabularies/document#Document", "http://a.ml/vocabularies/document#Module", "http://a.ml/vocabularies/document#Unit", "http://a.ml/vocabularies/document#Fragment" ],
+    "@id" : "./",
+    "@type" : [ "meta:Dialect", "document:Document", "document:Module", "document:Unit", "document:Fragment" ],
     "name" : "Agents",
-    "http://a.ml/vocabularies/core#version" : "1.0",
-    "declares" : [ "file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode", "file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode", "file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode", "file://src/main/resources/agents/agents.dialect.yaml#/declarations/NamedNode" ],
+    "core:version" : "1.0",
+    "declares" : [ "dialect:declarations/PersonNode", "dialect:declarations/OrganizationNode", "dialect:declarations/AgentListNode", "dialect:declarations/NamedNode" ],
     "location" : "file://src/main/resources/agents/agents.dialect.yaml",
-    "references" : "file://src/main/resources/agents/agents.vocabulary.yaml",
-    "http://a.ml/vocabularies/document#root" : true,
+    "references" : "agents.vocabulary.yaml",
+    "document:root" : true,
     "version" : "3.0.0",
-    "documents" : "file://src/main/resources/agents/agents.dialect.yaml/documents"
+    "documents" : "documents"
   }, {
-    "@id" : "file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://www.w3.org/ns/shacl#Shape", "http://a.ml/vocabularies/meta#NodeMapping" ],
+    "@id" : "dialect:declarations/AgentListNode",
+    "@type" : [ "document:DomainElement", "shacl:Shape", "meta:NodeMapping" ],
     "name" : "AgentListNode",
-    "property" : "file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode/property/agents"
+    "property" : "dialect:declarations/AgentListNode/property/agents"
   }, {
-    "@id" : "file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode/property/agents",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#NodePropertyMapping" ],
+    "@id" : "dialect:declarations/AgentListNode/property/agents",
+    "@type" : [ "document:DomainElement", "meta:NodePropertyMapping" ],
     "name" : "agents",
-    "http://a.ml/vocabularies/meta#allowMultiple" : true,
-    "node" : "file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode/property/agents/list",
-    "path" : "http://agents.org/vocabulary#composedOf"
+    "meta:allowMultiple" : true,
+    "node" : "dialect:declarations/AgentListNode/property/agents/list",
+    "path" : "vocabulary:composedOf"
   }, {
-    "@id" : "file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode/property/agents/list",
-    "@type" : "http://www.w3.org/2000/01/rdf-schema#Seq",
-    "_1" : "file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode",
-    "_2" : "file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode"
+    "@id" : "dialect:declarations/AgentListNode/property/agents/list",
+    "@type" : "rdfs:Seq",
+    "_1" : "dialect:declarations/OrganizationNode",
+    "_2" : "dialect:declarations/PersonNode"
   }, {
-    "@id" : "file://src/main/resources/agents/agents.dialect.yaml#/declarations/NamedNode",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://www.w3.org/ns/shacl#Shape", "http://a.ml/vocabularies/meta#NodeMapping" ],
+    "@id" : "dialect:declarations/NamedNode",
+    "@type" : [ "document:DomainElement", "shacl:Shape", "meta:NodeMapping" ],
     "name" : "NamedNode",
-    "property" : "file://src/main/resources/agents/agents.dialect.yaml#/declarations/NamedNode/property/name"
+    "property" : "dialect:declarations/NamedNode/property/name"
   }, {
-    "@id" : "file://src/main/resources/agents/agents.dialect.yaml#/declarations/NamedNode/property/name",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#NodePropertyMapping" ],
+    "@id" : "dialect:declarations/NamedNode/property/name",
+    "@type" : [ "document:DomainElement", "meta:NodePropertyMapping" ],
     "name" : "name",
-    "datatype" : "http://www.w3.org/2001/XMLSchema#string",
-    "path" : "http://agents.org/vocabulary#name"
+    "datatype" : "xsd:string",
+    "path" : "vocabulary:name"
   }, {
-    "@id" : "file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://www.w3.org/ns/shacl#Shape", "http://a.ml/vocabularies/meta#NodeMapping" ],
+    "@id" : "dialect:declarations/OrganizationNode",
+    "@type" : [ "document:DomainElement", "shacl:Shape", "meta:NodeMapping" ],
     "name" : "OrganizationNode",
-    "resolvedExtends" : "file://src/main/resources/agents/agents.dialect.yaml#/declarations/NamedNode",
-    "property" : [ "file://src/main/resources/agents/agents.dialect.yaml#/declarations/NamedNode/property/name", "file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode/property/members" ],
-    "targetClass" : "http://agents.org/vocabulary#Organization"
+    "resolvedExtends" : "dialect:declarations/NamedNode",
+    "property" : [ "dialect:declarations/NamedNode/property/name", "dialect:declarations/OrganizationNode/property/members" ],
+    "targetClass" : "vocabulary:Organization"
   }, {
-    "@id" : "file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode/property/members",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#NodePropertyMapping" ],
+    "@id" : "dialect:declarations/OrganizationNode/property/members",
+    "@type" : [ "document:DomainElement", "meta:NodePropertyMapping" ],
     "name" : "members",
-    "http://a.ml/vocabularies/meta#allowMultiple" : true,
+    "meta:allowMultiple" : true,
     "minCount" : "1",
-    "node" : "file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode/property/members/list",
-    "path" : "http://agents.org/vocabulary#members"
+    "node" : "dialect:declarations/OrganizationNode/property/members/list",
+    "path" : "vocabulary:members"
   }, {
-    "@id" : "file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode/property/members/list",
-    "@type" : "http://www.w3.org/2000/01/rdf-schema#Seq",
-    "_1" : "file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode"
+    "@id" : "dialect:declarations/OrganizationNode/property/members/list",
+    "@type" : "rdfs:Seq",
+    "_1" : "dialect:declarations/PersonNode"
   }, {
-    "@id" : "file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://www.w3.org/ns/shacl#Shape", "http://a.ml/vocabularies/meta#NodeMapping" ],
+    "@id" : "dialect:declarations/PersonNode",
+    "@type" : [ "document:DomainElement", "shacl:Shape", "meta:NodeMapping" ],
     "name" : "PersonNode",
-    "resolvedExtends" : "file://src/main/resources/agents/agents.dialect.yaml#/declarations/NamedNode",
-    "property" : [ "file://src/main/resources/agents/agents.dialect.yaml#/declarations/NamedNode/property/name", "file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode/property/ssn" ],
-    "targetClass" : "http://agents.org/vocabulary#Person"
+    "resolvedExtends" : "dialect:declarations/NamedNode",
+    "property" : [ "dialect:declarations/NamedNode/property/name", "dialect:declarations/PersonNode/property/ssn" ],
+    "targetClass" : "vocabulary:Person"
   }, {
-    "@id" : "file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode/property/ssn",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#NodePropertyMapping" ],
+    "@id" : "dialect:declarations/PersonNode/property/ssn",
+    "@type" : [ "document:DomainElement", "meta:NodePropertyMapping" ],
     "name" : "ssn",
-    "datatype" : "http://www.w3.org/2001/XMLSchema#string",
+    "datatype" : "xsd:string",
     "minCount" : "1",
-    "path" : "http://agents.org/vocabulary#ssn"
+    "path" : "vocabulary:ssn"
   }, {
-    "@id" : "file://src/main/resources/agents/agents.dialect.yaml#/documents/fragments/Organization",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#DocumentMapping" ],
+    "@id" : "dialect:documents/fragments/Organization",
+    "@type" : [ "document:DomainElement", "meta:DocumentMapping" ],
     "name" : "Organization",
-    "encodedNode" : "file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode"
+    "encodedNode" : "dialect:declarations/OrganizationNode"
   }, {
-    "@id" : "file://src/main/resources/agents/agents.dialect.yaml#/documents/fragments/Person",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#DocumentMapping" ],
+    "@id" : "dialect:documents/fragments/Person",
+    "@type" : [ "document:DomainElement", "meta:DocumentMapping" ],
     "name" : "Person",
-    "encodedNode" : "file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode"
+    "encodedNode" : "dialect:declarations/PersonNode"
   }, {
-    "@id" : "file://src/main/resources/agents/agents.dialect.yaml#/documents/root",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#DocumentMapping" ],
+    "@id" : "dialect:documents/root",
+    "@type" : [ "document:DomainElement", "meta:DocumentMapping" ],
     "name" : "Agents 1.0",
-    "encodedNode" : "file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode"
+    "encodedNode" : "dialect:declarations/AgentListNode"
   }, {
-    "@id" : "file://src/main/resources/agents/agents.dialect.yaml/documents",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#DocumentsModel" ],
-    "fragments" : [ "file://src/main/resources/agents/agents.dialect.yaml#/documents/fragments/Person", "file://src/main/resources/agents/agents.dialect.yaml#/documents/fragments/Organization" ],
-    "rootDocument" : "file://src/main/resources/agents/agents.dialect.yaml#/documents/root"
+    "@id" : "documents",
+    "@type" : [ "document:DomainElement", "meta:DocumentsModel" ],
+    "fragments" : [ "dialect:documents/fragments/Person", "dialect:documents/fragments/Organization" ],
+    "rootDocument" : "dialect:documents/root"
   }, {
-    "@id" : "file://src/main/resources/agents/agents.vocabulary.yaml",
-    "@type" : [ "http://a.ml/vocabularies/document#Unit", "http://a.ml/vocabularies/meta#Vocabulary", "http://www.w3.org/2002/07/owl#Ontology" ],
+    "@id" : "agents.vocabulary.yaml",
+    "@type" : [ "document:Unit", "meta:Vocabulary", "owl:Ontology" ],
     "name" : "Agents",
-    "declares" : [ "http://agents.org/vocabulary#members", "http://agents.org/vocabulary#Organization", "http://agents.org/vocabulary#composedOf", "http://agents.org/vocabulary#name", "http://agents.org/vocabulary#ssn", "http://agents.org/vocabulary#Agent", "http://agents.org/vocabulary#Person" ],
+    "declares" : [ "vocabulary:members", "vocabulary:Organization", "vocabulary:composedOf", "vocabulary:name", "vocabulary:ssn", "vocabulary:Agent", "vocabulary:Person" ],
     "location" : "file://src/main/resources/agents/agents.vocabulary.yaml",
-    "http://a.ml/vocabularies/document#root" : false,
+    "document:root" : false,
     "version" : "3.0.0",
     "base" : "http://agents.org/vocabulary#"
   }, {
-    "@id" : "http://agents.org/vocabulary#Agent",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://www.w3.org/2002/07/owl#Class" ],
+    "@id" : "vocabulary:Agent",
+    "@type" : [ "document:DomainElement", "owl:Class" ],
     "description" : "The most generic class representing any judiciary agent",
     "displayName" : "Agent",
     "name" : "Agent"
   }, {
-    "@id" : "http://agents.org/vocabulary#Organization",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://www.w3.org/2002/07/owl#Class" ],
+    "@id" : "vocabulary:Organization",
+    "@type" : [ "document:DomainElement", "owl:Class" ],
     "description" : "An organization (company, non-profit, etc.) judiciary agent class",
     "displayName" : "Organization",
     "name" : "Organization",
-    "subClassOf" : "http://agents.org/vocabulary#Agent"
+    "subClassOf" : "vocabulary:Agent"
   }, {
-    "@id" : "http://agents.org/vocabulary#Person",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://www.w3.org/2002/07/owl#Class" ],
+    "@id" : "vocabulary:Person",
+    "@type" : [ "document:DomainElement", "owl:Class" ],
     "description" : "A physical person judiciary agent class",
     "displayName" : "Person",
     "name" : "Person",
-    "subClassOf" : "http://agents.org/vocabulary#Agent"
+    "subClassOf" : "vocabulary:Agent"
   }, {
-    "@id" : "http://agents.org/vocabulary#composedOf",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#Property", "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+    "@id" : "vocabulary:composedOf",
+    "@type" : [ "document:DomainElement", "meta:Property", "owl:ObjectProperty" ],
     "description" : "List of other judiciary agents composing another an organization judiciary agent",
     "displayName" : "Composed Of",
-    "range" : "http://agents.org/vocabulary#Agent"
+    "range" : "vocabulary:Agent"
   }, {
-    "@id" : "http://agents.org/vocabulary#members",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#Property", "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+    "@id" : "vocabulary:members",
+    "@type" : [ "document:DomainElement", "meta:Property", "owl:ObjectProperty" ],
     "description" : "The person members of an organization judiciary agent",
     "displayName" : "Members",
-    "range" : "http://agents.org/vocabulary#Person",
-    "subPropertyOf" : "http://agents.org/vocabulary#composedOf"
+    "range" : "vocabulary:Person",
+    "subPropertyOf" : "vocabulary:composedOf"
   }, {
-    "@id" : "http://agents.org/vocabulary#name",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#Property", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+    "@id" : "vocabulary:name",
+    "@type" : [ "document:DomainElement", "meta:Property", "owl:DatatypeProperty" ],
     "description" : "The name given to any juduiciary agent",
     "displayName" : "Name",
-    "range" : "http://www.w3.org/2001/XMLSchema#string"
+    "range" : "xsd:string"
   }, {
-    "@id" : "http://agents.org/vocabulary#ssn",
-    "@type" : [ "http://a.ml/vocabularies/document#DomainElement", "http://a.ml/vocabularies/meta#Property", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+    "@id" : "vocabulary:ssn",
+    "@type" : [ "document:DomainElement", "meta:Property", "owl:DatatypeProperty" ],
     "description" : "Number that identifies a physical person in various governamental agencies",
     "displayName" : "Social Security Number",
-    "range" : "http://www.w3.org/2001/XMLSchema#string"
+    "range" : "xsd:string"
   } ],
   "@context" : {
     "range" : {
@@ -244,6 +244,16 @@
     "rootDocument" : {
       "@id" : "http://a.ml/vocabularies/meta#rootDocument",
       "@type" : "@id"
-    }
+    },
+    "shacl" : "http://www.w3.org/ns/shacl#",
+    "core" : "http://a.ml/vocabularies/core#",
+    "vocabulary" : "http://agents.org/vocabulary#",
+    "dialect" : "file://src/main/resources/agents/agents.dialect.yaml#/",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "meta" : "http://a.ml/vocabularies/meta#",
+    "document" : "http://a.ml/vocabularies/document#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#"
   }
 }

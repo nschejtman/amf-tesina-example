@@ -1,106 +1,79 @@
-<file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml>
-        a       <http://a.ml/vocabularies/document#Unit> , <http://a.ml/vocabularies/document#Fragment> , <http://a.ml/vocabularies/meta#DialectInstanceFragment> ;
-        <http://a.ml/vocabularies/document#encodes>
-                <file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml#/encodes> ;
-        <http://a.ml/vocabularies/document#root>
-                false ;
-        <http://a.ml/vocabularies/document#version>
-                "3.0.0" ;
-        <http://a.ml/vocabularies/meta#definedBy>
-                <file://src/main/resources/agents/agents.dialect.yaml> ;
-        <http://a.ml/vocabularies/meta#fragment>
-                "Person" .
+@base          <file://src/main/resources/agents/example-instances/agents.instance.yaml> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix core:  <http://a.ml/vocabularies/core#> .
+@prefix vocabulary: <http://agents.org/vocabulary#> .
+@prefix dialect: <file://src/main/resources/agents/agents.dialect.yaml#/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix meta:  <http://a.ml/vocabularies/meta#> .
+@prefix document: <http://a.ml/vocabularies/document#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 
-<file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/0>
-        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#DialectDomainElement> , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , <http://agents.org/vocabulary#Person> ;
-        <http://a.ml/vocabularies/document#link-label>
-                "nicolas.fragment.instance.yaml" ;
-        <http://a.ml/vocabularies/document#link-target>
-                <file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml#/encodes> .
+<nicolas.fragment.instance.yaml>
+        a                 document:Unit , document:Fragment , meta:DialectInstanceFragment ;
+        document:encodes  <nicolas.fragment.instance.yaml#/encodes> ;
+        document:root     false ;
+        document:version  "3.0.0" ;
+        meta:definedBy    <file://src/main/resources/agents/agents.dialect.yaml> ;
+        meta:fragment     "Person" .
 
-<file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/1>
-        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#DialectDomainElement> , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , <http://agents.org/vocabulary#Person> ;
-        <http://agents.org/vocabulary#name>
-                "Cristian Pavon" ;
-        <http://agents.org/vocabulary#ssn>
-                "444444444" .
+<#/encodes/agents/0>  a       document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , vocabulary:Person ;
+        document:link-label   "nicolas.fragment.instance.yaml" ;
+        document:link-target  <nicolas.fragment.instance.yaml#/encodes> .
 
-<file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/0>
-        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#DialectDomainElement> , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , <http://agents.org/vocabulary#Person> ;
-        <http://agents.org/vocabulary#name>
-                "Marco Colombetti" ;
-        <http://agents.org/vocabulary#ssn>
-                "111111111" .
+<#/encodes/agents/2/members/1>
+        a                document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , vocabulary:Person ;
+        vocabulary:name  "Cristian Pavon" ;
+        vocabulary:ssn   "444444444" .
 
-<file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml>
-        a       <http://a.ml/vocabularies/document#Unit> , <http://a.ml/vocabularies/document#Fragment> , <http://a.ml/vocabularies/meta#DialectInstanceFragment> ;
-        <http://a.ml/vocabularies/document#encodes>
-                <file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/encodes> ;
-        <http://a.ml/vocabularies/document#root>
-                false ;
-        <http://a.ml/vocabularies/document#version>
-                "3.0.0" ;
-        <http://a.ml/vocabularies/meta#definedBy>
-                <file://src/main/resources/agents/agents.dialect.yaml> ;
-        <http://a.ml/vocabularies/meta#fragment>
-                "Organization" .
+<polimi.fragment.instance.yaml#/members/0>
+        a                document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , vocabulary:Person ;
+        vocabulary:name  "Marco Colombetti" ;
+        vocabulary:ssn   "111111111" .
 
-<file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml#/encodes>
-        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#DialectDomainElement> , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , <http://agents.org/vocabulary#Person> ;
-        <http://agents.org/vocabulary#name>
-                "Nicolas Schejtman" ;
-        <http://agents.org/vocabulary#ssn>
-                "38028835" .
+<polimi.fragment.instance.yaml>
+        a                 document:Unit , document:Fragment , meta:DialectInstanceFragment ;
+        document:encodes  <polimi.fragment.instance.yaml#/encodes> ;
+        document:root     false ;
+        document:version  "3.0.0" ;
+        meta:definedBy    <file://src/main/resources/agents/agents.dialect.yaml> ;
+        meta:fragment     "Organization" .
 
-<file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/1>
-        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#DialectDomainElement> , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode> , <http://agents.org/vocabulary#Organization> ;
-        <http://a.ml/vocabularies/document#link-label>
-                "polimi.fragment.instance.yaml" ;
-        <http://a.ml/vocabularies/document#link-target>
-                <file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/encodes> .
+<nicolas.fragment.instance.yaml#/encodes>
+        a                document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , vocabulary:Person ;
+        vocabulary:name  "Nicolas Schejtman" ;
+        vocabulary:ssn   "38028835" .
 
-<file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/1>
-        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#DialectDomainElement> , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , <http://agents.org/vocabulary#Person> ;
-        <http://agents.org/vocabulary#name>
-                "Angelo Carlo Morzenti" ;
-        <http://agents.org/vocabulary#ssn>
-                "222222222" .
+<#/encodes/agents/1>  a       document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode> , vocabulary:Organization ;
+        document:link-label   "polimi.fragment.instance.yaml" ;
+        document:link-target  <polimi.fragment.instance.yaml#/encodes> .
 
-<file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2>
-        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#DialectDomainElement> , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode> , <http://agents.org/vocabulary#Organization> ;
-        <http://agents.org/vocabulary#members>
-                <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/1> , <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/0> ;
-        <http://agents.org/vocabulary#name>
-                "Boca Juniors" .
+<polimi.fragment.instance.yaml#/members/1>
+        a                document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , vocabulary:Person ;
+        vocabulary:name  "Angelo Carlo Morzenti" ;
+        vocabulary:ssn   "222222222" .
 
-<file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/encodes>
-        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#DialectDomainElement> , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode> , <http://agents.org/vocabulary#Organization> ;
-        <http://agents.org/vocabulary#members>
-                <file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/1> , <file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml#/members/0> ;
-        <http://agents.org/vocabulary#name>
-                "Politecnico di Milano" .
+<#/encodes/agents/2>  a     document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode> , vocabulary:Organization ;
+        vocabulary:members  <#/encodes/agents/2/members/1> , <#/encodes/agents/2/members/0> ;
+        vocabulary:name     "Boca Juniors" .
 
-<file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes>
-        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#DialectDomainElement> , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode> ;
-        <http://agents.org/vocabulary#composedOf>
-                <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2> , <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/1> , <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/0> .
+<polimi.fragment.instance.yaml#/encodes>
+        a                   document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode> , vocabulary:Organization ;
+        vocabulary:members  <polimi.fragment.instance.yaml#/members/1> , <polimi.fragment.instance.yaml#/members/0> ;
+        vocabulary:name     "Politecnico di Milano" .
 
-<file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes/agents/2/members/0>
-        a       <http://a.ml/vocabularies/document#DomainElement> , <http://a.ml/vocabularies/meta#DialectDomainElement> , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , <http://agents.org/vocabulary#Person> ;
-        <http://agents.org/vocabulary#name>
-                "Carlos Alberto Tevez" ;
-        <http://agents.org/vocabulary#ssn>
-                "333333333" .
+<#/encodes>  a                 document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode> ;
+        vocabulary:composedOf  <#/encodes/agents/2> , <#/encodes/agents/1> , <#/encodes/agents/0> .
 
-<file://src/main/resources/agents/example-instances/agents.instance.yaml>
-        a       <http://a.ml/vocabularies/document#Module> , <http://a.ml/vocabularies/document#Fragment> , <http://a.ml/vocabularies/document#Unit> , <http://a.ml/vocabularies/meta#DialectInstance> , <http://a.ml/vocabularies/document#Document> ;
-        <http://a.ml/vocabularies/document#encodes>
-                <file://src/main/resources/agents/example-instances/agents.instance.yaml#/encodes> ;
-        <http://a.ml/vocabularies/document#references>
-                <file://src/main/resources/agents/example-instances/polimi.fragment.instance.yaml> , <file://src/main/resources/agents/example-instances/nicolas.fragment.instance.yaml> ;
-        <http://a.ml/vocabularies/document#root>
-                true ;
-        <http://a.ml/vocabularies/document#version>
-                "3.0.0" ;
-        <http://a.ml/vocabularies/meta#definedBy>
-                <file://src/main/resources/agents/agents.dialect.yaml> .
+<#/encodes/agents/2/members/0>
+        a                document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , vocabulary:Person ;
+        vocabulary:name  "Carlos Alberto Tevez" ;
+        vocabulary:ssn   "333333333" .
+
+<>      a                    document:Module , document:Fragment , document:Unit , meta:DialectInstance , document:Document ;
+        document:encodes     <#/encodes> ;
+        document:references  <polimi.fragment.instance.yaml> , <nicolas.fragment.instance.yaml> ;
+        document:root        true ;
+        document:version     "3.0.0" ;
+        meta:definedBy       <file://src/main/resources/agents/agents.dialect.yaml> .
