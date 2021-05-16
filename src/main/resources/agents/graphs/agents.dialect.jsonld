@@ -4,7 +4,7 @@
     "@type" : [ "meta:Dialect", "document:Document", "document:Module", "document:Unit", "document:Fragment" ],
     "name" : "Agents",
     "core:version" : "1.0",
-    "declares" : [ "dialect:declarations/PersonNode", "dialect:declarations/OrganizationNode", "dialect:declarations/AgentListNode", "dialect:declarations/NamedNode" ],
+    "declares" : [ "dialect:declarations/PersonNode", "dialect:declarations/OrganizationNode", "dialect:declarations/AgentListNode", "dialect:declarations/AgentNode" ],
     "location" : "file://src/main/resources/agents/agents.dialect.yaml",
     "references" : "agents.vocabulary.yaml",
     "document:root" : true,
@@ -28,12 +28,13 @@
     "_1" : "dialect:declarations/OrganizationNode",
     "_2" : "dialect:declarations/PersonNode"
   }, {
-    "@id" : "dialect:declarations/NamedNode",
+    "@id" : "dialect:declarations/AgentNode",
     "@type" : [ "document:DomainElement", "shacl:Shape", "meta:NodeMapping" ],
-    "name" : "NamedNode",
-    "property" : "dialect:declarations/NamedNode/property/name"
+    "name" : "AgentNode",
+    "property" : "dialect:declarations/AgentNode/property/name",
+    "targetClass" : "vocabulary:Agent"
   }, {
-    "@id" : "dialect:declarations/NamedNode/property/name",
+    "@id" : "dialect:declarations/AgentNode/property/name",
     "@type" : [ "document:DomainElement", "meta:NodePropertyMapping" ],
     "name" : "name",
     "datatype" : "xsd:string",
@@ -42,9 +43,19 @@
     "@id" : "dialect:declarations/OrganizationNode",
     "@type" : [ "document:DomainElement", "shacl:Shape", "meta:NodeMapping" ],
     "name" : "OrganizationNode",
-    "resolvedExtends" : "dialect:declarations/NamedNode",
-    "property" : [ "dialect:declarations/NamedNode/property/name", "dialect:declarations/OrganizationNode/property/members" ],
+    "resolvedExtends" : "dialect:declarations/AgentNode",
+    "property" : [ "dialect:declarations/AgentNode/property/name", "dialect:declarations/OrganizationNode/property/managedBy", "dialect:declarations/OrganizationNode/property/members" ],
     "targetClass" : "vocabulary:Organization"
+  }, {
+    "@id" : "dialect:declarations/OrganizationNode/property/managedBy",
+    "@type" : [ "document:DomainElement", "meta:NodePropertyMapping" ],
+    "name" : "managedBy",
+    "node" : "dialect:declarations/OrganizationNode/property/managedBy/list",
+    "path" : "vocabulary:managedBy"
+  }, {
+    "@id" : "dialect:declarations/OrganizationNode/property/managedBy/list",
+    "@type" : "rdfs:Seq",
+    "_1" : "dialect:declarations/AgentNode"
   }, {
     "@id" : "dialect:declarations/OrganizationNode/property/members",
     "@type" : [ "document:DomainElement", "meta:NodePropertyMapping" ],
@@ -61,8 +72,8 @@
     "@id" : "dialect:declarations/PersonNode",
     "@type" : [ "document:DomainElement", "shacl:Shape", "meta:NodeMapping" ],
     "name" : "PersonNode",
-    "resolvedExtends" : "dialect:declarations/NamedNode",
-    "property" : [ "dialect:declarations/NamedNode/property/name", "dialect:declarations/PersonNode/property/ssn" ],
+    "resolvedExtends" : "dialect:declarations/AgentNode",
+    "property" : [ "dialect:declarations/AgentNode/property/name", "dialect:declarations/PersonNode/property/ssn" ],
     "targetClass" : "vocabulary:Person"
   }, {
     "@id" : "dialect:declarations/PersonNode/property/ssn",
@@ -95,7 +106,7 @@
     "@id" : "agents.vocabulary.yaml",
     "@type" : [ "document:Unit", "meta:Vocabulary", "owl:Ontology" ],
     "name" : "Agents",
-    "declares" : [ "vocabulary:members", "vocabulary:Organization", "vocabulary:composedOf", "vocabulary:name", "vocabulary:ssn", "vocabulary:Agent", "vocabulary:Person" ],
+    "declares" : [ "vocabulary:members", "vocabulary:Organization", "vocabulary:composedOf", "vocabulary:name", "vocabulary:managedBy", "vocabulary:ssn", "vocabulary:Agent", "vocabulary:Person" ],
     "location" : "file://src/main/resources/agents/agents.vocabulary.yaml",
     "document:root" : false,
     "version" : "3.0.0",
@@ -127,6 +138,12 @@
     "displayName" : "Composed Of",
     "range" : "vocabulary:Agent"
   }, {
+    "@id" : "vocabulary:managedBy",
+    "@type" : [ "document:DomainElement", "meta:Property", "owl:ObjectProperty" ],
+    "description" : "The person that leads an organization",
+    "displayName" : "Managed By",
+    "range" : "vocabulary:Person"
+  }, {
     "@id" : "vocabulary:members",
     "@type" : [ "document:DomainElement", "meta:Property", "owl:ObjectProperty" ],
     "description" : "The person members of an organization judiciary agent",
@@ -157,21 +174,6 @@
     "displayName" : {
       "@id" : "http://a.ml/vocabularies/core#displayName"
     },
-    "datatype" : {
-      "@id" : "http://www.w3.org/ns/shacl#datatype",
-      "@type" : "@id"
-    },
-    "name" : {
-      "@id" : "http://a.ml/vocabularies/core#name"
-    },
-    "path" : {
-      "@id" : "http://www.w3.org/ns/shacl#path",
-      "@type" : "@id"
-    },
-    "minCount" : {
-      "@id" : "http://www.w3.org/ns/shacl#minCount",
-      "@type" : "http://www.w3.org/2001/XMLSchema#long"
-    },
     "resolvedExtends" : {
       "@id" : "http://a.ml/vocabularies/meta#resolvedExtends",
       "@type" : "@id"
@@ -180,8 +182,23 @@
       "@id" : "http://www.w3.org/ns/shacl#property",
       "@type" : "@id"
     },
+    "name" : {
+      "@id" : "http://a.ml/vocabularies/core#name"
+    },
     "targetClass" : {
       "@id" : "http://www.w3.org/ns/shacl#targetClass",
+      "@type" : "@id"
+    },
+    "minCount" : {
+      "@id" : "http://www.w3.org/ns/shacl#minCount",
+      "@type" : "http://www.w3.org/2001/XMLSchema#long"
+    },
+    "datatype" : {
+      "@id" : "http://www.w3.org/ns/shacl#datatype",
+      "@type" : "@id"
+    },
+    "path" : {
+      "@id" : "http://www.w3.org/ns/shacl#path",
       "@type" : "@id"
     },
     "_1" : {

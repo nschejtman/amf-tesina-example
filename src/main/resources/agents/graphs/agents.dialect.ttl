@@ -15,11 +15,12 @@ vocabulary:ssn  a         document:DomainElement , meta:Property , owl:DatatypeP
         core:description  "Number that identifies a physical person in various governamental agencies" ;
         core:displayName  "Social Security Number" .
 
-<#/declarations/NamedNode/property/name>
-        a               document:DomainElement , meta:NodePropertyMapping ;
-        core:name       "name" ;
-        shacl:datatype  xsd:string ;
-        shacl:path      vocabulary:name .
+<#/declarations/PersonNode>
+        a                     document:DomainElement , shacl:Shape , meta:NodeMapping ;
+        core:name             "PersonNode" ;
+        meta:resolvedExtends  <#/declarations/AgentNode> ;
+        shacl:property        <#/declarations/AgentNode/property/name> , <#/declarations/PersonNode/property/ssn> ;
+        shacl:targetClass     vocabulary:Person .
 
 <#/declarations/PersonNode/property/ssn>
         a               document:DomainElement , meta:NodePropertyMapping ;
@@ -28,28 +29,27 @@ vocabulary:ssn  a         document:DomainElement , meta:Property , owl:DatatypeP
         shacl:minCount  "1"^^xsd:long ;
         shacl:path      vocabulary:ssn .
 
-<#/declarations/PersonNode>
-        a                     document:DomainElement , shacl:Shape , meta:NodeMapping ;
-        core:name             "PersonNode" ;
-        meta:resolvedExtends  <#/declarations/NamedNode> ;
-        shacl:property        <#/declarations/NamedNode/property/name> , <#/declarations/PersonNode/property/ssn> ;
-        shacl:targetClass     vocabulary:Person .
+<#/declarations/AgentNode/property/name>
+        a               document:DomainElement , meta:NodePropertyMapping ;
+        core:name       "name" ;
+        shacl:datatype  xsd:string ;
+        shacl:path      vocabulary:name .
 
 <#/declarations/OrganizationNode>
         a                     document:DomainElement , shacl:Shape , meta:NodeMapping ;
         core:name             "OrganizationNode" ;
-        meta:resolvedExtends  <#/declarations/NamedNode> ;
-        shacl:property        <#/declarations/NamedNode/property/name> , <#/declarations/OrganizationNode/property/members> ;
+        meta:resolvedExtends  <#/declarations/AgentNode> ;
+        shacl:property        <#/declarations/AgentNode/property/name> , <#/declarations/OrganizationNode/property/managedBy> , <#/declarations/OrganizationNode/property/members> ;
         shacl:targetClass     vocabulary:Organization .
-
-<#/declarations/OrganizationNode/property/members/list>
-        a        rdfs:Seq ;
-        rdfs:_1  <#/declarations/PersonNode> .
 
 vocabulary:Agent  a       document:DomainElement , owl:Class ;
         core:description  "The most generic class representing any judiciary agent" ;
         core:displayName  "Agent" ;
         core:name         "Agent" .
+
+<#/declarations/OrganizationNode/property/members/list>
+        a        rdfs:Seq ;
+        rdfs:_1  <#/declarations/PersonNode> .
 
 vocabulary:name  a        document:DomainElement , meta:Property , owl:DatatypeProperty ;
         rdfs:range        xsd:string ;
@@ -76,7 +76,7 @@ vocabulary:Person  a      document:DomainElement , owl:Class ;
 <>      a                    meta:Dialect , document:Document , document:Module , document:Unit , document:Fragment ;
         core:name            "Agents" ;
         core:version         "1.0" ;
-        document:declares    <#/declarations/PersonNode> , <#/declarations/OrganizationNode> , <#/declarations/AgentListNode> , <#/declarations/NamedNode> ;
+        document:declares    <#/declarations/PersonNode> , <#/declarations/OrganizationNode> , <#/declarations/AgentListNode> , <#/declarations/AgentNode> ;
         document:location    "file://src/main/resources/agents/agents.dialect.yaml" ;
         document:references  <agents.vocabulary.yaml> ;
         document:root        true ;
@@ -88,10 +88,20 @@ vocabulary:Person  a      document:DomainElement , owl:Class ;
         core:name       "AgentListNode" ;
         shacl:property  <#/declarations/AgentListNode/property/agents> .
 
+<#/declarations/AgentNode>
+        a                  document:DomainElement , shacl:Shape , meta:NodeMapping ;
+        core:name          "AgentNode" ;
+        shacl:property     <#/declarations/AgentNode/property/name> ;
+        shacl:targetClass  vocabulary:Agent .
+
+<#/declarations/OrganizationNode/property/managedBy/list>
+        a        rdfs:Seq ;
+        rdfs:_1  <#/declarations/AgentNode> .
+
 <agents.vocabulary.yaml>
         a                  document:Unit , meta:Vocabulary , owl:Ontology ;
         core:name          "Agents" ;
-        document:declares  vocabulary:members , vocabulary:Organization , vocabulary:composedOf , vocabulary:name , vocabulary:ssn , vocabulary:Agent , vocabulary:Person ;
+        document:declares  vocabulary:members , vocabulary:Organization , vocabulary:composedOf , vocabulary:name , vocabulary:managedBy , vocabulary:ssn , vocabulary:Agent , vocabulary:Person ;
         document:location  "file://src/main/resources/agents/agents.vocabulary.yaml" ;
         document:root      false ;
         document:version   "3.0.0" ;
@@ -128,6 +138,12 @@ vocabulary:Organization
         core:name         "Organization" ;
         meta:encodedNode  <#/declarations/OrganizationNode> .
 
+<#/declarations/OrganizationNode/property/managedBy>
+        a           document:DomainElement , meta:NodePropertyMapping ;
+        core:name   "managedBy" ;
+        shacl:node  <#/declarations/OrganizationNode/property/managedBy/list> ;
+        shacl:path  vocabulary:managedBy .
+
 <#/documents/fragments/Person>
         a                 document:DomainElement , meta:DocumentMapping ;
         core:name         "Person" ;
@@ -139,10 +155,10 @@ vocabulary:members  a       document:DomainElement , meta:Property , owl:ObjectP
         core:description    "The person members of an organization judiciary agent" ;
         core:displayName    "Members" .
 
-<#/declarations/NamedNode>
-        a               document:DomainElement , shacl:Shape , meta:NodeMapping ;
-        core:name       "NamedNode" ;
-        shacl:property  <#/declarations/NamedNode/property/name> .
+vocabulary:managedBy  a   document:DomainElement , meta:Property , owl:ObjectProperty ;
+        rdfs:range        vocabulary:Person ;
+        core:description  "The person that leads an organization" ;
+        core:displayName  "Managed By" .
 
 <agents.dialect.yaml/documents>
         a                  document:DomainElement , meta:DocumentsModel ;

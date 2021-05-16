@@ -6,8 +6,8 @@ uses:
 
 # Mappings from nodes in the source YAML/JSON document to nodes in the RDF Graph
 nodeMappings:
-  NamedNode:
-    # no class term (will auto-generate one)
+  AgentNode:
+    classTerm: agents-vocabulary.Agent
     mapping:
       name:
         propertyTerm: agents-vocabulary.name
@@ -15,7 +15,7 @@ nodeMappings:
 
   PersonNode:
     classTerm: agents-vocabulary.Person
-    extends: NamedNode # This is only structural extension (it inherits the `name` mapping)
+    extends: AgentNode # This is only structural extension (it inherits the `name` mapping)
     mapping:
       ssn:
         propertyTerm: agents-vocabulary.ssn
@@ -24,13 +24,16 @@ nodeMappings:
 
   OrganizationNode:
     classTerm: agents-vocabulary.Organization
-    extends: NamedNode # This is only structural extension (it inherits the `name` mapping)
+    extends: AgentNode # This is only structural extension (it inherits the `name` mapping)
     mapping:
       members:
         propertyTerm: agents-vocabulary.members
         allowMultiple: true
         mandatory: true
         range: PersonNode
+      managedBy:
+        propertyTerm: agents-vocabulary.managedBy
+        range: AgentNode
 
   AgentListNode:
     # no class term (will auto-generate one)

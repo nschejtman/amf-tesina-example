@@ -38,3 +38,8 @@ propertyTerms:
     displayName: Members
     description: The person members of an organization judiciary agent
     range: Person
+
+  managedBy:
+    displayName: Managed By
+    description: The person that leads an organization
+    range: Person

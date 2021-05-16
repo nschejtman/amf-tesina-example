@@ -13,9 +13,9 @@
     <document:declares>
       <document:DomainElement rdf:about="#/declarations/PersonNode">
         <meta:resolvedExtends>
-          <document:DomainElement rdf:about="#/declarations/NamedNode">
+          <document:DomainElement rdf:about="#/declarations/AgentNode">
             <shacl:property>
-              <document:DomainElement rdf:about="#/declarations/NamedNode/property/name">
+              <document:DomainElement rdf:about="#/declarations/AgentNode/property/name">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                 <core:name>name</core:name>
                 <shacl:path>
@@ -30,12 +30,20 @@
                 <rdf:type rdf:resource="http://a.ml/vocabularies/meta#NodePropertyMapping"/>
               </document:DomainElement>
             </shacl:property>
-            <core:name>NamedNode</core:name>
+            <core:name>AgentNode</core:name>
+            <shacl:targetClass>
+              <document:DomainElement rdf:about="http://agents.org/vocabulary#Agent">
+                <core:description>The most generic class representing any judiciary agent</core:description>
+                <core:displayName>Agent</core:displayName>
+                <core:name>Agent</core:name>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+              </document:DomainElement>
+            </shacl:targetClass>
             <rdf:type rdf:resource="http://www.w3.org/ns/shacl#Shape"/>
             <rdf:type rdf:resource="http://a.ml/vocabularies/meta#NodeMapping"/>
           </document:DomainElement>
         </meta:resolvedExtends>
-        <shacl:property rdf:resource="#/declarations/NamedNode/property/name"/>
+        <shacl:property rdf:resource="#/declarations/AgentNode/property/name"/>
         <shacl:property>
           <document:DomainElement rdf:about="#/declarations/PersonNode/property/ssn">
             <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
@@ -57,14 +65,7 @@
         <core:name>PersonNode</core:name>
         <shacl:targetClass>
           <document:DomainElement rdf:about="http://agents.org/vocabulary#Person">
-            <rdfs:subClassOf>
-              <document:DomainElement rdf:about="http://agents.org/vocabulary#Agent">
-                <core:description>The most generic class representing any judiciary agent</core:description>
-                <core:displayName>Agent</core:displayName>
-                <core:name>Agent</core:name>
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-              </document:DomainElement>
-            </rdfs:subClassOf>
+            <rdfs:subClassOf rdf:resource="http://agents.org/vocabulary#Agent"/>
             <core:description>A physical person judiciary agent class</core:description>
             <core:displayName>Person</core:displayName>
             <core:name>Person</core:name>
@@ -80,8 +81,28 @@
     <rdf:type rdf:resource="http://a.ml/vocabularies/document#Module"/>
     <document:declares>
       <document:DomainElement rdf:about="#/declarations/OrganizationNode">
-        <meta:resolvedExtends rdf:resource="#/declarations/NamedNode"/>
-        <shacl:property rdf:resource="#/declarations/NamedNode/property/name"/>
+        <meta:resolvedExtends rdf:resource="#/declarations/AgentNode"/>
+        <shacl:property rdf:resource="#/declarations/AgentNode/property/name"/>
+        <shacl:property>
+          <document:DomainElement rdf:about="#/declarations/OrganizationNode/property/managedBy">
+            <shacl:node>
+              <rdfs:Seq rdf:about="#/declarations/OrganizationNode/property/managedBy/list">
+                <rdfs:_1 rdf:resource="#/declarations/AgentNode"/>
+              </rdfs:Seq>
+            </shacl:node>
+            <core:name>managedBy</core:name>
+            <shacl:path>
+              <document:DomainElement rdf:about="http://agents.org/vocabulary#managedBy">
+                <rdfs:range rdf:resource="http://agents.org/vocabulary#Person"/>
+                <core:description>The person that leads an organization</core:description>
+                <core:displayName>Managed By</core:displayName>
+                <rdf:type rdf:resource="http://a.ml/vocabularies/meta#Property"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+              </document:DomainElement>
+            </shacl:path>
+            <rdf:type rdf:resource="http://a.ml/vocabularies/meta#NodePropertyMapping"/>
+          </document:DomainElement>
+        </shacl:property>
         <shacl:property>
           <document:DomainElement rdf:about="#/declarations/OrganizationNode/property/members">
             <meta:allowMultiple rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
@@ -185,6 +206,7 @@
         <document:declares rdf:resource="http://agents.org/vocabulary#Organization"/>
         <document:declares rdf:resource="http://agents.org/vocabulary#composedOf"/>
         <document:declares rdf:resource="http://agents.org/vocabulary#name"/>
+        <document:declares rdf:resource="http://agents.org/vocabulary#managedBy"/>
         <document:root rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
         >false</document:root>
         <document:declares rdf:resource="http://agents.org/vocabulary#ssn"/>
@@ -201,8 +223,8 @@
     <core:version>1.0</core:version>
     <document:root rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
     >true</document:root>
-    <document:declares rdf:resource="#/declarations/NamedNode"/>
     <core:name>Agents</core:name>
     <rdf:type rdf:resource="http://a.ml/vocabularies/document#Fragment"/>
+    <document:declares rdf:resource="#/declarations/AgentNode"/>
   </meta:Dialect>
 </rdf:RDF>

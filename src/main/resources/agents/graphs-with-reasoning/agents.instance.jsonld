@@ -7,6 +7,13 @@
       "@id" : "rdfs:Resource"
     } ]
   }, {
+    "@id" : "dialect:declarations/AgentNode",
+    "rdf:type" : [ {
+      "@id" : "rdfs:Class"
+    }, {
+      "@id" : "rdfs:Resource"
+    } ]
+  }, {
     "@id" : "dialect:declarations/OrganizationNode",
     "rdf:type" : [ {
       "@id" : "rdfs:Class"
@@ -23,7 +30,7 @@
   }, {
     "@id" : "../agents.vocabulary.yaml",
     "core:name" : "Agents",
-    "declares" : [ "vocabulary:members", "vocabulary:Organization", "vocabulary:composedOf", "vocabulary:name", "vocabulary:ssn", "vocabulary:Agent", "vocabulary:Person" ],
+    "declares" : [ "vocabulary:members", "vocabulary:Organization", "vocabulary:composedOf", "vocabulary:name", "vocabulary:managedBy", "vocabulary:ssn", "vocabulary:Agent", "vocabulary:Person" ],
     "location" : "file://src/main/resources/agents/agents.vocabulary.yaml",
     "document:root" : true,
     "version" : "3.0.0",
@@ -83,9 +90,9 @@
     }, {
       "@id" : "vocabulary:Person"
     }, {
-      "@id" : "vocabulary:Agent"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "vocabulary:Agent"
     }, {
       "@id" : "owl:Thing"
     } ],
@@ -113,6 +120,7 @@
   }, {
     "@id" : "#/encodes/agents/2",
     "composedOf" : [ "#/encodes/agents/2/members/1", "#/encodes/agents/2/members/0" ],
+    "managedBy" : "#/encodes/agents/2/managedBy",
     "members" : [ "#/encodes/agents/2/members/1", "#/encodes/agents/2/members/0" ],
     "name" : "Boca Juniors",
     "rdf:type" : [ {
@@ -132,6 +140,25 @@
     } ],
     "sameAs" : "#/encodes/agents/2"
   }, {
+    "@id" : "#/encodes/agents/2/managedBy",
+    "name" : "Jorge Amor Ameal",
+    "rdf:type" : [ {
+      "@id" : "document:DomainElement"
+    }, {
+      "@id" : "meta:DialectDomainElement"
+    }, {
+      "@id" : "dialect:declarations/AgentNode"
+    }, {
+      "@id" : "vocabulary:Agent"
+    }, {
+      "@id" : "owl:Thing"
+    }, {
+      "@id" : "vocabulary:Person"
+    }, {
+      "@id" : "rdfs:Resource"
+    } ],
+    "sameAs" : "#/encodes/agents/2/managedBy"
+  }, {
     "@id" : "#/encodes/agents/2/members/0",
     "name" : "Carlos Alberto Tevez",
     "ssn" : "333333333",
@@ -146,9 +173,9 @@
     }, {
       "@id" : "owl:Thing"
     }, {
-      "@id" : "vocabulary:Agent"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "vocabulary:Agent"
     } ],
     "sameAs" : "#/encodes/agents/2/members/0"
   }, {
@@ -166,9 +193,9 @@
     }, {
       "@id" : "owl:Thing"
     }, {
-      "@id" : "vocabulary:Agent"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "vocabulary:Agent"
     } ],
     "sameAs" : "#/encodes/agents/2/members/1"
   }, {
@@ -198,9 +225,9 @@
     }, {
       "@id" : "vocabulary:Person"
     }, {
-      "@id" : "vocabulary:Agent"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "vocabulary:Agent"
     }, {
       "@id" : "owl:Thing"
     } ],
@@ -235,9 +262,9 @@
     }, {
       "@id" : "owl:Thing"
     }, {
-      "@id" : "vocabulary:Agent"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "vocabulary:Agent"
     } ],
     "sameAs" : "polimi.fragment.instance.yaml#/encodes"
   }, {
@@ -255,9 +282,9 @@
     }, {
       "@id" : "owl:Thing"
     }, {
-      "@id" : "vocabulary:Agent"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "vocabulary:Agent"
     } ],
     "sameAs" : "polimi.fragment.instance.yaml#/members/0"
   }, {
@@ -275,9 +302,9 @@
     }, {
       "@id" : "owl:Thing"
     }, {
-      "@id" : "vocabulary:Agent"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "vocabulary:Agent"
     } ],
     "sameAs" : "polimi.fragment.instance.yaml#/members/1"
   }, {
@@ -529,6 +556,24 @@
     "range" : [ "owl:Thing", "vocabulary:Agent", "rdfs:Resource" ],
     "subPropertyOf" : "vocabulary:composedOf"
   }, {
+    "@id" : "vocabulary:managedBy",
+    "description" : "The person that leads an organization",
+    "displayName" : "Managed By",
+    "rdf:type" : [ {
+      "@id" : "rdf:Property"
+    }, {
+      "@id" : "document:DomainElement"
+    }, {
+      "@id" : "meta:Property"
+    }, {
+      "@id" : "owl:ObjectProperty"
+    }, {
+      "@id" : "rdfs:Resource"
+    } ],
+    "domain" : [ "owl:Thing", "rdfs:Resource" ],
+    "range" : [ "owl:Thing", "vocabulary:Person", "rdfs:Resource", "vocabulary:Agent" ],
+    "subPropertyOf" : "vocabulary:managedBy"
+  }, {
     "@id" : "vocabulary:members",
     "description" : "The person members of an organization judiciary agent",
     "displayName" : "Members",
@@ -583,17 +628,17 @@
   }, {
     "@id" : "rdf:Alt",
     "rdf:type" : [ {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     } ],
     "subClassOf" : "rdfs:Container"
   }, {
     "@id" : "rdf:Bag",
     "rdf:type" : [ {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     } ],
     "subClassOf" : "rdfs:Container"
   }, {
@@ -621,9 +666,9 @@
   }, {
     "@id" : "rdf:Seq",
     "rdf:type" : [ {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     } ],
     "subClassOf" : "rdfs:Container"
   }, {
@@ -642,9 +687,9 @@
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     } ]
   }, {
     "@id" : "rdf:first",
@@ -726,16 +771,16 @@
   }, {
     "@id" : "rdfs:Container",
     "rdf:type" : [ {
-      "@id" : "rdfs:Resource"
-    }, {
       "@id" : "rdfs:Class"
+    }, {
+      "@id" : "rdfs:Resource"
     } ]
   }, {
     "@id" : "rdfs:ContainerMembershipProperty",
     "rdf:type" : [ {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     } ],
     "subClassOf" : "rdf:Property"
   }, {
@@ -829,27 +874,27 @@
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     } ]
   }, {
     "@id" : "xsd:base64Binary",
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     } ]
   }, {
     "@id" : "xsd:boolean",
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     }, {
       "@id" : "owl:Class"
     } ],
@@ -859,9 +904,9 @@
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     }, {
       "@id" : "owl:Class"
     } ],
@@ -873,9 +918,9 @@
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     }, {
       "@id" : "owl:Class"
     } ],
@@ -885,9 +930,9 @@
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     }, {
       "@id" : "owl:Class"
     } ],
@@ -897,9 +942,9 @@
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     }, {
       "@id" : "owl:Class"
     } ],
@@ -909,18 +954,18 @@
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     } ]
   }, {
     "@id" : "xsd:duration",
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     }, {
       "@id" : "owl:Class"
     } ],
@@ -930,9 +975,9 @@
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     }, {
       "@id" : "owl:Class"
     } ],
@@ -942,63 +987,63 @@
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     } ]
   }, {
     "@id" : "xsd:gMonth",
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     } ]
   }, {
     "@id" : "xsd:gMonthDay",
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     } ]
   }, {
     "@id" : "xsd:gYear",
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     } ]
   }, {
     "@id" : "xsd:gYearMonth",
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     } ]
   }, {
     "@id" : "xsd:hexBinary",
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     } ]
   }, {
     "@id" : "xsd:int",
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     }, {
       "@id" : "owl:Class"
     } ],
@@ -1010,9 +1055,9 @@
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     }, {
       "@id" : "owl:Class"
     } ],
@@ -1024,9 +1069,9 @@
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     }, {
       "@id" : "owl:Class"
     } ],
@@ -1038,18 +1083,18 @@
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     } ]
   }, {
     "@id" : "xsd:nonNegativeInteger",
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     }, {
       "@id" : "owl:Class"
     } ],
@@ -1061,9 +1106,9 @@
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     }, {
       "@id" : "owl:Class"
     } ],
@@ -1073,18 +1118,18 @@
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     } ]
   }, {
     "@id" : "xsd:short",
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     }, {
       "@id" : "owl:Class"
     } ],
@@ -1110,9 +1155,9 @@
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     }, {
       "@id" : "owl:Class"
     } ],
@@ -1122,9 +1167,9 @@
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     }, {
       "@id" : "owl:Class"
     } ],
@@ -1136,9 +1181,9 @@
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     }, {
       "@id" : "owl:Class"
     } ],
@@ -1150,9 +1195,9 @@
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     }, {
       "@id" : "owl:Class"
     } ],
@@ -1164,9 +1209,9 @@
     "rdf:type" : [ {
       "@id" : "rdfs:Datatype"
     }, {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     }, {
       "@id" : "owl:Class"
     } ],
@@ -1210,9 +1255,9 @@
   }, {
     "@id" : "owl:InverseFunctionalProperty",
     "rdf:type" : [ {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     } ],
     "subClassOf" : "owl:ObjectProperty"
   }, {
@@ -1297,9 +1342,9 @@
   }, {
     "@id" : "owl:TransitiveProperty",
     "rdf:type" : [ {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     } ],
     "subClassOf" : "owl:ObjectProperty"
   }, {
@@ -1477,6 +1522,10 @@
     },
     "ssn" : {
       "@id" : "http://agents.org/vocabulary#ssn"
+    },
+    "managedBy" : {
+      "@id" : "http://agents.org/vocabulary#managedBy",
+      "@type" : "@id"
     },
     "members" : {
       "@id" : "http://agents.org/vocabulary#members",

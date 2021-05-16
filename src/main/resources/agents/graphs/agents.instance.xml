@@ -17,6 +17,14 @@
         <vocabulary:composedOf>
           <document:DomainElement rdf:about="#/encodes/agents/2">
             <vocabulary:name>Boca Juniors</vocabulary:name>
+            <vocabulary:managedBy>
+              <document:DomainElement rdf:about="#/encodes/agents/2/managedBy">
+                <vocabulary:name>Jorge Amor Ameal</vocabulary:name>
+                <rdf:type rdf:resource="http://a.ml/vocabularies/meta#DialectDomainElement"/>
+                <rdf:type rdf:resource="../agents.dialect.yaml#/declarations/AgentNode"/>
+                <rdf:type rdf:resource="http://agents.org/vocabulary#Agent"/>
+              </document:DomainElement>
+            </vocabulary:managedBy>
             <vocabulary:members>
               <document:DomainElement rdf:about="#/encodes/agents/2/members/1">
                 <vocabulary:name>Cristian Pavon</vocabulary:name>

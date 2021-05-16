@@ -64,6 +64,15 @@
       </document:DomainElement>
     </document:declares>
     <document:declares>
+      <document:DomainElement rdf:about="http://agents.org/vocabulary#managedBy">
+        <rdfs:range rdf:resource="http://agents.org/vocabulary#Person"/>
+        <core:description>The person that leads an organization</core:description>
+        <core:displayName>Managed By</core:displayName>
+        <rdf:type rdf:resource="http://a.ml/vocabularies/meta#Property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+      </document:DomainElement>
+    </document:declares>
+    <document:declares>
       <document:DomainElement rdf:about="http://agents.org/vocabulary#ssn">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <core:description>Number that identifies a physical person in various governamental agencies</core:description>

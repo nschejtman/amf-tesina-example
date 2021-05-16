@@ -3,7 +3,7 @@
     "@id" : "./",
     "@type" : [ "document:Unit", "meta:Vocabulary", "owl:Ontology" ],
     "name" : "Agents",
-    "declares" : [ "vocabulary:members", "vocabulary:Organization", "vocabulary:composedOf", "vocabulary:name", "vocabulary:ssn", "vocabulary:Agent", "vocabulary:Person" ],
+    "declares" : [ "vocabulary:members", "vocabulary:Organization", "vocabulary:composedOf", "vocabulary:name", "vocabulary:managedBy", "vocabulary:ssn", "vocabulary:Agent", "vocabulary:Person" ],
     "location" : "file://src/main/resources/agents/agents.vocabulary.yaml",
     "document:root" : true,
     "version" : "3.0.0",
@@ -34,6 +34,12 @@
     "description" : "List of other judiciary agents composing another an organization judiciary agent",
     "displayName" : "Composed Of",
     "range" : "vocabulary:Agent"
+  }, {
+    "@id" : "vocabulary:managedBy",
+    "@type" : [ "document:DomainElement", "meta:Property", "owl:ObjectProperty" ],
+    "description" : "The person that leads an organization",
+    "displayName" : "Managed By",
+    "range" : "vocabulary:Person"
   }, {
     "@id" : "vocabulary:members",
     "@type" : [ "document:DomainElement", "meta:Property", "owl:ObjectProperty" ],

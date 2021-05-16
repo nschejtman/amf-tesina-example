@@ -54,9 +54,14 @@
         vocabulary:name  "Angelo Carlo Morzenti" ;
         vocabulary:ssn   "222222222" .
 
-<#/encodes/agents/2>  a     document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode> , vocabulary:Organization ;
-        vocabulary:members  <#/encodes/agents/2/members/1> , <#/encodes/agents/2/members/0> ;
-        vocabulary:name     "Boca Juniors" .
+<#/encodes/agents/2/managedBy>
+        a                document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentNode> , vocabulary:Agent ;
+        vocabulary:name  "Jorge Amor Ameal" .
+
+<#/encodes/agents/2>  a       document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode> , vocabulary:Organization ;
+        vocabulary:managedBy  <#/encodes/agents/2/managedBy> ;
+        vocabulary:members    <#/encodes/agents/2/members/1> , <#/encodes/agents/2/members/0> ;
+        vocabulary:name       "Boca Juniors" .
 
 <polimi.fragment.instance.yaml#/encodes>
         a                   document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode> , vocabulary:Organization ;

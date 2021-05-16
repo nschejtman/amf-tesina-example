@@ -8,3 +8,5 @@ agents:
         ssn: "333333333"
       - name: Cristian Pavon
         ssn: "444444444"
+    managedBy:
+      name: Jorge Amor Ameal

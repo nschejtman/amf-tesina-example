@@ -24,8 +24,13 @@
   }, {
     "@id" : "#/encodes/agents/2",
     "@type" : [ "document:DomainElement", "meta:DialectDomainElement", "dialect:declarations/OrganizationNode", "vocabulary:Organization" ],
+    "managedBy" : "#/encodes/agents/2/managedBy",
     "members" : [ "#/encodes/agents/2/members/1", "#/encodes/agents/2/members/0" ],
     "name" : "Boca Juniors"
+  }, {
+    "@id" : "#/encodes/agents/2/managedBy",
+    "@type" : [ "document:DomainElement", "meta:DialectDomainElement", "dialect:declarations/AgentNode", "vocabulary:Agent" ],
+    "name" : "Jorge Amor Ameal"
   }, {
     "@id" : "#/encodes/agents/2/members/0",
     "@type" : [ "document:DomainElement", "meta:DialectDomainElement", "dialect:declarations/PersonNode", "vocabulary:Person" ],
@@ -104,6 +109,10 @@
     },
     "ssn" : {
       "@id" : "http://agents.org/vocabulary#ssn"
+    },
+    "managedBy" : {
+      "@id" : "http://agents.org/vocabulary#managedBy",
+      "@type" : "@id"
     },
     "members" : {
       "@id" : "http://agents.org/vocabulary#members",

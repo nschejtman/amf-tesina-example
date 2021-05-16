@@ -12,7 +12,7 @@
 
 <>      a                  document:Unit , meta:Vocabulary , owl:Ontology ;
         core:name          "Agents" ;
-        document:declares  vocabulary:members , vocabulary:Organization , vocabulary:composedOf , vocabulary:name , vocabulary:ssn , vocabulary:Agent , vocabulary:Person ;
+        document:declares  vocabulary:members , vocabulary:Organization , vocabulary:composedOf , vocabulary:name , vocabulary:managedBy , vocabulary:ssn , vocabulary:Agent , vocabulary:Person ;
         document:location  "file://src/main/resources/agents/agents.vocabulary.yaml" ;
         document:root      true ;
         document:version   "3.0.0" ;
@@ -39,6 +39,11 @@ vocabulary:members  a       document:DomainElement , meta:Property , owl:ObjectP
         rdfs:subPropertyOf  vocabulary:composedOf ;
         core:description    "The person members of an organization judiciary agent" ;
         core:displayName    "Members" .
+
+vocabulary:managedBy  a   document:DomainElement , meta:Property , owl:ObjectProperty ;
+        rdfs:range        vocabulary:Person ;
+        core:description  "The person that leads an organization" ;
+        core:displayName  "Managed By" .
 
 vocabulary:composedOf
         a                 document:DomainElement , meta:Property , owl:ObjectProperty ;
