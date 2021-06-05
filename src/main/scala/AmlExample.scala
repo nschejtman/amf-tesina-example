@@ -14,7 +14,7 @@ import scala.concurrent.{Await, Future}
 import scala.util.{Failure, Success}
 
 //noinspection SameParameterValue
-object App {
+object AmlExample {
   def main(args: Array[String]): Unit = {
     val result: Future[Unit] = for {
       // Initialize the AMF framework (boilerplate code)
