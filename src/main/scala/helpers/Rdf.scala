@@ -1,0 +1,72 @@
+package helpers
+import amf.client.model.document.BaseUnit
+import helpers.Conversions.Fut
+import openllet.jena.PelletReasonerFactory
+import org.apache.jena.query.{QueryExecutionFactory, QueryFactory, ResultSet}
+import org.apache.jena.rdf.model.{InfModel, Model, ModelFactory}
+import org.apache.jena.reasoner.ReasonerRegistry
+
+import java.io.FileWriter
+import scala.collection.JavaConverters.mapAsJavaMapConverter
+import scala.concurrent.Future
+
+object Rdf {
+  object Inference {
+    def default(data: Model, schema: Model): Future[InfModel] = {
+      val reasoner = ReasonerRegistry.getOWLReasoner.bindSchema(schema)
+      ModelFactory.createInfModel(reasoner, data).wrapFuture
+    }
+
+    def pellet(ontology: Model, data: Model): Future[InfModel] = {
+      val reasoner = PelletReasonerFactory.theInstance().create()
+      reasoner.bind(ontology)
+      ModelFactory.createInfModel(reasoner, data).wrapFuture
+    }
+  }
+
+  object IO {
+    def read(fileName: String, lang: String = "JSON-LD"): Future[Model] = {
+      println(s"Started: read $fileName")
+      val model = ModelFactory.createDefaultModel()
+      model.read(fileName, lang)
+      println(s"Done: read $fileName")
+      model.wrapFuture
+    }
+
+    def write(model: Model, fileName: String, lang: String, base: String): Future[Unit] = {
+      println(s"Started: write $fileName")
+      model.write(new FileWriter(fileName), lang, base)
+      println(s"Done: write $fileName")
+      Future.unit
+    }
+
+    def print(model: Model, lang: String = "JSON-LD"): Future[Unit] = {
+      model.write(System.out, "JSON-LD")
+      Future.unit
+    }
+  }
+
+  object AMF {
+    def toRdfModel(baseUnit: BaseUnit, namespaces: Map[String, String]): Future[Model] = {
+      println(s"Started: toRdfModel ${baseUnit.id}")
+      val result = baseUnit.toNativeRdfModel().native().asInstanceOf[Model].setNsPrefixes(namespaces.asJava)
+      println(s"Done: toRdfModel ${baseUnit.id}")
+      result.wrapFuture
+    }
+  }
+
+  object Query {
+    def select(model: Model, queryUrl: String): Future[ResultSet] = {
+      val query     = QueryFactory.read(queryUrl)
+      val execution = QueryExecutionFactory.create(query, model)
+      execution.execSelect().wrapFuture
+    }
+
+    def construct(model: Model, queryUrl: String): Future[Model] = {
+      val query     = QueryFactory.read(queryUrl)
+      val execution = QueryExecutionFactory.create(query, model)
+      execution.execConstruct().wrapFuture
+    }
+  }
+
+}
