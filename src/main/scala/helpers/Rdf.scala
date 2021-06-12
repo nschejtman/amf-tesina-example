@@ -3,7 +3,7 @@ import amf.client.model.document.BaseUnit
 import helpers.Conversions.Fut
 import openllet.jena.PelletReasonerFactory
 import org.apache.jena.query.{QueryExecutionFactory, QueryFactory, ResultSet}
-import org.apache.jena.rdf.model.{InfModel, Model, ModelFactory}
+import org.apache.jena.rdf.model.{InfModel, Literal, Model, ModelFactory, Resource}
 import org.apache.jena.reasoner.ReasonerRegistry
 
 import java.io.FileWriter
@@ -25,6 +25,8 @@ object Rdf {
   }
 
   object IO {
+    val DIVIDER = "-----------------------------------------------------------------------------------------------------------------"
+
     def read(fileName: String, lang: String = "JSON-LD"): Future[Model] = {
       println(s"Started: read $fileName")
       val model = ModelFactory.createDefaultModel()
@@ -42,6 +44,22 @@ object Rdf {
 
     def print(model: Model, lang: String = "JSON-LD"): Future[Unit] = {
       model.write(System.out, "JSON-LD")
+      Future.unit
+    }
+
+    def print(resultSet: ResultSet): Future[Unit] = {
+      val vars = resultSet.getResultVars
+      var i    = 0
+      println(DIVIDER)
+      resultSet.forEachRemaining { result =>
+        println(s"Result: $i")
+        vars.forEach { variable =>
+          val value = result.get(variable)
+          println(s"$variable: $value")
+        }
+        i += 1
+        println(DIVIDER)
+      }
       Future.unit
     }
   }

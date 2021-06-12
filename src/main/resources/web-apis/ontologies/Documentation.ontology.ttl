@@ -1,3 +1,4 @@
+@base <file://src/main/resources/web-apis/ontologies/documentation#> .
 @prefix rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:        <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl:         <http://www.w3.org/2002/07/owl#> .
@@ -7,15 +8,18 @@
 @prefix meta:        <http://a.ml/vocabularies/meta#> .
 @prefix core:        <http://a.ml/vocabularies/core#> .
 @prefix apiContract: <http://a.ml/vocabularies/apiContract#> .
-@prefix me:          <http://a.ml/me#> .
 
-me:Documentable a owl:Class .
+<#>
+    a owl:Ontology .
+
+<#Documentable>
+    a owl:Class .
 
 apiContract:EndPoint
-    rdfs:subClassOf me:Documentable .
+    rdfs:subClassOf <#Documentable> .
 
 apiContract:Operation
-    rdfs:subClassOf me:Documentable .
+    rdfs:subClassOf <#Documentable> .
 
 
 

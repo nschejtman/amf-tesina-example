@@ -50,10 +50,11 @@ object WebApisExample {
       resolved       <- resolve(parsed, vendor)
       rdf            <- Rdf.AMF.toRdfModel(resolved, helpers.Namespaces.ns)
       _              <- Rdf.IO.write(rdf, fileUrl.noProtocol.withExtension(".jsonld"), "JSON-LD", resolved.id)
-      ontology       <- Rdf.IO.read("src/main/resources/web-apis/well-documented.ontology.ttl", lang = "TTL")
+      ontology       <- Rdf.IO.read("src/main/resources/web-apis/ontologies/Documentation.ontology.ttl", lang = "TTL")
       inferenceModel <- Rdf.Inference.pellet(ontology, rdf)
       _              <- Rdf.IO.write(inferenceModel, fileUrl.noProtocol.withExtension(".enriched.jsonld"), "JSON-LD", resolved.id)
-      _              <- Rdf.Query.construct(rdf, "src/main/resources/web-apis/well-documented.sparql")
+      resultSet      <- Rdf.Query.select(inferenceModel, "src/main/resources/web-apis/queries/list-documentables.sparql")
+      _              <- Rdf.IO.print(resultSet)
     } yield {
       rdf
     }

@@ -1,0 +1,5 @@
+PREFIX documentation: <file://src/main/resources/web-apis/ontologies/documentation#>
+SELECT ?s
+WHERE {
+      ?s a documentation:Documentable
+      }
