@@ -1,5 +1,6 @@
 import amf.client.model.document.{BaseUnit, Vocabulary}
 import amf.client.parse.Aml10Parser
+import helpers.Conversions.Fut
 import helpers.{InitializationHelper, Namespaces}
 
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -36,9 +37,7 @@ object AmlExample {
       vocabularyRdfModel        <- toRdfModel(vocabularyBaseUnitUnitModel, namespaces)
       instanceRdfModel          <- toRdfModel(instanceBaseUnitModel, namespaces)
       instanceInferenceRdfModel <- getInferenceModel(instanceRdfModel, vocabularyRdfModel)
-      inferredTriples <- Future.successful {
-        instanceInferenceRdfModel.difference(instanceRdfModel)
-      }
+      inferredTriples           <- instanceInferenceRdfModel.difference(instanceRdfModel).wrapFuture
 
     } yield {
       case class Fmt(lang: String, extension: String)
@@ -46,18 +45,9 @@ object AmlExample {
 
       formats.foreach {
         case Fmt(lang, extension) =>
-          write(dialectRdfModel,
-                s"src/main/resources/agents/graphs/agents.dialect$extension",
-                lang,
-                dialectBaseUnitModel.id)
-          write(vocabularyRdfModel,
-                s"src/main/resources/agents/graphs/agents.vocabulary$extension",
-                lang,
-                vocabularyBaseUnitUnitModel.id)
-          write(instanceRdfModel,
-                s"src/main/resources/agents/graphs/agents.instance$extension",
-                lang,
-                instanceBaseUnitModel.id)
+          write(dialectRdfModel, s"src/main/resources/agents/graphs/agents.dialect$extension", lang, dialectBaseUnitModel.id)
+          write(vocabularyRdfModel, s"src/main/resources/agents/graphs/agents.vocabulary$extension", lang, vocabularyBaseUnitUnitModel.id)
+          write(instanceRdfModel, s"src/main/resources/agents/graphs/agents.instance$extension", lang, instanceBaseUnitModel.id)
           write(instanceInferenceRdfModel,
                 s"src/main/resources/agents/graphs-with-reasoning/agents.instance$extension",
                 lang,
@@ -79,13 +69,11 @@ object AmlExample {
   }
 
   private def parse(fileUrl: String): Future[BaseUnit] = {
-    Future.successful {
-      println(s"Started: parse $fileUrl")
-      val parser = new Aml10Parser()
-      val result = parser.parseFileAsync(fileUrl).get()
-      println(s"Done: parse $fileUrl")
-      result
-    }
+    println(s"Started: parse $fileUrl")
+    val parser = new Aml10Parser()
+    val result = parser.parseFileAsync(fileUrl).get()
+    println(s"Done: parse $fileUrl")
+    result.wrapFuture
   }
 
 }
