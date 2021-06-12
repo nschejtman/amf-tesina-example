@@ -5,6 +5,7 @@
 @prefix dialect: <file://src/main/resources/agents/agents.dialect.yaml#/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix apiContract: <http://a.ml/vocabularies/apiContract#> .
 @prefix meta:  <http://a.ml/vocabularies/meta#> .
 @prefix document: <http://a.ml/vocabularies/document#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
@@ -15,7 +16,7 @@ rdfs:domain  a              rdf:Property , rdfs:Resource ;
         rdfs:range          rdfs:Class , rdfs:Resource ;
         rdfs:subPropertyOf  rdfs:domain .
 
-owl:DatatypeProperty  a  rdfs:Class , rdfs:Resource ;
+owl:DatatypeProperty  a  rdfs:Resource , rdfs:Class ;
         rdfs:subClassOf  rdf:Property .
 
 owl:Property  a              rdfs:Class , rdfs:Resource , owl:Class ;
@@ -27,9 +28,9 @@ owl:imports  a              owl:OntologyProperty , rdf:Property , rdfs:Resource 
         rdfs:range          owl:Ontology , rdfs:Resource ;
         rdfs:subPropertyOf  owl:imports .
 
-xsd:negativeInteger  a  rdfs:Datatype , rdfs:Class , rdfs:Resource .
+xsd:negativeInteger  a  rdfs:Datatype , rdfs:Resource , rdfs:Class .
 
-owl:ObjectProperty  a    rdfs:Class , rdfs:Resource ;
+owl:ObjectProperty  a    rdfs:Resource , rdfs:Class ;
         rdfs:subClassOf  rdf:Property .
 
 owl:intersectionOf  a       rdf:Property , rdfs:Resource ;
@@ -69,7 +70,7 @@ owl:onProperty  a           rdf:Property , rdfs:Resource ;
         rdfs:range          owl:Property , rdfs:Resource ;
         rdfs:subPropertyOf  owl:onProperty .
 
-owl:differentFrom  a        owl:SymmetricProperty , rdf:Property , owl:ObjectProperty , rdfs:Resource ;
+owl:differentFrom  a        owl:SymmetricProperty , owl:ObjectProperty , rdf:Property , rdfs:Resource ;
         rdfs:subPropertyOf  owl:differentFrom .
 
 rdf:object  a               rdf:Property , rdfs:Resource ;
@@ -86,14 +87,14 @@ owl:disjointWith  a         owl:SymmetricProperty , owl:ObjectProperty , rdf:Pro
         rdfs:range          owl:Class , rdfs:Resource , rdfs:Class ;
         rdfs:subPropertyOf  owl:disjointWith .
 
-rdf:Alt  a               rdfs:Class , rdfs:Resource ;
+rdf:Alt  a               rdfs:Resource , rdfs:Class ;
         rdfs:subClassOf  rdfs:Container .
 
 owl:Class  a                 rdfs:Class , rdfs:Resource , owl:Class ;
         rdfs:subClassOf      owl:Class , rdfs:Resource , rdfs:Class ;
         owl:equivalentClass  owl:Class .
 
-xsd:duration  a           rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+xsd:duration  a           rdfs:Datatype , rdfs:Resource , rdfs:Class , owl:Class ;
         owl:disjointWith  xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:float , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger .
 
 document:declares  a        rdf:Property , rdfs:Resource ;
@@ -107,15 +108,15 @@ rdf:Statement  a             rdfs:Class , rdfs:Resource , owl:Class ;
         rdfs:subClassOf      rdf:Statement , rdfs:Resource ;
         owl:equivalentClass  rdf:Statement .
 
-rdf:Seq  a               rdfs:Class , rdfs:Resource ;
+rdf:Seq  a               rdfs:Resource , rdfs:Class ;
         rdfs:subClassOf  rdfs:Container .
 
 xsd:double  a   rdfs:Datatype , rdfs:Class , rdfs:Resource .
 
-xsd:gMonth  a   rdfs:Datatype , rdfs:Class , rdfs:Resource .
+xsd:gMonth  a   rdfs:Datatype , rdfs:Resource , rdfs:Class .
 
 owl:FunctionalProperty
-        a                rdfs:Class , rdfs:Resource ;
+        a                rdfs:Resource , rdfs:Class ;
         rdfs:subClassOf  rdf:Property .
 
 xsd:unsignedByte  a          rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
@@ -127,16 +128,16 @@ document:version  a         rdf:Property , rdfs:Resource ;
         rdfs:subPropertyOf  document:version .
 
 owl:SymmetricProperty
-        a                rdfs:Class , rdfs:Resource ;
+        a                rdfs:Resource , rdfs:Class ;
         rdfs:subClassOf  owl:ObjectProperty .
 
-xsd:gMonthDay  a  rdfs:Datatype , rdfs:Class , rdfs:Resource .
+xsd:gMonthDay  a  rdfs:Datatype , rdfs:Resource , rdfs:Class .
 
 rdfs:ContainerMembershipProperty
-        a                rdfs:Class , rdfs:Resource ;
+        a                rdfs:Resource , rdfs:Class ;
         rdfs:subClassOf  rdf:Property .
 
-rdf:Property  a              rdfs:Class , rdfs:Resource , owl:Class ;
+rdf:Property  a              rdfs:Class , owl:Class , rdfs:Resource ;
         rdfs:subClassOf      rdf:Property , rdfs:Resource ;
         owl:equivalentClass  rdf:Property .
 
@@ -149,7 +150,7 @@ xsd:nonNegativeInteger
 owl:sameAs  a               owl:SymmetricProperty , rdf:Property , owl:ObjectProperty , rdfs:Resource ;
         rdfs:subPropertyOf  owl:sameAs .
 
-rdf:XMLLiteral  a  rdfs:Datatype , rdfs:Class , rdfs:Resource .
+rdf:XMLLiteral  a  rdfs:Datatype , rdfs:Resource , rdfs:Class .
 
 xsd:unsignedShort  a         rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
         rdfs:subClassOf      xsd:unsignedLong , xsd:unsignedInt , xsd:int , xsd:integer , xsd:long , xsd:short , xsd:nonNegativeInteger , xsd:unsignedShort ;
@@ -172,7 +173,7 @@ xsd:boolean  a            rdfs:Datatype , rdfs:Resource , rdfs:Class , owl:Class
         owl:disjointWith  xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:float , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:nonPositiveInteger .
 
 owl:InverseFunctionalProperty
-        a                rdfs:Class , rdfs:Resource ;
+        a                rdfs:Resource , rdfs:Class ;
         rdfs:subClassOf  owl:ObjectProperty .
 
 owl:Nothing  a               rdfs:Class , owl:Class , rdfs:Resource ;
@@ -255,7 +256,7 @@ vocabulary:Agent  a          rdfs:Class , document:DomainElement , owl:Class , r
         core:name            "Agent" ;
         owl:equivalentClass  vocabulary:Agent .
 
-owl:OntologyProperty  a  rdfs:Class , rdfs:Resource ;
+owl:OntologyProperty  a  rdfs:Resource , rdfs:Class ;
         rdfs:subClassOf  rdf:Property .
 
 vocabulary:ssn  a           rdf:Property , document:DomainElement , meta:Property , owl:DatatypeProperty , rdfs:Resource ;
@@ -289,7 +290,7 @@ vocabulary:managedBy  a     rdf:Property , document:DomainElement , meta:Propert
         core:displayName    "Managed By" .
 
 owl:TransitiveProperty
-        a                rdfs:Class , rdfs:Resource ;
+        a                rdfs:Resource , rdfs:Class ;
         rdfs:subClassOf  owl:ObjectProperty .
 
 rdf:rest  a                 owl:FunctionalProperty , rdf:Property , rdfs:Resource ;
@@ -313,7 +314,7 @@ xsd:short  a                 rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Cl
 core:name  a                rdf:Property , rdfs:Resource ;
         rdfs:subPropertyOf  core:name .
 
-xsd:positiveInteger  a  rdfs:Datatype , rdfs:Class , rdfs:Resource .
+xsd:positiveInteger  a  rdfs:Datatype , rdfs:Resource , rdfs:Class .
 
 rdf:type  a                 rdf:Property , rdfs:Resource ;
         rdfs:range          rdfs:Class , rdfs:Resource ;
@@ -325,7 +326,7 @@ rdfs:Class  a                rdfs:Class , rdfs:Resource , owl:Class ;
 
 xsd:anyURI  a   rdfs:Datatype , rdfs:Resource , rdfs:Class .
 
-rdfs:Datatype  a         rdfs:Class , rdfs:Resource ;
+rdfs:Datatype  a         rdfs:Resource , rdfs:Class ;
         rdfs:subClassOf  rdfs:Class .
 
 owl:versionInfo  a  owl:AnnotationProperty .
@@ -341,7 +342,7 @@ vocabulary:name  a          rdf:Property , document:DomainElement , meta:Propert
         core:description    "The name given to any juduiciary agent" ;
         core:displayName    "Name" .
 
-xsd:base64Binary  a  rdfs:Datatype , rdfs:Class , rdfs:Resource .
+xsd:base64Binary  a  rdfs:Datatype , rdfs:Resource , rdfs:Class .
 
 document:encodes  a         rdf:Property , rdfs:Resource ;
         rdfs:subPropertyOf  document:encodes .
@@ -350,6 +351,9 @@ xsd:unsignedInt  a           rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Cl
         rdfs:subClassOf      xsd:unsignedLong , xsd:unsignedInt , xsd:int , xsd:integer , xsd:long , xsd:nonNegativeInteger ;
         owl:disjointWith     xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
         owl:equivalentClass  xsd:unsignedInt .
+
+xsd:time  a               rdfs:Datatype , rdfs:Resource , rdfs:Class , owl:Class ;
+        owl:disjointWith  xsd:long , xsd:byte , xsd:unsignedShort , xsd:unsignedLong , xsd:float , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger .
 
 xsd:byte  a                  rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
         rdfs:subClassOf      xsd:int , xsd:integer , xsd:long , xsd:byte , xsd:short ;
@@ -363,15 +367,12 @@ rdf:subject  a              rdf:Property , rdfs:Resource ;
 core:description  a         rdf:Property , rdfs:Resource ;
         rdfs:subPropertyOf  core:description .
 
-xsd:time  a               rdfs:Datatype , rdfs:Resource , rdfs:Class , owl:Class ;
-        owl:disjointWith  xsd:long , xsd:byte , xsd:unsignedShort , xsd:unsignedLong , xsd:float , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger .
-
 xsd:integer  a               rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
         rdfs:subClassOf      xsd:decimal , xsd:integer ;
         owl:disjointWith     xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
         owl:equivalentClass  xsd:integer .
 
-xsd:float  a              rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+xsd:float  a              rdfs:Datatype , rdfs:Resource , rdfs:Class , owl:Class ;
         owl:disjointWith  xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger .
 
 rdfs:Literal  a              rdfs:Class , rdfs:Resource , owl:Class ;
@@ -383,7 +384,7 @@ owl:Restriction  a           rdfs:Class , rdfs:Resource , owl:Class ;
         owl:equivalentClass  owl:Restriction .
 
 xsd:nonPositiveInteger
-        a                 rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        a                 rdfs:Datatype , rdfs:Resource , rdfs:Class , owl:Class ;
         owl:disjointWith  xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean .
 
 xsd:gYearMonth  a  rdfs:Datatype , rdfs:Class , rdfs:Resource .
@@ -408,7 +409,7 @@ xsd:string  a                rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Cl
         a                 document:Unit , document:Fragment , meta:DialectInstanceFragment ;
         document:encodes  <nicolas.fragment.instance.yaml#/encodes> ;
         document:root     false ;
-        document:version  "3.0.0" ;
+        document:version  "3.1.0" ;
         meta:definedBy    <file://src/main/resources/agents/agents.dialect.yaml> ;
         meta:fragment     "Person" .
 
@@ -424,7 +425,7 @@ xsd:string  a                rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Cl
         owl:sameAs       <#/encodes/agents/2/members/1> .
 
 <polimi.fragment.instance.yaml#/members/0>
-        a                document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , vocabulary:Person , owl:Thing , rdfs:Resource , vocabulary:Agent ;
+        a                document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , vocabulary:Person , owl:Thing , vocabulary:Agent , rdfs:Resource ;
         vocabulary:name  "Marco Colombetti" ;
         vocabulary:ssn   "111111111" ;
         owl:sameAs       <polimi.fragment.instance.yaml#/members/0> .
@@ -433,17 +434,17 @@ xsd:string  a                rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Cl
         a                 document:Unit , document:Fragment , meta:DialectInstanceFragment ;
         document:encodes  <polimi.fragment.instance.yaml#/encodes> ;
         document:root     false ;
-        document:version  "3.0.0" ;
+        document:version  "3.1.0" ;
         meta:definedBy    <file://src/main/resources/agents/agents.dialect.yaml> ;
         meta:fragment     "Organization" .
 
 <nicolas.fragment.instance.yaml#/encodes>
-        a                document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , vocabulary:Person , rdfs:Resource , owl:Thing , vocabulary:Agent ;
+        a                document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , vocabulary:Person , owl:Thing , vocabulary:Agent , rdfs:Resource ;
         vocabulary:name  "Nicolas Schejtman" ;
         vocabulary:ssn   "38028835" ;
         owl:sameAs       <nicolas.fragment.instance.yaml#/encodes> .
 
-<#/encodes/agents/1>  a       document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode> , vocabulary:Organization , owl:Thing , vocabulary:Agent , rdfs:Resource ;
+<#/encodes/agents/1>  a       document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode> , vocabulary:Organization , vocabulary:Agent , owl:Thing , rdfs:Resource ;
         document:link-label   "polimi.fragment.instance.yaml" ;
         document:link-target  <polimi.fragment.instance.yaml#/encodes> ;
         owl:sameAs            <#/encodes/agents/1> .
@@ -473,12 +474,12 @@ xsd:string  a                rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Cl
         vocabulary:name        "Politecnico di Milano" ;
         owl:sameAs             <polimi.fragment.instance.yaml#/encodes> .
 
-<#/encodes>  a                 document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode> , owl:Thing , rdfs:Resource ;
+<#/encodes>  a                 document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode> , rdfs:Resource , owl:Thing ;
         vocabulary:composedOf  <#/encodes/agents/2> , <#/encodes/agents/1> , <#/encodes/agents/0> ;
         owl:sameAs             <#/encodes> .
 
 <#/encodes/agents/2/members/0>
-        a                document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , vocabulary:Person , owl:Thing , rdfs:Resource , vocabulary:Agent ;
+        a                document:DomainElement , meta:DialectDomainElement , <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode> , vocabulary:Person , owl:Thing , vocabulary:Agent , rdfs:Resource ;
         vocabulary:name  "Carlos Alberto Tevez" ;
         vocabulary:ssn   "333333333" ;
         owl:sameAs       <#/encodes/agents/2/members/0> .
@@ -487,7 +488,7 @@ xsd:string  a                rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Cl
         document:encodes     <#/encodes> ;
         document:references  <polimi.fragment.instance.yaml> , <nicolas.fragment.instance.yaml> ;
         document:root        true ;
-        document:version     "3.0.0" ;
+        document:version     "3.1.0" ;
         meta:definedBy       <file://src/main/resources/agents/agents.dialect.yaml> .
 
 <file://src/main/resources/agents/agents.vocabulary.yaml>
@@ -496,48 +497,48 @@ xsd:string  a                rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Cl
         document:declares  vocabulary:members , vocabulary:Organization , vocabulary:composedOf , vocabulary:name , vocabulary:managedBy , vocabulary:ssn , vocabulary:Agent , vocabulary:Person ;
         document:location  "file://src/main/resources/agents/agents.vocabulary.yaml" ;
         document:root      true ;
-        document:version   "3.0.0" ;
+        document:version   "3.1.0" ;
         meta:base          "http://agents.org/vocabulary#" .
+
+rdfs:Container  a  rdfs:Resource , rdfs:Class .
 
 rdfs:seeAlso  a             rdf:Property , rdfs:Resource ;
         rdfs:subPropertyOf  rdfs:seeAlso .
 
-rdfs:Container  a  rdfs:Class , rdfs:Resource .
-
 owl:AnnotationProperty
-        a       rdfs:Class , rdfs:Resource .
+        a       rdfs:Resource , rdfs:Class .
 
 <file://src/main/resources/agents/agents.dialect.yaml#/declarations/PersonNode>
-        a       rdfs:Class , rdfs:Resource .
+        a       rdfs:Resource , rdfs:Class .
 
 document:DomainElement
-        a       rdfs:Class , rdfs:Resource .
+        a       rdfs:Resource , rdfs:Class .
 
 <file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentListNode>
-        a       rdfs:Class , rdfs:Resource .
+        a       rdfs:Resource , rdfs:Class .
 
 meta:DialectDomainElement
-        a       rdfs:Class , rdfs:Resource .
+        a       rdfs:Resource , rdfs:Class .
 
-meta:DialectInstance  a  rdfs:Class , rdfs:Resource .
+meta:DialectInstance  a  rdfs:Resource , rdfs:Class .
 
 <file://src/main/resources/agents/agents.dialect.yaml#/declarations/OrganizationNode>
-        a       rdfs:Class , rdfs:Resource .
+        a       rdfs:Resource , rdfs:Class .
 
-document:Unit  a  rdfs:Class , rdfs:Resource .
+document:Unit  a  rdfs:Resource , rdfs:Class .
 
-document:Fragment  a  rdfs:Class , rdfs:Resource .
+document:Fragment  a  rdfs:Resource , rdfs:Class .
 
 meta:DialectInstanceFragment
-        a       rdfs:Class , rdfs:Resource .
+        a       rdfs:Resource , rdfs:Class .
 
-document:Module  a  rdfs:Class , rdfs:Resource .
+document:Module  a  rdfs:Resource , rdfs:Class .
 
-document:Document  a  rdfs:Class , rdfs:Resource .
+document:Document  a  rdfs:Resource , rdfs:Class .
 
 <file://src/main/resources/agents/agents.dialect.yaml#/declarations/AgentNode>
-        a       rdfs:Class , rdfs:Resource .
+        a       rdfs:Resource , rdfs:Class .
 
-meta:Property  a  rdfs:Class , rdfs:Resource .
+meta:Property  a  rdfs:Resource , rdfs:Class .
 
-meta:Vocabulary  a  rdfs:Class , rdfs:Resource .
+meta:Vocabulary  a  rdfs:Resource , rdfs:Class .

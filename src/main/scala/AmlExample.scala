@@ -1,13 +1,12 @@
 import amf.client.model.document.{BaseUnit, Vocabulary}
 import amf.client.parse.Aml10Parser
 import helpers.Conversions.Fut
-import helpers.{InitializationHelper, Namespaces}
+import helpers.{InitializationHelper, Namespaces, Rdf}
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration.Duration
 import scala.concurrent.{Await, Future}
 import scala.util.{Failure, Success}
-import helpers.RdfHelper._
 
 //noinspection SameParameterValue
 object AmlExample {
@@ -33,10 +32,10 @@ object AmlExample {
         * In AMF we have our own internal model which is based on RDF but is easier to consume by traditional programming
         * languages. We can convert it nevertheless to an RDF representation
         */
-      dialectRdfModel           <- toRdfModel(dialectBaseUnitModel, namespaces)
-      vocabularyRdfModel        <- toRdfModel(vocabularyBaseUnitUnitModel, namespaces)
-      instanceRdfModel          <- toRdfModel(instanceBaseUnitModel, namespaces)
-      instanceInferenceRdfModel <- getInferenceModel(instanceRdfModel, vocabularyRdfModel)
+      dialectRdfModel           <- Rdf.AMF.toRdfModel(dialectBaseUnitModel, namespaces)
+      vocabularyRdfModel        <- Rdf.AMF.toRdfModel(vocabularyBaseUnitUnitModel, namespaces)
+      instanceRdfModel          <- Rdf.AMF.toRdfModel(instanceBaseUnitModel, namespaces)
+      instanceInferenceRdfModel <- Rdf.Inference.default(instanceRdfModel, vocabularyRdfModel)
       inferredTriples           <- instanceInferenceRdfModel.difference(instanceRdfModel).wrapFuture
 
     } yield {
@@ -45,14 +44,14 @@ object AmlExample {
 
       formats.foreach {
         case Fmt(lang, extension) =>
-          write(dialectRdfModel, s"src/main/resources/agents/graphs/agents.dialect$extension", lang, dialectBaseUnitModel.id)
-          write(vocabularyRdfModel, s"src/main/resources/agents/graphs/agents.vocabulary$extension", lang, vocabularyBaseUnitUnitModel.id)
-          write(instanceRdfModel, s"src/main/resources/agents/graphs/agents.instance$extension", lang, instanceBaseUnitModel.id)
-          write(instanceInferenceRdfModel,
+          Rdf.IO.write(dialectRdfModel, s"src/main/resources/agents/graphs/agents.dialect$extension", lang, dialectBaseUnitModel.id)
+          Rdf.IO.write(vocabularyRdfModel, s"src/main/resources/agents/graphs/agents.vocabulary$extension", lang, vocabularyBaseUnitUnitModel.id)
+          Rdf.IO.write(instanceRdfModel, s"src/main/resources/agents/graphs/agents.instance$extension", lang, instanceBaseUnitModel.id)
+          Rdf.IO.write(instanceInferenceRdfModel,
                 s"src/main/resources/agents/graphs-with-reasoning/agents.instance$extension",
                 lang,
                 instanceBaseUnitModel.id)
-          write(inferredTriples,
+          Rdf.IO.write(inferredTriples,
                 s"src/main/resources/agents/graphs-with-reasoning/agents.inferred.triples.instance$extension",
                 lang,
                 instanceBaseUnitModel.id)

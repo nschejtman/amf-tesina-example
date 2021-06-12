@@ -3,9 +3,7 @@ import amf.client.parse.Parser
 import amf.client.resolve.Resolver
 import amf.core.remote.{Raml10, Vendor}
 import helpers.Conversions._
-import helpers.{InitializationHelper, MediaType, RdfHelper}
-import org.apache.jena.query.{QueryExecutionFactory, QueryFactory}
-import org.apache.jena.rdf.model.Model
+import helpers.{InitializationHelper, MediaType, Rdf}
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration.Duration
@@ -46,20 +44,16 @@ object WebApisExample {
     result.wrapFuture
   }
 
-  private def query(model: Model, queryUrl: String) = {
-    val query     = QueryFactory.read(queryUrl)
-    val execution = QueryExecutionFactory.create(query, model)
-    execution.execConstruct().write(System.out, "JSON-LD")
-    Future.unit
-  }
-
   private def cycle(fileUrl: String, vendor: Vendor) = {
     for {
       parsed         <- parse(fileUrl, vendor)
       resolved       <- resolve(parsed, vendor)
-      rdf            <- RdfHelper.toRdfModel(resolved, helpers.Namespaces.ns)
-      _              <- RdfHelper.write(rdf, fileUrl.noProtocol.withExtension(".jsonld"), "JSON-LD", resolved.id)
-      _              <- query(rdf, "src/main/resources/web-apis/well-documented.sparql")
+      rdf            <- Rdf.AMF.toRdfModel(resolved, helpers.Namespaces.ns)
+      _              <- Rdf.IO.write(rdf, fileUrl.noProtocol.withExtension(".jsonld"), "JSON-LD", resolved.id)
+      ontology       <- Rdf.IO.read("src/main/resources/web-apis/well-documented.ontology.ttl", lang = "TTL")
+      inferenceModel <- Rdf.Inference.pellet(ontology, rdf)
+      _              <- Rdf.IO.write(inferenceModel, fileUrl.noProtocol.withExtension(".enriched.jsonld"), "JSON-LD", resolved.id)
+      _              <- Rdf.Query.construct(rdf, "src/main/resources/web-apis/well-documented.sparql")
     } yield {
       rdf
     }

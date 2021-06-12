@@ -227,7 +227,7 @@
                 <#/encodes/agents/2/members/1> .
 
 <nicolas.fragment.instance.yaml#/encodes>
-        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://agents.org/vocabulary#Agent> ;
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2002/07/owl#Thing> ;
         <http://www.w3.org/2002/07/owl#sameAs>
                 <nicolas.fragment.instance.yaml#/encodes> .
 
@@ -649,7 +649,7 @@
         <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
                 <http://a.ml/vocabularies/document#encodes> .
 
-<#/encodes/agents/1>  a  <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://agents.org/vocabulary#Agent> ;
+<#/encodes/agents/1>  a  <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2002/07/owl#Thing> ;
         <http://www.w3.org/2002/07/owl#sameAs>
                 <#/encodes/agents/1> .
 
@@ -748,11 +748,11 @@
         <http://a.ml/vocabularies/document#root>
                 true ;
         <http://a.ml/vocabularies/document#version>
-                "3.0.0" ;
+                "3.1.0" ;
         <http://a.ml/vocabularies/meta#base>
                 "http://agents.org/vocabulary#" .
 
-<#/encodes/agents/0>  a  <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , <http://agents.org/vocabulary#Agent> ;
+<#/encodes/agents/0>  a  <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://agents.org/vocabulary#Agent> , <http://www.w3.org/2002/07/owl#Thing> ;
         <http://www.w3.org/2002/07/owl#sameAs>
                 <#/encodes/agents/0> .
 

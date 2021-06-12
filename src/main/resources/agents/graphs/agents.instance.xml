@@ -3,6 +3,7 @@
     xmlns:vocabulary="http://agents.org/vocabulary#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:j.0="file://src/main/resources/agents/agents.dialect.yaml#/declarations/"
+    xmlns:apiContract="http://a.ml/vocabularies/apiContract#"
     xmlns:shacl="http://www.w3.org/ns/shacl#"
     xmlns:meta="http://a.ml/vocabularies/meta#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -11,7 +12,6 @@
     xmlns:dialect="file://src/main/resources/agents/agents.dialect.yaml#/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
   <document:Module rdf:about="">
-    <document:version>3.0.0</document:version>
     <document:encodes>
       <document:DomainElement rdf:about="#/encodes">
         <vocabulary:composedOf>
@@ -113,7 +113,7 @@
       <document:Unit rdf:about="polimi.fragment.instance.yaml">
         <document:root rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
         >false</document:root>
-        <document:version>3.0.0</document:version>
+        <document:version>3.1.0</document:version>
         <document:encodes rdf:resource="polimi.fragment.instance.yaml#/encodes"/>
         <meta:fragment>Organization</meta:fragment>
         <meta:definedBy rdf:resource="../agents.dialect.yaml"/>
@@ -122,11 +122,12 @@
       </document:Unit>
     </document:references>
     <rdf:type rdf:resource="http://a.ml/vocabularies/document#Document"/>
+    <document:version>3.1.0</document:version>
     <document:references>
       <document:Unit rdf:about="nicolas.fragment.instance.yaml">
         <document:root rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
         >false</document:root>
-        <document:version>3.0.0</document:version>
+        <document:version>3.1.0</document:version>
         <document:encodes rdf:resource="nicolas.fragment.instance.yaml#/encodes"/>
         <meta:fragment>Person</meta:fragment>
         <meta:definedBy rdf:resource="../agents.dialect.yaml"/>

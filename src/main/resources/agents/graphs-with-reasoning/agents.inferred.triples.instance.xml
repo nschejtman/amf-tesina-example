@@ -1076,7 +1076,7 @@
     </j.3:declares>
     <j.3:root rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
     >true</j.3:root>
-    <j.3:version>3.0.0</j.3:version>
+    <j.3:version>3.1.0</j.3:version>
     <rdf:type>
       <rdfs:Resource rdf:about="http://a.ml/vocabularies/meta#Vocabulary">
         <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
@@ -1160,16 +1160,16 @@
   </rdfs:Resource>
   <rdfs:Resource rdf:about="http://www.w3.org/2002/07/owl#incompatibleWith">
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#incompatibleWith"/>
-    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
   </rdfs:Resource>
   <rdfs:Resource rdf:about="http://www.w3.org/2002/07/owl#backwardCompatibleWith">
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#backwardCompatibleWith"/>
-    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
@@ -1182,10 +1182,10 @@
   </rdfs:Resource>
   <rdfs:Resource rdf:about="http://www.w3.org/2002/07/owl#equivalentClass">
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
-    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -1203,15 +1203,15 @@
   </rdfs:Resource>
   <rdfs:Resource rdf:about="nicolas.fragment.instance.yaml#/encodes">
     <owl:sameAs rdf:resource="nicolas.fragment.instance.yaml#/encodes"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     <rdf:type rdf:resource="http://agents.org/vocabulary#Agent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   </rdfs:Resource>
   <rdfs:Resource rdf:about="http://www.w3.org/2002/07/owl#onProperty">
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#onProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Property"/>
@@ -1231,8 +1231,8 @@
   </rdfs:Resource>
   <rdfs:Resource rdf:about="http://www.w3.org/2000/01/rdf-schema#domain">
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#domain"/>
-    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -1254,8 +1254,8 @@
   </rdfs:Resource>
   <rdfs:Resource rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -1278,8 +1278,8 @@
   </rdfs:Resource>
   <rdfs:Resource rdf:about="#/encodes/agents/0">
     <owl:sameAs rdf:resource="#/encodes/agents/0"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     <rdf:type rdf:resource="http://agents.org/vocabulary#Agent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   </rdfs:Resource>
   <rdfs:Resource rdf:about="http://www.w3.org/2002/07/owl#differentFrom">
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#differentFrom"/>
@@ -1309,8 +1309,8 @@
   </rdfs:Resource>
   <rdfs:Resource rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#rest">
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"/>
-    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
     <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -1318,8 +1318,8 @@
   </rdfs:Resource>
   <rdfs:Resource rdf:about="http://www.w3.org/2000/01/rdf-schema#range">
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
-    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -1338,8 +1338,8 @@
   </rdfs:Resource>
   <rdfs:Resource rdf:about="http://www.w3.org/2002/07/owl#imports">
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#imports"/>
-    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdf:type>
       <rdfs:Resource rdf:about="http://www.w3.org/2002/07/owl#OntologyProperty">
@@ -1362,8 +1362,8 @@
   </rdfs:Resource>
   <rdfs:Resource rdf:about="http://www.w3.org/2002/07/owl#priorVersion">
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#priorVersion"/>
-    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
@@ -1382,16 +1382,16 @@
   </rdfs:Resource>
   <rdfs:Resource rdf:about="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"/>
-    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdfs:Resource>
   <rdfs:Resource rdf:about="#/encodes/agents/1">
     <owl:sameAs rdf:resource="#/encodes/agents/1"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     <rdf:type rdf:resource="http://agents.org/vocabulary#Agent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   </rdfs:Resource>
   <rdfs:Resource rdf:about="http://a.ml/vocabularies/core#name">
     <rdfs:subPropertyOf rdf:resource="http://a.ml/vocabularies/core#name"/>

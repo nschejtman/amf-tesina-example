@@ -1,0 +1,21 @@
+@prefix rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:        <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:         <http://www.w3.org/2002/07/owl#> .
+@prefix shacl:       <http://www.w3.org/ns/shacl#> .
+@prefix xsd:         <http://www.w3.org/2001/XMLSchema#> .
+@prefix document:    <http://a.ml/vocabularies/document#> .
+@prefix meta:        <http://a.ml/vocabularies/meta#> .
+@prefix core:        <http://a.ml/vocabularies/core#> .
+@prefix apiContract: <http://a.ml/vocabularies/apiContract#> .
+@prefix me:          <http://a.ml/me#> .
+
+me:Documentable a owl:Class .
+
+apiContract:EndPoint
+    rdfs:subClassOf me:Documentable .
+
+apiContract:Operation
+    rdfs:subClassOf me:Documentable .
+
+
+
