@@ -12,6 +12,8 @@ object Conversions {
   implicit class Fut[T](t: T) {
     def wrapFuture: Future[T] = Future.successful(t)
   }
+
+  implicit class Percentage(d: Double) {
+    def asPercentage: String = s"${d * 100}%"
+  }
 }
-
-

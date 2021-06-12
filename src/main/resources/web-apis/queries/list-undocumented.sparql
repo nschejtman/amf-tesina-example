@@ -2,4 +2,7 @@ PREFIX documentation: <file://src/main/resources/web-apis/ontologies/documentati
 SELECT ?s
 WHERE {
       ?s a documentation:Documentable
+      FILTER NOT EXISTS {
+                        ?s a documentation:Documented
+                        }
       }

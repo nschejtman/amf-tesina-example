@@ -85,6 +85,12 @@ object Rdf {
       val execution = QueryExecutionFactory.create(query, model)
       execution.execConstruct().wrapFuture
     }
+
+    def ask(model: Model, queryUrl: String): Future[Boolean] = {
+      val query     = QueryFactory.read(queryUrl)
+      val execution = QueryExecutionFactory.create(query, model)
+      execution.execAsk().wrapFuture
+    }
   }
 
 }
