@@ -1,0 +1,20 @@
+PREFIX core: <http://a.ml/vocabularies/core#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX document: <http://a.ml/vocabularies/document#>
+PREFIX apiContract: <http://a.ml/vocabularies/apiContract#>
+CONSTRUCT {
+          ?e rdf:type core:WellDocumented
+          }
+WHERE {
+      ?e rdf:type ?e_type .
+      FILTER (?e_type IN (apiContract:EndPoint, apiContract:Operation, apiContract:WebAPI)) .
+      ?e core:description ?e_desc .
+      FILTER NOT EXISTS {
+                        ?e ?e_prop ?e_subj .
+                        FILTER (?e_prop IN (apiContract:supportedOperation, apiContract:parameter, apiContract:endpoint))
+                        FILTER NOT EXISTS {
+                                          ?e_subj core:description ?e_subj_desc
+                        }
+      }
+
+      }
