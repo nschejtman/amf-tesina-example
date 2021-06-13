@@ -14,6 +14,11 @@
 <#Documented>
     a owl:Class .
 
+# Making Documented a sub class of Documentable reduces coverage metric for RAML example 80% -> 66%
+#<#Documented>
+#    a               owl:Class ;
+#    rdfs:subClassOf <#Documentable> .
+
 core:description
     rdfs:domain <#Documented> .
 
