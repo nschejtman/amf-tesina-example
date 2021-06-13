@@ -5,7 +5,7 @@
     "encodes" : "#/encodes",
     "references" : [ "polimi.fragment.instance.yaml", "nicolas.fragment.instance.yaml" ],
     "document:root" : true,
-    "version" : "3.0.0",
+    "version" : "3.1.0",
     "definedBy" : "../agents.dialect.yaml"
   }, {
     "@id" : "#/encodes",
@@ -46,7 +46,7 @@
     "@type" : [ "document:Unit", "document:Fragment", "meta:DialectInstanceFragment" ],
     "encodes" : "nicolas.fragment.instance.yaml#/encodes",
     "document:root" : false,
-    "version" : "3.0.0",
+    "version" : "3.1.0",
     "definedBy" : "../agents.dialect.yaml",
     "fragment" : "Person"
   }, {
@@ -59,7 +59,7 @@
     "@type" : [ "document:Unit", "document:Fragment", "meta:DialectInstanceFragment" ],
     "encodes" : "polimi.fragment.instance.yaml#/encodes",
     "document:root" : false,
-    "version" : "3.0.0",
+    "version" : "3.1.0",
     "definedBy" : "../agents.dialect.yaml",
     "fragment" : "Organization"
   }, {
@@ -132,6 +132,7 @@
     "dialect" : "file://src/main/resources/agents/agents.dialect.yaml#/",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "owl" : "http://www.w3.org/2002/07/owl#",
+    "apiContract" : "http://a.ml/vocabularies/apiContract#",
     "meta" : "http://a.ml/vocabularies/meta#",
     "document" : "http://a.ml/vocabularies/document#",
     "xsd" : "http://www.w3.org/2001/XMLSchema#",

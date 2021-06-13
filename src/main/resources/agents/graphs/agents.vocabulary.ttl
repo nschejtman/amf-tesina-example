@@ -5,6 +5,7 @@
 @prefix dialect: <file://src/main/resources/agents/agents.dialect.yaml#/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix apiContract: <http://a.ml/vocabularies/apiContract#> .
 @prefix meta:  <http://a.ml/vocabularies/meta#> .
 @prefix document: <http://a.ml/vocabularies/document#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
@@ -15,7 +16,7 @@
         document:declares  vocabulary:members , vocabulary:Organization , vocabulary:composedOf , vocabulary:name , vocabulary:managedBy , vocabulary:ssn , vocabulary:Agent , vocabulary:Person ;
         document:location  "file://src/main/resources/agents/agents.vocabulary.yaml" ;
         document:root      true ;
-        document:version   "3.0.0" ;
+        document:version   "3.1.0" ;
         meta:base          "http://agents.org/vocabulary#" .
 
 vocabulary:ssn  a         document:DomainElement , meta:Property , owl:DatatypeProperty ;

@@ -2,6 +2,7 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:vocabulary="http://agents.org/vocabulary#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:apiContract="http://a.ml/vocabularies/apiContract#"
     xmlns:shacl="http://www.w3.org/ns/shacl#"
     xmlns:meta="http://a.ml/vocabularies/meta#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -83,7 +84,7 @@
     </document:declares>
     <document:root rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
     >true</document:root>
-    <document:version>3.0.0</document:version>
+    <document:version>3.1.0</document:version>
     <rdf:type rdf:resource="http://a.ml/vocabularies/meta#Vocabulary"/>
     <meta:base>http://agents.org/vocabulary#</meta:base>
     <document:declares rdf:resource="http://agents.org/vocabulary#Agent"/>

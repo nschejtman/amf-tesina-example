@@ -1,0 +1,54 @@
+@base <file://src/main/resources/web-apis/ontologies/documentation#> .
+@prefix rdfs:        <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:         <http://www.w3.org/2002/07/owl#> .
+@prefix core:        <http://a.ml/vocabularies/core#> .
+@prefix apiContract: <http://a.ml/vocabularies/apiContract#> .
+@prefix security:    <http://a.ml/vocabularies/security#> .
+
+<#>
+    a owl:Ontology .
+
+<#Documentable>
+    a owl:Class .
+
+<#Documented>
+    a owl:Class .
+
+core:description
+    rdfs:domain <#Documented> .
+
+apiContract:API
+    rdfs:subClassOf <#Documentable> .
+
+core:CorrelationId
+    rdfs:subClassOf <#Documentable> .
+
+apiContract:EndPoint
+    rdfs:subClassOf <#Documentable> .
+
+apiContract:Message
+    rdfs:subClassOf <#Documentable> .
+
+apiContract:Operation
+    rdfs:subClassOf <#Documentable> .
+
+apiContract:Parameter
+    rdfs:subClassOf <#Documentable> .
+
+apiContract:Payload
+    rdfs:subClassOf <#Documentable> .
+
+apiContract:Server
+    rdfs:subClassOf <#Documentable> .
+
+apiContract:Tag
+    rdfs:subClassOf <#Documentable> .
+
+apiContract:TemplatedLink
+    rdfs:subClassOf <#Documentable> .
+
+security:SecurityScheme
+    rdfs:subClassOf <#Documentable> .
+
+
+

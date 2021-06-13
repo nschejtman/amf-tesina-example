@@ -1,0 +1,30 @@
+#%RAML 1.0
+title: Agents API
+version: 1.0
+types:
+  Agent:
+    description: A judiciary agent (person or organization)
+    type: object
+    properties:
+      name: string
+      agentType:
+        type: string
+        enum:
+          - Person
+          - Organization
+
+/agents:
+  description: Default endpoint for CRUD operations on agents
+  get:
+    description: Returns all the known agents
+    responses:
+      200:
+        description: Successfully obtained the list of agents
+        body:
+          application/json:
+            schema: Agent[]
+            example:
+              - name: Polimi
+                agentType: Organization
+              - name: Nicolas
+                agentType: Person

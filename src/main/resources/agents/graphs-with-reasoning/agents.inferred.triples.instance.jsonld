@@ -33,7 +33,7 @@
     "declares" : [ "http://agents.org/vocabulary#members", "http://agents.org/vocabulary#Organization", "http://agents.org/vocabulary#composedOf", "http://agents.org/vocabulary#name", "http://agents.org/vocabulary#managedBy", "http://agents.org/vocabulary#ssn", "http://agents.org/vocabulary#Agent", "http://agents.org/vocabulary#Person" ],
     "location" : "file://src/main/resources/agents/agents.vocabulary.yaml",
     "http://a.ml/vocabularies/document#root" : true,
-    "version" : "3.0.0",
+    "version" : "3.1.0",
     "base" : "http://agents.org/vocabulary#",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
@@ -57,9 +57,9 @@
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
     }, {
-      "@id" : "http://www.w3.org/2002/07/owl#Thing"
-    }, {
       "@id" : "http://agents.org/vocabulary#Agent"
+    }, {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
     } ],
     "sameAs" : "#/encodes/agents/0"
   }, {
@@ -67,9 +67,9 @@
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
     }, {
-      "@id" : "http://www.w3.org/2002/07/owl#Thing"
-    }, {
       "@id" : "http://agents.org/vocabulary#Agent"
+    }, {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
     } ],
     "sameAs" : "#/encodes/agents/1"
   }, {
@@ -118,9 +118,9 @@
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
     }, {
-      "@id" : "http://www.w3.org/2002/07/owl#Thing"
-    }, {
       "@id" : "http://agents.org/vocabulary#Agent"
+    }, {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
     } ],
     "sameAs" : "nicolas.fragment.instance.yaml#/encodes"
   }, {
@@ -1323,12 +1323,12 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
       "@type" : "@id"
     },
-    "domain" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
-      "@type" : "@id"
-    },
     "range" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "domain" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
       "@type" : "@id"
     },
     "subClassOf" : {

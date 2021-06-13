@@ -33,7 +33,7 @@
     "declares" : [ "vocabulary:members", "vocabulary:Organization", "vocabulary:composedOf", "vocabulary:name", "vocabulary:managedBy", "vocabulary:ssn", "vocabulary:Agent", "vocabulary:Person" ],
     "location" : "file://src/main/resources/agents/agents.vocabulary.yaml",
     "document:root" : true,
-    "version" : "3.0.0",
+    "version" : "3.1.0",
     "base" : "http://agents.org/vocabulary#",
     "rdf:type" : [ {
       "@id" : "document:Unit"
@@ -49,7 +49,7 @@
     "encodes" : "#/encodes",
     "references" : [ "polimi.fragment.instance.yaml", "nicolas.fragment.instance.yaml" ],
     "document:root" : true,
-    "version" : "3.0.0",
+    "version" : "3.1.0",
     "definedBy" : "../agents.dialect.yaml",
     "rdf:type" : [ {
       "@id" : "document:Module"
@@ -90,11 +90,11 @@
     }, {
       "@id" : "vocabulary:Person"
     }, {
+      "@id" : "owl:Thing"
+    }, {
       "@id" : "rdfs:Resource"
     }, {
       "@id" : "vocabulary:Agent"
-    }, {
-      "@id" : "owl:Thing"
     } ],
     "sameAs" : "#/encodes/agents/0"
   }, {
@@ -202,7 +202,7 @@
     "@id" : "nicolas.fragment.instance.yaml",
     "encodes" : "nicolas.fragment.instance.yaml#/encodes",
     "document:root" : false,
-    "version" : "3.0.0",
+    "version" : "3.1.0",
     "definedBy" : "../agents.dialect.yaml",
     "fragment" : "Person",
     "rdf:type" : [ {
@@ -225,18 +225,18 @@
     }, {
       "@id" : "vocabulary:Person"
     }, {
+      "@id" : "owl:Thing"
+    }, {
       "@id" : "rdfs:Resource"
     }, {
       "@id" : "vocabulary:Agent"
-    }, {
-      "@id" : "owl:Thing"
     } ],
     "sameAs" : "nicolas.fragment.instance.yaml#/encodes"
   }, {
     "@id" : "polimi.fragment.instance.yaml",
     "encodes" : "polimi.fragment.instance.yaml#/encodes",
     "document:root" : false,
-    "version" : "3.0.0",
+    "version" : "3.1.0",
     "definedBy" : "../agents.dialect.yaml",
     "fragment" : "Organization",
     "rdf:type" : [ {
@@ -771,9 +771,9 @@
   }, {
     "@id" : "rdfs:Container",
     "rdf:type" : [ {
-      "@id" : "rdfs:Class"
-    }, {
       "@id" : "rdfs:Resource"
+    }, {
+      "@id" : "rdfs:Class"
     } ]
   }, {
     "@id" : "rdfs:ContainerMembershipProperty",
@@ -1381,7 +1381,7 @@
       "@id" : "rdfs:Resource"
     } ],
     "domain" : [ "owl:Class", "rdfs:Resource", "rdfs:Class" ],
-    "range" : [ "owl:Class", "rdfs:Class", "rdfs:Resource" ],
+    "range" : [ "owl:Class", "rdfs:Resource", "rdfs:Class" ],
     "subPropertyOf" : "owl:disjointWith"
   }, {
     "@id" : "owl:equivalentClass",
@@ -1391,7 +1391,7 @@
       "@id" : "rdfs:Resource"
     } ],
     "domain" : [ "owl:Class", "rdfs:Resource", "rdfs:Class" ],
-    "range" : [ "owl:Class", "rdfs:Class", "rdfs:Resource" ],
+    "range" : [ "owl:Class", "rdfs:Resource", "rdfs:Class" ],
     "subPropertyOf" : "owl:equivalentClass"
   }, {
     "@id" : "owl:imports",
@@ -1569,6 +1569,7 @@
     "dialect" : "file://src/main/resources/agents/agents.dialect.yaml#/",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "owl" : "http://www.w3.org/2002/07/owl#",
+    "apiContract" : "http://a.ml/vocabularies/apiContract#",
     "meta" : "http://a.ml/vocabularies/meta#",
     "document" : "http://a.ml/vocabularies/document#",
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
