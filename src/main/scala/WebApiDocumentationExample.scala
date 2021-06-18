@@ -1,23 +1,23 @@
-import amf.core.remote.{Raml10, Vendor}
+import amf.core.remote.Raml10
 import com.typesafe.scalalogging.Logger
 import helpers.Conversions._
-import helpers.{Amf, InitializationHelper, Rdf}
+import helpers.{InitializationHelper, Rdf}
 import org.apache.jena.rdf.model.Model
 
-import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration.Duration
-import scala.concurrent.{Await, Future}
+import scala.concurrent.{Await, ExecutionContext, Future}
 import scala.util.{Failure, Success}
 
 //noinspection SameParameterValue
-object WebApiDocumentationExample {
-  implicit val logger: Logger = Logger[this.type]
+object WebApiDocumentationExample extends Pipeline {
+  implicit val logger: Logger       = Logger[this.type]
+  implicit val ec: ExecutionContext = scala.concurrent.ExecutionContext.Implicits.global
 
   def main(args: Array[String]): Unit = {
     val result = for {
       _ <- InitializationHelper.init()
-      _ <- run("file://src/main/resources/web-apis/raml/fully-documented.raml", Raml10)
-      _ <- run("file://src/main/resources/web-apis/raml/partially-documented.raml", Raml10)
+      _ <- run(s"$raml/fully-documented.raml", s"$ontologies/Documentation.ontology.ttl", Raml10)
+      _ <- run(s"$raml/partially-documented.raml", s"$ontologies/Documentation.ontology.ttl", Raml10)
     } yield {
       println()
     }
@@ -30,46 +30,30 @@ object WebApiDocumentationExample {
     Await.ready(result, Duration.Inf)
   }
 
-  private def run(fileUrl: String, vendor: Vendor) = {
-    for {
-      parsed         <- Amf.parse(fileUrl, vendor)
-      resolved       <- Amf.resolve(parsed, vendor)
-      _              <- Amf.render(resolved, fileUrl.withExtension(".jsonld"))
-      rdf            <- Rdf.IO.read(fileUrl.noProtocol.withExtension(".jsonld"))
-      ontology       <- Rdf.IO.read("src/main/resources/web-apis/ontologies/Documentation.ontology.ttl", lang = "TTL")
-      inferenceModel <- Rdf.Inference.default(ontology, rdf)
-      _              <- Rdf.IO.write(inferenceModel, fileUrl.noProtocol.withExtension(".inf.jsonld"), "JSON-LD", resolved.id)
-      _              <- runQueriesOn(inferenceModel, fileUrl)
-    } yield {
-      rdf
-    }
-  }
-
-  private def runQueriesOn(model: Model, modelName: String): Future[Unit] = {
+  override def runQueriesOn(model: Model, modelName: String): Future[Unit] = {
     println(Console.BLUE)
     println(s"Querying model: $modelName")
     println(Console.RESET)
-    val queriesDir = "src/main/resources/web-apis/queries"
     for {
-      isFullyDocumented <- queryIsFullyDocumented(model, queriesDir)
-      _                 <- queryCoverage(model, queriesDir)
-      _                 <- if (!isFullyDocumented) queryUndocumentedNodes(model, queriesDir) else Future.unit
+      isFullyDocumented <- queryIsFullyDocumented(model)
+      _                 <- queryCoverage(model)
+      _                 <- if (!isFullyDocumented) queryUndocumentedNodes(model) else Future.unit
     } yield {
       Unit
     }
   }
 
-  private def queryIsFullyDocumented(model: Model, queriesDir: String) = {
+  private def queryIsFullyDocumented(model: Model) = {
     for {
-      isFullyDocumented <- Rdf.Query.ask(model, s"$queriesDir/is-fully-documented.sparql")
+      isFullyDocumented <- Rdf.Query.ask(model, s"$queries/is-fully-documented.sparql".noProtocol)
     } yield {
       println(s"Fully documented: $isFullyDocumented")
       isFullyDocumented
     }
   }
-  private def queryCoverage(model: Model, queriesDir: String) = {
+  private def queryCoverage(model: Model) = {
     for {
-      coverageResult <- Rdf.Query.select(model, s"$queriesDir/documentation-coverage.sparql")
+      coverageResult <- Rdf.Query.select(model, s"$queries/documentation-coverage.sparql".noProtocol)
     } yield {
       val solution        = coverageResult.next()
       val total           = solution.getLiteral("total").getDouble
@@ -78,10 +62,10 @@ object WebApiDocumentationExample {
       println(s"Documentation coverage: ${coverage.asPercentage}")
     }
   }
-  private def queryUndocumentedNodes(model: Model, queriesDir: String) = {
+  private def queryUndocumentedNodes(model: Model) = {
     for {
       _         <- println("Missing description for: ").wrapFuture
-      resultSet <- Rdf.Query.select(model, s"$queriesDir/list-undocumented.sparql")
+      resultSet <- Rdf.Query.select(model, s"$queries/list-undocumented.sparql".noProtocol)
       _         <- Rdf.IO.print(resultSet)
     } yield {
       Unit
