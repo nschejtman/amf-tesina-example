@@ -1,11 +1,7 @@
-import amf.client.model.document.BaseUnit
-import amf.client.parse.Parser
-import amf.client.render.{RenderOptions, Renderer}
-import amf.client.resolve.Resolver
 import amf.core.remote.{Raml10, Vendor}
 import com.typesafe.scalalogging.Logger
 import helpers.Conversions._
-import helpers.{InitializationHelper, MediaType, Rdf}
+import helpers.{Amf, InitializationHelper, Rdf}
 import org.apache.jena.rdf.model.Model
 
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -34,36 +30,11 @@ object WebApiDocumentationExample {
     Await.ready(result, Duration.Inf)
   }
 
-  private def parse(fileUrl: String, vendor: Vendor): Future[BaseUnit] = {
-    logger.debug(s"Started: parse $fileUrl")
-    val parser = new Parser(vendor.name, MediaType.forVendor(vendor))
-    val result = parser.parseFileAsync(fileUrl).get()
-    logger.debug(s"Done: parse $fileUrl")
-    result.wrapFuture
-  }
-
-  private def resolve(baseUnit: BaseUnit, vendor: Vendor): Future[BaseUnit] = {
-    logger.debug(s"Started: resolve ${baseUnit.id}")
-    val resolver = new Resolver(vendor.name)
-    val result   = resolver.resolve(baseUnit)
-    logger.debug(s"Done: resolve ${baseUnit.id}")
-    result.wrapFuture
-  }
-
-  private def render(baseUnit: BaseUnit, url: String): Future[Unit] = {
-    logger.debug(s"Started: render ${baseUnit.id}")
-    val renderer      = new Renderer(Vendor.AMF.name, "application/ld+json")
-    val renderOptions = RenderOptions().withFlattenedJsonLd.withCompactUris.withPrettyPrint.withSourceMaps
-    renderer.generateFile(baseUnit, url, renderOptions).get()
-    logger.debug(s"Done: render ${baseUnit.id}")
-    Future.unit
-  }
-
   private def run(fileUrl: String, vendor: Vendor) = {
     for {
-      parsed         <- parse(fileUrl, vendor)
-      resolved       <- resolve(parsed, vendor)
-      _              <- render(resolved, fileUrl.withExtension(".jsonld"))
+      parsed         <- Amf.parse(fileUrl, vendor)
+      resolved       <- Amf.resolve(parsed, vendor)
+      _              <- Amf.render(resolved, fileUrl.withExtension(".jsonld"))
       rdf            <- Rdf.IO.read(fileUrl.noProtocol.withExtension(".jsonld"))
       ontology       <- Rdf.IO.read("src/main/resources/web-apis/ontologies/Documentation.ontology.ttl", lang = "TTL")
       inferenceModel <- Rdf.Inference.default(ontology, rdf)
