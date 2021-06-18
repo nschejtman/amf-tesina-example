@@ -16,8 +16,8 @@ object WebApiDocumentationExample extends Pipeline {
   def main(args: Array[String]): Unit = {
     val result = for {
       _ <- InitializationHelper.init()
-      _ <- run(s"$raml/fully-documented.raml", s"$ontologies/Documentation.ontology.ttl", Raml10)
-      _ <- run(s"$raml/partially-documented.raml", s"$ontologies/Documentation.ontology.ttl", Raml10)
+      _ <- run(s"$raml/fully-documented/api.raml", s"$ontologies/Documentation.ontology.ttl", Raml10)
+      _ <- run(s"$raml/partially-documented/api.raml", s"$ontologies/Documentation.ontology.ttl", Raml10)
     } yield {
       println()
     }

@@ -100,7 +100,7 @@
     },
     {
       "@id": "#/web-api/source-map/source-vendor/element_0",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/web-api",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/web-api",
       "sourcemaps:value": "RAML 1.0"
     },
     {
@@ -115,7 +115,7 @@
     },
     {
       "@id": "#/web-api/source-map/lexical/element_1",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/web-api",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/web-api",
       "sourcemaps:value": "[(2,0)-(33,33)]"
     },
     {
@@ -168,7 +168,7 @@
     },
     {
       "@id": "#/web-api/end-points/%2Fagents/source-map/lexical/element_1",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/web-api/end-points/%2Fagents",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/web-api/end-points/%2Fagents",
       "sourcemaps:value": "[(19,0)-(33,33)]"
     },
     {
@@ -216,7 +216,7 @@
     },
     {
       "@id": "#/web-api/end-points/%2Fagents/get/source-map/lexical/element_1",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/web-api/end-points/%2Fagents/get",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/web-api/end-points/%2Fagents/get",
       "sourcemaps:value": "[(21,2)-(33,33)]"
     },
     {
@@ -266,7 +266,7 @@
     },
     {
       "@id": "#/web-api/end-points/%2Fagents/get/200/source-map/lexical/element_1",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/web-api/end-points/%2Fagents/get/200",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200",
       "sourcemaps:value": "[(24,6)-(33,33)]"
     },
     {
@@ -338,7 +338,7 @@
     },
     {
       "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/source-map/lexical/element_0",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson",
       "sourcemaps:value": "[(27,10)-(33,33)]"
     },
     {
@@ -470,12 +470,12 @@
     },
     {
       "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map/auto-generated-name/element_0",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema",
       "sourcemaps:value": ""
     },
     {
       "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map/lexical/element_1",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema",
       "sourcemaps:value": "[(27,10)-(33,33)]"
     },
     {
@@ -485,7 +485,7 @@
     },
     {
       "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map/type-property-lexical-info/element_0",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema",
       "sourcemaps:value": "[(28,12)-(28,16)]"
     },
     {
@@ -586,7 +586,7 @@
     },
     {
       "@id": "#/declarations/types/Agent/source-map/type-property-lexical-info/element_0",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/declarations/types/Agent",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/declarations/types/Agent",
       "sourcemaps:value": "[(7,4)-(7,8)]"
     },
     {
@@ -601,12 +601,12 @@
     },
     {
       "@id": "#/declarations/types/Agent/source-map/lexical/element_1",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/declarations/types/Agent",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/declarations/types/Agent",
       "sourcemaps:value": "[(5,2)-(19,0)]"
     },
     {
       "@id": "#/declarations/types/Agent/source-map/declared-element/element_0",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/declarations/types/Agent",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/declarations/types/Agent",
       "sourcemaps:value": ""
     },
     {
@@ -672,13 +672,13 @@
     },
     {
       "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/source-map/lexical/element_0",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example",
       "sourcemaps:value": "[(29,20)-(33,33)]"
     },
     {
       "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/source-map/tracked-element/element_0",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example",
-      "sourcemaps:value": "file://src/main/resources/web-apis/raml/partially-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson"
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example",
+      "sourcemaps:value": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson"
     },
     {
       "@id": "#/declarations/types/Agent/property/name/scalar/name/source-map",
@@ -714,7 +714,7 @@
     },
     {
       "@id": "#/declarations/types/Agent/property/name/source-map/lexical/element_1",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/declarations/types/Agent/property/name",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/declarations/types/Agent/property/name",
       "sourcemaps:value": "[(9,6)-(12,0)]"
     },
     {
@@ -769,7 +769,7 @@
     },
     {
       "@id": "#/declarations/types/Agent/property/agentType/source-map/lexical/element_1",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/declarations/types/Agent/property/agentType",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/declarations/types/Agent/property/agentType",
       "sourcemaps:value": "[(12,6)-(19,0)]"
     },
     {
@@ -903,12 +903,12 @@
     },
     {
       "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/source-map/lexical/element_0",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1",
       "sourcemaps:value": "[(30,0)-(33,33)]"
     },
     {
       "@id": "#/declarations/types/Agent/property/name/scalar/name/source-map/type-property-lexical-info/element_0",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/declarations/types/Agent/property/name/scalar/name",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/declarations/types/Agent/property/name/scalar/name",
       "sourcemaps:value": "[(11,8)-(11,12)]"
     },
     {
@@ -923,7 +923,7 @@
     },
     {
       "@id": "#/declarations/types/Agent/property/name/scalar/name/source-map/lexical/element_1",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/declarations/types/Agent/property/name/scalar/name",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/declarations/types/Agent/property/name/scalar/name",
       "sourcemaps:value": "[(9,6)-(12,0)]"
     },
     {
@@ -968,7 +968,7 @@
     },
     {
       "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map/type-property-lexical-info/element_0",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/declarations/types/Agent/property/agentType/scalar/agentType",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/declarations/types/Agent/property/agentType/scalar/agentType",
       "sourcemaps:value": "[(13,8)-(13,12)]"
     },
     {
@@ -988,7 +988,7 @@
     },
     {
       "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map/lexical/element_2",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/declarations/types/Agent/property/agentType/scalar/agentType",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/declarations/types/Agent/property/agentType/scalar/agentType",
       "sourcemaps:value": "[(12,6)-(19,0)]"
     },
     {
@@ -1046,7 +1046,7 @@
     },
     {
       "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/lexical/element_1",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2",
       "sourcemaps:value": "[(30,16)-(32,0)]"
     },
     {
@@ -1104,7 +1104,7 @@
     },
     {
       "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/lexical/element_1",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5",
       "sourcemaps:value": "[(32,16)-(33,33)]"
     },
     {
@@ -1157,7 +1157,7 @@
     },
     {
       "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map/lexical/element_0",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3",
       "sourcemaps:value": "[(30,22)-(30,28)]"
     },
     {
@@ -1172,7 +1172,7 @@
     },
     {
       "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map/lexical/element_0",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4",
       "sourcemaps:value": "[(31,27)-(31,39)]"
     },
     {
@@ -1187,7 +1187,7 @@
     },
     {
       "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map/lexical/element_0",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6",
       "sourcemaps:value": "[(32,22)-(32,29)]"
     },
     {
@@ -1202,7 +1202,7 @@
     },
     {
       "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map/lexical/element_0",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7",
       "sourcemaps:value": "[(33,27)-(33,33)]"
     },
     {
@@ -1217,7 +1217,7 @@
     },
     {
       "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1/source-map/lexical/element_0",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1",
       "sourcemaps:value": "[(16,12)-(16,18)]"
     },
     {
@@ -1232,7 +1232,7 @@
     },
     {
       "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2/source-map/lexical/element_0",
-      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented.raml#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/partially-documented/api.raml#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2",
       "sourcemaps:value": "[(17,12)-(17,24)]"
     },
     {
@@ -1251,7 +1251,7 @@
     }
   ],
   "@context": {
-    "@base": "file://src/main/resources/web-apis/raml/partially-documented.raml",
+    "@base": "file://src/main/resources/web-apis/raml/partially-documented/api.raml",
     "shacl": "http://www.w3.org/ns/shacl#",
     "raml-shapes": "http://a.ml/vocabularies/shapes#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
