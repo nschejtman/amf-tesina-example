@@ -1,5 +1,6 @@
 import amf.client.model.document.BaseUnit
 import amf.client.parse.Parser
+import amf.client.render.{RenderOptions, Renderer}
 import amf.client.resolve.Resolver
 import amf.core.remote.{Raml10, Vendor}
 import helpers.Conversions._
@@ -45,12 +46,21 @@ object WebApisExample {
     result.wrapFuture
   }
 
+  private def render(baseUnit: BaseUnit, url: String): Future[Unit] = {
+    println(s"Started: render ${baseUnit.id}")
+    val renderer      = new Renderer(Vendor.AMF.name, "application/ld+json")
+    val renderOptions = RenderOptions().withFlattenedJsonLd.withCompactUris.withPrettyPrint.withSourceMaps
+    renderer.generateFile(baseUnit, url, renderOptions).get()
+    println(s"Done: render ${baseUnit.id}")
+    Future.unit
+  }
+
   private def run(fileUrl: String, vendor: Vendor) = {
     for {
       parsed         <- parse(fileUrl, vendor)
       resolved       <- resolve(parsed, vendor)
-      rdf            <- Rdf.AMF.toRdfModel(resolved, helpers.Namespaces.ns)
-      _              <- Rdf.IO.write(rdf, fileUrl.noProtocol.withExtension(".jsonld"), "JSON-LD", resolved.id)
+      _              <- render(resolved, fileUrl.withExtension(".jsonld"))
+      rdf            <- Rdf.IO.read(fileUrl.noProtocol.withExtension(".jsonld"))
       ontology       <- Rdf.IO.read("src/main/resources/web-apis/ontologies/Documentation.ontology.ttl", lang = "TTL")
       inferenceModel <- Rdf.Inference.default(ontology, rdf)
       _              <- Rdf.IO.write(inferenceModel, fileUrl.noProtocol.withExtension(".inf.jsonld"), "JSON-LD", resolved.id)

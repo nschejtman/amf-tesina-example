@@ -15,7 +15,7 @@
     }, {
       "@id" : "rdfs:Resource"
     } ],
-    "subClassOf" : [ "rdfs:Resource", "../ontologies/documentation#Documentable", "owl:Thing" ],
+    "subClassOf" : [ "../ontologies/documentation#Documentable", "rdfs:Resource", "owl:Thing" ],
     "equivalentClass" : "../ontologies/documentation#Documentable"
   }, {
     "@id" : "../ontologies/documentation#Documented",
@@ -26,13 +26,13 @@
     }, {
       "@id" : "rdfs:Resource"
     } ],
-    "subClassOf" : [ "owl:Thing", "rdfs:Resource", "../ontologies/documentation#Documented", "../ontologies/documentation#Documentable" ],
+    "subClassOf" : [ "owl:Thing", "../ontologies/documentation#Documented", "rdfs:Resource", "../ontologies/documentation#Documentable" ],
     "equivalentClass" : "../ontologies/documentation#Documented"
   }, {
     "@id" : "./",
     "encodes" : "#/web-api",
     "http://a.ml/vocabularies/document#root" : true,
-    "version" : "3.1.0",
+    "http://a.ml/vocabularies/document#version" : "3.1.0",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "http://a.ml/vocabularies/document#Unit"
     }, {
@@ -45,6 +45,7 @@
   }, {
     "@id" : "#/declarations/types/Agent",
     "description" : "A judiciary agent (person or organization)",
+    "sources" : "#/declarations/types/Agent/source-map",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "shapes:AnyShape"
     }, {
@@ -60,9 +61,9 @@
     }, {
       "@id" : "rdfs:Resource"
     }, {
-      "@id" : "../ontologies/documentation#Documentable"
-    }, {
       "@id" : "owl:Thing"
+    }, {
+      "@id" : "../ontologies/documentation#Documentable"
     } ],
     "sameAs" : "#/declarations/types/Agent",
     "shacl:closed" : false,
@@ -70,6 +71,7 @@
     "property" : [ "#/declarations/types/Agent/property/name", "#/declarations/types/Agent/property/agentType" ]
   }, {
     "@id" : "#/declarations/types/Agent/property/agentType",
+    "sources" : "#/declarations/types/Agent/property/agentType/source-map",
     "shapes:range" : {
       "@id" : "#/declarations/types/Agent/property/agentType/scalar/agentType"
     },
@@ -84,22 +86,23 @@
     }, {
       "@id" : "rdfs:Resource"
     } ],
-    "minCount" : "1",
+    "shacl:minCount" : 1,
     "name" : "agentType",
     "path" : "http://a.ml/vocabularies/data#agentType"
   }, {
     "@id" : "#/declarations/types/Agent/property/agentType/scalar/agentType",
     "description" : "Type of a judiciary agent. Can be 'Person' for a physical judiciary person or 'Organization' for a organization-like agents",
+    "sources" : "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-      "@id" : "http://a.ml/vocabularies/document#DomainElement"
-    }, {
-      "@id" : "shapes:Shape"
+      "@id" : "shapes:AnyShape"
     }, {
       "@id" : "shacl:Shape"
     }, {
-      "@id" : "shapes:AnyShape"
-    }, {
       "@id" : "shapes:ScalarShape"
+    }, {
+      "@id" : "http://a.ml/vocabularies/document#DomainElement"
+    }, {
+      "@id" : "shapes:Shape"
     }, {
       "@id" : "../ontologies/documentation#Documented"
     }, {
@@ -116,7 +119,8 @@
   }, {
     "@id" : "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1",
     "core:name" : "scalar_1",
-    "value" : "Person",
+    "http://a.ml/vocabularies/data#value" : "Person",
+    "sources" : "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1/source-map",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "http://a.ml/vocabularies/document#DomainElement"
     }, {
@@ -126,9 +130,29 @@
     } ],
     "datatype" : "http://www.w3.org/2001/XMLSchema#string"
   }, {
+    "@id" : "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1/source-map",
+    "lexical" : "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1/source-map/lexical/element_0",
+    "synthesized-field" : [ "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1/source-map/synthesized-field/element_0", "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1/source-map/synthesized-field/element_1" ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#SourceMap"
+    }
+  }, {
+    "@id" : "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1/source-map/lexical/element_0",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1",
+    "value" : "[(17,12)-(17,18)]"
+  }, {
+    "@id" : "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1/source-map/synthesized-field/element_0",
+    "element" : "core:name",
+    "value" : "true"
+  }, {
+    "@id" : "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1/source-map/synthesized-field/element_1",
+    "element" : "shacl:datatype",
+    "value" : "true"
+  }, {
     "@id" : "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2",
     "core:name" : "scalar_2",
-    "value" : "Organization",
+    "http://a.ml/vocabularies/data#value" : "Organization",
+    "sources" : "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2/source-map",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "http://a.ml/vocabularies/document#DomainElement"
     }, {
@@ -137,6 +161,25 @@
       "@id" : "http://a.ml/vocabularies/data#Scalar"
     } ],
     "datatype" : "http://www.w3.org/2001/XMLSchema#string"
+  }, {
+    "@id" : "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2/source-map",
+    "lexical" : "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2/source-map/lexical/element_0",
+    "synthesized-field" : [ "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2/source-map/synthesized-field/element_0", "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2/source-map/synthesized-field/element_1" ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#SourceMap"
+    }
+  }, {
+    "@id" : "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2/source-map/lexical/element_0",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2",
+    "value" : "[(18,12)-(18,24)]"
+  }, {
+    "@id" : "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2/source-map/synthesized-field/element_0",
+    "element" : "core:name",
+    "value" : "true"
+  }, {
+    "@id" : "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2/source-map/synthesized-field/element_1",
+    "element" : "shacl:datatype",
+    "value" : "true"
   }, {
     "@id" : "#/declarations/types/Agent/property/agentType/scalar/agentType/list",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : {
@@ -145,7 +188,58 @@
     "_1" : "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1",
     "_2" : "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2"
   }, {
+    "@id" : "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map",
+    "lexical" : [ "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map/lexical/element_2", "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map/lexical/element_0", "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map/lexical/element_1", "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map/lexical/element_3" ],
+    "type-property-lexical-info" : "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map/type-property-lexical-info/element_0",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#SourceMap"
+    }
+  }, {
+    "@id" : "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map/lexical/element_0",
+    "element" : "shacl:in",
+    "value" : "[(16,8)-(20,0)]"
+  }, {
+    "@id" : "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map/lexical/element_1",
+    "element" : "shacl:datatype",
+    "value" : "[(14,8)-(15,0)]"
+  }, {
+    "@id" : "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map/lexical/element_2",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/declarations/types/Agent/property/agentType/scalar/agentType",
+    "value" : "[(13,6)-(20,0)]"
+  }, {
+    "@id" : "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map/lexical/element_3",
+    "element" : "core:description",
+    "value" : "[(15,8)-(16,0)]"
+  }, {
+    "@id" : "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map/type-property-lexical-info/element_0",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/declarations/types/Agent/property/agentType/scalar/agentType",
+    "value" : "[(14,8)-(14,12)]"
+  }, {
+    "@id" : "#/declarations/types/Agent/property/agentType/source-map",
+    "lexical" : [ "#/declarations/types/Agent/property/agentType/source-map/lexical/element_0", "#/declarations/types/Agent/property/agentType/source-map/lexical/element_1" ],
+    "synthesized-field" : [ "#/declarations/types/Agent/property/agentType/source-map/synthesized-field/element_0", "#/declarations/types/Agent/property/agentType/source-map/synthesized-field/element_1" ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#SourceMap"
+    }
+  }, {
+    "@id" : "#/declarations/types/Agent/property/agentType/source-map/lexical/element_0",
+    "element" : "raml-shapes:range",
+    "value" : "[(13,16)-(20,0)]"
+  }, {
+    "@id" : "#/declarations/types/Agent/property/agentType/source-map/lexical/element_1",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/declarations/types/Agent/property/agentType",
+    "value" : "[(13,6)-(20,0)]"
+  }, {
+    "@id" : "#/declarations/types/Agent/property/agentType/source-map/synthesized-field/element_0",
+    "element" : "shacl:minCount",
+    "value" : "true"
+  }, {
+    "@id" : "#/declarations/types/Agent/property/agentType/source-map/synthesized-field/element_1",
+    "element" : "shacl:path",
+    "value" : "true"
+  }, {
     "@id" : "#/declarations/types/Agent/property/name",
+    "sources" : "#/declarations/types/Agent/property/name/source-map",
     "shapes:range" : {
       "@id" : "#/declarations/types/Agent/property/name/scalar/name"
     },
@@ -160,12 +254,13 @@
     }, {
       "@id" : "rdfs:Resource"
     } ],
-    "minCount" : "1",
+    "shacl:minCount" : 1,
     "name" : "name",
     "path" : "http://a.ml/vocabularies/data#name"
   }, {
     "@id" : "#/declarations/types/Agent/property/name/scalar/name",
     "description" : "Name of a judiciary agent",
+    "sources" : "#/declarations/types/Agent/property/name/scalar/name/source-map",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "http://a.ml/vocabularies/document#DomainElement"
     }, {
@@ -189,11 +284,91 @@
     "datatype" : "http://www.w3.org/2001/XMLSchema#string",
     "name" : "name"
   }, {
+    "@id" : "#/declarations/types/Agent/property/name/scalar/name/source-map",
+    "lexical" : [ "#/declarations/types/Agent/property/name/scalar/name/source-map/lexical/element_1", "#/declarations/types/Agent/property/name/scalar/name/source-map/lexical/element_0", "#/declarations/types/Agent/property/name/scalar/name/source-map/lexical/element_2" ],
+    "type-property-lexical-info" : "#/declarations/types/Agent/property/name/scalar/name/source-map/type-property-lexical-info/element_0",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#SourceMap"
+    }
+  }, {
+    "@id" : "#/declarations/types/Agent/property/name/scalar/name/source-map/lexical/element_0",
+    "element" : "core:description",
+    "value" : "[(11,8)-(12,0)]"
+  }, {
+    "@id" : "#/declarations/types/Agent/property/name/scalar/name/source-map/lexical/element_1",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/declarations/types/Agent/property/name/scalar/name",
+    "value" : "[(10,6)-(13,0)]"
+  }, {
+    "@id" : "#/declarations/types/Agent/property/name/scalar/name/source-map/lexical/element_2",
+    "element" : "shacl:datatype",
+    "value" : "[(12,8)-(13,0)]"
+  }, {
+    "@id" : "#/declarations/types/Agent/property/name/scalar/name/source-map/type-property-lexical-info/element_0",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/declarations/types/Agent/property/name/scalar/name",
+    "value" : "[(12,8)-(12,12)]"
+  }, {
+    "@id" : "#/declarations/types/Agent/property/name/source-map",
+    "lexical" : [ "#/declarations/types/Agent/property/name/source-map/lexical/element_0", "#/declarations/types/Agent/property/name/source-map/lexical/element_1" ],
+    "synthesized-field" : [ "#/declarations/types/Agent/property/name/source-map/synthesized-field/element_0", "#/declarations/types/Agent/property/name/source-map/synthesized-field/element_1" ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#SourceMap"
+    }
+  }, {
+    "@id" : "#/declarations/types/Agent/property/name/source-map/lexical/element_0",
+    "element" : "raml-shapes:range",
+    "value" : "[(10,11)-(13,0)]"
+  }, {
+    "@id" : "#/declarations/types/Agent/property/name/source-map/lexical/element_1",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/declarations/types/Agent/property/name",
+    "value" : "[(10,6)-(13,0)]"
+  }, {
+    "@id" : "#/declarations/types/Agent/property/name/source-map/synthesized-field/element_0",
+    "element" : "shacl:minCount",
+    "value" : "true"
+  }, {
+    "@id" : "#/declarations/types/Agent/property/name/source-map/synthesized-field/element_1",
+    "element" : "shacl:path",
+    "value" : "true"
+  }, {
+    "@id" : "#/declarations/types/Agent/source-map",
+    "declared-element" : "#/declarations/types/Agent/source-map/declared-element/element_0",
+    "lexical" : [ "#/declarations/types/Agent/source-map/lexical/element_1", "#/declarations/types/Agent/source-map/lexical/element_0", "#/declarations/types/Agent/source-map/lexical/element_2" ],
+    "synthesized-field" : "#/declarations/types/Agent/source-map/synthesized-field/element_0",
+    "type-property-lexical-info" : "#/declarations/types/Agent/source-map/type-property-lexical-info/element_0",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#SourceMap"
+    }
+  }, {
+    "@id" : "#/declarations/types/Agent/source-map/declared-element/element_0",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/declarations/types/Agent",
+    "value" : ""
+  }, {
+    "@id" : "#/declarations/types/Agent/source-map/lexical/element_0",
+    "element" : "core:description",
+    "value" : "[(7,4)-(8,0)]"
+  }, {
+    "@id" : "#/declarations/types/Agent/source-map/lexical/element_1",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/declarations/types/Agent",
+    "value" : "[(6,2)-(20,0)]"
+  }, {
+    "@id" : "#/declarations/types/Agent/source-map/lexical/element_2",
+    "element" : "shacl:name",
+    "value" : "[(6,2)-(6,7)]"
+  }, {
+    "@id" : "#/declarations/types/Agent/source-map/synthesized-field/element_0",
+    "element" : "shacl:closed",
+    "value" : "true"
+  }, {
+    "@id" : "#/declarations/types/Agent/source-map/type-property-lexical-info/element_0",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/declarations/types/Agent",
+    "value" : "[(8,4)-(8,8)]"
+  }, {
     "@id" : "#/web-api",
     "endpoint" : "#/web-api/end-points/%2Fagents",
     "description" : "API for handling judiciary agents",
     "core:name" : "Agents API",
-    "core:version" : "1.0",
+    "version" : "1.0",
+    "sources" : "#/web-api/source-map",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "http://a.ml/vocabularies/document#DomainElement"
     }, {
@@ -207,9 +382,9 @@
     }, {
       "@id" : "rdfs:Resource"
     }, {
-      "@id" : "../ontologies/documentation#Documentable"
-    }, {
       "@id" : "owl:Thing"
+    }, {
+      "@id" : "../ontologies/documentation#Documentable"
     } ],
     "sameAs" : "#/web-api"
   }, {
@@ -217,6 +392,7 @@
     "apiContract:path" : "/agents",
     "supportedOperation" : "#/web-api/end-points/%2Fagents/get",
     "description" : "Default endpoint for CRUD operations on agents",
+    "sources" : "#/web-api/end-points/%2Fagents/source-map",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "http://a.ml/vocabularies/document#DomainElement"
     }, {
@@ -226,9 +402,9 @@
     }, {
       "@id" : "rdfs:Resource"
     }, {
-      "@id" : "../ontologies/documentation#Documentable"
-    }, {
       "@id" : "owl:Thing"
+    }, {
+      "@id" : "../ontologies/documentation#Documentable"
     } ],
     "sameAs" : "#/web-api/end-points/%2Fagents"
   }, {
@@ -236,6 +412,7 @@
     "method" : "get",
     "returns" : "#/web-api/end-points/%2Fagents/get/200",
     "description" : "Returns all the known agents",
+    "sources" : "#/web-api/end-points/%2Fagents/get/source-map",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "http://a.ml/vocabularies/document#DomainElement"
     }, {
@@ -245,9 +422,9 @@
     }, {
       "@id" : "rdfs:Resource"
     }, {
-      "@id" : "../ontologies/documentation#Documentable"
-    }, {
       "@id" : "owl:Thing"
+    }, {
+      "@id" : "../ontologies/documentation#Documentable"
     } ],
     "sameAs" : "#/web-api/end-points/%2Fagents/get"
   }, {
@@ -256,6 +433,7 @@
     "statusCode" : "200",
     "description" : "Successfully obtained the list of agents",
     "core:name" : "200",
+    "sources" : "#/web-api/end-points/%2Fagents/get/200/source-map",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "http://a.ml/vocabularies/document#DomainElement"
     }, {
@@ -267,14 +445,15 @@
     }, {
       "@id" : "rdfs:Resource"
     }, {
-      "@id" : "../ontologies/documentation#Documentable"
-    }, {
       "@id" : "owl:Thing"
+    }, {
+      "@id" : "../ontologies/documentation#Documentable"
     } ],
     "sameAs" : "#/web-api/end-points/%2Fagents/get/200"
   }, {
     "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson",
     "mediaType" : "application/json",
+    "sources" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/source-map",
     "schema" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "http://a.ml/vocabularies/document#DomainElement"
@@ -285,17 +464,18 @@
     "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema",
     "examples" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example",
     "description" : "Returns the collection of all registered agents",
+    "sources" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map",
     "items" : "#/declarations/types/Agent",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-      "@id" : "http://a.ml/vocabularies/document#DomainElement"
-    }, {
-      "@id" : "shapes:Shape"
-    }, {
       "@id" : "shacl:Shape"
     }, {
       "@id" : "shapes:AnyShape"
     }, {
+      "@id" : "shapes:Shape"
+    }, {
       "@id" : "shapes:ArrayShape"
+    }, {
+      "@id" : "http://a.ml/vocabularies/document#DomainElement"
     }, {
       "@id" : "../ontologies/documentation#Documented"
     }, {
@@ -312,6 +492,7 @@
     "raw" : "-\n  name: Polimi\n  agentType: Organization\n-\n  name: Nicolas\n  agentType: Person",
     "http://a.ml/vocabularies/document#strict" : true,
     "structuredValue" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1",
+    "sources" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/source-map",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "http://a.ml/vocabularies/document#DomainElement"
     }, {
@@ -320,6 +501,7 @@
   }, {
     "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1",
     "core:name" : "array_1",
+    "sources" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/source-map",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "http://a.ml/vocabularies/document#DomainElement"
     }, {
@@ -339,6 +521,7 @@
     "http://a.ml/vocabularies/data#name" : {
       "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3"
     },
+    "sources" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "http://a.ml/vocabularies/document#DomainElement"
     }, {
@@ -349,7 +532,8 @@
   }, {
     "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3",
     "core:name" : "name",
-    "value" : "Polimi",
+    "http://a.ml/vocabularies/data#value" : "Polimi",
+    "sources" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "http://a.ml/vocabularies/document#DomainElement"
     }, {
@@ -359,9 +543,29 @@
     } ],
     "datatype" : "http://www.w3.org/2001/XMLSchema#string"
   }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map",
+    "lexical" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map/lexical/element_0",
+    "synthesized-field" : [ "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map/synthesized-field/element_0", "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map/synthesized-field/element_1" ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#SourceMap"
+    }
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map/lexical/element_0",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3",
+    "value" : "[(32,22)-(32,28)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map/synthesized-field/element_0",
+    "element" : "core:name",
+    "value" : "true"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map/synthesized-field/element_1",
+    "element" : "shacl:datatype",
+    "value" : "true"
+  }, {
     "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4",
     "core:name" : "agentType",
-    "value" : "Organization",
+    "http://a.ml/vocabularies/data#value" : "Organization",
+    "sources" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "http://a.ml/vocabularies/document#DomainElement"
     }, {
@@ -370,6 +574,48 @@
       "@id" : "http://a.ml/vocabularies/data#Scalar"
     } ],
     "datatype" : "http://www.w3.org/2001/XMLSchema#string"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map",
+    "lexical" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map/lexical/element_0",
+    "synthesized-field" : [ "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map/synthesized-field/element_0", "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map/synthesized-field/element_1" ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#SourceMap"
+    }
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map/lexical/element_0",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4",
+    "value" : "[(33,27)-(33,39)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map/synthesized-field/element_0",
+    "element" : "core:name",
+    "value" : "true"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map/synthesized-field/element_1",
+    "element" : "shacl:datatype",
+    "value" : "true"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map",
+    "lexical" : [ "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/lexical/element_1", "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/lexical/element_0", "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/lexical/element_2" ],
+    "synthesized-field" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/synthesized-field/element_0",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#SourceMap"
+    }
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/lexical/element_0",
+    "element" : "data:agentType",
+    "value" : "[(33,16)-(34,0)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/lexical/element_1",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2",
+    "value" : "[(32,16)-(34,0)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/lexical/element_2",
+    "element" : "data:name",
+    "value" : "[(32,16)-(33,0)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/synthesized-field/element_0",
+    "element" : "core:name",
+    "value" : "true"
   }, {
     "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5",
     "core:name" : "object_5",
@@ -377,6 +623,7 @@
     "http://a.ml/vocabularies/data#name" : {
       "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6"
     },
+    "sources" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "http://a.ml/vocabularies/document#DomainElement"
     }, {
@@ -387,7 +634,8 @@
   }, {
     "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6",
     "core:name" : "name",
-    "value" : "Nicolas",
+    "http://a.ml/vocabularies/data#value" : "Nicolas",
+    "sources" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "http://a.ml/vocabularies/document#DomainElement"
     }, {
@@ -397,9 +645,29 @@
     } ],
     "datatype" : "http://www.w3.org/2001/XMLSchema#string"
   }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map",
+    "lexical" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map/lexical/element_0",
+    "synthesized-field" : [ "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map/synthesized-field/element_0", "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map/synthesized-field/element_1" ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#SourceMap"
+    }
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map/lexical/element_0",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6",
+    "value" : "[(34,22)-(34,29)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map/synthesized-field/element_0",
+    "element" : "core:name",
+    "value" : "true"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map/synthesized-field/element_1",
+    "element" : "shacl:datatype",
+    "value" : "true"
+  }, {
     "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7",
     "core:name" : "agentType",
-    "value" : "Person",
+    "http://a.ml/vocabularies/data#value" : "Person",
+    "sources" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "http://a.ml/vocabularies/document#DomainElement"
     }, {
@@ -408,6 +676,201 @@
       "@id" : "http://a.ml/vocabularies/data#Scalar"
     } ],
     "datatype" : "http://www.w3.org/2001/XMLSchema#string"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map",
+    "lexical" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map/lexical/element_0",
+    "synthesized-field" : [ "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map/synthesized-field/element_0", "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map/synthesized-field/element_1" ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#SourceMap"
+    }
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map/lexical/element_0",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7",
+    "value" : "[(35,27)-(35,33)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map/synthesized-field/element_0",
+    "element" : "core:name",
+    "value" : "true"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map/synthesized-field/element_1",
+    "element" : "shacl:datatype",
+    "value" : "true"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map",
+    "lexical" : [ "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/lexical/element_1", "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/lexical/element_0", "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/lexical/element_2" ],
+    "synthesized-field" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/synthesized-field/element_0",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#SourceMap"
+    }
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/lexical/element_0",
+    "element" : "data:agentType",
+    "value" : "[(35,16)-(35,33)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/lexical/element_1",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5",
+    "value" : "[(34,16)-(35,33)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/lexical/element_2",
+    "element" : "data:name",
+    "value" : "[(34,16)-(35,0)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/synthesized-field/element_0",
+    "element" : "core:name",
+    "value" : "true"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/source-map",
+    "lexical" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/source-map/lexical/element_0",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#SourceMap"
+    }
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/source-map/lexical/element_0",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1",
+    "value" : "[(32,0)-(35,33)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/source-map",
+    "lexical" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/source-map/lexical/element_0",
+    "synthesized-field" : [ "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/source-map/synthesized-field/element_0", "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/source-map/synthesized-field/element_1" ],
+    "tracked-element" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/source-map/tracked-element/element_0",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#SourceMap"
+    }
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/source-map/lexical/element_0",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example",
+    "value" : "[(31,20)-(35,33)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/source-map/synthesized-field/element_0",
+    "element" : "doc:raw",
+    "value" : "true"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/source-map/synthesized-field/element_1",
+    "element" : "doc:strict",
+    "value" : "true"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/source-map/tracked-element/element_0",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example",
+    "value" : "file://src/main/resources/web-apis/raml/well-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map",
+    "auto-generated-name" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map/auto-generated-name/element_0",
+    "lexical" : [ "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map/lexical/element_1", "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map/lexical/element_0", "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map/lexical/element_2" ],
+    "type-property-lexical-info" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map/type-property-lexical-info/element_0",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#SourceMap"
+    }
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map/auto-generated-name/element_0",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema",
+    "value" : ""
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map/lexical/element_0",
+    "element" : "apiContract:examples",
+    "value" : "[(31,12)-(35,33)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map/lexical/element_1",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema",
+    "value" : "[(28,10)-(35,33)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map/lexical/element_2",
+    "element" : "core:description",
+    "value" : "[(29,12)-(30,0)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map/type-property-lexical-info/element_0",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema",
+    "value" : "[(30,12)-(30,16)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/source-map",
+    "lexical" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/source-map/lexical/element_0",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#SourceMap"
+    }
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/source-map/lexical/element_0",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson",
+    "value" : "[(28,10)-(35,33)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/source-map",
+    "lexical" : [ "#/web-api/end-points/%2Fagents/get/200/source-map/lexical/element_1", "#/web-api/end-points/%2Fagents/get/200/source-map/lexical/element_0", "#/web-api/end-points/%2Fagents/get/200/source-map/lexical/element_2" ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#SourceMap"
+    }
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/source-map/lexical/element_0",
+    "element" : "apiContract:payload",
+    "value" : "[(27,8)-(35,33)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/source-map/lexical/element_1",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/web-api/end-points/%2Fagents/get/200",
+    "value" : "[(25,6)-(35,33)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/200/source-map/lexical/element_2",
+    "element" : "core:description",
+    "value" : "[(26,8)-(27,0)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/source-map",
+    "lexical" : [ "#/web-api/end-points/%2Fagents/get/source-map/lexical/element_1", "#/web-api/end-points/%2Fagents/get/source-map/lexical/element_0", "#/web-api/end-points/%2Fagents/get/source-map/lexical/element_2" ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#SourceMap"
+    }
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/source-map/lexical/element_0",
+    "element" : "apiContract:returns",
+    "value" : "[(24,4)-(35,33)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/source-map/lexical/element_1",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/web-api/end-points/%2Fagents/get",
+    "value" : "[(22,2)-(35,33)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/get/source-map/lexical/element_2",
+    "element" : "core:description",
+    "value" : "[(23,4)-(24,0)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/source-map",
+    "lexical" : [ "#/web-api/end-points/%2Fagents/source-map/lexical/element_1", "#/web-api/end-points/%2Fagents/source-map/lexical/element_0", "#/web-api/end-points/%2Fagents/source-map/lexical/element_2" ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#SourceMap"
+    }
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/source-map/lexical/element_0",
+    "element" : "core:description",
+    "value" : "[(21,2)-(22,0)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/source-map/lexical/element_1",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/web-api/end-points/%2Fagents",
+    "value" : "[(20,0)-(35,33)]"
+  }, {
+    "@id" : "#/web-api/end-points/%2Fagents/source-map/lexical/element_2",
+    "element" : "apiContract:path",
+    "value" : "[(20,0)-(20,7)]"
+  }, {
+    "@id" : "#/web-api/source-map",
+    "lexical" : [ "#/web-api/source-map/lexical/element_2", "#/web-api/source-map/lexical/element_0", "#/web-api/source-map/lexical/element_1", "#/web-api/source-map/lexical/element_3" ],
+    "source-vendor" : "#/web-api/source-map/source-vendor/element_0",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#SourceMap"
+    }
+  }, {
+    "@id" : "#/web-api/source-map/lexical/element_0",
+    "element" : "core:version",
+    "value" : "[(3,0)-(4,0)]"
+  }, {
+    "@id" : "#/web-api/source-map/lexical/element_1",
+    "element" : "core:name",
+    "value" : "[(2,0)-(3,0)]"
+  }, {
+    "@id" : "#/web-api/source-map/lexical/element_2",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/web-api",
+    "value" : "[(2,0)-(35,33)]"
+  }, {
+    "@id" : "#/web-api/source-map/lexical/element_3",
+    "element" : "core:description",
+    "value" : "[(4,0)-(5,0)]"
+  }, {
+    "@id" : "#/web-api/source-map/source-vendor/element_0",
+    "element" : "file://src/main/resources/web-apis/raml/well-documented.raml#/web-api",
+    "value" : "RAML 1.0"
   }, {
     "@id" : "apiContract:API",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -579,7 +1042,7 @@
     }, {
       "@id" : "rdfs:Resource"
     } ],
-    "domain" : [ "../ontologies/documentation#Documented", "owl:Thing", "../ontologies/documentation#Documentable", "rdfs:Resource" ],
+    "domain" : [ "../ontologies/documentation#Documented", "rdfs:Resource", "../ontologies/documentation#Documentable", "owl:Thing" ],
     "subPropertyOf" : "core:description"
   }, {
     "@id" : "core:mediaType",
@@ -748,6 +1211,93 @@
     } ],
     "subPropertyOf" : "http://a.ml/vocabularies/document#version"
   }, {
+    "@id" : "http://a.ml/vocabularies/document-source-maps#SourceMap",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+      "@id" : "rdfs:Class"
+    }, {
+      "@id" : "rdfs:Resource"
+    } ]
+  }, {
+    "@id" : "http://a.ml/vocabularies/document-source-maps#auto-generated-name",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    }, {
+      "@id" : "rdfs:Resource"
+    } ],
+    "subPropertyOf" : "http://a.ml/vocabularies/document-source-maps#auto-generated-name"
+  }, {
+    "@id" : "http://a.ml/vocabularies/document-source-maps#declared-element",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    }, {
+      "@id" : "rdfs:Resource"
+    } ],
+    "subPropertyOf" : "http://a.ml/vocabularies/document-source-maps#declared-element"
+  }, {
+    "@id" : "http://a.ml/vocabularies/document-source-maps#element",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    }, {
+      "@id" : "rdfs:Resource"
+    } ],
+    "subPropertyOf" : "http://a.ml/vocabularies/document-source-maps#element"
+  }, {
+    "@id" : "http://a.ml/vocabularies/document-source-maps#lexical",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    }, {
+      "@id" : "rdfs:Resource"
+    } ],
+    "subPropertyOf" : "http://a.ml/vocabularies/document-source-maps#lexical"
+  }, {
+    "@id" : "http://a.ml/vocabularies/document-source-maps#source-vendor",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    }, {
+      "@id" : "rdfs:Resource"
+    } ],
+    "subPropertyOf" : "http://a.ml/vocabularies/document-source-maps#source-vendor"
+  }, {
+    "@id" : "http://a.ml/vocabularies/document-source-maps#sources",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    }, {
+      "@id" : "rdfs:Resource"
+    } ],
+    "subPropertyOf" : "http://a.ml/vocabularies/document-source-maps#sources"
+  }, {
+    "@id" : "http://a.ml/vocabularies/document-source-maps#synthesized-field",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    }, {
+      "@id" : "rdfs:Resource"
+    } ],
+    "subPropertyOf" : "http://a.ml/vocabularies/document-source-maps#synthesized-field"
+  }, {
+    "@id" : "http://a.ml/vocabularies/document-source-maps#tracked-element",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    }, {
+      "@id" : "rdfs:Resource"
+    } ],
+    "subPropertyOf" : "http://a.ml/vocabularies/document-source-maps#tracked-element"
+  }, {
+    "@id" : "http://a.ml/vocabularies/document-source-maps#type-property-lexical-info",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    }, {
+      "@id" : "rdfs:Resource"
+    } ],
+    "subPropertyOf" : "http://a.ml/vocabularies/document-source-maps#type-property-lexical-info"
+  }, {
+    "@id" : "http://a.ml/vocabularies/document-source-maps#value",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    }, {
+      "@id" : "rdfs:Resource"
+    } ],
+    "subPropertyOf" : "http://a.ml/vocabularies/document-source-maps#value"
+  }, {
     "@id" : "security:SecurityScheme",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "rdfs:Class"
@@ -799,7 +1349,7 @@
       "@id" : "rdfs:Resource"
     } ],
     "domain" : [ "shacl:PropertyShape", "rdfs:Resource" ],
-    "range" : [ "../ontologies/documentation#Documentable", "rdfs:Resource", "owl:Thing" ],
+    "range" : [ "../ontologies/documentation#Documentable", "owl:Thing", "rdfs:Resource" ],
     "subPropertyOf" : "shapes:range"
   }, {
     "@id" : "shapes:schema",
@@ -808,7 +1358,7 @@
     }, {
       "@id" : "rdfs:Resource"
     } ],
-    "range" : [ "../ontologies/documentation#Documentable", "rdfs:Resource", "owl:Thing" ],
+    "range" : [ "../ontologies/documentation#Documentable", "owl:Thing", "rdfs:Resource" ],
     "subPropertyOf" : "shapes:schema"
   }, {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt",
@@ -956,9 +1506,9 @@
   }, {
     "@id" : "rdfs:Container",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-      "@id" : "rdfs:Resource"
-    }, {
       "@id" : "rdfs:Class"
+    }, {
+      "@id" : "rdfs:Resource"
     } ]
   }, {
     "@id" : "rdfs:ContainerMembershipProperty",
@@ -1488,9 +2038,9 @@
   }, {
     "@id" : "owl:ObjectProperty",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-      "@id" : "rdfs:Resource"
-    }, {
       "@id" : "rdfs:Class"
+    }, {
+      "@id" : "rdfs:Resource"
     } ],
     "subClassOf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
   }, {
@@ -1576,9 +2126,9 @@
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "owl:SymmetricProperty"
     }, {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    }, {
       "@id" : "owl:ObjectProperty"
+    }, {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     }, {
       "@id" : "rdfs:Resource"
     } ],
@@ -1594,8 +2144,8 @@
     }, {
       "@id" : "rdfs:Resource"
     } ],
-    "domain" : [ "owl:Class", "rdfs:Class", "rdfs:Resource" ],
-    "range" : [ "owl:Class", "rdfs:Class", "rdfs:Resource" ],
+    "domain" : [ "owl:Class", "rdfs:Resource", "rdfs:Class" ],
+    "range" : [ "owl:Class", "rdfs:Resource", "rdfs:Class" ],
     "subPropertyOf" : "owl:disjointWith"
   }, {
     "@id" : "owl:equivalentClass",
@@ -1604,8 +2154,8 @@
     }, {
       "@id" : "rdfs:Resource"
     } ],
-    "domain" : [ "owl:Class", "rdfs:Class", "rdfs:Resource" ],
-    "range" : [ "owl:Class", "rdfs:Class", "rdfs:Resource" ],
+    "domain" : [ "owl:Class", "rdfs:Resource", "rdfs:Class" ],
+    "range" : [ "owl:Class", "rdfs:Resource", "rdfs:Class" ],
     "subPropertyOf" : "owl:equivalentClass"
   }, {
     "@id" : "owl:imports",
@@ -1636,7 +2186,7 @@
     }, {
       "@id" : "rdfs:Resource"
     } ],
-    "domain" : [ "owl:Class", "rdfs:Class", "rdfs:Resource" ],
+    "domain" : [ "owl:Class", "rdfs:Resource", "rdfs:Class" ],
     "subPropertyOf" : "owl:intersectionOf"
   }, {
     "@id" : "owl:onProperty",
@@ -1655,7 +2205,7 @@
     }, {
       "@id" : "rdfs:Resource"
     } ],
-    "domain" : [ "owl:Class", "rdfs:Class", "rdfs:Resource" ],
+    "domain" : [ "owl:Class", "rdfs:Resource", "rdfs:Class" ],
     "subPropertyOf" : "owl:oneOf"
   }, {
     "@id" : "owl:priorVersion",
@@ -1672,9 +2222,9 @@
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
       "@id" : "owl:SymmetricProperty"
     }, {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    }, {
       "@id" : "owl:ObjectProperty"
+    }, {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     }, {
       "@id" : "rdfs:Resource"
     } ],
@@ -1701,7 +2251,7 @@
     }, {
       "@id" : "owl:Class"
     } ],
-    "subClassOf" : [ "rdfs:Resource", "shacl:PropertyShape" ],
+    "subClassOf" : [ "shacl:PropertyShape", "rdfs:Resource" ],
     "equivalentClass" : "shacl:PropertyShape"
   }, {
     "@id" : "shacl:Shape",
@@ -1788,8 +2338,25 @@
       "@id" : "http://www.w3.org/2002/07/owl#equivalentClass",
       "@type" : "@id"
     },
+    "sources" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#sources",
+      "@type" : "@id"
+    },
     "description" : {
       "@id" : "http://a.ml/vocabularies/core#description"
+    },
+    "returns" : {
+      "@id" : "http://a.ml/vocabularies/apiContract#returns",
+      "@type" : "@id"
+    },
+    "method" : {
+      "@id" : "http://a.ml/vocabularies/apiContract#method"
+    },
+    "value" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#value"
+    },
+    "element" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#element"
     },
     "name" : {
       "@id" : "http://www.w3.org/ns/shacl#name"
@@ -1798,24 +2365,44 @@
       "@id" : "http://www.w3.org/ns/shacl#datatype",
       "@type" : "@id"
     },
-    "examples" : {
-      "@id" : "http://a.ml/vocabularies/apiContract#examples",
+    "tracked-element" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#tracked-element",
       "@type" : "@id"
     },
-    "items" : {
-      "@id" : "http://a.ml/vocabularies/shapes#items",
+    "synthesized-field" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#synthesized-field",
       "@type" : "@id"
     },
-    "value" : {
-      "@id" : "http://a.ml/vocabularies/data#value"
+    "lexical" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#lexical",
+      "@type" : "@id"
     },
-    "minCount" : {
-      "@id" : "http://www.w3.org/ns/shacl#minCount",
-      "@type" : "http://www.w3.org/2001/XMLSchema#long"
+    "agentType" : {
+      "@id" : "http://a.ml/vocabularies/data#agentType",
+      "@type" : "@id"
+    },
+    "type-property-lexical-info" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#type-property-lexical-info",
+      "@type" : "@id"
+    },
+    "auto-generated-name" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#auto-generated-name",
+      "@type" : "@id"
+    },
+    "version" : {
+      "@id" : "http://a.ml/vocabularies/core#version"
+    },
+    "endpoint" : {
+      "@id" : "http://a.ml/vocabularies/apiContract#endpoint",
+      "@type" : "@id"
     },
     "path" : {
       "@id" : "http://www.w3.org/ns/shacl#path",
       "@type" : "@id"
+    },
+    "minCount" : {
+      "@id" : "http://www.w3.org/ns/shacl#minCount",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
     },
     "_2" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#_2",
@@ -1825,61 +2412,51 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#_1",
       "@type" : "@id"
     },
-    "payload" : {
-      "@id" : "http://a.ml/vocabularies/apiContract#payload",
+    "schema" : {
+      "@id" : "http://a.ml/vocabularies/shapes#schema",
       "@type" : "@id"
     },
-    "statusCode" : {
-      "@id" : "http://a.ml/vocabularies/apiContract#statusCode"
+    "mediaType" : {
+      "@id" : "http://a.ml/vocabularies/core#mediaType"
+    },
+    "examples" : {
+      "@id" : "http://a.ml/vocabularies/apiContract#examples",
+      "@type" : "@id"
+    },
+    "items" : {
+      "@id" : "http://a.ml/vocabularies/shapes#items",
+      "@type" : "@id"
     },
     "in" : {
       "@id" : "http://www.w3.org/ns/shacl#in",
-      "@type" : "@id"
-    },
-    "agentType" : {
-      "@id" : "http://a.ml/vocabularies/data#agentType",
-      "@type" : "@id"
-    },
-    "member" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#member",
       "@type" : "@id"
     },
     "supportedOperation" : {
       "@id" : "http://a.ml/vocabularies/apiContract#supportedOperation",
       "@type" : "@id"
     },
+    "statusCode" : {
+      "@id" : "http://a.ml/vocabularies/apiContract#statusCode"
+    },
+    "payload" : {
+      "@id" : "http://a.ml/vocabularies/apiContract#payload",
+      "@type" : "@id"
+    },
     "root" : {
       "@id" : "http://a.ml/vocabularies/document#root",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
-    },
-    "version" : {
-      "@id" : "http://a.ml/vocabularies/document#version"
     },
     "encodes" : {
       "@id" : "http://a.ml/vocabularies/document#encodes",
       "@type" : "@id"
     },
-    "returns" : {
-      "@id" : "http://a.ml/vocabularies/apiContract#returns",
+    "source-vendor" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#source-vendor",
       "@type" : "@id"
     },
-    "method" : {
-      "@id" : "http://a.ml/vocabularies/apiContract#method"
-    },
-    "endpoint" : {
-      "@id" : "http://a.ml/vocabularies/apiContract#endpoint",
+    "member" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#member",
       "@type" : "@id"
-    },
-    "property" : {
-      "@id" : "http://www.w3.org/ns/shacl#property",
-      "@type" : "@id"
-    },
-    "closed" : {
-      "@id" : "http://www.w3.org/ns/shacl#closed",
-      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
-    },
-    "raw" : {
-      "@id" : "http://a.ml/vocabularies/document#raw"
     },
     "structuredValue" : {
       "@id" : "http://a.ml/vocabularies/document#structuredValue",
@@ -1889,12 +2466,20 @@
       "@id" : "http://a.ml/vocabularies/document#strict",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
-    "schema" : {
-      "@id" : "http://a.ml/vocabularies/shapes#schema",
+    "raw" : {
+      "@id" : "http://a.ml/vocabularies/document#raw"
+    },
+    "declared-element" : {
+      "@id" : "http://a.ml/vocabularies/document-source-maps#declared-element",
       "@type" : "@id"
     },
-    "mediaType" : {
-      "@id" : "http://a.ml/vocabularies/core#mediaType"
+    "property" : {
+      "@id" : "http://www.w3.org/ns/shacl#property",
+      "@type" : "@id"
+    },
+    "closed" : {
+      "@id" : "http://www.w3.org/ns/shacl#closed",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "disjointWith" : {
       "@id" : "http://www.w3.org/2002/07/owl#disjointWith",
