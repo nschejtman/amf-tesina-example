@@ -1,8 +1,15 @@
 PREFIX documentation: <file://src/main/resources/web-apis/ontologies/documentation#>
-SELECT ?s
+PREFIX dsm: <http://a.ml/vocabularies/document-source-maps#>
+SELECT ?id ?lexical_data
 WHERE {
-      ?s a documentation:Documentable
+      ?id a documentation:Documentable
       FILTER NOT EXISTS {
-                        ?s a documentation:Documented
+                        ?id a documentation:Documented
                         }
+      OPTIONAL {
+               ?id dsm:sources/dsm:lexical ?lexicalNode .
+               ?lexicalNode dsm:element ?graph_element ;
+                            dsm:value ?lexical_data .
+               FILTER (STRAFTER(STR(?graph_element), "#") = STRAFTER(STR(?id), "#") )
+               }
       }

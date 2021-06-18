@@ -13,11 +13,12 @@ import scala.concurrent.{Await, Future}
 import scala.util.{Failure, Success}
 
 //noinspection SameParameterValue
-object WebApisExample {
+object WebApiDocumentationExample {
   def main(args: Array[String]): Unit = {
     val result = for {
       _ <- InitializationHelper.init()
-      _ <- run("file://src/main/resources/web-apis/raml/well-documented.raml", Raml10)
+      _ <- run("file://src/main/resources/web-apis/raml/fully-documented.raml", Raml10)
+      _ <- run("file://src/main/resources/web-apis/raml/partially-documented.raml", Raml10)
     } yield {
       true
     }
