@@ -3,6 +3,7 @@ import amf.client.parse.Parser
 import amf.client.render.{RenderOptions, Renderer}
 import amf.client.resolve.Resolver
 import amf.core.remote.{Raml10, Vendor}
+import com.typesafe.scalalogging.Logger
 import helpers.Conversions._
 import helpers.{InitializationHelper, MediaType, Rdf}
 import org.apache.jena.rdf.model.Model
@@ -14,45 +15,47 @@ import scala.util.{Failure, Success}
 
 //noinspection SameParameterValue
 object WebApiDocumentationExample {
+  implicit val logger: Logger = Logger[this.type]
+
   def main(args: Array[String]): Unit = {
     val result = for {
       _ <- InitializationHelper.init()
       _ <- run("file://src/main/resources/web-apis/raml/fully-documented.raml", Raml10)
       _ <- run("file://src/main/resources/web-apis/raml/partially-documented.raml", Raml10)
     } yield {
-      true
+      println()
     }
 
     result onComplete {
-      case Success(_) => println("Finished with success")
-      case Failure(f) => println(s"Finished with failure: ${f.toString}")
+      case Success(_) => logger.info("Finished with success")
+      case Failure(f) => logger.error(s"Finished with failure: ${f.toString}")
     }
 
     Await.ready(result, Duration.Inf)
   }
 
   private def parse(fileUrl: String, vendor: Vendor): Future[BaseUnit] = {
-    println(s"Started: parse $fileUrl")
+    logger.debug(s"Started: parse $fileUrl")
     val parser = new Parser(vendor.name, MediaType.forVendor(vendor))
     val result = parser.parseFileAsync(fileUrl).get()
-    println(s"Done: parse $fileUrl")
+    logger.debug(s"Done: parse $fileUrl")
     result.wrapFuture
   }
 
   private def resolve(baseUnit: BaseUnit, vendor: Vendor): Future[BaseUnit] = {
-    println(s"Started: resolve ${baseUnit.id}")
+    logger.debug(s"Started: resolve ${baseUnit.id}")
     val resolver = new Resolver(vendor.name)
     val result   = resolver.resolve(baseUnit)
-    println(s"Done: resolve ${baseUnit.id}")
+    logger.debug(s"Done: resolve ${baseUnit.id}")
     result.wrapFuture
   }
 
   private def render(baseUnit: BaseUnit, url: String): Future[Unit] = {
-    println(s"Started: render ${baseUnit.id}")
+    logger.debug(s"Started: render ${baseUnit.id}")
     val renderer      = new Renderer(Vendor.AMF.name, "application/ld+json")
     val renderOptions = RenderOptions().withFlattenedJsonLd.withCompactUris.withPrettyPrint.withSourceMaps
     renderer.generateFile(baseUnit, url, renderOptions).get()
-    println(s"Done: render ${baseUnit.id}")
+    logger.debug(s"Done: render ${baseUnit.id}")
     Future.unit
   }
 

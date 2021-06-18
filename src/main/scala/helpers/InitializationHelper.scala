@@ -1,16 +1,17 @@
 package helpers
 import amf.client.AMF
+import com.typesafe.scalalogging.Logger
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
 object InitializationHelper {
-  def init(): Future[Unit] = {
-    println(s"Started: AMF initialization")
+  def init()(implicit logger: Logger): Future[Unit] = {
+    logger.debug(s"Started: AMF initialization")
     for {
       _ <- Future.successful(AMF.init().get())
     } yield {
-      println(s"Done: AMF initialization")
+      logger.debug(s"Done: AMF initialization")
     }
   }
 }

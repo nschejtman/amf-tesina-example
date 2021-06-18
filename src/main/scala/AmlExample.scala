@@ -1,5 +1,6 @@
 import amf.client.model.document.{BaseUnit, Vocabulary}
 import amf.client.parse.Aml10Parser
+import com.typesafe.scalalogging.Logger
 import helpers.Conversions.Fut
 import helpers.{InitializationHelper, Namespaces, Rdf}
 
@@ -10,6 +11,7 @@ import scala.util.{Failure, Success}
 
 //noinspection SameParameterValue
 object AmlExample {
+  implicit val logger: Logger = Logger[this.type]
   def main(args: Array[String]): Unit = {
     val result: Future[Unit] = for {
       // Initialize the AMF framework (boilerplate code)

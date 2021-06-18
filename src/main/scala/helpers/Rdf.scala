@@ -1,5 +1,6 @@
 package helpers
 import amf.client.model.document.BaseUnit
+import com.typesafe.scalalogging.Logger
 import helpers.Conversions.Fut
 import openllet.jena.PelletReasonerFactory
 import org.apache.jena.query.{QueryExecutionFactory, QueryFactory, ResultSet}
@@ -27,18 +28,18 @@ object Rdf {
   object IO {
     val DIVIDER = "-----------------------------------------------------------------------------------------------------------------"
 
-    def read(fileName: String, lang: String = "JSON-LD"): Future[Model] = {
-      println(s"Started: read $fileName")
+    def read(fileName: String, lang: String = "JSON-LD")(implicit logger: Logger): Future[Model] = {
+      logger.debug(s"Started: read $fileName")
       val model = ModelFactory.createDefaultModel()
       model.read(fileName, lang)
-      println(s"Done: read $fileName")
+      logger.debug(s"Done: read $fileName")
       model.wrapFuture
     }
 
-    def write(model: Model, fileName: String, lang: String, base: String): Future[Unit] = {
-      println(s"Started: write $fileName")
+    def write(model: Model, fileName: String, lang: String, base: String)(implicit logger: Logger): Future[Unit] = {
+      logger.debug(s"Started: write $fileName")
       model.write(new FileWriter(fileName), lang, base)
-      println(s"Done: write $fileName")
+      logger.debug(s"Done: write $fileName")
       Future.unit
     }
 
@@ -65,10 +66,10 @@ object Rdf {
   }
 
   object AMF {
-    def toRdfModel(baseUnit: BaseUnit, namespaces: Map[String, String]): Future[Model] = {
-      println(s"Started: toRdfModel ${baseUnit.id}")
+    def toRdfModel(baseUnit: BaseUnit, namespaces: Map[String, String])(implicit logger: Logger): Future[Model] = {
+      logger.debug(s"Started: toRdfModel ${baseUnit.id}")
       val result = baseUnit.toNativeRdfModel().native().asInstanceOf[Model].setNsPrefixes(namespaces.asJava)
-      println(s"Done: toRdfModel ${baseUnit.id}")
+      logger.debug(s"Done: toRdfModel ${baseUnit.id}")
       result.wrapFuture
     }
   }
