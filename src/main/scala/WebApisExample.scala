@@ -53,6 +53,7 @@ object WebApisExample {
       _              <- Rdf.IO.write(rdf, fileUrl.noProtocol.withExtension(".jsonld"), "JSON-LD", resolved.id)
       ontology       <- Rdf.IO.read("src/main/resources/web-apis/ontologies/Documentation.ontology.ttl", lang = "TTL")
       inferenceModel <- Rdf.Inference.default(ontology, rdf)
+      _              <- Rdf.IO.write(inferenceModel, fileUrl.noProtocol.withExtension(".inf.jsonld"), "JSON-LD", resolved.id)
       _              <- runQueriesOn(inferenceModel)
     } yield {
       rdf

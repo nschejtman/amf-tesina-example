@@ -1,14 +1,18 @@
 #%RAML 1.0
 title: Agents API
 version: 1.0
+description: API for handling judiciary agents
 types:
   Agent:
     description: A judiciary agent (person or organization)
     type: object
     properties:
-      name: string
+      name:
+        description: Name of a judiciary agent
+        type: string
       agentType:
         type: string
+        description: Type of a judiciary agent. Can be 'Person' for a physical judiciary person or 'Organization' for a organization-like agents
         enum:
           - Person
           - Organization
@@ -22,7 +26,8 @@ types:
         description: Successfully obtained the list of agents
         body:
           application/json:
-            schema: Agent[]
+            description: Returns the collection of all registered agents
+            type: Agent[]
             example:
               - name: Polimi
                 agentType: Organization
