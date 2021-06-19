@@ -1,0 +1,4 @@
+PREFIX pii: <file://src/main/resources/web-apis/ontologies/pii#>
+ASK {
+    ?s a pii:SensitiveElement
+    }

@@ -1,0 +1,15 @@
+@base <file://src/main/resources/web-apis/ontologies/pii#> .
+@prefix rdfs:        <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:         <http://www.w3.org/2002/07/owl#> .
+
+<#>
+    a owl:Ontology .
+
+<#SensitiveElement>
+    a owl:Class .
+
+# this property is useless. Just using it to infer the SensitiveElement class from ranges to domains
+rdfs:Property
+    rdfs:range  <#SensitiveElement> ;
+    rdfs:domain <#SensitiveElement> .
+

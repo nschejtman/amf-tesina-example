@@ -1,0 +1,1084 @@
+{
+  "@graph": [
+    {
+      "@id": "#/web-api",
+      "@type": [
+        "apiContract:WebAPI",
+        "apiContract:API",
+        "doc:RootDomainElement",
+        "doc:DomainElement"
+      ],
+      "core:name": "Users API",
+      "core:version": "1.0",
+      "apiContract:endpoint": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers"
+        }
+      ],
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers",
+      "@type": [
+        "apiContract:EndPoint",
+        "doc:DomainElement"
+      ],
+      "apiContract:path": "/users",
+      "apiContract:supportedOperation": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get"
+        }
+      ],
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:source-vendor": [
+        {
+          "@id": "#/web-api/source-map/source-vendor/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/source-map/lexical/element_2"
+        },
+        {
+          "@id": "#/web-api/source-map/lexical/element_0"
+        },
+        {
+          "@id": "#/web-api/source-map/lexical/element_1"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get",
+      "@type": [
+        "apiContract:Operation",
+        "doc:DomainElement"
+      ],
+      "apiContract:method": "get",
+      "apiContract:returns": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200"
+        }
+      ],
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/source-map/lexical/element_1"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fusers/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/source-map/source-vendor/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/web-api",
+      "sourcemaps:value": "RAML 1.0"
+    },
+    {
+      "@id": "#/web-api/source-map/lexical/element_2",
+      "sourcemaps:element": "core:name",
+      "sourcemaps:value": "[(2,0)-(3,0)]"
+    },
+    {
+      "@id": "#/web-api/source-map/lexical/element_0",
+      "sourcemaps:element": "core:version",
+      "sourcemaps:value": "[(3,0)-(5,0)]"
+    },
+    {
+      "@id": "#/web-api/source-map/lexical/element_1",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/web-api",
+      "sourcemaps:value": "[(2,0)-(24,35)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200",
+      "@type": [
+        "apiContract:Response",
+        "apiContract:Message",
+        "doc:DomainElement"
+      ],
+      "apiContract:statusCode": "200",
+      "core:name": "200",
+      "apiContract:payload": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson"
+        }
+      ],
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/source-map/lexical/element_1"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/source-map/lexical/element_1",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/web-api/end-points/%2Fusers",
+      "sourcemaps:value": "[(13,0)-(24,35)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/source-map/lexical/element_0",
+      "sourcemaps:element": "apiContract:path",
+      "sourcemaps:value": "[(13,0)-(13,6)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson",
+      "@type": [
+        "apiContract:Payload",
+        "doc:DomainElement"
+      ],
+      "core:mediaType": "application/json",
+      "raml-shapes:schema": {
+        "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema"
+      },
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/source-map/lexical/element_1"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/source-map/lexical/element_1",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/web-api/end-points/%2Fusers/get",
+      "sourcemaps:value": "[(14,2)-(24,35)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/source-map/lexical/element_0",
+      "sourcemaps:element": "apiContract:returns",
+      "sourcemaps:value": "[(15,4)-(24,35)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema",
+      "@type": [
+        "raml-shapes:ArrayShape",
+        "raml-shapes:AnyShape",
+        "shacl:Shape",
+        "raml-shapes:Shape",
+        "doc:DomainElement"
+      ],
+      "raml-shapes:items": {
+        "@id": "#/declarations/types/User"
+      },
+      "shacl:name": "schema",
+      "apiContract:examples": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example"
+        }
+      ],
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/source-map/lexical/element_1",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/web-api/end-points/%2Fusers/get/200",
+      "sourcemaps:value": "[(16,6)-(24,35)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/source-map/lexical/element_0",
+      "sourcemaps:element": "apiContract:payload",
+      "sourcemaps:value": "[(17,8)-(24,35)]"
+    },
+    {
+      "@id": "#/declarations/types/User",
+      "@type": [
+        "shacl:NodeShape",
+        "raml-shapes:AnyShape",
+        "shacl:Shape",
+        "raml-shapes:Shape",
+        "doc:DomainElement"
+      ],
+      "shacl:closed": false,
+      "shacl:property": [
+        {
+          "@id": "#/declarations/types/User/property/userId"
+        },
+        {
+          "@id": "#/declarations/types/User/property/fullName"
+        }
+      ],
+      "shacl:name": "User",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/declarations/types/User/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example",
+      "@type": [
+        "apiContract:Example",
+        "doc:DomainElement"
+      ],
+      "doc:strict": true,
+      "doc:structuredValue": {
+        "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1"
+      },
+      "doc:raw": "-\n  userId: 0\n  fullName: Nicolas Schejtman\n-\n  userId: 1\n  fullName: Joe Biden",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:auto-generated-name": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/source-map/auto-generated-name/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/source-map/lexical/element_1"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/source-map/lexical/element_0"
+        }
+      ],
+      "sourcemaps:type-property-lexical-info": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/source-map/type-property-lexical-info/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/source-map/lexical/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/web-api/end-points/%2Fusers/get/200/application%2Fjson",
+      "sourcemaps:value": "[(18,10)-(24,35)]"
+    },
+    {
+      "@id": "#/declarations/types/User/property/userId",
+      "@type": [
+        "shacl:PropertyShape",
+        "shacl:Shape",
+        "raml-shapes:Shape",
+        "doc:DomainElement"
+      ],
+      "shacl:path": [
+        {
+          "@id": "http://a.ml/vocabularies/data#userId"
+        }
+      ],
+      "raml-shapes:range": {
+        "@id": "#/declarations/types/User/property/userId/scalar/userId"
+      },
+      "shacl:minCount": 1,
+      "shacl:name": "userId",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/declarations/types/User/property/userId/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/types/User/property/fullName",
+      "@type": [
+        "shacl:PropertyShape",
+        "shacl:Shape",
+        "raml-shapes:Shape",
+        "doc:DomainElement",
+        "pii:SensitiveElement"
+      ],
+      "shacl:path": [
+        {
+          "@id": "http://a.ml/vocabularies/data#fullName"
+        }
+      ],
+      "raml-shapes:range": {
+        "@id": "#/declarations/types/User/property/fullName/scalar/fullName"
+      },
+      "shacl:minCount": 1,
+      "shacl:name": "fullName",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/declarations/types/User/property/fullName/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/types/User/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/declarations/types/User/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:type-property-lexical-info": [
+        {
+          "@id": "#/declarations/types/User/source-map/type-property-lexical-info/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/declarations/types/User/source-map/lexical/element_1"
+        },
+        {
+          "@id": "#/declarations/types/User/source-map/lexical/element_0"
+        }
+      ],
+      "sourcemaps:declared-element": [
+        {
+          "@id": "#/declarations/types/User/source-map/declared-element/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1",
+      "@type": [
+        "data:Array",
+        "rdf:Seq",
+        "data:Node",
+        "doc:DomainElement"
+      ],
+      "rdfs:member": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5"
+        }
+      ],
+      "core:name": "array_1",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/source-map/synthesized-field/element_1"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/source-map/lexical/element_0"
+        }
+      ],
+      "sourcemaps:tracked-element": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/source-map/tracked-element/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/source-map/auto-generated-name/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema",
+      "sourcemaps:value": ""
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/source-map/lexical/element_1",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema",
+      "sourcemaps:value": "[(18,10)-(24,35)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/source-map/lexical/element_0",
+      "sourcemaps:element": "apiContract:examples",
+      "sourcemaps:value": "[(20,12)-(24,35)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/source-map/type-property-lexical-info/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema",
+      "sourcemaps:value": "[(19,12)-(19,16)]"
+    },
+    {
+      "@id": "#/declarations/types/User/property/userId/scalar/userId",
+      "@type": [
+        "raml-shapes:ScalarShape",
+        "raml-shapes:AnyShape",
+        "shacl:Shape",
+        "raml-shapes:Shape",
+        "doc:DomainElement"
+      ],
+      "shacl:datatype": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#integer"
+        }
+      ],
+      "shacl:name": "userId",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/declarations/types/User/property/userId/scalar/userId/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/types/User/property/userId/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/declarations/types/User/property/userId/source-map/synthesized-field/element_1"
+        },
+        {
+          "@id": "#/declarations/types/User/property/userId/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/declarations/types/User/property/userId/source-map/lexical/element_1"
+        },
+        {
+          "@id": "#/declarations/types/User/property/userId/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/types/User/property/fullName/scalar/fullName",
+      "@type": [
+        "raml-shapes:ScalarShape",
+        "raml-shapes:AnyShape",
+        "shacl:Shape",
+        "raml-shapes:Shape",
+        "doc:DomainElement"
+      ],
+      "shacl:datatype": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ],
+      "shacl:name": "fullName",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/declarations/types/User/property/fullName/scalar/fullName/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/types/User/property/fullName/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/declarations/types/User/property/fullName/source-map/synthesized-field/element_1"
+        },
+        {
+          "@id": "#/declarations/types/User/property/fullName/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/declarations/types/User/property/fullName/source-map/lexical/element_1"
+        },
+        {
+          "@id": "#/declarations/types/User/property/fullName/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/types/User/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "shacl:closed",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/declarations/types/User/source-map/type-property-lexical-info/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/declarations/types/User",
+      "sourcemaps:value": "[(7,4)-(7,8)]"
+    },
+    {
+      "@id": "#/declarations/types/User/source-map/lexical/element_1",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/declarations/types/User",
+      "sourcemaps:value": "[(6,2)-(13,0)]"
+    },
+    {
+      "@id": "#/declarations/types/User/source-map/lexical/element_0",
+      "sourcemaps:element": "shacl:name",
+      "sourcemaps:value": "[(6,2)-(6,6)]"
+    },
+    {
+      "@id": "#/declarations/types/User/source-map/declared-element/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/declarations/types/User",
+      "sourcemaps:value": ""
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2",
+      "@type": [
+        "data:Object",
+        "data:Node",
+        "doc:DomainElement"
+      ],
+      "data:userId": {
+        "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3"
+      },
+      "data:fullName": {
+        "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4"
+      },
+      "core:name": "object_2",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5",
+      "@type": [
+        "data:Object",
+        "data:Node",
+        "doc:DomainElement"
+      ],
+      "data:userId": {
+        "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6"
+      },
+      "data:fullName": {
+        "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7"
+      },
+      "core:name": "object_5",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/source-map/synthesized-field/element_1",
+      "sourcemaps:element": "doc:strict",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "doc:raw",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/source-map/lexical/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example",
+      "sourcemaps:value": "[(20,20)-(24,35)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/source-map/tracked-element/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example",
+      "sourcemaps:value": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/web-api/end-points/%2Fusers/get/200/application%2Fjson"
+    },
+    {
+      "@id": "#/declarations/types/User/property/userId/scalar/userId/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:type-property-lexical-info": [
+        {
+          "@id": "#/declarations/types/User/property/userId/scalar/userId/source-map/type-property-lexical-info/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/declarations/types/User/property/userId/scalar/userId/source-map/lexical/element_1"
+        },
+        {
+          "@id": "#/declarations/types/User/property/userId/scalar/userId/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/types/User/property/userId/source-map/synthesized-field/element_1",
+      "sourcemaps:element": "shacl:path",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/declarations/types/User/property/userId/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "shacl:minCount",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/declarations/types/User/property/userId/source-map/lexical/element_1",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/declarations/types/User/property/userId",
+      "sourcemaps:value": "[(9,6)-(11,0)]"
+    },
+    {
+      "@id": "#/declarations/types/User/property/userId/source-map/lexical/element_0",
+      "sourcemaps:element": "raml-shapes:range",
+      "sourcemaps:value": "[(9,13)-(11,0)]"
+    },
+    {
+      "@id": "#/declarations/types/User/property/fullName/scalar/fullName/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:type-property-lexical-info": [
+        {
+          "@id": "#/declarations/types/User/property/fullName/scalar/fullName/source-map/type-property-lexical-info/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/declarations/types/User/property/fullName/scalar/fullName/source-map/lexical/element_1"
+        },
+        {
+          "@id": "#/declarations/types/User/property/fullName/scalar/fullName/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/types/User/property/fullName/source-map/synthesized-field/element_1",
+      "sourcemaps:element": "shacl:path",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/declarations/types/User/property/fullName/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "shacl:minCount",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/declarations/types/User/property/fullName/source-map/lexical/element_1",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/declarations/types/User/property/fullName",
+      "sourcemaps:value": "[(11,6)-(13,0)]"
+    },
+    {
+      "@id": "#/declarations/types/User/property/fullName/source-map/lexical/element_0",
+      "sourcemaps:element": "raml-shapes:range",
+      "sourcemaps:value": "[(11,15)-(13,0)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3",
+      "@type": [
+        "data:Scalar",
+        "data:Node",
+        "doc:DomainElement"
+      ],
+      "data:value": "0",
+      "shacl:datatype": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#integer"
+        }
+      ],
+      "core:name": "userId",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4",
+      "@type": [
+        "data:Scalar",
+        "data:Node",
+        "doc:DomainElement"
+      ],
+      "data:value": "Nicolas Schejtman",
+      "shacl:datatype": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ],
+      "core:name": "fullName",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/lexical/element_2"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/lexical/element_0"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/lexical/element_1"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6",
+      "@type": [
+        "data:Scalar",
+        "data:Node",
+        "doc:DomainElement"
+      ],
+      "data:value": "1",
+      "shacl:datatype": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#integer"
+        }
+      ],
+      "core:name": "userId",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7",
+      "@type": [
+        "data:Scalar",
+        "data:Node",
+        "doc:DomainElement"
+      ],
+      "data:value": "Joe Biden",
+      "shacl:datatype": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ],
+      "core:name": "fullName",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/lexical/element_2"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/lexical/element_0"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/lexical/element_1"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/source-map/lexical/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1",
+      "sourcemaps:value": "[(21,0)-(24,35)]"
+    },
+    {
+      "@id": "#/declarations/types/User/property/userId/scalar/userId/source-map/type-property-lexical-info/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/declarations/types/User/property/userId/scalar/userId",
+      "sourcemaps:value": "[(10,8)-(10,12)]"
+    },
+    {
+      "@id": "#/declarations/types/User/property/userId/scalar/userId/source-map/lexical/element_1",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/declarations/types/User/property/userId/scalar/userId",
+      "sourcemaps:value": "[(9,6)-(11,0)]"
+    },
+    {
+      "@id": "#/declarations/types/User/property/userId/scalar/userId/source-map/lexical/element_0",
+      "sourcemaps:element": "shacl:datatype",
+      "sourcemaps:value": "[(10,8)-(11,0)]"
+    },
+    {
+      "@id": "#/declarations/types/User/property/fullName/scalar/fullName/source-map/type-property-lexical-info/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/declarations/types/User/property/fullName/scalar/fullName",
+      "sourcemaps:value": "[(12,8)-(12,12)]"
+    },
+    {
+      "@id": "#/declarations/types/User/property/fullName/scalar/fullName/source-map/lexical/element_1",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/declarations/types/User/property/fullName/scalar/fullName",
+      "sourcemaps:value": "[(11,6)-(13,0)]"
+    },
+    {
+      "@id": "#/declarations/types/User/property/fullName/scalar/fullName/source-map/lexical/element_0",
+      "sourcemaps:element": "shacl:datatype",
+      "sourcemaps:value": "[(12,8)-(13,0)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map/synthesized-field/element_1"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map/synthesized-field/element_1"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "core:name",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/lexical/element_2",
+      "sourcemaps:element": "data:userId",
+      "sourcemaps:value": "[(21,16)-(22,0)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/lexical/element_0",
+      "sourcemaps:element": "data:fullName",
+      "sourcemaps:value": "[(22,16)-(23,0)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/lexical/element_1",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2",
+      "sourcemaps:value": "[(21,16)-(23,0)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map/synthesized-field/element_1"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map/synthesized-field/element_1"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "core:name",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/lexical/element_2",
+      "sourcemaps:element": "data:userId",
+      "sourcemaps:value": "[(23,16)-(24,0)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/lexical/element_0",
+      "sourcemaps:element": "data:fullName",
+      "sourcemaps:value": "[(24,16)-(24,35)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/lexical/element_1",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5",
+      "sourcemaps:value": "[(23,16)-(24,35)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map/synthesized-field/element_1",
+      "sourcemaps:element": "shacl:datatype",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "core:name",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map/lexical/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3",
+      "sourcemaps:value": "[(21,24)-(21,25)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map/synthesized-field/element_1",
+      "sourcemaps:element": "shacl:datatype",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "core:name",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map/lexical/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4",
+      "sourcemaps:value": "[(22,26)-(22,43)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map/synthesized-field/element_1",
+      "sourcemaps:element": "shacl:datatype",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "core:name",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map/lexical/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6",
+      "sourcemaps:value": "[(23,24)-(23,25)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map/synthesized-field/element_1",
+      "sourcemaps:element": "shacl:datatype",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "core:name",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map/lexical/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml#/web-api/end-points/%2Fusers/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7",
+      "sourcemaps:value": "[(24,26)-(24,35)]"
+    },
+    {
+      "@id": "",
+      "@type": [
+        "doc:Document",
+        "doc:Fragment",
+        "doc:Module",
+        "doc:Unit"
+      ],
+      "doc:encodes": {
+        "@id": "#/web-api"
+      },
+      "doc:version": "3.1.0",
+      "doc:root": true
+    }
+  ],
+  "@context": {
+    "@base": "file://src/main/resources/web-apis/raml/pii-sensitive/api.raml",
+    "pii": "file://src/main/resources/web-apis/ontologies/pii#",
+    "shacl": "http://www.w3.org/ns/shacl#",
+    "raml-shapes": "http://a.ml/vocabularies/shapes#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "data": "http://a.ml/vocabularies/data#",
+    "doc": "http://a.ml/vocabularies/document#",
+    "apiContract": "http://a.ml/vocabularies/apiContract#",
+    "core": "http://a.ml/vocabularies/core#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "sourcemaps": "http://a.ml/vocabularies/document-source-maps#"
+  }
+}
