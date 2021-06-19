@@ -25,10 +25,11 @@ trait Pipeline {
     }
   }
 
-  protected def obtainInferenceModelFrom(model: Model, ontologyUrl: String): Future[Model] = {
+  protected def obtainInferenceModelFrom(model: Model, ontologyUrl: String, fileUrl: String): Future[Model] = {
     for {
       ontology       <- Rdf.IO.read(ontologyUrl.noProtocol, lang = "TTL")
       inferenceModel <- Rdf.Inference.default(ontology, model)
+      _              <- Rdf.IO.write(inferenceModel, fileUrl.noProtocol.withExtension(".inference.jsonld"), "JSON-LD", fileUrl)
     } yield {
       inferenceModel
     }
@@ -39,7 +40,7 @@ trait Pipeline {
   protected def run(fileUrl: String, ontologyUrl: String, vendor: Vendor): Future[Unit] = {
     for {
       model          <- obtainModelFromAmf(fileUrl, vendor)          // generate basic graph
-      inferenceModel <- obtainInferenceModelFrom(model, ontologyUrl) // enrich graph
+      inferenceModel <- obtainInferenceModelFrom(model, ontologyUrl, fileUrl) // enrich graph
       _              <- runQueriesOn(inferenceModel, fileUrl)        // query graph
     } yield {
       println()
