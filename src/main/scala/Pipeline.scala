@@ -1,5 +1,6 @@
 import WebApiDocumentationExample.logger
 import amf.core.remote.Vendor
+import com.typesafe.scalalogging.Logger
 import helpers.Conversions.Url
 import helpers.{Amf, Rdf}
 import org.apache.jena.rdf.model.Model
@@ -8,7 +9,9 @@ import scala.concurrent.{ExecutionContext, Future}
 
 //noinspection SameParameterValue
 trait Pipeline {
-  implicit val ec: ExecutionContext
+  implicit val logger: Logger       = Logger[this.type]
+  implicit val ec: ExecutionContext = scala.concurrent.ExecutionContext.Implicits.global
+
   val resources  = "file://src/main/resources"
   val raml       = s"$resources/web-apis/raml"
   val ontologies = s"$resources/web-apis/ontologies"

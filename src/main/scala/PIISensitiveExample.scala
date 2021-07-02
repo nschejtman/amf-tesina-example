@@ -10,8 +10,6 @@ import scala.util.{Failure, Success}
 
 //noinspection SameParameterValue
 object PIISensitiveExample extends Pipeline {
-  implicit val logger: Logger       = Logger[this.type]
-  implicit val ec: ExecutionContext = scala.concurrent.ExecutionContext.Implicits.global
 
   def main(args: Array[String]): Unit = {
     val result = for {
