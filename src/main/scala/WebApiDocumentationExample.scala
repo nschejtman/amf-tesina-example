@@ -8,6 +8,8 @@ import scala.concurrent.Future
 //noinspection SameParameterValue
 object WebApiDocumentationExample extends Example {
 
+  def main(args: Array[String]): Unit = mainImpl()
+
   override def runQueriesOn(model: Model, modelName: String): Future[Unit] = {
     println(Console.BLUE)
     println(s"Querying model: $modelName")

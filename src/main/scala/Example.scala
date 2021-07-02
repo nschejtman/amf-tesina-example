@@ -55,7 +55,7 @@ trait Example {
 
   protected def kernel(): Future[Unit]
 
-  protected def main(args: Array[String]): Unit = {
+  protected def mainImpl(): Unit = {
     val result = for {
       _ <- InitializationHelper.init()
       _ <- kernel()

@@ -8,6 +8,8 @@ import scala.concurrent.Future
 //noinspection SameParameterValue
 object PIISensitiveExample extends Example {
 
+  def main(args: Array[String]): Unit = mainImpl()
+
   override protected def obtainModelFromAmf(fileUrl: String, vendor: Vendor): Future[Model] = {
     Rdf.IO.read(fileUrl.noProtocol.withExtension(".jsonld"))
   }
