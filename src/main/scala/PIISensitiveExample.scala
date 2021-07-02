@@ -14,7 +14,7 @@ object PIISensitiveExample extends Example {
     Rdf.IO.read(fileUrl.noProtocol.withExtension(".jsonld"))
   }
 
-  override def runQueriesOn(model: Model, fileUrl: String): Future[Unit] = {
+  override protected def runQueriesOn(model: Model, fileUrl: String): Future[Unit] = {
     println(Console.BLUE)
     println(s"Querying model: $fileUrl")
     println(Console.RESET)
