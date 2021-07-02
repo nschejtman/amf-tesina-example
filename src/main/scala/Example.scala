@@ -1,14 +1,15 @@
-import WebApiDocumentationExample.logger
 import amf.core.remote.Vendor
 import com.typesafe.scalalogging.Logger
 import helpers.Conversions.Url
-import helpers.{Amf, Rdf}
+import helpers.{Amf, InitializationHelper, Rdf}
 import org.apache.jena.rdf.model.Model
 
-import scala.concurrent.{ExecutionContext, Future}
+import scala.concurrent.duration.Duration
+import scala.concurrent.{Await, ExecutionContext, Future}
+import scala.util.{Failure, Success}
 
 //noinspection SameParameterValue
-trait Pipeline {
+trait Example {
   implicit val logger: Logger       = Logger[this.type]
   implicit val ec: ExecutionContext = scala.concurrent.ExecutionContext.Implicits.global
 
@@ -48,6 +49,24 @@ trait Pipeline {
     } yield {
       println()
     }
+  }
+
+  protected def kernel(): Future[Unit]
+
+  protected def main(args: Array[String]): Unit = {
+    val result = for {
+      _ <- InitializationHelper.init()
+      _ <- kernel()
+    } yield {
+      println()
+    }
+
+    result onComplete {
+      case Success(_) => logger.info("Finished with success")
+      case Failure(f) => logger.error(s"Finished with failure: ${f.toString}")
+    }
+
+    Await.ready(result, Duration.Inf)
   }
 
 }

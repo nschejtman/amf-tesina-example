@@ -1,32 +1,12 @@
 import amf.core.remote.Raml10
-import com.typesafe.scalalogging.Logger
 import helpers.Conversions._
-import helpers.{InitializationHelper, Rdf}
+import helpers.Rdf
 import org.apache.jena.rdf.model.Model
 
-import scala.concurrent.duration.Duration
-import scala.concurrent.{Await, ExecutionContext, Future}
-import scala.util.{Failure, Success}
+import scala.concurrent.Future
 
 //noinspection SameParameterValue
-object WebApiDocumentationExample extends Pipeline {
-
-  def main(args: Array[String]): Unit = {
-    val result = for {
-      _ <- InitializationHelper.init()
-      _ <- run(s"$raml/fully-documented/api.raml", s"$ontologies/Documentation.ontology.ttl", Raml10)
-      _ <- run(s"$raml/partially-documented/api.raml", s"$ontologies/Documentation.ontology.ttl", Raml10)
-    } yield {
-      println()
-    }
-
-    result onComplete {
-      case Success(_) => logger.info("Finished with success")
-      case Failure(f) => logger.error(s"Finished with failure: ${f.toString}")
-    }
-
-    Await.ready(result, Duration.Inf)
-  }
+object WebApiDocumentationExample extends Example {
 
   override def runQueriesOn(model: Model, modelName: String): Future[Unit] = {
     println(Console.BLUE)
@@ -65,6 +45,14 @@ object WebApiDocumentationExample extends Pipeline {
       _         <- println("Missing description for: ").wrapFuture
       resultSet <- Rdf.Query.select(model, s"$queries/list-undocumented.sparql".noProtocol)
       _         <- Rdf.IO.print(resultSet)
+    } yield {
+      Unit
+    }
+  }
+  override protected def kernel(): Future[Unit] = {
+    for {
+      _ <- run(s"$raml/fully-documented/api.raml", s"$ontologies/Documentation.ontology.ttl", Raml10)
+      _ <- run(s"$raml/partially-documented/api.raml", s"$ontologies/Documentation.ontology.ttl", Raml10)
     } yield {
       Unit
     }

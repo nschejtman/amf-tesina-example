@@ -1,31 +1,12 @@
 import amf.core.remote.{Raml10, Vendor}
-import com.typesafe.scalalogging.Logger
 import helpers.Conversions._
-import helpers.{Amf, InitializationHelper, Rdf}
+import helpers.Rdf
 import org.apache.jena.rdf.model.Model
 
-import scala.concurrent.duration.Duration
-import scala.concurrent.{Await, ExecutionContext, Future}
-import scala.util.{Failure, Success}
+import scala.concurrent.Future
 
 //noinspection SameParameterValue
-object PIISensitiveExample extends Pipeline {
-
-  def main(args: Array[String]): Unit = {
-    val result = for {
-      _ <- InitializationHelper.init()
-      _ <- run(s"$raml/pii-sensitive/api.raml", s"$ontologies/PII.ontology.ttl", Raml10)
-    } yield {
-      println()
-    }
-
-    result onComplete {
-      case Success(_) => logger.info("Finished with success")
-      case Failure(f) => logger.error(s"Finished with failure: ${f.toString}")
-    }
-
-    Await.ready(result, Duration.Inf)
-  }
+object PIISensitiveExample extends Example {
 
   override protected def obtainModelFromAmf(fileUrl: String, vendor: Vendor): Future[Model] = {
     Rdf.IO.read(fileUrl.noProtocol.withExtension(".jsonld"))
@@ -79,4 +60,5 @@ object PIISensitiveExample extends Pipeline {
       Unit
     }
   }
+  override protected def kernel(): Future[Unit] = run(s"$raml/pii-sensitive/api.raml", s"$ontologies/PII.ontology.ttl", Raml10)
 }
