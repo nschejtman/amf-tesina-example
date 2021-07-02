@@ -10,13 +10,13 @@ import scala.util.{Failure, Success}
 
 //noinspection SameParameterValue
 trait Example {
-  implicit val logger: Logger       = Logger[this.type]
-  implicit val ec: ExecutionContext = scala.concurrent.ExecutionContext.Implicits.global
+  protected implicit val logger: Logger       = Logger[this.type]
+  protected implicit val ec: ExecutionContext = scala.concurrent.ExecutionContext.Implicits.global
 
-  val resources  = "file://src/main/resources"
-  val raml       = s"$resources/web-apis/raml"
-  val ontologies = s"$resources/web-apis/ontologies"
-  val queries    = s"$resources/web-apis/queries"
+  protected val resources  = "file://src/main/resources"
+  protected val raml       = s"$resources/web-apis/raml"
+  protected val ontologies = s"$resources/web-apis/ontologies"
+  protected val queries    = s"$resources/web-apis/queries"
 
   protected def obtainModelFromAmf(fileUrl: String, vendor: Vendor): Future[Model] = {
     for {
