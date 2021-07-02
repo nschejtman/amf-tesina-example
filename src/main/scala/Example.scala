@@ -2,7 +2,7 @@ import amf.core.remote.Vendor
 import com.typesafe.scalalogging.Logger
 import helpers.Conversions.Url
 import helpers.{Amf, InitializationHelper, Rdf}
-import org.apache.jena.rdf.model.Model
+import org.apache.jena.rdf.model.{InfModel, Model}
 
 import scala.concurrent.duration.Duration
 import scala.concurrent.{Await, ExecutionContext, Future}
@@ -12,6 +12,8 @@ import scala.util.{Failure, Success}
 trait Example {
   protected implicit val logger: Logger       = Logger[this.type]
   protected implicit val ec: ExecutionContext = scala.concurrent.ExecutionContext.Implicits.global
+
+  protected val inferenceProvider: (Model, Model) => Future[InfModel] = Rdf.Inference.default
 
   protected val resources  = "file://src/main/resources"
   protected val raml       = s"$resources/web-apis/raml"
@@ -32,7 +34,7 @@ trait Example {
   protected def obtainInferenceModelFrom(model: Model, ontologyUrl: String, fileUrl: String): Future[Model] = {
     for {
       ontology       <- Rdf.IO.read(ontologyUrl.noProtocol, lang = "TTL")
-      inferenceModel <- Rdf.Inference.default(ontology, model)
+      inferenceModel <- inferenceProvider(ontology, model)
       _              <- Rdf.IO.write(inferenceModel, fileUrl.noProtocol.withExtension(".inference.jsonld"), "JSON-LD", fileUrl)
     } yield {
       inferenceModel
@@ -43,9 +45,9 @@ trait Example {
 
   protected def run(fileUrl: String, ontologyUrl: String, vendor: Vendor): Future[Unit] = {
     for {
-      model          <- obtainModelFromAmf(fileUrl, vendor)          // generate basic graph
+      model          <- obtainModelFromAmf(fileUrl, vendor)                   // generate basic graph
       inferenceModel <- obtainInferenceModelFrom(model, ontologyUrl, fileUrl) // enrich graph
-      _              <- runQueriesOn(inferenceModel, fileUrl)        // query graph
+      _              <- runQueriesOn(inferenceModel, fileUrl)                 // query graph
     } yield {
       println()
     }
