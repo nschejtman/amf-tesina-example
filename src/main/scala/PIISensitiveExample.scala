@@ -1,12 +1,14 @@
 import amf.core.remote.{Raml10, Vendor}
 import helpers.Conversions._
 import helpers.Rdf
-import org.apache.jena.rdf.model.Model
+import org.apache.jena.rdf.model.{InfModel, Model}
 
 import scala.concurrent.Future
 
 //noinspection SameParameterValue
 object PIISensitiveExample extends Example {
+
+  override protected val inferenceProvider: (Model, Model) => Future[InfModel] = Rdf.Inference.pellet
 
   def main(args: Array[String]): Unit = mainImpl()
 
