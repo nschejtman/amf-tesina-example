@@ -1,17 +1,14 @@
 import amf.core.remote.Vendor
-import com.typesafe.scalalogging.Logger
 import helpers.Conversions.Url
 import helpers.{Amf, InitializationHelper, Rdf}
 import org.apache.jena.rdf.model.{InfModel, Model}
 
 import scala.concurrent.duration.Duration
-import scala.concurrent.{Await, ExecutionContext, Future}
+import scala.concurrent.{Await, Future}
 import scala.util.{Failure, Success}
 
 //noinspection SameParameterValue
-trait Example {
-  protected implicit val logger: Logger       = Logger[this.type]
-  protected implicit val ec: ExecutionContext = scala.concurrent.ExecutionContext.Implicits.global
+trait Example extends HasLogger with HasGlobalEC {
 
   protected val inferenceProvider: (Model, Model) => Future[InfModel] = Rdf.Inference.default
 
