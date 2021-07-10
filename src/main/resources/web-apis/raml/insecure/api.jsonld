@@ -1,0 +1,739 @@
+{
+  "@graph": [
+    {
+      "@id": "#/web-api",
+      "@type": [
+        "apiContract:WebAPI",
+        "apiContract:API",
+        "doc:RootDomainElement",
+        "doc:DomainElement"
+      ],
+      "core:name": "API",
+      "apiContract:endpoint": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers"
+        }
+      ],
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers",
+      "@type": [
+        "apiContract:EndPoint",
+        "doc:DomainElement"
+      ],
+      "apiContract:path": "/users",
+      "apiContract:supportedOperation": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fusers/post"
+        }
+      ],
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:source-vendor": [
+        {
+          "@id": "#/web-api/source-map/source-vendor/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/source-map/lexical/element_1"
+        },
+        {
+          "@id": "#/web-api/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get",
+      "@type": [
+        "apiContract:Operation",
+        "doc:DomainElement"
+      ],
+      "apiContract:method": "get",
+      "security:security": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/default-requirement_1"
+        }
+      ],
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/post",
+      "@type": [
+        "apiContract:Operation",
+        "doc:DomainElement"
+      ],
+      "apiContract:method": "post",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/post/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/source-map/lexical/element_1"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fusers/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/source-map/source-vendor/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/insecure/api.raml#/web-api",
+      "sourcemaps:value": "RAML 1.0"
+    },
+    {
+      "@id": "#/web-api/source-map/lexical/element_1",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/insecure/api.raml#/web-api",
+      "sourcemaps:value": "[(2,0)-(25,0)]"
+    },
+    {
+      "@id": "#/web-api/source-map/lexical/element_0",
+      "sourcemaps:element": "core:name",
+      "sourcemaps:value": "[(2,0)-(3,0)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/default-requirement_1",
+      "@type": [
+        "security:SecurityRequirement",
+        "doc:DomainElement"
+      ],
+      "security:schemes": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/default-requirement_1/oauth_2_0"
+        }
+      ],
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/default-requirement_1/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/post/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/post/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/source-map/lexical/element_1",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/insecure/api.raml#/web-api/end-points/%2Fusers",
+      "sourcemaps:value": "[(21,0)-(25,0)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/source-map/lexical/element_0",
+      "sourcemaps:element": "apiContract:path",
+      "sourcemaps:value": "[(21,0)-(21,6)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/default-requirement_1/oauth_2_0",
+      "@type": [
+        "security:ParametrizedSecurityScheme",
+        "doc:DomainElement"
+      ],
+      "core:name": "oauth_2_0",
+      "security:scheme": {
+        "@id": "#/declarations/securitySchemes/oauth_2_0"
+      },
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/default-requirement_1/oauth_2_0/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/default-requirement_1/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/default-requirement_1/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/source-map/lexical/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/insecure/api.raml#/web-api/end-points/%2Fusers/get",
+      "sourcemaps:value": "[(22,2)-(24,0)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/post/source-map/lexical/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/insecure/api.raml#/web-api/end-points/%2Fusers/post",
+      "sourcemaps:value": "[(24,2)-(25,0)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0",
+      "@type": [
+        "security:SecurityScheme",
+        "doc:DomainElement"
+      ],
+      "core:name": "oauth_2_0",
+      "security:type": "OAuth 2.0",
+      "apiContract:header": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization"
+        }
+      ],
+      "apiContract:parameter": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token"
+        }
+      ],
+      "apiContract:response": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/401"
+        },
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/403"
+        }
+      ],
+      "security:settings": {
+        "@id": "#/declarations/securitySchemes/oauth_2_0/settings/oauth2"
+      },
+      "sourcemaps:sources": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/default-requirement_1/oauth_2_0/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fusers/get/default-requirement_1/oauth_2_0/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/default-requirement_1/source-map/lexical/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/insecure/api.raml#/web-api/end-points/%2Fusers/get/default-requirement_1",
+      "sourcemaps:value": "[(23,15)-(23,24)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization",
+      "@type": [
+        "apiContract:Parameter",
+        "doc:DomainElement"
+      ],
+      "core:name": "Authorization",
+      "apiContract:paramName": "Authorization",
+      "apiContract:required": true,
+      "apiContract:binding": "header",
+      "raml-shapes:schema": {
+        "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization/scalar/schema"
+      },
+      "sourcemaps:sources": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token",
+      "@type": [
+        "apiContract:Parameter",
+        "doc:DomainElement"
+      ],
+      "core:name": "access_token",
+      "apiContract:paramName": "access_token",
+      "apiContract:required": true,
+      "apiContract:binding": "query",
+      "raml-shapes:schema": {
+        "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token/scalar/schema"
+      },
+      "sourcemaps:sources": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/401",
+      "@type": [
+        "apiContract:Response",
+        "apiContract:Message",
+        "doc:DomainElement"
+      ],
+      "apiContract:statusCode": "401",
+      "core:name": "401",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/401/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/403",
+      "@type": [
+        "apiContract:Response",
+        "apiContract:Message",
+        "doc:DomainElement"
+      ],
+      "apiContract:statusCode": "403",
+      "core:name": "403",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/403/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/settings/oauth2",
+      "@type": [
+        "security:OAuth2Settings",
+        "security:Settings",
+        "doc:DomainElement"
+      ],
+      "security:authorizationGrant": [
+        "authorization_code",
+        "implicit"
+      ],
+      "security:flows": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/settings/oauth2/default-flow"
+        }
+      ],
+      "sourcemaps:sources": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/settings/oauth2/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:declared-element": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/source-map/declared-element/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/source-map/lexical/element_6"
+        },
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/source-map/lexical/element_4"
+        },
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/source-map/lexical/element_2"
+        },
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/source-map/lexical/element_0"
+        },
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/source-map/lexical/element_1"
+        },
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/source-map/lexical/element_3"
+        },
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/source-map/lexical/element_5"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fusers/get/default-requirement_1/oauth_2_0/source-map/lexical/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/insecure/api.raml#/web-api/end-points/%2Fusers/get/default-requirement_1/oauth_2_0",
+      "sourcemaps:value": "[(23,15)-(23,24)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization/scalar/schema",
+      "@type": [
+        "raml-shapes:ScalarShape",
+        "raml-shapes:AnyShape",
+        "shacl:Shape",
+        "raml-shapes:Shape",
+        "doc:DomainElement"
+      ],
+      "shacl:datatype": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ],
+      "shacl:name": "schema",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization/scalar/schema/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization/source-map/lexical/element_1"
+        },
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token/scalar/schema",
+      "@type": [
+        "raml-shapes:ScalarShape",
+        "raml-shapes:AnyShape",
+        "shacl:Shape",
+        "raml-shapes:Shape",
+        "doc:DomainElement"
+      ],
+      "shacl:datatype": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ],
+      "shacl:name": "schema",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token/scalar/schema/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token/source-map/lexical/element_1"
+        },
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/401/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/401/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/403/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/403/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/settings/oauth2/default-flow",
+      "@type": [
+        "security:OAuth2Flow",
+        "doc:DomainElement"
+      ],
+      "security:authorizationUri": "https://www.dropbox.com/1/oauth2/authorize",
+      "security:accessTokenUri": "https://api.dropbox.com/1/oauth2/token",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/settings/oauth2/default-flow/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/settings/oauth2/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/settings/oauth2/source-map/lexical/element_1"
+        },
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/settings/oauth2/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/source-map/declared-element/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/insecure/api.raml#/declarations/securitySchemes/oauth_2_0",
+      "sourcemaps:value": ""
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/source-map/lexical/element_6",
+      "sourcemaps:element": "apiContract:response",
+      "sourcemaps:value": "[(13,6)-(16,0)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/source-map/lexical/element_4",
+      "sourcemaps:element": "core:name",
+      "sourcemaps:value": "[(4,2)-(4,11)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/source-map/lexical/element_2",
+      "sourcemaps:element": "security:type",
+      "sourcemaps:value": "[(5,4)-(6,0)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/source-map/lexical/element_0",
+      "sourcemaps:element": "security:settings",
+      "sourcemaps:value": "[(16,4)-(21,0)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/source-map/lexical/element_1",
+      "sourcemaps:element": "apiContract:parameter",
+      "sourcemaps:value": "[(10,6)-(13,0)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/source-map/lexical/element_3",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/insecure/api.raml#/declarations/securitySchemes/oauth_2_0",
+      "sourcemaps:value": "[(4,2)-(21,0)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/source-map/lexical/element_5",
+      "sourcemaps:element": "apiContract:header",
+      "sourcemaps:value": "[(7,6)-(10,0)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization/scalar/schema/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:type-property-lexical-info": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization/scalar/schema/source-map/type-property-lexical-info/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization/scalar/schema/source-map/lexical/element_1"
+        },
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization/scalar/schema/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "apiContract:binding",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization/source-map/lexical/element_1",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/insecure/api.raml#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization",
+      "sourcemaps:value": "[(8,8)-(10,0)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization/source-map/lexical/element_0",
+      "sourcemaps:element": "raml-shapes:schema",
+      "sourcemaps:value": "[(8,8)-(10,0)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token/scalar/schema/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:type-property-lexical-info": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token/scalar/schema/source-map/type-property-lexical-info/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token/scalar/schema/source-map/lexical/element_1"
+        },
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token/scalar/schema/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "apiContract:binding",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token/source-map/lexical/element_1",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/insecure/api.raml#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token",
+      "sourcemaps:value": "[(11,8)-(13,0)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token/source-map/lexical/element_0",
+      "sourcemaps:element": "raml-shapes:schema",
+      "sourcemaps:value": "[(11,8)-(13,0)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/401/source-map/lexical/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/insecure/api.raml#/declarations/securitySchemes/oauth_2_0/401",
+      "sourcemaps:value": "[(14,8)-(15,0)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/403/source-map/lexical/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/insecure/api.raml#/declarations/securitySchemes/oauth_2_0/403",
+      "sourcemaps:value": "[(15,8)-(16,0)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/settings/oauth2/default-flow/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/settings/oauth2/default-flow/source-map/lexical/element_2"
+        },
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/settings/oauth2/default-flow/source-map/lexical/element_0"
+        },
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0/settings/oauth2/default-flow/source-map/lexical/element_1"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/settings/oauth2/source-map/lexical/element_1",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/insecure/api.raml#/declarations/securitySchemes/oauth_2_0/settings/oauth2",
+      "sourcemaps:value": "[(16,13)-(21,0)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/settings/oauth2/source-map/lexical/element_0",
+      "sourcemaps:element": "security:authorizationGrant",
+      "sourcemaps:value": "[(19,6)-(21,0)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization/scalar/schema/source-map/type-property-lexical-info/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/insecure/api.raml#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization/scalar/schema",
+      "sourcemaps:value": "[(9,10)-(9,14)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization/scalar/schema/source-map/lexical/element_1",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/insecure/api.raml#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization/scalar/schema",
+      "sourcemaps:value": "[(8,8)-(10,0)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/header/Authorization/scalar/schema/source-map/lexical/element_0",
+      "sourcemaps:element": "shacl:datatype",
+      "sourcemaps:value": "[(9,10)-(10,0)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token/scalar/schema/source-map/type-property-lexical-info/element_0",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/insecure/api.raml#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token/scalar/schema",
+      "sourcemaps:value": "[(12,10)-(12,14)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token/scalar/schema/source-map/lexical/element_1",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/insecure/api.raml#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token/scalar/schema",
+      "sourcemaps:value": "[(11,8)-(13,0)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/parameter/query/access_token/scalar/schema/source-map/lexical/element_0",
+      "sourcemaps:element": "shacl:datatype",
+      "sourcemaps:value": "[(12,10)-(13,0)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/settings/oauth2/default-flow/source-map/lexical/element_2",
+      "sourcemaps:element": "security:authorizationUri",
+      "sourcemaps:value": "[(17,6)-(18,0)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/settings/oauth2/default-flow/source-map/lexical/element_0",
+      "sourcemaps:element": "security:accessTokenUri",
+      "sourcemaps:value": "[(18,6)-(19,0)]"
+    },
+    {
+      "@id": "#/declarations/securitySchemes/oauth_2_0/settings/oauth2/default-flow/source-map/lexical/element_1",
+      "sourcemaps:element": "file://src/main/resources/web-apis/raml/insecure/api.raml#/declarations/securitySchemes/oauth_2_0/settings/oauth2/default-flow",
+      "sourcemaps:value": "[(17,0)-(21,0)]"
+    },
+    {
+      "@id": "",
+      "doc:declares": [
+        {
+          "@id": "#/declarations/securitySchemes/oauth_2_0"
+        }
+      ],
+      "@type": [
+        "doc:Document",
+        "doc:Fragment",
+        "doc:Module",
+        "doc:Unit"
+      ],
+      "doc:encodes": {
+        "@id": "#/web-api"
+      },
+      "doc:version": "3.1.0",
+      "doc:root": true
+    }
+  ],
+  "@context": {
+    "@base": "file://src/main/resources/web-apis/raml/insecure/api.raml",
+    "shacl": "http://www.w3.org/ns/shacl#",
+    "raml-shapes": "http://a.ml/vocabularies/shapes#",
+    "security": "http://a.ml/vocabularies/security#",
+    "doc": "http://a.ml/vocabularies/document#",
+    "apiContract": "http://a.ml/vocabularies/apiContract#",
+    "core": "http://a.ml/vocabularies/core#",
+    "sourcemaps": "http://a.ml/vocabularies/document-source-maps#"
+  }
+}

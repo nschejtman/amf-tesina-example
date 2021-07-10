@@ -1,0 +1,24 @@
+#%RAML 1.0
+title: API
+securitySchemes:
+  oauth_2_0:
+    type: OAuth 2.0
+    describedBy:
+      headers:
+        Authorization:
+          type: string
+      queryParameters:
+        access_token:
+          type: string
+      responses:
+        401:
+        403:
+    settings:
+      authorizationUri: https://www.dropbox.com/1/oauth2/authorize
+      accessTokenUri: https://api.dropbox.com/1/oauth2/token
+      authorizationGrants: [ authorization_code, implicit ]
+
+/users:
+  get:
+    securedBy: oauth_2_0
+  post:

@@ -1,0 +1,11 @@
+PREFIX security: <http://a.ml/vocabularies/security#>
+CONSTRUCT {
+          ?this a security:Insecure .
+          }
+WHERE {
+      ?this a security:Securable .
+      FILTER NOT EXISTS {
+                        ?this a security:Secure .
+      }
+      }
+

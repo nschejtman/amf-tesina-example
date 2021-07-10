@@ -1,0 +1,217 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "inverseOf" : "http://a.ml/vocabularies/security#securityTransferProperty"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "owl:Restriction",
+    "subClassOf" : "http://a.ml/vocabularies/security#Secure",
+    "onProperty" : "_:b0",
+    "someValuesFrom" : "http://a.ml/vocabularies/security#Secure"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "owl:Axiom",
+    "comment" : "A subject of class :Secure makes every object of a  :securityTransferProperty of class :Secure too",
+    "annotatedProperty" : "rdfs:subClassOf",
+    "annotatedSource" : "_:b1",
+    "annotatedTarget" : "http://a.ml/vocabularies/security#Secure"
+  }, {
+    "@id" : "apiContract:API",
+    "@type" : "owl:Class",
+    "subClassOf" : [ "http://a.ml/vocabularies/security#Securable", "owl:Thing", "apiContract:API" ],
+    "disjointWith" : "owl:Nothing",
+    "equivalentClass" : "apiContract:API"
+  }, {
+    "@id" : "apiContract:EndPoint",
+    "@type" : "owl:Class",
+    "subClassOf" : [ "http://a.ml/vocabularies/security#Securable", "owl:Thing", "apiContract:EndPoint" ],
+    "disjointWith" : "owl:Nothing",
+    "equivalentClass" : "apiContract:EndPoint"
+  }, {
+    "@id" : "apiContract:Operation",
+    "@type" : "owl:Class",
+    "subClassOf" : [ "http://a.ml/vocabularies/security#Securable", "owl:Thing", "apiContract:Operation" ],
+    "disjointWith" : "owl:Nothing",
+    "equivalentClass" : "apiContract:Operation"
+  }, {
+    "@id" : "apiContract:endpoint",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "apiContract:API",
+    "range" : "apiContract:EndPoint",
+    "subPropertyOf" : [ "http://a.ml/vocabularies/security#securityTransferProperty", "owl:topObjectProperty", "apiContract:endpoint" ],
+    "equivalentProperty" : "apiContract:endpoint",
+    "propertyDisjointWith" : "owl:bottomObjectProperty"
+  }, {
+    "@id" : "apiContract:supportedOperation",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "apiContract:EndPoint",
+    "range" : "apiContract:Operation",
+    "subPropertyOf" : [ "http://a.ml/vocabularies/security#securityTransferProperty", "owl:topObjectProperty", "apiContract:supportedOperation" ],
+    "equivalentProperty" : "apiContract:supportedOperation",
+    "propertyDisjointWith" : "owl:bottomObjectProperty"
+  }, {
+    "@id" : "http://a.ml/vocabularies/security#",
+    "@type" : "owl:Ontology"
+  }, {
+    "@id" : "http://a.ml/vocabularies/security#Insecure",
+    "@type" : "owl:Class",
+    "subClassOf" : [ "http://a.ml/vocabularies/security#Securable", "owl:Thing", "http://a.ml/vocabularies/security#Insecure" ],
+    "disjointWith" : [ "owl:Nothing", "http://a.ml/vocabularies/security#Secure" ],
+    "equivalentClass" : "http://a.ml/vocabularies/security#Insecure"
+  }, {
+    "@id" : "http://a.ml/vocabularies/security#Securable",
+    "@type" : "owl:Class",
+    "subClassOf" : [ "owl:Thing", "http://a.ml/vocabularies/security#Securable" ],
+    "disjointUnionOf" : {
+      "@list" : [ "http://a.ml/vocabularies/security#Insecure", "http://a.ml/vocabularies/security#Secure" ]
+    },
+    "disjointWith" : "owl:Nothing",
+    "equivalentClass" : "http://a.ml/vocabularies/security#Securable"
+  }, {
+    "@id" : "http://a.ml/vocabularies/security#Secure",
+    "@type" : "owl:Class",
+    "subClassOf" : [ "http://a.ml/vocabularies/security#Securable", "owl:Thing", "http://a.ml/vocabularies/security#Secure" ],
+    "disjointWith" : [ "http://a.ml/vocabularies/security#Insecure", "owl:Nothing" ],
+    "equivalentClass" : "http://a.ml/vocabularies/security#Secure"
+  }, {
+    "@id" : "http://a.ml/vocabularies/security#security",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://a.ml/vocabularies/security#Secure",
+    "subPropertyOf" : [ "owl:topObjectProperty", "http://a.ml/vocabularies/security#security" ],
+    "equivalentProperty" : "http://a.ml/vocabularies/security#security",
+    "propertyDisjointWith" : "owl:bottomObjectProperty"
+  }, {
+    "@id" : "http://a.ml/vocabularies/security#securityTransferProperty",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "Property that tells if a subject is of class :Secure every object is of class :Secure too",
+    "domain" : "http://a.ml/vocabularies/security#Securable",
+    "range" : "http://a.ml/vocabularies/security#Securable",
+    "subPropertyOf" : [ "owl:topObjectProperty", "http://a.ml/vocabularies/security#securityTransferProperty" ],
+    "equivalentProperty" : "http://a.ml/vocabularies/security#securityTransferProperty",
+    "propertyDisjointWith" : "owl:bottomObjectProperty"
+  }, {
+    "@id" : "owl:Nothing",
+    "@type" : "owl:Class",
+    "subClassOf" : [ "apiContract:API", "apiContract:Operation", "owl:Thing", "http://a.ml/vocabularies/security#Insecure", "http://a.ml/vocabularies/security#Securable", "http://a.ml/vocabularies/security#Secure", "apiContract:EndPoint", "owl:Nothing" ],
+    "complementOf" : "owl:Thing",
+    "disjointWith" : [ "owl:Thing", "apiContract:EndPoint", "http://a.ml/vocabularies/security#Insecure", "apiContract:API", "apiContract:Operation", "owl:Nothing", "http://a.ml/vocabularies/security#Securable", "http://a.ml/vocabularies/security#Secure" ],
+    "equivalentClass" : "owl:Nothing"
+  }, {
+    "@id" : "owl:Thing",
+    "@type" : "owl:Class",
+    "subClassOf" : "owl:Thing",
+    "complementOf" : "owl:Nothing",
+    "disjointWith" : "owl:Nothing",
+    "equivalentClass" : "owl:Thing"
+  }, {
+    "@id" : "owl:bottomDataProperty",
+    "@type" : "owl:DatatypeProperty",
+    "subPropertyOf" : [ "owl:topDataProperty", "owl:bottomDataProperty" ],
+    "equivalentProperty" : "owl:bottomDataProperty",
+    "propertyDisjointWith" : [ "owl:bottomDataProperty", "owl:topDataProperty" ]
+  }, {
+    "@id" : "owl:bottomObjectProperty",
+    "@type" : [ "owl:SymmetricProperty", "owl:ObjectProperty" ],
+    "subPropertyOf" : [ "http://a.ml/vocabularies/security#securityTransferProperty", "owl:topObjectProperty", "http://a.ml/vocabularies/security#security", "owl:bottomObjectProperty", "apiContract:endpoint", "apiContract:supportedOperation" ],
+    "equivalentProperty" : "owl:bottomObjectProperty",
+    "inverseOf" : "owl:bottomObjectProperty",
+    "propertyDisjointWith" : [ "apiContract:endpoint", "http://a.ml/vocabularies/security#securityTransferProperty", "http://a.ml/vocabularies/security#security", "owl:bottomObjectProperty", "apiContract:supportedOperation", "owl:topObjectProperty" ]
+  }, {
+    "@id" : "owl:topDataProperty",
+    "@type" : "owl:DatatypeProperty",
+    "subPropertyOf" : "owl:topDataProperty",
+    "equivalentProperty" : "owl:topDataProperty",
+    "propertyDisjointWith" : "owl:bottomDataProperty"
+  }, {
+    "@id" : "owl:topObjectProperty",
+    "@type" : [ "owl:SymmetricProperty", "owl:TransitiveProperty", "owl:ObjectProperty" ],
+    "subPropertyOf" : "owl:topObjectProperty",
+    "equivalentProperty" : "owl:topObjectProperty",
+    "inverseOf" : "owl:topObjectProperty",
+    "propertyDisjointWith" : "owl:bottomObjectProperty"
+  } ],
+  "@context" : {
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "propertyDisjointWith" : {
+      "@id" : "http://www.w3.org/2002/07/owl#propertyDisjointWith",
+      "@type" : "@id"
+    },
+    "equivalentProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#equivalentProperty",
+      "@type" : "@id"
+    },
+    "disjointWith" : {
+      "@id" : "http://www.w3.org/2002/07/owl#disjointWith",
+      "@type" : "@id"
+    },
+    "equivalentClass" : {
+      "@id" : "http://www.w3.org/2002/07/owl#equivalentClass",
+      "@type" : "@id"
+    },
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "complementOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#complementOf",
+      "@type" : "@id"
+    },
+    "inverseOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
+      "@type" : "@id"
+    },
+    "someValuesFrom" : {
+      "@id" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+      "@type" : "@id"
+    },
+    "onProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#onProperty",
+      "@type" : "@id"
+    },
+    "domain" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
+      "@type" : "@id"
+    },
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "rest" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type" : "@id"
+    },
+    "first" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "annotatedTarget" : {
+      "@id" : "http://www.w3.org/2002/07/owl#annotatedTarget",
+      "@type" : "@id"
+    },
+    "annotatedProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#annotatedProperty",
+      "@type" : "@id"
+    },
+    "annotatedSource" : {
+      "@id" : "http://www.w3.org/2002/07/owl#annotatedSource",
+      "@type" : "@id"
+    },
+    "disjointUnionOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#disjointUnionOf",
+      "@type" : "@id"
+    },
+    "@vocab" : "http://a.ml/vocabularies/security#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "xml" : "http://www.w3.org/XML/1998/namespace",
+    "apiContract" : "http://a.ml/vocabularies/apiContract#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#"
+  }
+}
