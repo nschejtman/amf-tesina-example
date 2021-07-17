@@ -1,5 +1,0 @@
-PREFIX pii: <file://src/main/resources/web-apis/ontologies/pii#>
-SELECT ?id
-WHERE {
-      ?id a pii:SensitiveElement
-      }

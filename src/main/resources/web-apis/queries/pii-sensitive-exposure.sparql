@@ -1,7 +1,0 @@
-PREFIX pii: <file://src/main/resources/web-apis/ontologies/pii#>
-PREFIX doc: <http://a.ml/vocabularies/document#>
-SELECT (COUNT (DISTINCT ?sensitiveElement) AS ?sensitiveElementCount) (COUNT(DISTINCT ?domainElement) AS ?domainElementCount)
-WHERE {
-      ?sensitiveElement a pii:SensitiveElement .
-      ?domainElement a doc:DomainElement
-      }
