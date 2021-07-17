@@ -1,13 +1,14 @@
-@prefix :            <file://src/test/resources/basic/ontology#> .
+@prefix :            <file://test/ontology#> .
 @prefix owl:         <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:        <http://www.w3.org/2000/01/rdf-schema#> .
-@base <file://src/test/resources/basic/ontology#> .
+@base <file://test/ontology#> .
 
-<file://src/test/resources/basic/ontology#>
+<file://test/ontology#>
     rdf:type owl:Ontology .
 
-:Region a owl:Class .
+:Region
+    a owl:Class .
 
 :Country
     rdfs:subClassOf :Region .

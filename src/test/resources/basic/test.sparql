@@ -1,6 +1,0 @@
-PREFIX i: <file://src/test/resources/basic/data#>
-PREFIX o: <file://src/test/resources/basic/ontology#>
-ASK {
-    i:Argentina a o:Region .
-    i:BuenosAires a o:Region .
-    }

@@ -1,0 +1,8 @@
+@prefix i:            <file://test/data#> .
+@prefix o:            <file://test/ontology#> .
+
+i:Argentina
+    a o:Country .
+
+i:BuenosAires
+    a o:Province .

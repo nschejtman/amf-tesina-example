@@ -1,0 +1,6 @@
+@prefix i:            <file://test/data#> .
+@prefix o:            <file://test/ontology#> .
+
+i:Nicolas
+    o:firstName "Nicolas" ;
+    o:lastName  "Schejtman" .

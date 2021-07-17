@@ -1,0 +1,6 @@
+PREFIX i: <file://test/data#>
+PREFIX o: <file://test/ontology#>
+ASK {
+    i:Argentina a o:Region .
+    i:BuenosAires a o:Region .
+    }

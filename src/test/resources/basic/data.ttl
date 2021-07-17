@@ -1,8 +1,0 @@
-@prefix i:            <file://src/test/resources/basic/data#> .
-@prefix o:            <file://src/test/resources/basic/ontology#> .
-
-i:Argentina
-    a o:Country .
-
-i:BuenosAires
-    a o:Province .

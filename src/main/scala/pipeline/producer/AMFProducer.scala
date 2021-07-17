@@ -17,7 +17,7 @@ case class AMFProducer(fileUrl: String, vendor: Vendor) extends AsyncProducer wi
       parsed   <- Amf.parse(fileUrl, vendor)
       resolved <- Amf.resolve(parsed, vendor)
       _        <- Amf.render(resolved, fileUrl.withExtension(".jsonld"))
-      rdf      <- IO.read(fileUrl.noProtocol.withExtension(".jsonld"), JsonLd).wrapFuture
+      rdf      <- IO.read(fileUrl.withProtocol("").withExtension(".jsonld"), JsonLd).wrapFuture
     } yield {
       rdf
     }
