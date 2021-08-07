@@ -1,5 +1,7 @@
 package utils.jena
-import amf.client.model.document.BaseUnit
+import amf.core.client.scala.model.document.BaseUnit
+import amf.core.client.scala.rdf.RdfUnitConverter
+import amf.core.internal.rdf.RdfModelDocument
 import com.typesafe.scalalogging.Logger
 import openllet.jena.PelletReasonerFactory
 import org.apache.jena.rdf.model.{InfModel, Model, ModelFactory}
@@ -11,9 +13,9 @@ object Rdf {
   object AMF {
     def toRdfModel(baseUnit: BaseUnit, namespaces: Map[String, String])(implicit logger: Logger): Model = {
       logger.debug(s"Started: toRdfModel ${baseUnit.id}")
-      val result = baseUnit.toNativeRdfModel().native().asInstanceOf[Model].setNsPrefixes(namespaces.asJava)
+      val result = RdfUnitConverter.toNativeRdfModel(baseUnit).native()
       logger.debug(s"Done: toRdfModel ${baseUnit.id}")
-      result
+      result.asInstanceOf[Model]
     }
   }
 

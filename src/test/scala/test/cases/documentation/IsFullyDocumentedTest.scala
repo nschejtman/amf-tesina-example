@@ -1,16 +1,13 @@
 package test.cases.documentation
 
-import amf.core.remote.{Raml10, Vendor}
-import org.apache.jena.query.ResultSet
-import org.scalatest.Assertion
 import org.scalatest.funsuite.AsyncFunSuite
 import pipeline.producer.AMFProducer
 
 class IsFullyDocumentedTest extends AsyncFunSuite {
 
-  private def fullyDocumentedAssertion(apiPath: String, vendor: Vendor)(expected: Boolean) = {
+  private def fullyDocumentedAssertion(apiPath: String)(expected: Boolean) = {
     val baseDir  = DocumentationCase.baseDir
-    val producer = AMFProducer(s"file://$baseDir/$apiPath", vendor)
+    val producer = AMFProducer(s"file://$baseDir/$apiPath")
     producer
       .produce()
       .map(DocumentationCase.pipeline.run)
@@ -18,20 +15,20 @@ class IsFullyDocumentedTest extends AsyncFunSuite {
       .map(actual => assert(actual == expected))
   }
 
-  private def assertFullyDocumented(apiPath: String, vendor: Vendor) = fullyDocumentedAssertion(apiPath, vendor)(expected = true)
+  private def assertFullyDocumented(apiPath: String) = fullyDocumentedAssertion(apiPath)(expected = true)
 
-  private def assertNotFullyDocumented(apiPath: String, vendor: Vendor) = fullyDocumentedAssertion(apiPath, vendor)(expected = false)
+  private def assertNotFullyDocumented(apiPath: String) = fullyDocumentedAssertion(apiPath)(expected = false)
 
   test("Fully-undocumented case") {
-    assertNotFullyDocumented("fully-undocumented/api.raml", Raml10)
+    assertNotFullyDocumented("fully-undocumented/api.raml")
   }
 
   test("Fully-documented case") {
-    assertFullyDocumented("fully-documented/api.raml", Raml10)
+    assertFullyDocumented("fully-documented/api.raml")
   }
 
   test("Partially-documented case") {
-    assertNotFullyDocumented("partially-documented/api.raml", Raml10)
+    assertNotFullyDocumented("partially-documented/api.raml")
   }
 
 }

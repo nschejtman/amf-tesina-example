@@ -1,37 +1,59 @@
 package utils.amf
 
-import amf.client.model.document.BaseUnit
-import amf.client.parse.Parser
-import amf.client.render.{RenderOptions, Renderer}
-import amf.client.resolve.Resolver
-import amf.core.remote.Vendor
+import amf.apicontract.client.scala._
+import amf.core.client.scala.config.RenderOptions
+import amf.core.client.scala.model.document.BaseUnit
+import amf.core.internal.remote.Spec
 import com.typesafe.scalalogging.Logger
-import utils.Conversions.Fut
+import utils.Conversions.{Fut, Url}
 
-import scala.concurrent.Future
+import java.io.FileWriter
+import scala.concurrent.{ExecutionContext, Future}
 
 object Amf {
-  def parse(fileUrl: String, vendor: Vendor)(implicit logger: Logger): Future[BaseUnit] = {
-    logger.debug(s"Started: parse $fileUrl")
-    val parser = new Parser(vendor.name, MediaType.forVendor(vendor))
-    val result = parser.parseFileAsync(fileUrl).get()
-    logger.debug(s"Done: parse $fileUrl")
-    result.wrapFuture
+  private def client(spec: Spec = null): AMFBaseUnitClient = {
+    val baseConfig = spec match {
+      case Spec.RAML08  => RAMLConfiguration.RAML08()
+      case Spec.RAML10  => RAMLConfiguration.RAML10()
+      case Spec.OAS20   => OASConfiguration.OAS20()
+      case Spec.OAS30   => OASConfiguration.OAS30()
+      case Spec.ASYNC20 => AsyncAPIConfiguration.Async20()
+      case null         => WebAPIConfiguration.WebAPI()
+    }
+    baseConfig
+      .withRenderOptions(RenderOptions().withPrettyPrint.withCompactUris.withSourceMaps)
+      .baseUnitClient()
   }
 
-  def resolve(baseUnit: BaseUnit, vendor: Vendor)(implicit logger: Logger): Future[BaseUnit] = {
+  def parse(fileUrl: String)(implicit logger: Logger, executionContext: ExecutionContext): Future[(BaseUnit, Spec)] = {
+    logger.debug(s"Started: parse $fileUrl")
+
+    client().parse(fileUrl).map { result =>
+      if (!result.conforms) {
+        throw new IllegalArgumentException(s"$fileUrl has parsing errors")
+      } else {
+        logger.debug(s"Done: parse $fileUrl")
+        (result.baseUnit, result.sourceSpec)
+      }
+    }
+  }
+
+  def resolve(baseUnit: BaseUnit, spec: Spec)(implicit logger: Logger): Future[BaseUnit] = {
     logger.debug(s"Started: resolve ${baseUnit.id}")
-    val resolver = new Resolver(vendor.name)
-    val result   = resolver.resolve(baseUnit)
+    val result = client(spec).transform(baseUnit)
     logger.debug(s"Done: resolve ${baseUnit.id}")
-    result.wrapFuture
+    if (!result.conforms) {
+      throw new IllegalArgumentException(s"${baseUnit.location()} has resolution errors")
+    }
+    result.baseUnit.wrapFuture
   }
 
   def render(baseUnit: BaseUnit, url: String)(implicit logger: Logger): Future[Unit] = {
     logger.debug(s"Started: render ${baseUnit.id}")
-    val renderer      = new Renderer(Vendor.AMF.name, "application/ld+json")
-    val renderOptions = RenderOptions().withFlattenedJsonLd.withCompactUris.withPrettyPrint.withSourceMaps
-    renderer.generateFile(baseUnit, url, renderOptions).get()
+    val content = client().render(baseUnit, "application/ld+json")
+    val writer  = new FileWriter(url.withProtocol(""))
+    writer.write(content)
+    writer.close()
     logger.debug(s"Done: render ${baseUnit.id}")
     Future.unit
   }
