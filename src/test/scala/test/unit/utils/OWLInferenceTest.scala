@@ -26,4 +26,21 @@ class OWLInferenceTest() extends AnyFunSuite with WithDefaultLogger {
     val result   = Query.ask(infModel, s"$baseDir/subPropertyOf/test.sparql")
     assert(result)
   }
+
+  test("Test subClassOf inference with Pellet reasoner") {
+    val data     = IO.read(s"$baseDir/subClassOf/data.ttl", Ttl)
+    val schema   = IO.read(s"$baseDir/subClassOf/ontology.ttl", Ttl)
+    val infModel = InferenceModel.from(data, schema, Reasoners.pellet())
+    val result   = Query.ask(infModel, s"$baseDir/subClassOf/test.sparql")
+    assert(result)
+  }
+
+  test("Test subPropertyOf inference with Pellet reasoner") {
+    val data     = IO.read(s"$baseDir/subPropertyOf/data.ttl", Ttl)
+    val schema   = IO.read(s"$baseDir/subPropertyOf/ontology.ttl", Ttl)
+    val infModel = InferenceModel.from(data, schema, Reasoners.pellet())
+    val result   = Query.ask(infModel, s"$baseDir/subPropertyOf/test.sparql")
+    assert(result)
+  }
+
 }
