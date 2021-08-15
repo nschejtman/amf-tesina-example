@@ -1,13 +1,11 @@
 package pipeline.inference
-import utils.jena._
-import org.apache.jena.rdf.model.{Model, ModelFactory}
+import org.apache.jena.rdf.model.Model
 import org.apache.jena.reasoner.Reasoner
 import utils.Conversions.Url
-import utils.logger.WithDefaultLogger
+import utils.jena._
 
 case class OWLInferenceStep(ontologyUrl: String, lang: Lang, reasoner: Reasoner = Reasoners.default())
-    extends SyncInferenceStep
-    with WithDefaultLogger {
+    extends SyncInferenceStep {
 
   override def run(model: Model): Model = {
     val schema = IO.read(ontologyUrl.withProtocol(""), lang)

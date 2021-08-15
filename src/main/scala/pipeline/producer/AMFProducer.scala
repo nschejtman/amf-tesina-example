@@ -5,11 +5,10 @@ import org.apache.jena.rdf.model.Model
 import utils.Conversions.{Fut, Url}
 import utils.amf.Amf
 import utils.ec.HasExecutionContext
-import utils.logger.WithDefaultLogger
 
 import scala.concurrent.Future
 
-case class AMFProducer(fileUrl: String) extends AsyncProducer with HasExecutionContext with WithDefaultLogger {
+case class AMFProducer(fileUrl: String) extends AsyncProducer with HasExecutionContext {
   override def produce(): Future[Model] = {
     for {
       (parsed, spec) <- Amf.parse(fileUrl)

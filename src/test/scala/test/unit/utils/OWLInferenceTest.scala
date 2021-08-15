@@ -3,11 +3,10 @@ package test.unit.utils
 import org.scalatest.funsuite.AnyFunSuite
 import utils.jena.Lang.Ttl
 import utils.jena.{IO, InferenceModel, Query, Reasoners}
-import utils.logger.WithDefaultLogger
 
 import scala.concurrent.ExecutionContext
 
-class OWLInferenceTest() extends AnyFunSuite with WithDefaultLogger {
+class OWLInferenceTest() extends AnyFunSuite {
   protected implicit val ec: ExecutionContext = scala.concurrent.ExecutionContext.Implicits.global
   val baseDir                                 = "src/test/resources/test/unit/utils/owl-inference-test"
 
