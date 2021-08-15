@@ -5,10 +5,8 @@ import utils.Conversions.Url
 
 object Query {
   private def executionFrom(model: Model, queryUrl: String) = {
-    JenaLock.synchronized {
-      val query = QueryFactory.read(queryUrl.withProtocol(""))
-      QueryExecutionFactory.create(query, model)
-    }
+    val query = QueryFactory.read(queryUrl.withProtocol(""))
+    QueryExecutionFactory.create(query, model)
   }
 
   def select(model: Model, queryUrl: String): ResultSet = executionFrom(model, queryUrl).execSelect()
