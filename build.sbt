@@ -9,3 +9,4 @@ ThisBuild / resolvers ++= Seq(releasesRepo, publicRepo, mavenCentral)
 ThisBuild / libraryDependencies += "com.github.amlorg"             %% "amf-api-contract" % "5.0.0-beta.3"
 ThisBuild / libraryDependencies += "com.github.galigator.openllet" % "openllet-jena"     % "2.6.5"
 ThisBuild / libraryDependencies += "org.scalatest"                 %% "scalatest"        % "3.2.9" % "test"
+parallelExecution in Test := false

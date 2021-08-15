@@ -1,5 +1,4 @@
 package utils
-import scala.concurrent.Future
 import scala.math.pow
 
 object Conversions {
@@ -10,10 +9,6 @@ object Conversions {
       val i = url.lastIndexOf(".")
       url.substring(0, i) + extension
     }
-  }
-
-  implicit class Fut[T](t: T) {
-    def wrapFuture: Future[T] = Future.successful(t)
   }
 
   implicit class Percentage(val d: Double) extends AnyVal {

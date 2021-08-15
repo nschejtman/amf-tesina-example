@@ -1,19 +1,15 @@
 package test.cases.documentation
 import org.apache.jena.query.ResultSet
 import org.scalatest.Assertion
-import org.scalatest.funsuite.AsyncFunSuite
+import pipeline.Pipeline
 import pipeline.producer.AMFProducer
 
-class ListUndocumentedTest extends AsyncFunSuite {
+class ListUndocumentedCaseStudyTest extends DocumentationCaseStudyTest {
 
-  private def listUndocumentedFrom(apiPath: String)(assertion: ResultSet => Assertion) = {
-    val baseDir  = DocumentationCase.baseDir
-    val producer = AMFProducer(s"file://$baseDir/$apiPath")
-    producer
-      .produce()
-      .map(DocumentationCase.pipeline.run)
-      .map(DocumentationCase.listUndocumented.consume)
-      .map(assertion)
+  private def listUndocumentedFrom(apiPath: String)(assertionFn: ResultSet => Assertion) = {
+    val producer        = AMFProducer(s"file://$baseDir/$apiPath")
+    val actual          = Pipeline(producer, transformations, listUndocumentedConsumer).run()
+    assertionFn(actual)
   }
 
   test("List undocumented nodes in fully-undocumented") {

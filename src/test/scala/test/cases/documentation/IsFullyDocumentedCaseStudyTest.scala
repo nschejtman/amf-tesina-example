@@ -1,18 +1,14 @@
 package test.cases.documentation
 
-import org.scalatest.funsuite.AsyncFunSuite
+import pipeline.Pipeline
 import pipeline.producer.AMFProducer
 
-class IsFullyDocumentedTest extends AsyncFunSuite {
+class IsFullyDocumentedCaseStudyTest extends DocumentationCaseStudyTest {
 
   private def fullyDocumentedAssertion(apiPath: String)(expected: Boolean) = {
-    val baseDir  = DocumentationCase.baseDir
-    val producer = AMFProducer(s"file://$baseDir/$apiPath")
-    producer
-      .produce()
-      .map(DocumentationCase.pipeline.run)
-      .map(DocumentationCase.isFullyDocumented.consume)
-      .map(actual => assert(actual == expected))
+    val producer        = AMFProducer(s"file://$baseDir/$apiPath")
+    val actual          = Pipeline(producer, transformations, isFullyDocumentedConsumer).run()
+    assert(actual == expected)
   }
 
   private def assertFullyDocumented(apiPath: String) = fullyDocumentedAssertion(apiPath)(expected = true)
