@@ -1,0 +1,5 @@
+PREFIX pii: <http://a.ml/vocabularies/pii#>
+SELECT ?id
+WHERE {
+      ?id a pii:SensitiveElement
+      }

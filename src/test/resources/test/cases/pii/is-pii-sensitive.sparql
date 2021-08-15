@@ -1,0 +1,4 @@
+PREFIX pii: <http://a.ml/vocabularies/pii#>
+ASK {
+    ?s a pii:SensitiveElement
+    }
