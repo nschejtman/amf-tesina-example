@@ -7,6 +7,8 @@ object Reasoners {
   OpenlletOptions.IGNORE_UNSUPPORTED_AXIOMS = false
   OpenlletOptions.SILENT_UNDEFINED_ENTITY_HANDLING = false
 
-  def default(): Reasoner = ReasonerRegistry.getOWLReasoner
-  def pellet(): Reasoner  = PelletReasonerFactory.theInstance().create()
+  def default(): Reasoner = JenaLock.synchronized { ReasonerRegistry.getOWLReasoner }
+
+  def pellet(): Reasoner = JenaLock.synchronized { PelletReasonerFactory.theInstance().create() }
+
 }
