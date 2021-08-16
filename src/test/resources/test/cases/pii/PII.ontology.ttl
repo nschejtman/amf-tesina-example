@@ -16,18 +16,28 @@
 <http://a.ml/vocabularies/pii#> rdf:type owl:Ontology .
 
 #################################################################
+#    Object Properties
+#################################################################
+
+###  http://a.ml/vocabularies/pii#sensitivityTransferProperty
+:sensitivityTransferProperty rdf:type owl:ObjectProperty ;
+                             rdfs:comment "Property that indicates if its object is of class SenstiveElement, then its subject of of class SensitiveElement as well." .
+
+
+#################################################################
 #    Classes
 #################################################################
 
 ###  http://a.ml/vocabularies/pii#SensitiveElement
 :SensitiveElement rdf:type owl:Class .
 
+
 #################################################################
 #    General axioms
 #################################################################
 
 [ rdf:type owl:Restriction ;
-  owl:onProperty owl:topObjectProperty ;
+  owl:onProperty :sensitivityTransferProperty ;
   owl:someValuesFrom :SensitiveElement ;
   rdfs:subClassOf :SensitiveElement
 ] .
