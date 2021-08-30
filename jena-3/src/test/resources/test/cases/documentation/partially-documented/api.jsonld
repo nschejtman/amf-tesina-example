@@ -1,0 +1,1265 @@
+{
+  "@graph": [
+    {
+      "@id": "#/web-api",
+      "@type": [
+        "apiContract:WebAPI",
+        "apiContract:API",
+        "doc:RootDomainElement",
+        "doc:DomainElement"
+      ],
+      "core:name": "Agents API",
+      "core:version": "1.0",
+      "apiContract:endpoint": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents"
+        }
+      ],
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents",
+      "@type": [
+        "apiContract:EndPoint",
+        "doc:DomainElement"
+      ],
+      "apiContract:path": "/agents",
+      "core:description": "Default endpoint for CRUD operations on agents",
+      "apiContract:supportedOperation": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get"
+        }
+      ],
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:source-vendor": [
+        {
+          "@id": "#/web-api/source-map/source-vendor/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/source-map/lexical/element_2"
+        },
+        {
+          "@id": "#/web-api/source-map/lexical/element_0"
+        },
+        {
+          "@id": "#/web-api/source-map/lexical/element_1"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get",
+      "@type": [
+        "apiContract:Operation",
+        "doc:DomainElement"
+      ],
+      "apiContract:method": "get",
+      "core:description": "Returns all the known agents",
+      "apiContract:returns": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200"
+        }
+      ],
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/source-map/lexical/element_2"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fagents/source-map/lexical/element_0"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fagents/source-map/lexical/element_1"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/source-map/source-vendor/element_0",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/web-api",
+      "sourcemaps:value": "RAML 1.0"
+    },
+    {
+      "@id": "#/web-api/source-map/lexical/element_2",
+      "sourcemaps:element": "core:name",
+      "sourcemaps:value": "[(2,0)-(3,0)]"
+    },
+    {
+      "@id": "#/web-api/source-map/lexical/element_0",
+      "sourcemaps:element": "core:version",
+      "sourcemaps:value": "[(3,0)-(4,0)]"
+    },
+    {
+      "@id": "#/web-api/source-map/lexical/element_1",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/web-api",
+      "sourcemaps:value": "[(2,0)-(33,33)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200",
+      "@type": [
+        "apiContract:Response",
+        "apiContract:Message",
+        "doc:DomainElement"
+      ],
+      "apiContract:statusCode": "200",
+      "core:name": "200",
+      "core:description": "Successfully obtained the list of agents",
+      "apiContract:payload": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson"
+        }
+      ],
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/source-map/lexical/element_2"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/source-map/lexical/element_0"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/source-map/lexical/element_1"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/source-map/lexical/element_2",
+      "sourcemaps:element": "apiContract:path",
+      "sourcemaps:value": "[(19,0)-(19,7)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/source-map/lexical/element_0",
+      "sourcemaps:element": "core:description",
+      "sourcemaps:value": "[(20,2)-(21,0)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/source-map/lexical/element_1",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/web-api/end-points/%2Fagents",
+      "sourcemaps:value": "[(19,0)-(33,33)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson",
+      "@type": [
+        "apiContract:Payload",
+        "doc:DomainElement"
+      ],
+      "core:mediaType": "application/json",
+      "raml-shapes:schema": {
+        "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema"
+      },
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/source-map/lexical/element_2"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/source-map/lexical/element_0"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/source-map/lexical/element_1"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/source-map/lexical/element_2",
+      "sourcemaps:element": "core:description",
+      "sourcemaps:value": "[(22,4)-(23,0)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/source-map/lexical/element_0",
+      "sourcemaps:element": "apiContract:returns",
+      "sourcemaps:value": "[(23,4)-(33,33)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/source-map/lexical/element_1",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/web-api/end-points/%2Fagents/get",
+      "sourcemaps:value": "[(21,2)-(33,33)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema",
+      "@type": [
+        "raml-shapes:ArrayShape",
+        "raml-shapes:AnyShape",
+        "shacl:Shape",
+        "raml-shapes:Shape",
+        "doc:DomainElement"
+      ],
+      "raml-shapes:items": {
+        "@id": "#/declarations/types/Agent"
+      },
+      "shacl:name": "schema",
+      "apiContract:examples": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example"
+        }
+      ],
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/source-map/lexical/element_2",
+      "sourcemaps:element": "core:description",
+      "sourcemaps:value": "[(25,8)-(26,0)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/source-map/lexical/element_0",
+      "sourcemaps:element": "apiContract:payload",
+      "sourcemaps:value": "[(26,8)-(33,33)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/source-map/lexical/element_1",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200",
+      "sourcemaps:value": "[(24,6)-(33,33)]"
+    },
+    {
+      "@id": "#/declarations/types/Agent",
+      "@type": [
+        "shacl:NodeShape",
+        "raml-shapes:AnyShape",
+        "shacl:Shape",
+        "raml-shapes:Shape",
+        "doc:DomainElement"
+      ],
+      "shacl:closed": false,
+      "shacl:property": [
+        {
+          "@id": "#/declarations/types/Agent/property/name"
+        },
+        {
+          "@id": "#/declarations/types/Agent/property/agentType"
+        }
+      ],
+      "shacl:name": "Agent",
+      "core:description": "A judiciary agent (person or organization)",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/declarations/types/Agent/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example",
+      "@type": [
+        "apiContract:Example",
+        "doc:DomainElement"
+      ],
+      "doc:strict": true,
+      "doc:structuredValue": {
+        "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1"
+      },
+      "doc:raw": "-\n  name: Polimi\n  agentType: Organization\n-\n  name: Nicolas\n  agentType: Person",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:auto-generated-name": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map/auto-generated-name/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map/lexical/element_1"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map/lexical/element_0"
+        }
+      ],
+      "sourcemaps:type-property-lexical-info": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map/type-property-lexical-info/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/source-map/lexical/element_0",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson",
+      "sourcemaps:value": "[(27,10)-(33,33)]"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/name",
+      "@type": [
+        "shacl:PropertyShape",
+        "shacl:Shape",
+        "raml-shapes:Shape",
+        "doc:DomainElement"
+      ],
+      "shacl:path": [
+        {
+          "@id": "http://a.ml/vocabularies/data#name"
+        }
+      ],
+      "raml-shapes:range": {
+        "@id": "#/declarations/types/Agent/property/name/scalar/name"
+      },
+      "shacl:minCount": 1,
+      "shacl:name": "name",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/declarations/types/Agent/property/name/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType",
+      "@type": [
+        "shacl:PropertyShape",
+        "shacl:Shape",
+        "raml-shapes:Shape",
+        "doc:DomainElement"
+      ],
+      "shacl:path": [
+        {
+          "@id": "http://a.ml/vocabularies/data#agentType"
+        }
+      ],
+      "raml-shapes:range": {
+        "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType"
+      },
+      "shacl:minCount": 1,
+      "shacl:name": "agentType",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/declarations/types/Agent/property/agentType/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/types/Agent/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/declarations/types/Agent/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:type-property-lexical-info": [
+        {
+          "@id": "#/declarations/types/Agent/source-map/type-property-lexical-info/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/declarations/types/Agent/source-map/lexical/element_2"
+        },
+        {
+          "@id": "#/declarations/types/Agent/source-map/lexical/element_0"
+        },
+        {
+          "@id": "#/declarations/types/Agent/source-map/lexical/element_1"
+        }
+      ],
+      "sourcemaps:declared-element": [
+        {
+          "@id": "#/declarations/types/Agent/source-map/declared-element/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1",
+      "@type": [
+        "data:Array",
+        "rdf:Seq",
+        "data:Node",
+        "doc:DomainElement"
+      ],
+      "rdfs:member": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5"
+        }
+      ],
+      "core:name": "array_1",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/source-map/synthesized-field/element_1"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/source-map/lexical/element_0"
+        }
+      ],
+      "sourcemaps:tracked-element": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/source-map/tracked-element/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map/auto-generated-name/element_0",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema",
+      "sourcemaps:value": ""
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map/lexical/element_1",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema",
+      "sourcemaps:value": "[(27,10)-(33,33)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map/lexical/element_0",
+      "sourcemaps:element": "apiContract:examples",
+      "sourcemaps:value": "[(29,12)-(33,33)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/source-map/type-property-lexical-info/element_0",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema",
+      "sourcemaps:value": "[(28,12)-(28,16)]"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/name/scalar/name",
+      "@type": [
+        "raml-shapes:ScalarShape",
+        "raml-shapes:AnyShape",
+        "shacl:Shape",
+        "raml-shapes:Shape",
+        "doc:DomainElement"
+      ],
+      "shacl:datatype": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ],
+      "shacl:name": "name",
+      "core:description": "Name of a judiciary agent",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/declarations/types/Agent/property/name/scalar/name/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/name/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/declarations/types/Agent/property/name/source-map/synthesized-field/element_1"
+        },
+        {
+          "@id": "#/declarations/types/Agent/property/name/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/declarations/types/Agent/property/name/source-map/lexical/element_1"
+        },
+        {
+          "@id": "#/declarations/types/Agent/property/name/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType",
+      "@type": [
+        "raml-shapes:ScalarShape",
+        "raml-shapes:AnyShape",
+        "shacl:Shape",
+        "raml-shapes:Shape",
+        "doc:DomainElement"
+      ],
+      "shacl:datatype": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ],
+      "shacl:name": "agentType",
+      "core:description": "Type of a judiciary agent. Can be 'Person' for a physical judiciary person or 'Organization' for a organization-like agents",
+      "shacl:in": {
+        "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/list"
+      },
+      "sourcemaps:sources": [
+        {
+          "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/declarations/types/Agent/property/agentType/source-map/synthesized-field/element_1"
+        },
+        {
+          "@id": "#/declarations/types/Agent/property/agentType/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/declarations/types/Agent/property/agentType/source-map/lexical/element_1"
+        },
+        {
+          "@id": "#/declarations/types/Agent/property/agentType/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/types/Agent/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "shacl:closed",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/declarations/types/Agent/source-map/type-property-lexical-info/element_0",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/declarations/types/Agent",
+      "sourcemaps:value": "[(7,4)-(7,8)]"
+    },
+    {
+      "@id": "#/declarations/types/Agent/source-map/lexical/element_2",
+      "sourcemaps:element": "shacl:name",
+      "sourcemaps:value": "[(5,2)-(5,7)]"
+    },
+    {
+      "@id": "#/declarations/types/Agent/source-map/lexical/element_0",
+      "sourcemaps:element": "core:description",
+      "sourcemaps:value": "[(6,4)-(7,0)]"
+    },
+    {
+      "@id": "#/declarations/types/Agent/source-map/lexical/element_1",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/declarations/types/Agent",
+      "sourcemaps:value": "[(5,2)-(19,0)]"
+    },
+    {
+      "@id": "#/declarations/types/Agent/source-map/declared-element/element_0",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/declarations/types/Agent",
+      "sourcemaps:value": ""
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2",
+      "@type": [
+        "data:Object",
+        "data:Node",
+        "doc:DomainElement"
+      ],
+      "data:name": {
+        "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3"
+      },
+      "data:agentType": {
+        "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4"
+      },
+      "core:name": "object_2",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5",
+      "@type": [
+        "data:Object",
+        "data:Node",
+        "doc:DomainElement"
+      ],
+      "data:name": {
+        "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6"
+      },
+      "data:agentType": {
+        "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7"
+      },
+      "core:name": "object_5",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/source-map/synthesized-field/element_1",
+      "sourcemaps:element": "doc:strict",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "doc:raw",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/source-map/lexical/element_0",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example",
+      "sourcemaps:value": "[(29,20)-(33,33)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/source-map/tracked-element/element_0",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example",
+      "sourcemaps:value": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/name/scalar/name/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:type-property-lexical-info": [
+        {
+          "@id": "#/declarations/types/Agent/property/name/scalar/name/source-map/type-property-lexical-info/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/declarations/types/Agent/property/name/scalar/name/source-map/lexical/element_2"
+        },
+        {
+          "@id": "#/declarations/types/Agent/property/name/scalar/name/source-map/lexical/element_0"
+        },
+        {
+          "@id": "#/declarations/types/Agent/property/name/scalar/name/source-map/lexical/element_1"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/name/source-map/synthesized-field/element_1",
+      "sourcemaps:element": "shacl:path",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/name/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "shacl:minCount",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/name/source-map/lexical/element_1",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/declarations/types/Agent/property/name",
+      "sourcemaps:value": "[(9,6)-(12,0)]"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/name/source-map/lexical/element_0",
+      "sourcemaps:element": "raml-shapes:range",
+      "sourcemaps:value": "[(9,11)-(12,0)]"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/list",
+      "@type": "rdfs:Seq",
+      "rdfs:_1": {
+        "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1"
+      },
+      "rdfs:_2": {
+        "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2"
+      }
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:type-property-lexical-info": [
+        {
+          "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map/type-property-lexical-info/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map/lexical/element_3"
+        },
+        {
+          "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map/lexical/element_1"
+        },
+        {
+          "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map/lexical/element_0"
+        },
+        {
+          "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map/lexical/element_2"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/source-map/synthesized-field/element_1",
+      "sourcemaps:element": "shacl:path",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "shacl:minCount",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/source-map/lexical/element_1",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/declarations/types/Agent/property/agentType",
+      "sourcemaps:value": "[(12,6)-(19,0)]"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/source-map/lexical/element_0",
+      "sourcemaps:element": "raml-shapes:range",
+      "sourcemaps:value": "[(12,16)-(19,0)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3",
+      "@type": [
+        "data:Scalar",
+        "data:Node",
+        "doc:DomainElement"
+      ],
+      "data:value": "Polimi",
+      "shacl:datatype": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ],
+      "core:name": "name",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4",
+      "@type": [
+        "data:Scalar",
+        "data:Node",
+        "doc:DomainElement"
+      ],
+      "data:value": "Organization",
+      "shacl:datatype": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ],
+      "core:name": "agentType",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/lexical/element_2"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/lexical/element_0"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/lexical/element_1"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6",
+      "@type": [
+        "data:Scalar",
+        "data:Node",
+        "doc:DomainElement"
+      ],
+      "data:value": "Nicolas",
+      "shacl:datatype": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ],
+      "core:name": "name",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7",
+      "@type": [
+        "data:Scalar",
+        "data:Node",
+        "doc:DomainElement"
+      ],
+      "data:value": "Person",
+      "shacl:datatype": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ],
+      "core:name": "agentType",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/lexical/element_2"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/lexical/element_0"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/lexical/element_1"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/source-map/lexical/element_0",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1",
+      "sourcemaps:value": "[(30,0)-(33,33)]"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/name/scalar/name/source-map/type-property-lexical-info/element_0",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/declarations/types/Agent/property/name/scalar/name",
+      "sourcemaps:value": "[(11,8)-(11,12)]"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/name/scalar/name/source-map/lexical/element_2",
+      "sourcemaps:element": "shacl:datatype",
+      "sourcemaps:value": "[(11,8)-(12,0)]"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/name/scalar/name/source-map/lexical/element_0",
+      "sourcemaps:element": "core:description",
+      "sourcemaps:value": "[(10,8)-(11,0)]"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/name/scalar/name/source-map/lexical/element_1",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/declarations/types/Agent/property/name/scalar/name",
+      "sourcemaps:value": "[(9,6)-(12,0)]"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1",
+      "@type": [
+        "data:Scalar",
+        "data:Node",
+        "doc:DomainElement"
+      ],
+      "data:value": "Person",
+      "shacl:datatype": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ],
+      "core:name": "scalar_1",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2",
+      "@type": [
+        "data:Scalar",
+        "data:Node",
+        "doc:DomainElement"
+      ],
+      "data:value": "Organization",
+      "shacl:datatype": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ],
+      "core:name": "scalar_2",
+      "sourcemaps:sources": [
+        {
+          "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2/source-map"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map/type-property-lexical-info/element_0",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/declarations/types/Agent/property/agentType/scalar/agentType",
+      "sourcemaps:value": "[(13,8)-(13,12)]"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map/lexical/element_3",
+      "sourcemaps:element": "core:description",
+      "sourcemaps:value": "[(14,8)-(15,0)]"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map/lexical/element_1",
+      "sourcemaps:element": "shacl:datatype",
+      "sourcemaps:value": "[(13,8)-(14,0)]"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map/lexical/element_0",
+      "sourcemaps:element": "shacl:in",
+      "sourcemaps:value": "[(15,8)-(19,0)]"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/source-map/lexical/element_2",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/declarations/types/Agent/property/agentType/scalar/agentType",
+      "sourcemaps:value": "[(12,6)-(19,0)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map/synthesized-field/element_1"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map/synthesized-field/element_1"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "core:name",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/lexical/element_2",
+      "sourcemaps:element": "data:name",
+      "sourcemaps:value": "[(30,16)-(31,0)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/lexical/element_0",
+      "sourcemaps:element": "data:agentType",
+      "sourcemaps:value": "[(31,16)-(32,0)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/source-map/lexical/element_1",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2",
+      "sourcemaps:value": "[(30,16)-(32,0)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map/synthesized-field/element_1"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map/synthesized-field/element_1"
+        },
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "core:name",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/lexical/element_2",
+      "sourcemaps:element": "data:name",
+      "sourcemaps:value": "[(32,16)-(33,0)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/lexical/element_0",
+      "sourcemaps:element": "data:agentType",
+      "sourcemaps:value": "[(33,16)-(33,33)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/source-map/lexical/element_1",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5",
+      "sourcemaps:value": "[(32,16)-(33,33)]"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1/source-map/synthesized-field/element_1"
+        },
+        {
+          "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2/source-map",
+      "@type": [
+        "sourcemaps:SourceMap"
+      ],
+      "sourcemaps:synthesized-field": [
+        {
+          "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2/source-map/synthesized-field/element_1"
+        },
+        {
+          "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2/source-map/synthesized-field/element_0"
+        }
+      ],
+      "sourcemaps:lexical": [
+        {
+          "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2/source-map/lexical/element_0"
+        }
+      ]
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map/synthesized-field/element_1",
+      "sourcemaps:element": "shacl:datatype",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "core:name",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3/source-map/lexical/element_0",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_3",
+      "sourcemaps:value": "[(30,22)-(30,28)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map/synthesized-field/element_1",
+      "sourcemaps:element": "shacl:datatype",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "core:name",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4/source-map/lexical/element_0",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_2/scalar_4",
+      "sourcemaps:value": "[(31,27)-(31,39)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map/synthesized-field/element_1",
+      "sourcemaps:element": "shacl:datatype",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "core:name",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6/source-map/lexical/element_0",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_6",
+      "sourcemaps:value": "[(32,22)-(32,29)]"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map/synthesized-field/element_1",
+      "sourcemaps:element": "shacl:datatype",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "core:name",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7/source-map/lexical/element_0",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/web-api/end-points/%2Fagents/get/200/application%2Fjson/array/schema/example/default-example/array_1/object_5/scalar_7",
+      "sourcemaps:value": "[(33,27)-(33,33)]"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1/source-map/synthesized-field/element_1",
+      "sourcemaps:element": "shacl:datatype",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "core:name",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1/source-map/lexical/element_0",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_1",
+      "sourcemaps:value": "[(16,12)-(16,18)]"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2/source-map/synthesized-field/element_1",
+      "sourcemaps:element": "shacl:datatype",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2/source-map/synthesized-field/element_0",
+      "sourcemaps:element": "core:name",
+      "sourcemaps:value": "true"
+    },
+    {
+      "@id": "#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2/source-map/lexical/element_0",
+      "sourcemaps:element": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml#/declarations/types/Agent/property/agentType/scalar/agentType/enum/scalar_2",
+      "sourcemaps:value": "[(17,12)-(17,24)]"
+    },
+    {
+      "@id": "",
+      "@type": [
+        "doc:Document",
+        "doc:Fragment",
+        "doc:Module",
+        "doc:Unit"
+      ],
+      "doc:encodes": {
+        "@id": "#/web-api"
+      },
+      "doc:version": "3.1.0",
+      "doc:root": true
+    }
+  ],
+  "@context": {
+    "@base": "file://jena-3/src/test/resources/test/cases/documentation/partially-documented/api.raml",
+    "shacl": "http://www.w3.org/ns/shacl#",
+    "raml-shapes": "http://a.ml/vocabularies/shapes#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "data": "http://a.ml/vocabularies/data#",
+    "doc": "http://a.ml/vocabularies/document#",
+    "apiContract": "http://a.ml/vocabularies/apiContract#",
+    "core": "http://a.ml/vocabularies/core#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "sourcemaps": "http://a.ml/vocabularies/document-source-maps#"
+  }
+}

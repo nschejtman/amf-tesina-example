@@ -1,12 +1,19 @@
-# AML tesina example
+# Semantic ETL
 ## Requirements
-* sbt: [https://www.scala-sbt.org/](https://www.scala-sbt.org/)
+* [SBT](https://www.scala-sbt.org/)
+* [Pellet](https://github.com/stardog-union/pellet)
+* [Maven](https://maven.apache.org/), to install Pellet
 
-## How to run
-`sbt run`
+## How to install Pellet
+```bash
+$ git clone git@github.com:stardog-union/pellet.git
+$ cd pellet
+$ mvn install
+```
 
-## Agents example
-* `src/main/resources/agents/` contains the Dialect and Vocabulary files for the demo agents example
-* `src/main/resources/agents/example-instances` contains YAML example instance files that with the aid of the Agents Dialect (`agents.dialect.yaml`) will be mapped to an RDF graph
-* `src/main/resources/agents/graphs` contains the RDF graph representations for the agents dialect, vocabulary and example instances (mapped) files in various serialization formats
-* `src/main/scala/App.scala` contains the code used to generate the parsed graph representations of the source YAML files
+At this time the Pellet version is 2.4.0-SNAPSHOT. Repo revision is [4c7d16b](https://github.com/stardog-union/pellet/commit/4c7d16bd1811ec04117fa4cd96ed592c6cfa956b)
+
+## Test
+```bash
+$ sbt test
+```

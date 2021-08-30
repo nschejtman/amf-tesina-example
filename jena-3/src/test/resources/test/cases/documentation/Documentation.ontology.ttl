@@ -1,0 +1,63 @@
+@base <http://a.ml/vocabularies/documentation#> .
+@prefix rdfs:        <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:         <http://www.w3.org/2002/07/owl#> .
+@prefix shacl:       <http://www.w3.org/ns/shacl#>.
+@prefix core:        <http://a.ml/vocabularies/core#> .
+@prefix apiContract: <http://a.ml/vocabularies/apiContract#> .
+@prefix security:    <http://a.ml/vocabularies/security#> .
+@prefix shapes:      <http://a.ml/vocabularies/shapes#>.
+
+<#>
+    a owl:Ontology .
+
+<#Documentable>
+    a owl:Class .
+
+<#Documented>
+    a               owl:Class ;
+    rdfs:subClassOf <#Documentable> .
+
+core:description
+    rdfs:domain <#Documented> .
+
+apiContract:API
+    rdfs:subClassOf <#Documentable> .
+
+core:CorrelationId
+    rdfs:subClassOf <#Documentable> .
+
+apiContract:EndPoint
+    rdfs:subClassOf <#Documentable> .
+
+apiContract:Message
+    rdfs:subClassOf <#Documentable> .
+
+apiContract:Operation
+    rdfs:subClassOf <#Documentable> .
+
+apiContract:Parameter
+    rdfs:subClassOf <#Documentable> .
+
+apiContract:Server
+    rdfs:subClassOf <#Documentable> .
+
+apiContract:Tag
+    rdfs:subClassOf <#Documentable> .
+
+apiContract:TemplatedLink
+    rdfs:subClassOf <#Documentable> .
+
+security:SecurityScheme
+    rdfs:subClassOf <#Documentable> .
+
+shacl:NodeShape
+    rdfs:subClassOf <#Documentable> .
+
+# shacl:PropertyShape is not itself Documentable, but its range is
+shapes:range
+    rdfs:domain shacl:PropertyShape ;
+    rdfs:range  <#Documentable> .
+
+# apiContract:Payload are not Documentable but have a shapes:schema property whose range is a Documentable
+shapes:schema
+    rdfs:range <#Documentable> .
