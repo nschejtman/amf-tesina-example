@@ -2,6 +2,11 @@ PREFIX pii: <http://a.ml/vocabularies/pii#>
 PREFIX doc: <http://a.ml/vocabularies/document#>
 SELECT (COUNT (DISTINCT ?sensitiveElement) AS ?sensitiveElementCount) (COUNT(DISTINCT ?domainElement) AS ?domainElementCount)
 WHERE {
-      ?sensitiveElement a pii:SensitiveElement .
+      {
+      ?sensitiveElement a pii:SensitiveElement
+      }
+      UNION
+      {
       ?domainElement a doc:DomainElement
+      }
       }

@@ -1,27 +1,262 @@
-@prefix : <http://a.ml/vocabularies/pii#> .
-@prefix doc: <http://a.ml/vocabularies/document#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix core: <http://a.ml/vocabularies/core#> .
-@prefix data: <http://a.ml/vocabularies/data#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix shacl: <http://www.w3.org/ns/shacl#> .
-@prefix sourcemaps: <http://a.ml/vocabularies/document-source-maps#> .
+@prefix :            <http://a.ml/vocabularies/pii#> .
+@prefix doc:         <http://a.ml/vocabularies/document#> .
+@prefix owl:         <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml:         <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:         <http://www.w3.org/2001/XMLSchema#> .
+@prefix core:        <http://a.ml/vocabularies/core#> .
+@prefix data:        <http://a.ml/vocabularies/data#> .
+@prefix rdfs:        <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shacl:       <http://www.w3.org/ns/shacl#> .
+@prefix sourcemaps:  <http://a.ml/vocabularies/document-source-maps#> .
 @prefix apiContract: <http://a.ml/vocabularies/apiContract#> .
+@prefix apiBinding:  <http://a.ml/vocabularies/apiBinding#> .
 @prefix raml-shapes: <http://a.ml/vocabularies/shapes#> .
 @base <http://a.ml/vocabularies/pii#> .
 
-<http://a.ml/vocabularies/pii#> rdf:type owl:Ontology .
+<http://a.ml/vocabularies/pii#>
+    rdf:type owl:Ontology .
 
 #################################################################
 #    Object Properties
 #################################################################
+apiContract:payload
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiContract:returns
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiContract:supportedOperation
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiContract:endpoint
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiContract:callback
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiContract:cookieParameter
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiContract:header
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiContract:headerSchema
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiContract:link
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiContract:mapping
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiContract:parameter
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiContract:queryString
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiContract:expects
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiContract:response
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiContract:server
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiContract:tag
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiContract:uriParameter
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiContract:variable
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiBinding:binding
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiBinding:bindings
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiBinding:clientId
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiBinding:exchange
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiBinding:groupId
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiBinding:headers
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiBinding:lastWill
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiBinding:messageKey
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiBinding:query
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+apiBinding:queue
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+raml-shapes:additionalItemsSchema
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+raml-shapes:anyOf
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+raml-shapes:contains
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+raml-shapes:contentSchema
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+raml-shapes:dependencies
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+raml-shapes:discriminatorMapping
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+raml-shapes:discriminatorValueMapping
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+raml-shapes:discriminatorValueTarget
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+raml-shapes:inherits
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+raml-shapes:items
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+raml-shapes:range
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+raml-shapes:schema
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+raml-shapes:schemaDependencies
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+raml-shapes:schemaTarget
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+raml-shapes:unevaluatedItemsSchema
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+raml-shapes:unevaluatedPropertiesSchema
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+raml-shapes:xmlSerialization
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+shacl:additionalPropertiesSchema
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+shacl:and
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+shacl:defaultValue
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+shacl:else
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+shacl:if
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+shacl:in
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+shacl:not
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+shacl:or
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+shacl:property
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+shacl:propertyNames
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+shacl:then
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+shacl:xone
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
+
+raml-shapes:range
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :sensitivityTransferProperty .
 
 ###  http://a.ml/vocabularies/pii#sensitivityTransferProperty
-:sensitivityTransferProperty rdf:type owl:ObjectProperty ;
-                             rdfs:comment "Property that indicates if its object is of class SenstiveElement, then its subject of of class SensitiveElement as well." .
+:sensitivityTransferProperty
+    rdf:type owl:ObjectProperty ;
+    rdfs:comment
+             "Property that indicates if its object is of class SenstiveElement, then its subject of of class SensitiveElement as well." .
 
 
 #################################################################
@@ -29,7 +264,8 @@
 #################################################################
 
 ###  http://a.ml/vocabularies/pii#SensitiveElement
-:SensitiveElement rdf:type owl:Class .
+:SensitiveElement
+    rdf:type owl:Class .
 
 
 #################################################################

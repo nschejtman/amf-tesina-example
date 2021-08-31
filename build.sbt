@@ -18,6 +18,8 @@ lazy val jena3 = (project in file("jena-3"))
 
 lazy val jena2 = (project in file("jena-2"))
   .settings(
-      libraryDependencies += "com.clarkparsia.pellet" % "pellet-distribution" % "2.4.0-SNAPSHOT",
-      libraryDependencies += "org.apache.jena"        % "jena"                % "2.13.0" pomOnly ()
+      libraryDependencies += "com.clarkparsia.pellet" % "pellet-distribution"  % "2.4.0-SNAPSHOT",
+      libraryDependencies += "org.apache.jena"        % "jena"                 % "2.13.0" pomOnly (),
+      libraryDependencies += "jakarta.xml.bind"       % "jakarta.xml.bind-api" % "2.3.2",
+      libraryDependencies += "org.glassfish.jaxb"     % "jaxb-runtime"         % "2.3.2"
   )

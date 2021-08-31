@@ -508,8 +508,7 @@
         "shacl:Shape",
         "shacl:Shape",
         "raml-shapes:Shape",
-        "doc:DomainElement",
-        "pii:SensitiveElement"
+        "doc:DomainElement"
       ],
       "shacl:datatype": [
         {
@@ -1079,7 +1078,6 @@
     "apiContract": "http://a.ml/vocabularies/apiContract#",
     "core": "http://a.ml/vocabularies/core#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "sourcemaps": "http://a.ml/vocabularies/document-source-maps#",
-    "pii": "http://a.ml/vocabularies/pii#"
+    "sourcemaps": "http://a.ml/vocabularies/document-source-maps#"
   }
 }

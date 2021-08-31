@@ -1,0 +1,24 @@
+#%RAML 1.0
+title: Users API
+version: 1.0
+
+types:
+  User:
+    type: object
+    properties:
+      userId:
+        type: integer
+      fullName: # this property will be marked as PII sensitive by an external NPL system
+        type: string
+/users:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            type: User[]
+            example:
+              - userId: 0
+                fullName: Nicolas Schejtman
+              - userId: 1
+                fullName: Joe Biden
