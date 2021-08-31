@@ -1,0 +1,18 @@
+#%RAML 1.0
+title: api
+version: 1.0
+securitySchemes:
+  basic:
+    type: Basic Authentication
+
+/endpointA:
+  get:
+    securedBy: [basic]
+  post:
+    securedBy: [basic]
+
+/endpointB:
+  get:
+    securedBy: [basic]
+  post:
+    securedBy: [basic]

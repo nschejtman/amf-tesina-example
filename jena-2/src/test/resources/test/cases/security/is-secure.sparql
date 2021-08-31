@@ -1,0 +1,6 @@
+PREFIX security: <http://a.ml/vocabularies/security#>
+PREFIX apiContract: <http://a.ml/vocabularies/apiContract#>
+ASK {
+    ?api a apiContract:API ;
+         a security:Secure .
+    }

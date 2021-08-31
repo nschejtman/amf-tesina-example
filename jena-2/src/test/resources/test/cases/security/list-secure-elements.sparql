@@ -1,0 +1,6 @@
+PREFIX security: <http://a.ml/vocabularies/security#>
+SELECT ?id
+WHERE {
+      ?id a security:Secure
+      }
+

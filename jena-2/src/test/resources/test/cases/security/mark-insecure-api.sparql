@@ -1,0 +1,11 @@
+PREFIX security: <http://a.ml/vocabularies/security#>
+PREFIX apiContract: <http://a.ml/vocabularies/apiContract#>
+CONSTRUCT {
+          ?api a security:Insecure
+          }
+WHERE {
+      ?api a apiContract:API;
+           apiContract:endpoint ?endpoint .
+      ?endpoint a security:Insecure .
+      }
+

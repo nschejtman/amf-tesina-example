@@ -1,0 +1,171 @@
+{
+  "@graph": [
+    {
+      "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/web-api",
+      "@type": [
+        "http://a.ml/vocabularies/apiContract#WebAPI",
+        "http://a.ml/vocabularies/apiContract#API",
+        "http://a.ml/vocabularies/document#RootDomainElement",
+        "http://a.ml/vocabularies/document#DomainElement"
+      ],
+      "http://a.ml/vocabularies/core#name": "api",
+      "http://a.ml/vocabularies/core#version": "1.0",
+      "http://a.ml/vocabularies/apiContract#endpoint": [
+        {
+          "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/web-api/end-points/%2FendpointA"
+        },
+        {
+          "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/web-api/end-points/%2FendpointB"
+        }
+      ]
+    },
+    {
+      "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/web-api/end-points/%2FendpointA",
+      "@type": [
+        "http://a.ml/vocabularies/apiContract#EndPoint",
+        "http://a.ml/vocabularies/document#DomainElement"
+      ],
+      "http://a.ml/vocabularies/apiContract#path": "/endpointA",
+      "http://a.ml/vocabularies/apiContract#supportedOperation": [
+        {
+          "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/web-api/end-points/%2FendpointA/get"
+        },
+        {
+          "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/web-api/end-points/%2FendpointA/post"
+        }
+      ]
+    },
+    {
+      "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/web-api/end-points/%2FendpointB",
+      "@type": [
+        "http://a.ml/vocabularies/apiContract#EndPoint",
+        "http://a.ml/vocabularies/document#DomainElement"
+      ],
+      "http://a.ml/vocabularies/apiContract#path": "/endpointB",
+      "http://a.ml/vocabularies/apiContract#supportedOperation": [
+        {
+          "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/web-api/end-points/%2FendpointB/get"
+        },
+        {
+          "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/web-api/end-points/%2FendpointB/post"
+        }
+      ]
+    },
+    {
+      "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/web-api/end-points/%2FendpointA/get",
+      "@type": [
+        "http://a.ml/vocabularies/apiContract#Operation",
+        "http://a.ml/vocabularies/document#DomainElement"
+      ],
+      "http://a.ml/vocabularies/apiContract#method": "get",
+      "http://a.ml/vocabularies/security#security": [
+        {
+          "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/web-api/end-points/%2FendpointA/get/default-requirement_1"
+        }
+      ]
+    },
+    {
+      "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/web-api/end-points/%2FendpointA/post",
+      "@type": [
+        "http://a.ml/vocabularies/apiContract#Operation",
+        "http://a.ml/vocabularies/document#DomainElement"
+      ],
+      "http://a.ml/vocabularies/apiContract#method": "post",
+      "http://a.ml/vocabularies/security#security": [
+        {
+          "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/web-api/end-points/%2FendpointA/post/default-requirement_1"
+        }
+      ]
+    },
+    {
+      "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/web-api/end-points/%2FendpointB/get",
+      "@type": [
+        "http://a.ml/vocabularies/apiContract#Operation",
+        "http://a.ml/vocabularies/document#DomainElement"
+      ],
+      "http://a.ml/vocabularies/apiContract#method": "get"
+    },
+    {
+      "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/web-api/end-points/%2FendpointB/post",
+      "@type": [
+        "http://a.ml/vocabularies/apiContract#Operation",
+        "http://a.ml/vocabularies/document#DomainElement"
+      ],
+      "http://a.ml/vocabularies/apiContract#method": "post"
+    },
+    {
+      "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/web-api/end-points/%2FendpointA/get/default-requirement_1",
+      "@type": [
+        "http://a.ml/vocabularies/security#SecurityRequirement",
+        "http://a.ml/vocabularies/document#DomainElement"
+      ],
+      "http://a.ml/vocabularies/security#schemes": [
+        {
+          "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/web-api/end-points/%2FendpointA/get/default-requirement_1/basic"
+        }
+      ]
+    },
+    {
+      "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/web-api/end-points/%2FendpointA/post/default-requirement_1",
+      "@type": [
+        "http://a.ml/vocabularies/security#SecurityRequirement",
+        "http://a.ml/vocabularies/document#DomainElement"
+      ],
+      "http://a.ml/vocabularies/security#schemes": [
+        {
+          "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/web-api/end-points/%2FendpointA/post/default-requirement_1/basic"
+        }
+      ]
+    },
+    {
+      "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/web-api/end-points/%2FendpointA/get/default-requirement_1/basic",
+      "@type": [
+        "http://a.ml/vocabularies/security#ParametrizedSecurityScheme",
+        "http://a.ml/vocabularies/document#DomainElement"
+      ],
+      "http://a.ml/vocabularies/core#name": "basic",
+      "http://a.ml/vocabularies/security#scheme": {
+        "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/declarations/securitySchemes/basic"
+      }
+    },
+    {
+      "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/web-api/end-points/%2FendpointA/post/default-requirement_1/basic",
+      "@type": [
+        "http://a.ml/vocabularies/security#ParametrizedSecurityScheme",
+        "http://a.ml/vocabularies/document#DomainElement"
+      ],
+      "http://a.ml/vocabularies/core#name": "basic",
+      "http://a.ml/vocabularies/security#scheme": {
+        "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/declarations/securitySchemes/basic"
+      }
+    },
+    {
+      "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/declarations/securitySchemes/basic",
+      "@type": [
+        "http://a.ml/vocabularies/security#SecurityScheme",
+        "http://a.ml/vocabularies/document#DomainElement"
+      ],
+      "http://a.ml/vocabularies/core#name": "basic",
+      "http://a.ml/vocabularies/security#type": "Basic Authentication"
+    },
+    {
+      "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml",
+      "http://a.ml/vocabularies/document#declares": [
+        {
+          "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/declarations/securitySchemes/basic"
+        }
+      ],
+      "@type": [
+        "http://a.ml/vocabularies/document#Document",
+        "http://a.ml/vocabularies/document#Fragment",
+        "http://a.ml/vocabularies/document#Module",
+        "http://a.ml/vocabularies/document#Unit"
+      ],
+      "http://a.ml/vocabularies/document#encodes": {
+        "@id": "file://jena-2/src/test/resources/test/cases/security/bottom-up-semi-transfer/api.raml#/web-api"
+      },
+      "http://a.ml/vocabularies/document#version": "3.1.0",
+      "http://a.ml/vocabularies/document#root": true
+    }
+  ]
+}

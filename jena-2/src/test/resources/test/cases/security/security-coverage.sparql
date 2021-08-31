@@ -1,0 +1,11 @@
+PREFIX security: <http://a.ml/vocabularies/security#>
+SELECT (COUNT (DISTINCT ?secureElement) AS ?secureElementCount) (COUNT(DISTINCT ?securableElement) AS ?securableElementCount)
+WHERE {
+      {
+      ?secureElement a security:Secure
+      }
+      UNION
+      {
+      ?securableElement a security:Securable
+      }
+      }

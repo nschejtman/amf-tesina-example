@@ -1,0 +1,12 @@
+PREFIX security: <http://a.ml/vocabularies/security#>
+PREFIX apiContract: <http://a.ml/vocabularies/apiContract#>
+CONSTRUCT {
+          ?operation a security:Insecure
+          }
+WHERE {
+      ?operation a apiContract:Operation .
+      FILTER NOT EXISTS {
+                        ?operation a security:Secure .
+                        }
+      }
+
