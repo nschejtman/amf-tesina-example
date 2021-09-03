@@ -3,6 +3,7 @@
 * [SBT](https://www.scala-sbt.org/)
 * [Pellet](https://github.com/stardog-union/pellet)
 * [Maven](https://maven.apache.org/), to install Pellet
+* Java 11
 
 ## How to install Pellet
 ```bash
